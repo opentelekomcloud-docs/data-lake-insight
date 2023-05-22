@@ -1,0 +1,204 @@
+:original_name: dli_01_0498.html
+
+.. _dli_01_0498:
+
+(Recommended) Creating a Flink OpenSource SQL Job
+=================================================
+
+This section describes how to create a Flink OpenSource SQL job.
+
+DLI Flink OpenSource SQL jobs are fully compatible with the syntax of Flink 1.10 and 1.12 provided by the community. In addition, Redis, DWS(GaussDB), and DIS data source types are added based on the community connector. For details about the syntax and restrictions of Flink SQL DDL, DML, and functions, see `Table API & SQL <https://ci.apache.org/projects/flink/flink-docs-release-1.10/dev/table/sql/>`__.
+
+Prerequisites
+-------------
+
+-  You have prepared the data input and data output channels. For details, see :ref:`Preparing Flink Job Data <dli_01_0454>`.
+-  Before creating a Flink OpenSource SQL job to access other external data sources, such as OpenTSDB, HBase, Kafka, DWS, RDS, CSS, CloudTable, DCS Redis, and DDS Mongos, you need to create a cross-source connection to connect the job running queue to the external data source.
+
+   -  For details about the external data sources that can be accessed by Flink jobs, see :ref:`Datasource Connection and Cross-Source Analysis <dli_01_0410>`.
+
+   -  For details about how to create a datasource connection, see :ref:`Enhanced Datasource Connections <dli_01_0426>`.
+
+      On the **Queue Management** page, locate the queue you have created, and choose **More** > **Test Address Connectivity** in the **Operation** column to check whether the network connection between the queue and the data source is normal. For details, see :ref:`Testing Address Connectivity <dli_01_0489>`.
+
+Creating a Flink OpenSource SQL Job
+-----------------------------------
+
+#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+
+#. In the upper right corner of the **Flink Jobs** page, click **Create Job**.
+
+#. Specify job parameters.
+
+   .. table:: **Table 1** Job configuration information
+
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                |
+      +===================================+============================================================================================================================================+
+      | Type                              | Set **Type** to **Flink OpenSource SQL**. You will need to start jobs by compiling SQL statements.                                         |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name                              | Name of a job. Enter 1 to 57 characters. Only letters, digits, hyphens (-), and underscores (_) are allowed.                               |
+      |                                   |                                                                                                                                            |
+      |                                   | .. note::                                                                                                                                  |
+      |                                   |                                                                                                                                            |
+      |                                   |    The job name must be globally unique.                                                                                                   |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Description of a job. It can be up to 512 characters long.                                                                                 |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+      | Template Name                     | You can select a sample template or a custom job template. For details about templates, see :ref:`Managing Flink Templates <dli_01_0464>`. |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+
+#. Click **OK** to enter the **Edit** page.
+
+#. Edit an OpenSource SQL job.
+
+   Enter details SQL statements in the SQL statement edit area. For details about SQL statements, see the *Data Lake Insight Flink OpenSource SQL Syntax Reference*.
+
+#. Click **Check Semantics**.
+
+   -  You can **Start** a job only after the semantic verification is successful.
+   -  If verification is successful, the message "The SQL semantic verification is complete. No error." will be displayed.
+   -  If verification fails, a red "X" mark will be displayed in front of each SQL statement that produced an error. You can move the cursor to the "X" mark to view error details and change the SQL statement as prompted.
+
+#. Set job running parameters.
+
+   .. table:: **Table 2** Running parameters
+
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                           | Description                                                                                                                                                                                                                                                                          |
+      +=====================================+======================================================================================================================================================================================================================================================================================+
+      | Queue                               | A shared queue is selected by default. Select a CCE queue with dedicated resources and configure the following parameters:                                                                                                                                                           |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | **UDF Jar**: You can customize a UDF Jar file. Before selecting a JAR file to be inserted, upload the corresponding JAR package to the OBS bucket and choose **Data Management > Package Management** to create a package. For details, see :ref:`Creating a Package <dli_01_0367>`. |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | In SQL, you can call a user-defined function that is inserted into a JAR file.                                                                                                                                                                                                       |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | .. note::                                                                                                                                                                                                                                                                            |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    During job creation, a sub-user can only select a queue that has been allocated to the user.                                                                                                                                                                                      |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    If the remaining capacity of the selected queue cannot meet the job requirements, the system automatically scales up the capacity and you will be billed based on the increased capacity. When a queue is idle, the system automatically scales in the queue.                     |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | CUs                                 | Sum of the number of compute units and job manager CUs of DLI. One CU equals one vCPU and 4 GB.                                                                                                                                                                                      |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | The value is the number of CUs required for job running and cannot exceed the number of CUs in the bound queue.                                                                                                                                                                      |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Job Manager CUs                     | Number of CUs of the management unit.                                                                                                                                                                                                                                                |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parallelism                         | Number of Flink OpenSource SQL jobs that run at the same time                                                                                                                                                                                                                        |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | .. note::                                                                                                                                                                                                                                                                            |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    This value cannot be greater than four times the compute units (number of CUs minus the number of job manager CUs).                                                                                                                                                               |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Task Manager Configuration          | Whether to set Task Manager resource parameters.                                                                                                                                                                                                                                     |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | -  **CU(s) per TM**: Number of resources occupied by each Task Manager.                                                                                                                                                                                                              |
+      |                                     | -  **Slot(s) per TM**: Number of slots contained in each Task Manager.                                                                                                                                                                                                               |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | OBS Bucket                          | OBS bucket to store job logs and checkpoint information. If the selected OBS bucket is not authorized, click **Authorize**.                                                                                                                                                          |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Save Job Log                        | Whether to save the job running logs to OBS. The logs are saved in the following path: *Bucket name*\ **/jobs/logs/**\ *Directory starting with the job ID*.                                                                                                                         |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | .. caution::                                                                                                                                                                                                                                                                         |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    CAUTION:                                                                                                                                                                                                                                                                          |
+      |                                     |    You are advised to configure this parameter. Otherwise, no run log is generated after the job is executed. If the job fails, the run log cannot be obtained for fault locating.                                                                                                   |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | **OBS Bucket**: Select an OBS bucket to store user job logs. If the selected OBS bucket is not authorized, click **Authorize**.                                                                                                                                                      |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | .. note::                                                                                                                                                                                                                                                                            |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    If both **Enable Checkpointing** and **Save Job Log** are selected, you only need to authorize OBS once.                                                                                                                                                                          |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Alarm Generation upon Job Exception | Whether to report job exceptions, for example, abnormal job running or exceptions due to an insufficient balance, to users via SMS or email.                                                                                                                                         |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | **SMN Topic**                                                                                                                                                                                                                                                                        |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | Select a user-defined SMN topic. For details about how to customize SMN topics, see **Creating a Topic** in the *Simple Message Notification User Guide*.                                                                                                                            |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Enable Checkpointing                | Whether to enable job snapshots. If this function is enabled, jobs can be restored based on the checkpoints.                                                                                                                                                                         |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | -  **Checkpoint Interval (s)** indicates the interval for creating checkpoints. The value ranges from 1 to 999999, and the default value is **30**.                                                                                                                                  |
+      |                                     | -  **Checkpoint Mode** can be set to either of the following values:                                                                                                                                                                                                                 |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    -  **At least once**: Events are processed at least once.                                                                                                                                                                                                                         |
+      |                                     |    -  **Exactly once**: Events are processed only once.                                                                                                                                                                                                                              |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | -  **OBS Bucket**: Select an OBS bucket to store your checkpoints. If the selected OBS bucket is not authorized, click **Authorize**.                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    The checkpoint path is *Bucket name*\ **/jobs/checkpoint/**\ *Directory starting with the job ID*.                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    .. note::                                                                                                                                                                                                                                                                         |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |       If both **Enable Checkpointing** and **Save Job Log** are selected, you only need to authorize OBS once.                                                                                                                                                                       |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Auto Restart upon Exception         | Whether to enable automatic restart. If this function is enabled, any job that has become abnormal will be automatically restarted.                                                                                                                                                  |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                                                |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | -  **Max. Retry Attempts**: maximum number of retry times upon an exception. The unit is **Times/hour**.                                                                                                                                                                             |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     |    -  **Unlimited**: The number of retries is unlimited.                                                                                                                                                                                                                             |
+      |                                     |    -  **Limited**: The number of retries is user-defined.                                                                                                                                                                                                                            |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | -  **Restore Job from Checkpoint**: This parameter is available only when **Enable Checkpointing** is selected.                                                                                                                                                                      |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Idle State Retention Time           | How long the state of a key is retained without being updated before it is removed in **GroupBy** or **Window**. The default value is 1 hour.                                                                                                                                        |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Dirty Data Policy                   | Policy for processing dirty data. The following policies are supported: **Ignore**, **Trigger a job exception**, and **Save**.                                                                                                                                                       |
+      |                                     |                                                                                                                                                                                                                                                                                      |
+      |                                     | If you set this filed to **Save**, the **Dirty Data Dump Address** must be set. Click the address box to select the OBS path for storing dirty data.                                                                                                                                 |
+      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+#. (Optional) Set the runtime configuration as needed.
+
+#. Click **Save**.
+
+#. Click **Start**. On the displayed **Start Flink Jobs** page, confirm the job specifications, and click **Start Now** to start the job.
+
+   After the job is started, the system automatically switches to the **Flink Jobs** page, and the created job is displayed in the job list. You can view the job status in the **Status** column. After a job is successfully submitted, the job status will change from **Submitting** to **Running**. After the execution is complete, the message **Completed** is displayed.
+
+   If the job status is **Submission failed** or **Running exception**, the job submission failed or the job did not execute successfully. In this case, you can move the cursor over the status icon in the **Status** column of the job list to view the error details. You can click |image1| to copy these details. After handling the fault based on the provided information, resubmit the job.
+
+   .. note::
+
+      Other buttons are as follows:
+
+      -  **Save As**: Save the created job as a new job.
+      -  **Static Stream Graph**: Provide the static concurrency estimation function and stream graph display function.
+      -  **Simplified Stream Graph**: Display the data processing flow from the source to the sink.
+      -  **Format**: Format the SQL statements in the editing box.
+      -  **Set as Template**: Set the created SQL statements as a job template.
+      -  **Theme Settings**: Set the theme related parameters, including **Font Size**, **Wrap**, and **Page Style**.
+
+Simplified Stream Graph
+-----------------------
+
+On the OpenSource SQL job editing page, click **Simplified Stream Graph**.
+
+Static stream graph
+-------------------
+
+On the OpenSource SQL job editing page, click **Static Stream Graph**.
+
+The **Static Stream Graph** page also allows you to:
+
+-  Estimate concurrencies. Click **Estimate Concurrencies** on the **Static Stream Graph** page to estimate concurrencies. Click **Restore Initial Value** to restore the initial value after concurrency estimation.
+-  Zoom in or out the page.
+-  Expand or merge operator chains.
+-  You can edit **Parallelism**, **Output rate**, and **Rate factor**.
+
+   -  **Parallelism**: indicates the number of concurrent tasks.
+   -  **Output rate**: indicates the data traffic of an operator. The unit is piece/s.
+   -  **Rate factor**: indicates the retention rate after data is processed by operators. Rate factor = Data output volume of an operator/Data input volume of the operator (Unit: %)
+
+.. |image1| image:: /_static/images/en-us_image_0000001078931615.png
