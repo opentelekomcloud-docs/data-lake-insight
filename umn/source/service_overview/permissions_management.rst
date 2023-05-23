@@ -1,0 +1,142 @@
+:original_name: dli_07_0006.html
+
+.. _dli_07_0006:
+
+Permissions Management
+======================
+
+If you need to assign different permissions to employees in your enterprise to access your DLI resources, IAM is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you securely access to your cloud resources.
+
+With IAM, you can use your account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, some software developers in your enterprise need to use DLI resources but must not delete them or perform any high-risk operations. To achieve this result, you can create IAM users for the software developers and grant them only the permissions required for using DLI resources.
+
+If the account has met your requirements, you do not need to create an independent IAM user for permission management. Then you can skip this section. This will not affect other functions of DLI.
+
+DLI Permissions
+---------------
+
+By default, new IAM users do not have permissions assigned. You need to add the users to one or more groups, and attach permissions policies or roles to these groups. The users then inherit permissions from the groups to which they are added. After authorization, the users can perform specified operations on DLI based on the permissions.
+
+DLI is a project-level service deployed and accessed in specific physical regions. To assign ServiceStage permissions to a user group, specify the scope as region-specific projects and select projects for the permissions to take effect. If **All projects** is selected, the permissions will take effect for the user group in all region-specific projects. When accessing DLI, the users need to switch to a region where they have been authorized to use cloud services.
+
+Type: There are roles and policies.
+
+-  Roles: A type of coarse-grained authorization mechanism that defines permissions related to user responsibilities. Only a limited number of service-level roles are available. If one role has a dependency role required for accessing SA, assign both roles to the users. However, roles are not an ideal choice for fine-grained authorization and secure access control.
+-  Policies: A type of fine-grained authorization mechanism that defines permissions required to perform operations on specific cloud resources under certain conditions. This mechanism allows for more flexible policy-based authorization, meeting requirements for secure access control. For example, you can grant DLI users only the permissions for managing a certain type of ECSs. For the actions supported by DLI APIs, see "Permissions Policies and Supported Actions" in the *Data Lake Insight API Reference*.
+
+.. table:: **Table 1** DLI system permissions
+
+   +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+   | Role/Policy Name      | Description                                                                                                                                                                                                                                                                                                                                     | Category              |
+   +=======================+=================================================================================================================================================================================================================================================================================================================================================+=======================+
+   | DLI FullAccess        | Full permissions for DLI.                                                                                                                                                                                                                                                                                                                       | System-defined policy |
+   +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+   | DLI ReadOnlyAccess    | Read-only permissions for DLI.                                                                                                                                                                                                                                                                                                                  | System-defined policy |
+   |                       |                                                                                                                                                                                                                                                                                                                                                 |                       |
+   |                       | With read-only permissions, you can use DLI resources and perform operations that do not require fine-grained permissions. For example, create global variables, create packages and package groups, submit jobs to the default queue, create tables in the default database, create datasource connections, and delete datasource connections. |                       |
+   +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+   | Tenant Administrator  | Tenant administrator                                                                                                                                                                                                                                                                                                                            | System-defined role   |
+   |                       |                                                                                                                                                                                                                                                                                                                                                 |                       |
+   |                       | -  Job execution permissions for DLI resources. After a database or a queue is created, the user can use the ACL to assign rights to other users.                                                                                                                                                                                               |                       |
+   |                       | -  Scope: project-level service                                                                                                                                                                                                                                                                                                                 |                       |
+   +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+   | DLI Service Admin     | DLI administrator.                                                                                                                                                                                                                                                                                                                              | System-defined role   |
+   |                       |                                                                                                                                                                                                                                                                                                                                                 |                       |
+   |                       | -  Job execution permissions for DLI resources. After a database or a queue is created, the user can use the ACL to assign rights to other users.                                                                                                                                                                                               |                       |
+   |                       | -  Scope: project-level service                                                                                                                                                                                                                                                                                                                 |                       |
+   +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+
+:ref:`Table 2 <dli_07_0006__en-us_topic_0206791772_table168060107500>` lists the common operations supported by each system policy. You can choose required system policies according to this table.
+
+.. _dli_07_0006__en-us_topic_0206791772_table168060107500:
+
+.. table:: **Table 2** Common operations supported by each system permission
+
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   | Resource | Operation                     | Description                                                      | DLI FullAccess | DLI ReadOnlyAccess | Tenant Administrator | DLI Service Admin |
+   +==========+===============================+==================================================================+================+====================+======================+===================+
+   | Queue    | DROP_QUEUE                    | Deleting a Queue                                                 | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SUBMIT_JOB                    | Submitting a job                                                 | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | CANCEL_JOB                    | Terminating a Job                                                | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | RESTART                       | Restarting a queue                                               | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | GRANT_PRIVILEGE               | Granting permissions to a queue                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | REVOKE_PRIVILEGE              | Revoking permissions to a queue                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_PRIVILEGES               | Viewing the queue permissions of other users                     | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   | Database | DROP_DATABASE                 | Deleting a database                                              | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | CREATE_TABLE                  | Creating a table                                                 | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | CREATE_VIEW                   | Creating a view                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | EXPLAIN                       | Explaining the SQL statement as an execution plan                | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | CREATE_ROLE                   | Creating a role                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DROP_ROLE                     | Deleting a role                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_ROLES                    | Displaying a role                                                | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | GRANT_ROLE                    | Binding a role                                                   | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | REVOKE_ROLE                   | Unbinding a role                                                 | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_USERS                    | Displaying the binding relationships between all roles and users | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | GRANT_PRIVILEGE               | Granting permissions to the database                             | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | REVOKE_PRIVILEGE              | Revoking permissions to the database                             | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_PRIVILEGES               | Viewing database permissions of other users                      | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DISPLAY_ALL_TABLES            | Displaying tables in a database                                  | Y              | Y                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DISPLAY_DATABASE              | Displaying databases                                             | Y              | Y                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | CREATE_FUNCTION               | Creating a function                                              | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DROP_FUNCTION                 | Deleting a function                                              | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_FUNCTIONS                | Displaying all functions                                         | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DESCRIBE_FUNCTION             | Displaying function details                                      | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   | Table    | DROP_TABLE                    | Deleting tables                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SELECT                        | Querying tables                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | INSERT_INTO_TABLE             | Inserting table data                                             | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_ADD_COLUMNS       | Adding a column                                                  | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | INSERT_OVERWRITE_TABLE        | Overwriting a table                                              | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_RENAME            | Renaming a table                                                 | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_ADD_PARTITION     | Adding partitions to the partition table                         | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_RENAME_PARTITION  | Renaming a table partition                                       | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_DROP_PARTITION    | Deleting partitions from a partition table                       | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_PARTITIONS               | Displaying all partitions                                        | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_RECOVER_PARTITION | Restoring table partitions                                       | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | ALTER_TABLE_SET_LOCATION      | Setting the partition path                                       | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | GRANT_PRIVILEGE               | Granting permissions to the table                                | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | REVOKE_PRIVILEGE              | Revoking permissions to the table                                | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | SHOW_PRIVILEGES               | Viewing table permissions of other users                         | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DISPLAY_TABLE                 | Displaying a table                                               | Y              | Y                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
+   |          | DESCRIBE_TABLE                | Displaying table information                                     | Y              | x                  | Y                    | Y                 |
+   +----------+-------------------------------+------------------------------------------------------------------+----------------+--------------------+----------------------+-------------------+
