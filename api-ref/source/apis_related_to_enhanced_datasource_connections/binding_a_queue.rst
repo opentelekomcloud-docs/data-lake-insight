@@ -34,13 +34,11 @@ Request
 
 .. table:: **Table 2** Request parameters
 
-   +------------------------+-----------+------------------+--------------------------------------------------------------------------------+
-   | Parameter              | Mandatory | Type             | Description                                                                    |
-   +========================+===========+==================+================================================================================+
-   | queues                 | No        | Array of Strings | List of queue names that are available for datasource connections.             |
-   +------------------------+-----------+------------------+--------------------------------------------------------------------------------+
-   | elastic_resource_pools | No        | Array of Strings | Elastic resource pools you want to bind to the enhanced datasource connection. |
-   +------------------------+-----------+------------------+--------------------------------------------------------------------------------+
+   +-----------+-----------+------------------+--------------------------------------------------------------------+
+   | Parameter | Mandatory | Type             | Description                                                        |
+   +===========+===========+==================+====================================================================+
+   | queues    | No        | Array of Strings | List of queue names that are available for datasource connections. |
+   +-----------+-----------+------------------+--------------------------------------------------------------------+
 
 Response
 --------
@@ -57,6 +55,8 @@ Response
 
 Example Request
 ---------------
+
+Bind created enhanced datasource connections to queues **q1** and **q2**.
 
 .. code-block::
 
@@ -97,4 +97,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

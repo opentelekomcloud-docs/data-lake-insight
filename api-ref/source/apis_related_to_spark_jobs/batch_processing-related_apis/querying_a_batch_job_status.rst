@@ -37,7 +37,7 @@ None
 Response
 --------
 
-.. table:: **Table 2** Response parameter description
+.. table:: **Table 2** Response parameters
 
    +-----------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter | Mandatory | Type   | Description                                                                                                                                                                          |
@@ -79,4 +79,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

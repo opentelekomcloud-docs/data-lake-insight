@@ -80,14 +80,16 @@ Response
 Example Request
 ---------------
 
+Modify the scaling plan named **plan_A**. After the modification, the number of CUs of the queue is scaled to 64 at 19:30 on Thursday and Friday, and the scaling plan is not activated.
+
 .. code-block::
 
    {
-       "plan_name": "plan_Ad",
+       "plan_name": "plan_A",
        "target_cu": 64,
        "start_hour": 19,
        "start_minute": 30,
-       "repeat_day": ["THURSDAY","friday"],
+       "repeat_day": ["THURSDAY","FRIDAY"],
        "activate": false
    }
 
@@ -123,7 +125,7 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
 
 .. table:: **Table 5** Error codes
 

@@ -199,11 +199,13 @@ Response
 Example Request
 ---------------
 
+Create a Spark job. Set the Spark main class of the job to **org.apache.spark.examples.SparkPi**, specify the program package to **batchTest/spark-examples_2.11-2.1.0.luxor.jar**, and load the program package whose type is **jar** and the resource package whose type is **files**.
+
 .. code-block::
 
    {
        "file": "batchTest/spark-examples_2.11-2.1.0.luxor.jar",
-       "class_name": "org.apache.spark.examples.SparkPi",
+       "className": "org.apache.spark.examples.SparkPi",
        "sc_type": "A",
        "jars": ["demo-1.0.0.jar"],
        "files": ["count.txt"],
@@ -264,4 +266,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

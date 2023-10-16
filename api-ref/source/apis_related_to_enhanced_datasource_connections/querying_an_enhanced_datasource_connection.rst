@@ -19,7 +19,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** URI parameter
+   .. table:: **Table 1** URI parameters
 
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter     | Mandatory | Type   | Description                                                                                                                                   |
@@ -68,7 +68,7 @@ Response
 
 .. _dli_02_0189__table9559942155012:
 
-.. table:: **Table 3** **available_queue_info** parameter description
+.. table:: **Table 3** available_queue_info parameter description
 
    +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
    | Parameter   | Mandatory | Type   | Description                                                                                                  |
@@ -86,7 +86,7 @@ Response
 
 .. _dli_02_0189__table6991727151310:
 
-.. table:: **Table 4** **hosts** parameter description
+.. table:: **Table 4** hosts parameter description
 
    ========= ========= ====== =============================
    Parameter Mandatory Type   Description
@@ -108,22 +108,6 @@ Response
    +-----------+------------+------------------------------------------------------------------------------------------------------+
    | FAILED    | Failed     | Failed to create a datasource connection.                                                            |
    +-----------+------------+------------------------------------------------------------------------------------------------------+
-
-.. table:: **Table 6** **elastic_resource_pools** parameters
-
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                  |
-   +=============+===========+========+==============================================================================================================+
-   | peer_id     | No        | String | ID of a datasource connection.                                                                               |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
-   | status      | No        | String | Connection status. For details about the status code, see :ref:`Table 5 <dli_02_0189__table13946174752513>`. |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
-   | name        | No        | String | Elastic resource pool name                                                                                   |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
-   | err_msg     | No        | String | Detailed error message when the status is **FAILED**.                                                        |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
-   | update_time | No        | Long   | Update time                                                                                                  |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -168,11 +152,11 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 7 <dli_02_0189__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
+:ref:`Table 6 <dli_02_0189__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
 
 .. _dli_02_0189__tb12870f1c5f24b27abd55ca24264af36:
 
-.. table:: **Table 7** Status codes
+.. table:: **Table 6** Status codes
 
    =========== ========================
    Status Code Description
@@ -185,4 +169,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

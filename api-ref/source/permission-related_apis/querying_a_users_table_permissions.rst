@@ -43,17 +43,17 @@ Response
 
 .. table:: **Table 2** Response parameters
 
-   +------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type             | Description                                                                                                       |
-   +============+===========+==================+===================================================================================================================+
-   | is_success | No        | Boolean          | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
-   +------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | message    | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank.                                    |
-   +------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | user_name  | No        | String           | Name of the user whose permission is to be queried.                                                               |
-   +------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | privileges | No        | Array Of objects | Permission information. For details, see :ref:`Table 3 <dli_02_0042__table912853564418>`.                         |
-   +------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type             | Description                                                                                                                                |
+   +============+===========+==================+============================================================================================================================================+
+   | is_success | No        | Boolean          | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. Example value: **true**. |
+   +------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | message    | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank. Example value: left blank.                                  |
+   +------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | user_name  | No        | String           | Name of the user whose permission is to be queried.                                                                                        |
+   +------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | privileges | No        | Array Of objects | Permission information. For details, see :ref:`Table 3 <dli_02_0042__table912853564418>`.                                                  |
+   +------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0042__table912853564418:
 
@@ -65,9 +65,12 @@ Response
    | object          | No              | String           | Objects on which a user has permission.                                                                                                              |
    |                 |                 |                  |                                                                                                                                                      |
    |                 |                 |                  | -  If the object is in the format of **databases.\ Database name.tables.\ Table name**, the user has permission on the database.                     |
+   |                 |                 |                  |                                                                                                                                                      |
    |                 |                 |                  | -  If the object is in the format of **databases.\ Database name.tables.\ Table name\ columns.\ Column name**, the user has permission on the table. |
+   |                 |                 |                  |                                                                                                                                                      |
+   |                 |                 |                  |    Example value: **databases.dsstest.tables.obs_231**.                                                                                              |
    +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | privileges      | No              | Array of Strings | Permission of the user on a specified object.                                                                                                        |
+   | privileges      | No              | Array of Strings | Permission of the user on a specified object. Example value: [**DESCRIBE_TABLE**].                                                                   |
    +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
@@ -120,4 +123,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

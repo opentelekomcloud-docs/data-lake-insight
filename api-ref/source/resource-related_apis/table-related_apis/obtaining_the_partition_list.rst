@@ -31,7 +31,7 @@ URI
       | table_name    | Yes       | String | Name of a table.                                                                                                                              |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 2** **query** parameter description
+   .. table:: **Table 2** query parameter description
 
       +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                                              |
@@ -67,7 +67,7 @@ Response
 
 .. _dli_02_0250__table10945172033612:
 
-.. table:: **Table 4** **partitions** parameter description
+.. table:: **Table 4** partitions parameter description
 
    +-----------------+-----------+------------------+---------------------------------------------------------------------------------------+
    | Parameter       | Mandatory | Type             | Description                                                                           |
@@ -79,7 +79,7 @@ Response
 
 .. _dli_02_0250__table118615164215:
 
-.. table:: **Table 5** **partition_infos** parameter description
+.. table:: **Table 5** partition_infos parameter description
 
    +------------------+-----------+------------------+------------------------------------------------------------+
    | Parameter        | Mandatory | Type             | Description                                                |
@@ -185,4 +185,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

@@ -118,6 +118,8 @@ Response
 Example Request
 ---------------
 
+Update the Flink Jar job information. After the update, the job name is **test1**, the job execution queue is **testQueue**, and the job log function is disabled.
+
 .. code-block::
 
    {
@@ -174,4 +176,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
