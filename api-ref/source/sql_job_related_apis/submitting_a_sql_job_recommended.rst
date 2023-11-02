@@ -137,6 +137,8 @@ Response
 Example Request
 ---------------
 
+Submit a SQL job. The job execution database and queue are **db1** and **default**, respectively. Then, add the tags **workspace=space1** and **jobName=name1** for the job.
+
 .. code-block::
 
    {
@@ -214,4 +216,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

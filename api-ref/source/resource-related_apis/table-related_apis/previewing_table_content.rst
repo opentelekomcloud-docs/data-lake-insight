@@ -8,7 +8,7 @@ Previewing Table Content
 Function
 --------
 
-This API is used to preview the first ten rows of a table.
+This API is used to preview the first 10 rows in a table.
 
 URI
 ---
@@ -31,7 +31,7 @@ URI
       | table_name    | Yes       | String | Name of the table to be previewed.                                                                                                            |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 2** **query** parameter description
+   .. table:: **Table 2** query parameter description
 
       +-----------+-----------+--------+--------------------------------------------------------------------------------------------+
       | Parameter | Mandatory | Type   | Description                                                                                |
@@ -131,4 +131,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

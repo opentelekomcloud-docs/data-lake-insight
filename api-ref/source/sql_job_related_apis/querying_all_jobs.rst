@@ -136,7 +136,7 @@ Response
    +--------------------+-----------+------------------+---------------------------------------------------------------------------------------------------------------------------------------+
    | with_column_header | No        | Boolean          | Import jobs, which record whether the imported data contains column names.                                                            |
    +--------------------+-----------+------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   | detail             | Yes       | String           | JSON character string of related columns queried by using SQL statements.                                                             |
+   | detail             | Yes       | String           | JSON string of related columns queried using SQL statements.                                                                          |
    +--------------------+-----------+------------------+---------------------------------------------------------------------------------------------------------------------------------------+
    | statement          | Yes       | String           | SQL statements of a job.                                                                                                              |
    +--------------------+-----------+------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,4 +214,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

@@ -27,7 +27,7 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 2** **query** parameter description
+   .. table:: **Table 2** query parameter description
 
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter       | Mandatory       | Type            | Description                                                                                                                                           |
@@ -104,12 +104,12 @@ Response
    +----------------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | create_time          | No              | Long             | Time when a link is created. The time is converted to a UTC timestamp.                                                                                                                                              |
    +----------------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | hosts                | No              | Array of Objects | User-defined host information. For details, see :ref:`Table 6 <dli_02_0190__table6991727151310>`.                                                                                                                   |
+   | hosts                | No              | Array of objects | User-defined host information. For details, see :ref:`Table 6 <dli_02_0190__table6991727151310>`.                                                                                                                   |
    +----------------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0190__table9559942155012:
 
-.. table:: **Table 5** **available_queue_info** parameter description
+.. table:: **Table 5** available_queue_info parameter description
 
    +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------+
    | Parameter   | Mandatory | Type   | Description                                                                                                  |
@@ -206,4 +206,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

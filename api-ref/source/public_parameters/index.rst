@@ -6,7 +6,7 @@ Public Parameters
 =================
 
 -  :ref:`Status Codes <dli_02_0012>`
--  :ref:`Error Code <dli_02_0056>`
+-  :ref:`Error Codes <dli_02_0056>`
 -  :ref:`Obtaining a Project ID <dli_02_0183>`
 -  :ref:`Obtaining an Account ID <dli_02_0013>`
 
@@ -15,6 +15,6 @@ Public Parameters
    :hidden: 
 
    status_codes
-   error_code
+   error_codes
    obtaining_a_project_id
    obtaining_an_account_id

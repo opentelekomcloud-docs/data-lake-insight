@@ -32,23 +32,20 @@ Request
 
 .. table:: **Table 2** Request parameters
 
-   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type             | Description                                                                                                                  |
-   +=================+=================+==================+==============================================================================================================================+
-   | roles           | Yes             | Array of Strings | Role. Currently, only **obs_adm**, **dis_adm**, **ctable_adm**, **vpc_netadm**, **smn_adm**, and **te_admin** are supported. |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **obs_adm**: Administrator permissions for accessing and using the Object Storage Service.                                   |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **dis_adm**: Administrator permissions for using Data Ingestion Service data as the data source                              |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **ctable_adm**: Administrator permissions for accessing and using the CloudTable service                                     |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **vpc_netadm**: Administrator permissions for using the Virtual Private Cloud service                                        |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **smn_adm**: Administrator permissions for using the Simple Message Notification service                                     |
-   |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | **te_admin**: Tenant Administrator permissions                                                                               |
-   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                            |
+   +=================+=================+==================+========================================================================================================================+
+   | roles           | Yes             | Array of Strings | Role.                                                                                                                  |
+   |                 |                 |                  |                                                                                                                        |
+   |                 |                 |                  | Currently, only **obs_adm**, **dis_adm**, **ctable_adm**, **vpc_netadm**, **smn_adm**, and **te_admin** are supported. |
+   |                 |                 |                  |                                                                                                                        |
+   |                 |                 |                  | -  **obs_adm**: Administrator permissions for accessing and using the Object Storage Service.                          |
+   |                 |                 |                  | -  **dis_adm**: Administrator permissions for using Data Ingestion Service data as the data source                     |
+   |                 |                 |                  | -  **ctable_adm**: Administrator permissions for accessing and using the CloudTable service                            |
+   |                 |                 |                  | -  **vpc_netadm**: Administrator permissions for using the Virtual Private Cloud service                               |
+   |                 |                 |                  | -  **smn_adm**: Administrator permissions for using the Simple Message Notification service                            |
+   |                 |                 |                  | -  **te_admin**: Tenant Administrator permissions                                                                      |
+   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -65,6 +62,8 @@ Response
 
 Example Request
 ---------------
+
+Create a DLI user agency. The agency has the following permissions: **CloudTable Administrator** for accessing and using CloudTable, **VPC Administrator** for using VPC, **DIS Administrator** for accessing and using DIS, **SMN Administrator** for using SMN, and accessing and using OBS.
 
 .. code-block::
 
@@ -107,4 +106,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

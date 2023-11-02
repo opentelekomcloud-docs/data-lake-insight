@@ -278,71 +278,6 @@ Example Response
           }
       }
 
--  The following example takes the **flink_opensource_sql_job** type as an example:
-
-   .. code-block::
-
-      {
-          "is_success": "true",
-          "message": "The job information query succeeds.",
-          "job_detail": {
-              "job_type": "flink_opensource_sql_job",
-              "status_desc": "",
-              "create_time": 1637632872828,
-              "sql_body": "xxx",
-              "savepoint_path": null,
-              "main_class": null,
-              "queue_name": "xie_container_general",
-              "execution_graph": "xxx",
-              "start_time": 1638433497621,
-              "update_time": 1638449337993,
-              "job_config": {
-                  "checkpoint_enabled": true,
-                  "checkpoint_interval": 600,
-                  "checkpoint_mode": "exactly_once",
-                  "log_enabled": true,
-                  "obs_bucket": "dli-test",
-                  "root_id": -1,
-                  "edge_group_ids": null,
-                  "graph_editor_enabled": false,
-                  "graph_editor_data": "",
-                  "manager_cu_number": 1,
-                  "executor_number": null,
-                  "executor_cu_number": null,
-                  "cu_number": 2,
-                  "parallel_number": 3,
-                  "smn_topic": "",
-                  "restart_when_exception": true,
-                  "resume_checkpoint": true,
-                  "resume_max_num": -1,
-                  "checkpoint_path": null,
-                  "idle_state_retention": 3600,
-                  "config_url": null,
-                  "udf_jar_url": "test/flink_test-1.0-SNAPSHOT-jar-with-dependencies.jar",
-                  "dirty_data_strategy": "0",
-                  "entrypoint": "test/flink_test-1.0-SNAPSHOT-jar-with-dependencies.jar",
-                  "dependency_jars": null,
-                  "dependency_files": null,
-                  "tm_cus": 1,
-                  "tm_slot_num": 3,
-                  "image": null,
-                  "feature": null,
-                  "flink_version": null,
-                  "operator_config": "xxx",
-                  "static_estimator_config": "xxx",
-                  "runtime_config": null
-              },
-              "user_id": "xxx",
-              "project_id": "xxx",
-              "run_mode": "exclusive_cluster",
-              "job_id": 90634,
-              "name": "test_guoquan",
-              "desc": "",
-              "entrypoint_args": null,
-              "status": "job_cancel_success"
-          }
-      }
-
 Status Codes
 ------------
 
@@ -362,4 +297,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

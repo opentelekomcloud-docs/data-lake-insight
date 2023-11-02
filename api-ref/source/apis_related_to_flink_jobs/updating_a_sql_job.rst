@@ -108,13 +108,15 @@ Request
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | resume_max_num          | No              | Integer          | Maximum number of retry times upon exceptions. The unit is times/hour. Value range: -1 or greater than 0. The default value is **-1**, indicating that the number of times is unlimited.                                                                                |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | static_estimator_config | No              | String           | Traffic or hit ratio of each operator, which is a character string in JSON format. Example:                                                                                                                                                                             |
+   | static_estimator_config | No              | String           | Traffic or hit ratio of each operator, which is a string in JSON format. Example:                                                                                                                                                                                       |
    |                         |                 |                  |                                                                                                                                                                                                                                                                         |
    |                         |                 |                  | .. code-block::                                                                                                                                                                                                                                                         |
    |                         |                 |                  |                                                                                                                                                                                                                                                                         |
    |                         |                 |                  |    {"operator_list":[{"id":"0a448493b4782967b150582570326227","rate_factor":0.55},{"id":"6d2677a0ecc3fd8df0b72ec675edf8f4","rate_factor":1},{"id":"ea632d67b7d595e5b851708ae9ad79d6","rate_factor":0.55},{"id":"bc764cd8ddf7a0cff126f51c16239658","output_rate":2000}]} |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | runtime_config          | No              | String           | Customizes optimization parameters when a Flink job is running.                                                                                                                                                                                                         |
+   +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | flink_version           | No              | String           | Flink version. Currently, only 1.10 and 1.12 are supported.                                                                                                                                                                                                             |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
@@ -144,6 +146,8 @@ Response
 
 Example Request
 ---------------
+
+Update an existing SQL job. The updated job is named **myjob** and runs on **testQueue** in shared mode.
 
 .. code-block::
 
@@ -203,4 +207,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

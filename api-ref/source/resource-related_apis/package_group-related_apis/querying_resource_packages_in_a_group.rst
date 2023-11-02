@@ -19,7 +19,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** URI parameter description
+   .. table:: **Table 1** URI parameters
 
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter     | Mandatory | Type   | Description                                                                                                                                   |
@@ -29,7 +29,7 @@ URI
       | resource_name | Yes       | String | Name of the resource package that is uploaded.                                                                                                |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 2** **query** parameter description
+   .. table:: **Table 2** query parameter description
 
       +-----------+-----------+--------+---------------------------------------------------------------------------+
       | Parameter | Mandatory | Type   | Description                                                               |
@@ -112,4 +112,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

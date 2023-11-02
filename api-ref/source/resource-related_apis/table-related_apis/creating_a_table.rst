@@ -136,7 +136,7 @@ Response
 Example Request
 ---------------
 
--  Sample request when **data_location** is **OBS**.
+-  Create a table whose **data_location** is **OBS** and data format of CSV.
 
    .. code-block::
 
@@ -172,7 +172,7 @@ Example Request
 
       The values of **date_format** and **timestamp_format** must be the same as the time format in the imported CSV file.
 
--  Sample request when **data_location** is **VIEW**.
+-  Create a table whose **data_location** is **VIEW**.
 
    .. code-block::
 
@@ -226,4 +226,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

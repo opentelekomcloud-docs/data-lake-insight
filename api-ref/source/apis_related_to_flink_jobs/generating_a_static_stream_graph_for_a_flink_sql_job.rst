@@ -51,14 +51,16 @@ Request
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
    | static_estimator        | No              | Boolean         | Whether to estimate static resources.                                                 |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | job_type                | No              | String          | Job types. Only **flink_opensource_sql_job job** is supported.                        |
+   | job_type                | No              | String          | Job types.                                                                            |
+   |                         |                 |                 |                                                                                       |
+   |                         |                 |                 | Only **flink_opensource_sql_job job** is supported.                                   |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
    | graph_type              | No              | String          | Stream graph type. Currently, the following two types of stream graphs are supported: |
    |                         |                 |                 |                                                                                       |
    |                         |                 |                 | -  **simple_graph**: Simplified stream graph                                          |
    |                         |                 |                 | -  **job_graph**: Static stream graph                                                 |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | static_estimator_config | No              | String          | Traffic or hit ratio of each operator, which is a character string in JSON format.    |
+   | static_estimator_config | No              | String          | Traffic or hit ratio of each operator, which is a string in JSON format.              |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
 
 Response
@@ -80,6 +82,8 @@ Response
 
 Example Request
 ---------------
+
+Generate a static stream graph for a Flink SQL job.
 
 .. code-block::
 
@@ -128,4 +132,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

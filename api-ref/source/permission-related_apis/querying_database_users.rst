@@ -39,31 +39,31 @@ Response
 
 .. table:: **Table 2** Response parameters
 
-   +---------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | Parameter     | Mandatory | Type             | Description                                                                                                       |
-   +===============+===========+==================+===================================================================================================================+
-   | is_success    | No        | Boolean          | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
-   +---------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | message       | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank.                                    |
-   +---------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | database_name | No        | String           | Name of the database to be queried.                                                                               |
-   +---------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
-   | privileges    | No        | Array of objects | Permission information. For details, see :ref:`Table 3 <dli_02_0040__table34433526275>`.                          |
-   +---------------+-----------+------------------+-------------------------------------------------------------------------------------------------------------------+
+   +---------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter     | Mandatory | Type             | Description                                                                                                                                |
+   +===============+===========+==================+============================================================================================================================================+
+   | is_success    | No        | Boolean          | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. Example value: **true**. |
+   +---------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | message       | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank. Example value: left blank.                                  |
+   +---------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | database_name | No        | String           | Name of the database to be queried. Example value: **dsstest**.                                                                            |
+   +---------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | privileges    | No        | Array of objects | Permission information. For details, see :ref:`Table 3 <dli_02_0040__table34433526275>`.                                                   |
+   +---------------+-----------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0040__table34433526275:
 
 .. table:: **Table 3** **privileges** parameters
 
-   +------------+-----------+------------------+--------------------------------------------------------------+
-   | Parameter  | Mandatory | Type             | Description                                                  |
-   +============+===========+==================+==============================================================+
-   | is_admin   | No        | Boolean          | Whether the database user is an administrator.               |
-   +------------+-----------+------------------+--------------------------------------------------------------+
-   | user_name  | No        | String           | Name of the user who has permission on the current database. |
-   +------------+-----------+------------------+--------------------------------------------------------------+
-   | privileges | No        | Array of Strings | Permission of the user on the database.                      |
-   +------------+-----------+------------------+--------------------------------------------------------------+
+   +------------+-----------+------------------+-----------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type             | Description                                                                             |
+   +============+===========+==================+=========================================================================================+
+   | is_admin   | No        | Boolean          | Whether the database user is an administrator. Example value: **true**.                 |
+   +------------+-----------+------------------+-----------------------------------------------------------------------------------------+
+   | user_name  | No        | String           | Name of the user who has permission on the current database. Example value: **test**.   |
+   +------------+-----------+------------------+-----------------------------------------------------------------------------------------+
+   | privileges | No        | Array of Strings | Permission of the user on the database. Example value: [**ALTER_TABLE_ADD_PARTITION**]. |
+   +------------+-----------+------------------+-----------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -106,4 +106,4 @@ Example Response
 
 .. note::
 
-   If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+   If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

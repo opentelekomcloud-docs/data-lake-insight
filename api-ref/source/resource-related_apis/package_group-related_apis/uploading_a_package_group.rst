@@ -19,7 +19,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** URI parameter description
+   .. table:: **Table 1** URI parameter
 
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter  | Mandatory | Type   | Description                                                                                                                                   |
@@ -93,7 +93,7 @@ Response
 
 .. _dli_02_0130__en-us_topic_0103345070_table111231336220:
 
-.. table:: **Table 5** **details** parameter description
+.. table:: **Table 5** details parameter description
 
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                    |
@@ -117,6 +117,8 @@ Response
 
 Example Request
 ---------------
+
+Upload a JAR file from OBS to DLI and name the group **gatk**.
 
 .. code-block::
 
@@ -194,4 +196,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.

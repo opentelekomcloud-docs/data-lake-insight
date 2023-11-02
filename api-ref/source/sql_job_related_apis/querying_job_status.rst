@@ -77,7 +77,7 @@ Response
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | table_name      | No              | String           | Name of the target table. **table_name** is valid only for jobs of the **IMPORT** **EXPORT**, and **QUERY** types.                                                          |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | detail          | Yes             | String           | JSON character string for information about related columns.                                                                                                                |
+   | detail          | Yes             | String           | JSON string for information about related columns.                                                                                                                          |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | statement       | Yes             | String           | SQL statements of a job.                                                                                                                                                    |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -144,4 +144,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Code <dli_02_0056>`.
+If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
