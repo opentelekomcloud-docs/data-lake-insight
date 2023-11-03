@@ -10,3 +10,4 @@ Data Lake Insight (DLI) is a serverless data processing and analysis service ful
       :service_type: dli
       :umn: This document provides detailed operation guidance of DLI to help you learn and use DLI.
       :api-ref: This document introduces API reference provided by DLI and describes functions and parameters of each API.
+      :sqlreference: This document describes the common configuration items of the SQL syntax for DLI.
