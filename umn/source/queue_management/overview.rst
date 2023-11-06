@@ -10,13 +10,28 @@ Queue
 
 Queues in DLI are computing resources, which are the basis for using DLI. All executed jobs require computing resources.
 
-Currently, DLI provides two types of queues, **For SQL** and **For general use**. SQL queues are used to run SQL jobs. General-use queues are compatible with Spark queues of earlier versions and are used to run Spark and Flink jobs.
+Currently, DLI provides two types of queues: **For SQL** and **For general purpose**.
 
-.. note::
+-  For SQL: The queue is used to run SQL jobs.
+-  For general purpose: The queue is used to run Spark programs, Flink SQL jobs, and Flink Jar jobs.
 
-   -  The SQL queue automatically restarts every 12 hours.
-   -  Queues of different types cannot be directly switched. If you need to change a queue, purchase a new queue.
-   -  The default queue is preset. Do not delete it.
+Constraints
+-----------
+
+-  A queue named **default** is preset in DLI for you to experience. Resources are allocated on demand.
+
+-  Queue types:
+
+   -  For SQL: Spark SQL jobs can be submitted to SQL queues.
+   -  For general purpose: The queue is used to run Spark programs, Flink SQL jobs, and Flink Jar jobs.
+
+   The queue type cannot be changed. If you want to use another queue type, purchase a new queue.
+
+-  The region of a queue cannot be changed.
+
+-  A newly created queue can be scaled in or out only after a job is executed on the queue.
+
+-  DLI queues cannot access the Internet.
 
 Difference Between Computing and Storage Resources
 --------------------------------------------------

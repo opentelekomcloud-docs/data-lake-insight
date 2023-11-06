@@ -27,7 +27,7 @@ The following example assumes that the authorized user has the permission to cre
            {
                "Effect": "Allow",
                "Action": [
-                   "dli:database:create_table"
+                   "dli:database:createTable"
                ],
                "Resource": [
                    "dli:*:*:database:*"
@@ -135,7 +135,7 @@ You can set actions and resources of different levels based on scenarios.
       +==================================================+=============================================================================+
       | DLI:``*``:``*``:table:databases.dbname.tables.\* | DLI, any region, any account ID, all table resources of database **dbname** |
       +--------------------------------------------------+-----------------------------------------------------------------------------+
-      | DLI:``*``:``*``:database:databases.dbname        | DLI, any region, any account ID, queue of database **dbname**               |
+      | DLI:``*``:``*``:database:databases.dbname        | DLI, any region, any account ID, resource of database **dbname**            |
       +--------------------------------------------------+-----------------------------------------------------------------------------+
       | DLI:``*``:``*``:queue:queues.\*                  | DLI, any region, any account ID, any queue resource                         |
       +--------------------------------------------------+-----------------------------------------------------------------------------+
@@ -180,10 +180,10 @@ You can set actions and resources of different levels based on scenarios.
               {
                   "Effect": " Allow",
                   "Action": [
-                        "dli:database:create_database",
-                        "dli:database:drop_database",
-                        "dli:queue:submit_job",
-                        "dli:table:drop_table"
+                        "dli:database:createDatabase",
+                        "dli:database:dropDatabase",
+                        "dli:queue:submitJob",
+                        "dli:table:dropTable"
                   ],
                   "Resource": [
                         "dli:*:*:database:*",
@@ -209,7 +209,7 @@ Example Custom Policies
                  {
                      "Effect": "Allow",
                      "Action": [
-                         "dli:database:create_table"
+                         "dli:database:createTable"
                      ],
                      "Resource": [
                          "dli:*:*:database:*"
@@ -239,7 +239,9 @@ Example Custom Policies
 
 -  Example 2: Deny policies
 
-   A deny policy must be used in conjunction with other policies to take effect. If the permissions assigned to a user contain both Allow and Deny actions, the Deny actions take precedence over the Allow actions.
+   A deny policy must be used together with other policies. That is, a user can set a deny policy only after being assigned some operation permissions. Otherwise, the deny policy does not take effect.
+
+   If the permissions assigned to a user contain both Allow and Deny actions, the Deny actions take precedence over the Allow actions.
 
    -  Deny users to create or delete databases, submit jobs (except the default queue), or delete tables.
 
@@ -251,10 +253,10 @@ Example Custom Policies
                  {
                      "Effect": "Deny",
                      "Action": [
-                         "dli:database:create_database",
-                         "dli:database:drop_database",
-                         "dli:queue:submit_job",
-                         "dli:table:drop_table"
+                         "dli:database:createDatabase",
+                         "dli:database:dropDatabase",
+                         "dli:queue:submitJob",
+                         "dli:table:dropTable"
                      ],
                      "Resource": [
                          "dli:*:*:database:*",
@@ -275,7 +277,7 @@ Example Custom Policies
                  {
                      "Effect": "Deny",
                      "Action": [
-                         "dli:queue:submit_job"
+                         "dli:queue:submitJob"
                      ],
                      "Resource": [
                          "dli:*:*:queue:queues.demo"

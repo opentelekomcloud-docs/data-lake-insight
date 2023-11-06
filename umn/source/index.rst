@@ -13,7 +13,8 @@ Data Lake Insight - User Guide
    queue_management/index
    data_management/index
    job_templates/index
-   datasource_connections/index
+   enhanced_datasource_connections/index
+   datasource_authentication/index
    global_configuration/index
    permissions_management/index
    other_common_operations/index

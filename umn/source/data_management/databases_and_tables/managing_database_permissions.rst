@@ -5,8 +5,8 @@
 Managing Database Permissions
 =============================
 
-Operation Scenarios
--------------------
+Scenario
+--------
 
 -  You can isolate databases allocated to different users by setting permissions to ensure data query performance.
 -  The administrator and database owner have all permissions, which cannot be set or modified by other users.

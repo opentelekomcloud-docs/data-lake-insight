@@ -15,24 +15,21 @@ DLI supports standard SQL and is compatible with Spark SQL and Flink SQL. It als
 Functions
 ---------
 
-You can query and analyze heterogeneous data sources such as RDS, and DWS on the cloud using access methods, such as visualized interface, RESTful API, JDBC, ODBC, and Beeline. The data format is compatible with five mainstream data formats: CSV, JSON, Parquet, and ORC.
+You can query and analyze heterogeneous data sources such as RDS, and GaussDB(DWS) on the cloud using access methods, such as visualized interface, RESTful API, JDBC, and Beeline. The data format is compatible with five mainstream data formats: CSV, JSON, Parquet, and ORC.
 
 -  Basic functions
 
    -  You can use standard SQL statements to query in SQL jobs.
-   -  Flink jobs support Flink SQL online analysis. Aggregation functions such as Window and Join, geographic functions, and CEP functions are supported. SQL is used to express service logic, facilitating service implementation. For details, see .
-   -  For spark jobs, fully-managed Spark computing can be performed. You can submit computing tasks through interactive sessions or in batch to analyze data in the fully managed Spark queues. For details, see .
+   -  Flink jobs support Flink SQL online analysis. Aggregation functions such as Window and Join, geographic functions, and CEP functions are supported. SQL is used to express service logic, facilitating service implementation.
+   -  For spark jobs, fully-managed Spark computing can be performed. You can submit computing tasks through interactive sessions or in batch to analyze data in the fully managed Spark queues.
 
 -  Federated analysis of heterogeneous data sources
 
-   -  Spark datasource connection: Data sources such as DWS, RDS, and CSS can be accessed through DLI. For details, see .
-
+   -  Spark datasource connection: Data sources such as DWS, RDS, and CSS can be accessed through DLI.
    -  Interconnection with multiple cloud services is supported in Flink jobs to form a rich stream ecosystem. The DLI stream ecosystem consists of cloud service ecosystems and open source ecosystems.
 
       -  Cloud service ecosystem: DLI can interconnect with other services in Flink SQL. You can directly use SQL to read and write data from cloud services.
       -  Open-source ecosystems: After connections to other VPCs are established through datasource connections, you can access all data sources and output targets (such as Kafka, HBase, and Elasticsearch) supported by Flink and Spark in your dedicated DLI queue.
-
-      For details, see .
 
 -  Storage-compute decoupling
 
@@ -59,14 +56,16 @@ DLI is a serverless big data query and analysis service. It has the following ad
 Accessing DLI
 -------------
 
-A web-based service management platform is provided. You can access DLI using the management console or HTTPS-based APIs, or connect to the DLI server through a client such as JDBC or ODBC.
+A web-based service management platform is provided. You can access DLI using the management console or HTTPS-based APIs, or connect to the DLI server through the JDBC client.
 
 -  Using the management console
 
-   You can submit SQL, Spark, or Flink jobs on the DLI management console. Log in to the management console. Choose **EI Enterprise Intelligence** > **Data Lake Insight**.
+   You can submit SQL, Spark, or Flink jobs on the DLI management console.
+
+   Log in to the management console and choose **Data Analysis** > **Data Lake Insight**.
 
 -  Using APIs
 
    If you need to integrate DLI into a third-party system for secondary development, you can call DLI APIs to use the service.
 
-   For details, see *Data Lake Insight API Reference*.
+   For details, see `Data Lake Insight API Reference <https://docs.otc.t-systems.com/data-lake-insight/api-ref/>`__.

@@ -5,12 +5,12 @@
 Managing Permissions on Packages and Package Groups
 ===================================================
 
-Scenarios
----------
+Scenario
+--------
 
 -  You can isolate package groups or packages allocated to different users by setting permissions to ensure data query performance.
 -  The administrator and the owner of a package group or package have all permissions. You do not need to set permissions and the permissions cannot be modified by other users.
--  When you set permissions on a package group or a package to a new user, the user group to which the user belongs must have the Tenant Guest permission. For details about the Tenant Guest permission and how to apply for the permission, see .
+-  When you set permissions on a package group or a package to a new user, the user group the user belong to must have the Tenant Guest permission.
 
 On the **Package Management** page, click **Manage Permissions** in the **Operation** column of the target package. On the displayed **User Permission Info** page, you can grant permissions for the package group or package, set and revoke user permissions.
 
@@ -89,10 +89,10 @@ Permissions Description
 
 -  Package group permissions
 
-   Querying permissions. A group owner can view the created package group and all packages in the group, and can also view package groups on which he or she has all permissions.
+   Querying permissions. A group owner can view the created package group and all packages in the group, and can also view package groups on which they have all permissions.
 
    A package group is a unit. If you select a group when creating a package, you can grant only the permissions of the package group to other users.
 
 -  Package permissions
 
-   Querying permissions. A package owner can view the created packages, and can also view packages on which he or she has all permissions.
+   Querying permissions. A package owner can view the created packages, and can also view packages on which they have all permissions.

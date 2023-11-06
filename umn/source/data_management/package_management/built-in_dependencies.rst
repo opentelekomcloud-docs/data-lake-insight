@@ -640,8 +640,6 @@ Spark 2.3.2 Dependencies
 -  zookeeper-jute-3.5.6-ei-302002.jar
 -  zstd-jni-1.4.4-11.jar
 
-.. _dli_01_0397__section38822016193611:
-
 Flink 1.7.2 Dependencies
 ------------------------
 
@@ -695,8 +693,6 @@ Flink 1.7.2 Dependencies
 -  okio-1.14.0.jar
 -  slf4j-api-1.7.21.jar
 -  tensorflow-1.12.0.jar
-
-.. _dli_01_0397__section269411551620:
 
 Flink 1.10 Dependencies
 -----------------------

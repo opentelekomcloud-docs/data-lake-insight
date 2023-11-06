@@ -5,8 +5,8 @@
 Creating and Submitting a Flink OpenSource SQL Job
 ==================================================
 
-Scenarios
----------
+Scenario
+--------
 
 DLI Flink jobs can use other cloud services as data sources and sink streams for real-time compute. This example describes how to create and submit a Flink Opensource SQL job that uses Kafka as the input stream and RDS as the output stream.
 
@@ -55,7 +55,7 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
 
    -  For details about how to create a security group, see "Creating a Security Group" in the *Virtual Private Cloud User Guide*. For details about how to add rules to a security group, see "Creating a Subnet for the VPC" in the *Virtual Private Cloud User Guide*.
 
-   For more information, see **Managing Kafka Premium Instances** > in the *Distributed Message Service User Guide*.
+   For more information, see in *Distributed Message Service for Kafka User Guide*.
 
 #. Create a DMS for Kafka Instance for job input streams.
 
@@ -67,11 +67,12 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
       -  **Project**: Keep the default value.
       -  **AZ**: Keep the default value.
       -  **Instance Name**: **kafka-dliflink**
+      -  **Specifications**: **Default**
       -  **Enterprise Project**: **default**
       -  **Version**: Keep the default value.
       -  **CPU Architecture**: Keep the default value.
-      -  **Specifications**: Select the specifications as needed.
-      -  **Brokers**: Keep the default value.
+      -  **Broker Flavor**: Select a flavor as needed.
+      -  **Brokers**: Retain the default value.
       -  **Storage Space**: Keep the default value.
       -  **Capacity Threshold Policy**: Keep the default value.
       -  **VPC** and **Subnet**: Select the VPC and subnet created in :ref:`1 <dli_01_0531__en-us_topic_0000001354966081_li485218325375>`.
@@ -82,7 +83,7 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
       -  **More Settings**: Do not configure this parameter.
 
    d. Click **Buy**. The confirmation page is displayed.
-   e. Click **Submit**.
+   e. Confirm that the instance information is correct, read and agree to the , and click **Submit**. It takes about 10 to 15 minutes to create an instance.
 
 #. Create a Kafka topic.
 
@@ -101,11 +102,11 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
 Step 2: Prepare a Data Output Channel
 -------------------------------------
 
-To use RDS as the data output channel, create an RDS MySQL instance. For details, see Getting Started with RDS for MySQL.
+To use RDS as the data output channel, create an RDS MySQL instance. For details, see "Getting Started with RDS for MySQL" in *Getting Started with Relational Database Service*.
 
-#. Log in to the RDS console.
+#. Log in to the RDS management console.
 
-#. In the upper left corner of the management console, select the target region and project.
+#. Select a region in the upper left corner.
 
 #. Click **Buy DB Instance** in the upper right corner of the page and set related parameters. Retain the default values for other parameters.
 
@@ -117,7 +118,6 @@ To use RDS as the data output channel, create an RDS MySQL instance. For details
    -  **Storage Type**: Cloud SSD may be selected by default.
    -  **Primary AZ**: Select a custom AZ.
    -  **Standby AZ**: Select a custom AZ.
-   -  **Time Zone**: Keep the default value.
    -  **Instance Class**: Select a class as needed and choose **2 vCPUs \| 8 GB**.
    -  **Storage Space (GB)**: Set it to **40**.
    -  **VPC**: Select the VPC and subnet created in :ref:`1 <dli_01_0531__en-us_topic_0000001354966081_li485218325375>`.
@@ -126,7 +126,6 @@ To use RDS as the data output channel, create an RDS MySQL instance. For details
    -  **Administrator Password**: \***\* (Keep the password secure. The system cannot retrieve your password.)
    -  **Confirm Password**: \***\*
    -  **Parameter Template**: Choose **Default-MySQL-8.0**.
-   -  **Read Replica**: Select **Skip**.
 
 #. Click **Next** and confirm the specifications.
 
@@ -190,7 +189,7 @@ Flink OpenSource SQL jobs cannot run on the default queue. You need to create a 
 #. Configure the following parameters:
 
    -  **Name**: **Flinktest**
-   -  **Queue Usage**: Select **For general purpose** and enable **Dedicated Resource Mode**.
+   -  **Type**: **For general purpose**. Select **Dedicated Resource Mode**.
    -  **Specifications**: **16 CUs**
    -  **Enterprise Project**: **default**
    -  **Description**: Leave it blank.
@@ -226,7 +225,7 @@ You need to create an enhanced datasource connection for the Flink OpenSource SQ
 
    c. Click the security group name in the **Network** pane. On the displayed page, click the **Inbound Rules** tab and add a rule to allow access from the DLI queue.
 
-      For example, if the CIDR block of the queue is 10.0.0.0/16, set **Priority** to **1**, **Action** to **Allow**, **Protocol** to **TCP**, **Type** to **IPv4**, **Source** to **10.0.0.0/16**, and click **OK**.
+      For example, if the CIDR block of the queue is **10.0.0.0/16**, set **Protocol** to **TCP**, **Type** to **IPv4**, **Source** to **10.0.0.0/16**, and click **OK**.
 
 #. .. _dli_01_0531__li9182032194114:
 

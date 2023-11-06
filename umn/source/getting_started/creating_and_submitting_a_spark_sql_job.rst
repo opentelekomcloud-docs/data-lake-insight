@@ -5,8 +5,8 @@
 Creating and Submitting a Spark SQL Job
 =======================================
 
-Scenarios
----------
+Scenario
+--------
 
 DLI can query data stored in OBS. This section describes how to us a Spark SQL job on DLI to query OBS data.
 
@@ -39,7 +39,7 @@ Before you use DLI to query and analyze data, upload data files to OBS.
 #. Create a bucket. In this example, the bucket name is **obs1**.
 
    a. Click **Create Bucket** in the upper right corner.
-   b. On the displayed **Create Bucket** page, enter the **Bucket Name**. Retain the default values for other parameters or set them as required.
+   b. On the displayed **Create Bucket** page, enter the **Bucket Name**. Retain the default values for other parameters or adjust them as needed.
 
       .. note::
 
@@ -47,9 +47,9 @@ Before you use DLI to query and analyze data, upload data files to OBS.
 
    c. Click **Create Now**.
 
-#. Click **obs1** to switch to the **Overview** page.
+#. Click **obs1** to access its **Objects** tab page.
 
-#. In the left navigation pane, click **Objects**. Click **Upload Object**. In the displayed dialog box, drag files or folders to upload or add file, for example, **sampledata.csv** to the file upload box. Then, click **Upload**.
+#. Click **Upload Object**. In the displayed dialog box, drag a desired file or folder, for example, **sampledata.csv** to the **Upload Object** area. Then, click **Upload**.
 
    You can create a **sampledata.txt** file, copy the following content separated by commas (,), and save the file as **sampledata.csv**.
 
@@ -79,7 +79,7 @@ A queue is the basis for using DLI. Before executing an SQL job, you need to cre
 
    #. Log in to the DLI management console.
 
-   #. On the DLI management console, click **SQL Editor** in the navigation pane on the left. The **SQL Editor** page is displayed.
+   #. In the left navigation pane of the DLI management console, choose **SQL Editor**.
 
    #. On the left pane, select the **Queues** tab, and click |image1| next to **Queues**.
 
@@ -96,7 +96,7 @@ Before querying data, create a database, for example, **db1**.
 
    The **default** database is a built-in database. You cannot create the **default**. database.
 
-#. On the DLI management console, click **SQL Editor** in the navigation pane on the left. The **SQL Editor** page is displayed.
+#. In the left navigation pane of the DLI management console, choose **SQL Editor**.
 
 #. In the editing window on the right of the **SQL Editor** page, enter the following SQL statement and click **Execute**. Read and agree to the privacy agreement, and click **OK**.
 
@@ -104,7 +104,7 @@ Before querying data, create a database, for example, **db1**.
 
       create database db1;
 
-   After database **db1** is successfully created, **db1** will be displayed in the **Database** list.
+   After the database is successfully created, click |image2| in the middle pane to refresh the database list. The new database **db1** is displayed in the list.
 
    .. note::
 
@@ -125,7 +125,7 @@ After database **db1** is created, create a table (for example, **table1**) cont
 
       create table table1 (id int, name string) using csv options (path 'obs://obs1/sampledata.csv');
 
-   After the table is created, click the **Databases** tab and then select **db1**. The created table **table1** is displayed in the **Table** area.
+   After the table is successfully created, click the **Databases** tab then **db1**. The created table **table1** is displayed in the table list.
 
 .. _dli_01_0002__section37788816112733:
 
@@ -142,6 +142,7 @@ After performing the preceding steps, you can start querying data.
 
 #. Click **Execute**. The system starts the query.
 
-   After the SQL statement is executed successfully, you can view the query result in **View Result** under the SQL job editing window.
+   After the SQL statement is successfully executed or fails to be executed, you can view the query result on the **View Result** tab under the SQL job editing window.
 
 .. |image1| image:: /_static/images/en-us_image_0276441461.png
+.. |image2| image:: /_static/images/en-us_image_0000001597283981.png

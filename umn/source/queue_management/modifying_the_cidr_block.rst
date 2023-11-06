@@ -16,4 +16,4 @@ Procedure
 
 #. On the left of the DLI management console, click **Resources** >\ **Queue Management**.
 #. Select the queue to be modified and click **Modify CIDR Block** in the **Operation** column.
-#. Enter the required CIDR block and click **OK**.
+#. Enter the required CIDR block and click **OK**. After the CIDR block of the queue is successfully changed, wait for 5 to 10 minutes until the cluster to which the queue belongs is restarted and then run jobs on the queue.
