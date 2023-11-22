@@ -10,10 +10,11 @@ Queue Management
 -  :ref:`Creating a Queue <dli_01_0363>`
 -  :ref:`Deleting a Queue <dli_01_0016>`
 -  :ref:`Modifying the CIDR Block <dli_01_0443>`
--  :ref:`Elastic Scaling <dli_01_0487>`
+-  :ref:`Elastic Queue Scaling <dli_01_0487>`
 -  :ref:`Scheduling CU Changes <dli_01_0488>`
 -  :ref:`Testing Address Connectivity <dli_01_0489>`
--  :ref:`Creating a Message Notification Topic <dli_01_0421>`
+-  :ref:`Creating an SMN Topic <dli_01_0421>`
+-  :ref:`Managing Queue Tags <dli_01_0022>`
 
 .. toctree::
    :maxdepth: 1
@@ -24,7 +25,8 @@ Queue Management
    creating_a_queue
    deleting_a_queue
    modifying_the_cidr_block
-   elastic_scaling
+   elastic_queue_scaling
    scheduling_cu_changes
    testing_address_connectivity
-   creating_a_message_notification_topic
+   creating_an_smn_topic
+   managing_queue_tags

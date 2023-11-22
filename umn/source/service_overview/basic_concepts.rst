@@ -64,4 +64,4 @@ Constants and Variables
 The differences between constants and variables are as follows:
 
 -  During the running of a program, the value of a constant cannot be changed.
--  Variables are readable and writable, whereas constants are read-only. A variable is a memory address that contains a segment of data that can be changed during program running. For example, in **int a = 123**. **a** is an integer variable.
+-  Variables are readable and writable, whereas constants are read-only. A variable is a memory address that contains a segment of data that can be changed during program running. For example, in **int a = 123**, **a** is an integer variable.

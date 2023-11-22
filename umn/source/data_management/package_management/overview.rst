@@ -17,6 +17,17 @@ Package management provides the following functions:
 
 -  :ref:`Modifying the Owner <dli_01_0478>`
 
+Constraints
+-----------
+
+-  A package can be deleted, but a package group cannot be deleted.
+-  The following types of packages can be uploaded:
+
+   -  **JAR**: JAR file
+   -  **PyFile**: User Python file
+   -  **File**: User file
+   -  **ModelFile**: User AI model file
+
 Package Management Page
 -----------------------
 

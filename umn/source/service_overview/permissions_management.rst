@@ -9,7 +9,7 @@ If you need to assign different permissions to employees in your enterprise to a
 
 With IAM, you can use your account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, some software developers in your enterprise need to use DLI resources but must not delete them or perform any high-risk operations. To achieve this result, you can create IAM users for the software developers and grant them only the permissions required for using DLI resources.
 
-If the account has met your requirements, you do not need to create an independent IAM user for permission management. Then you can skip this section. This will not affect other functions of DLI.
+If your account does not require individual IAM users for permissions management, you may skip over this section.
 
 DLI Permissions
 ---------------

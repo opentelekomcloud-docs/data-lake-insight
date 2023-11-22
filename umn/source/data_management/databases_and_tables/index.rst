@@ -15,6 +15,7 @@ Databases and Tables
 -  :ref:`Exporting Data from DLI to OBS <dli_01_0010>`
 -  :ref:`Viewing Metadata <dli_01_0008>`
 -  :ref:`Previewing Data <dli_01_0007>`
+-  :ref:`Managing Tags <dli_01_0552>`
 
 .. toctree::
    :maxdepth: 1
@@ -30,3 +31,4 @@ Databases and Tables
    exporting_data_from_dli_to_obs
    viewing_metadata
    previewing_data
+   managing_tags

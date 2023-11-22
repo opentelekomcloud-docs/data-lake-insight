@@ -27,7 +27,7 @@ You can edit a created job, for example, by modifying the SQL statement, job nam
 
 #. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
 
-#. In the row where the job you want to edit locates, click **Edit** in the **Operation** column to switch to the **Edit** page.
+#. In the row where the job you want to edit locates, click **Edit** in the **Operation** column to switch to the editing page.
 
 #. Edit the job as required.
 
@@ -154,7 +154,7 @@ You can import the Flink job configuration file stored in the OBS bucket to the 
 
 This mode is applicable to the scenario where a large number of jobs need to be created when you switch to another region, project, or user. In this case, you do not need to create a job. You only need to export the original job, log in to the system in a new region or project, or use a new user to import the job.
 
-If you need to import a self-created job, you are advised to use the job creation function. For details, see :ref:`Creating a Flink SQL Job <dli_01_0455>`, :ref:`Creating a Flink Jar Job <dli_01_0457>`.
+If you need to import a self-created job, you are advised to use the job creation function. For details, see :ref:`Creating a Flink SQL Job <dli_01_0455>` and :ref:`Creating a Flink Jar Job <dli_01_0457>`.
 
 .. note::
 
@@ -170,7 +170,7 @@ If you need to import a self-created job, you are advised to use the job creatio
    -  Select **Overwrite job of the same name**. If the name of the job to be imported already exists, the existing job configuration will be overwritten and the job status switches to **Draft**.
    -  If **Overwrite job of the same name** is not selected and the name of the job to be imported already exists, the job will not be imported.
 
-5. Ensure that **Config File** and **Overwrite Same-Name Job** are correctly configured. Click **Confirm** to export the job.
+5. Ensure that **Config File** and **Overwrite Same-Name Job** are correctly configured. Click **Confirm** to import the job.
 
 .. _dli_01_0461__section15861321183619:
 
@@ -223,6 +223,8 @@ You can select **Runtime Configuration** to configure job exception alarms and r
       +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                           | Description                                                                                                                                                                                                                                          |
       +=====================================+======================================================================================================================================================================================================================================================+
+      | Name                                | Job name.                                                                                                                                                                                                                                            |
+      +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Alarm Generation upon Job Exception | Whether to report job exceptions, for example, abnormal job running or exceptions due to an insufficient balance, to users via SMS or email.                                                                                                         |
       |                                     |                                                                                                                                                                                                                                                      |
       |                                     | If this option is selected, you need to set the following parameters:                                                                                                                                                                                |
@@ -244,7 +246,7 @@ You can select **Runtime Configuration** to configure job exception alarms and r
       |                                     |                                                                                                                                                                                                                                                      |
       |                                     |    .. note::                                                                                                                                                                                                                                         |
       |                                     |                                                                                                                                                                                                                                                      |
-      |                                     |       For Flink streaming SQL jobs, you need to select **Enable Checkpoint** on the job editing page before configuring this parameter.                                                                                                              |
+      |                                     |       This parameter cannot be configured for Flink SQL jobs or Flink OpenSource SQL jobs.                                                                                                                                                           |
       |                                     |                                                                                                                                                                                                                                                      |
       |                                     |    If this parameter is selected, you need to set **Checkpoint Path** for Flink Jar jobs.                                                                                                                                                            |
       |                                     |                                                                                                                                                                                                                                                      |

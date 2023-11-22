@@ -5,8 +5,8 @@
 Queue Permission Management
 ===========================
 
-Scenarios
----------
+Scenario
+--------
 
 -  You can isolate queues allocated to different users by setting permissions to ensure data query performance.
 -  The administrator and queue owner have all permissions, which cannot be set or modified by other users.

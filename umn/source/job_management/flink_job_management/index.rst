@@ -11,9 +11,10 @@ Flink Job Management
 -  :ref:`(Recommended) Creating a Flink OpenSource SQL Job <dli_01_0498>`
 -  :ref:`Creating a Flink SQL Job <dli_01_0455>`
 -  :ref:`Creating a Flink Jar Job <dli_01_0457>`
--  :ref:`Debugging a Flink Job <dli_01_0458>`
 -  :ref:`Performing Operations on a Flink Job <dli_01_0461>`
 -  :ref:`Flink Job Details <dli_01_0462>`
+-  :ref:`Tag Management <dli_01_0463>`
+-  :ref:`Enabling Dynamic Scaling for Flink Jobs <dli_01_0534>`
 
 .. toctree::
    :maxdepth: 1
@@ -25,6 +26,7 @@ Flink Job Management
    recommended_creating_a_flink_opensource_sql_job
    creating_a_flink_sql_job
    creating_a_flink_jar_job
-   debugging_a_flink_job
    performing_operations_on_a_flink_job
    flink_job_details
+   tag_management
+   enabling_dynamic_scaling_for_flink_jobs

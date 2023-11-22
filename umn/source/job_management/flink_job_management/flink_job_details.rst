@@ -46,11 +46,7 @@ This section describes how to view job details. After you create and save a job,
       |                                     |                                                                                                                                      |
       |                                     | If your job runs on a custom queue with dedicated resources, this parameter is **Exclusive**.                                        |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-      | Queue                               | If the queue where the job runs is a shared queue, the shared queue is displayed.                                                    |
-      |                                     |                                                                                                                                      |
-      |                                     | If the queue where the job runs is a custom queue with dedicated resources, the queue name is displayed.                             |
-      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-      | UDF Jar                             | This parameter is displayed when a non-shared queue is selected for the job and **UDF Jar** is configured.                           |
+      | Flink Version                       | Version of Flink selected for the job.                                                                                               |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
       | Runtime Configuration               | Displayed when a user-defined parameter is added to a job                                                                            |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
@@ -75,10 +71,6 @@ This section describes how to view job details. After you create and save a job,
       | Auto Restart upon Exception         | Whether automatic restart is enabled.                                                                                                |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
       | Max. Retry Attempts                 | Maximum number of retry times upon an exception. **Unlimited** means the number is not limited.                                      |
-      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-      | Restore Job from Checkpoint         | Whether the job can be restored from a checkpoint                                                                                    |
-      +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-      | ID                                  | Job ID                                                                                                                               |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
       | Savepoint                           | OBS path of the savepoint                                                                                                            |
       +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+

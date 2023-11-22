@@ -5,8 +5,8 @@
 Managing Flink Job Permissions
 ==============================
 
-Scenarios
----------
+Scenario
+--------
 
 -  You can isolate Flink jobs allocated to different users by setting permissions to ensure data query performance.
 -  The administrator and job creator have all permissions, which cannot be set or modified by other users.
@@ -45,7 +45,8 @@ Flink Job Permission Operations
             |                                       |                                                                                                                                                           |
             |                                       |    The username is the name of an existing IAM user. In addition, the user can perform authorization operations only after logging in to the platform.    |
             +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-            | Permissions to be granted to the user | -  **View Job Details**: This permission allows you to view the job details.                                                                              |
+            | Permissions to be granted to the user | -  **Select all**: All permissions are selected.                                                                                                          |
+            |                                       | -  **View Job Details**: This permission allows you to view the job details.                                                                              |
             |                                       | -  **Modify Job**: This permission allows you to modify the job.                                                                                          |
             |                                       | -  **Delete Job**: This permission allows you to delete the job.                                                                                          |
             |                                       | -  **Start Job**: This permission allows you to start the job.                                                                                            |

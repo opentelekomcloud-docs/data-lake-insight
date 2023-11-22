@@ -14,7 +14,7 @@ SQL job management provides the following functions:
 -  :ref:`Terminating a Job <dli_01_0017__section8647175812179>`: Stop a job in the **Submitting** or **Running** status.
 -  :ref:`Exporting Query Results <dli_01_0017__section1152211221244>`: A maximum of 1000 records can be displayed in the query result on the console. To view more or all data, you can export the data to OBS.
 
-SQL Jobs page
+SQL Jobs Page
 -------------
 
 On the **Overview** page of the DLI console, click **SQL Jobs** to go to the SQL job management page. Alternatively, you can click **Job Management** > **SQL Jobs**. The job list displays all SQL jobs. If there are a large number of jobs, they will be displayed on multiple pages. You can switch to the specified page as needed. DLI allows you to view jobs in all statuses. By default, jobs in the job list are displayed in descending order of the job creation time.
@@ -115,11 +115,16 @@ Viewing Job Details
 
 On the **SQL Jobs** page, you can click |image2| in front of a job record to view details about the job.
 
-The following describes how to load data, create a table, and select a job. The job details vary depending on the job types, status, and configuration options.
+Job details vary with job types. The job details vary depending on the job types, status, and configuration options. The following describes how to load data, create a table, and select a job. For details about other job types, see the information on the management console.
 
--  **Load data** (job type: IMPORT) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter settings, label, number of results, scanned data, number of scanned data, number of error records, storage path, data format, database, table, table header, separator, reference character, escape character, date format, and timestamp format.
+-  **Load data** (job type: IMPORT) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter settings, label, number of results, scanned data, number of scanned data, number of error records, storage path, data format, database, table, table header, separator, reference character, escape character, date format, timestamp format, total CPU used, and output bytes.
 -  **Create table** (job type: DDL) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter settings, tags, number of results, scanned data, and database.
--  **Select** (job type: QUERY) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter setting, label, number of results (results of successful executions can be exported), and scanned data, username, result status (results of successful tasks can be viewed. Failure causes of failed tasks are displayed), and database.
+-  **Select** (job type: QUERY) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter setting, label, number of results (results of successful executions can be exported), and scanned data, username, result status (results of successful tasks can be viewed. Failure causes of failed tasks are displayed), database, total CPU used, and output bytes.
+
+   .. note::
+
+      -  **Total CPU Used (Core x ms)**: total CPU used during job execution.
+      -  **Output Bytes**: number of output bytes after the job is executed.
 
 .. _dli_01_0017__section8647175812179:
 
@@ -149,7 +154,7 @@ You can export results on the **SQL Jobs** page or the **SQL Editor** page.
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                             |
    +===================================+=========================================================================================================================================================================+
-   | **Data Format**                   | Format of the exported query result file. Formats other than JSON will be supported in later versions.                                                                  |
+   | Data Format                       | Format of the exported query result file. This parameter can be set to **json** or **csv**.                                                                             |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | **Queues**                        | The queue where the jobs are executed. SQL jobs can be executed only in SQL queues. For details about how to create a queue, see :ref:`Creating a Queue <dli_01_0363>`. |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

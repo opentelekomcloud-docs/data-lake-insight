@@ -5,10 +5,12 @@
 Global Variables
 ================
 
-Scenario
---------
+What Is a Global Variable?
+--------------------------
 
-Global variables can be used to simplify complex parameters. For example, long and difficult variables can be replaced to improve the readability of SQL statements.
+DLI allows you to set variables that are frequently used during job development as global variables on the DLI management console. This avoids repeated definitions during job editing and reduces development and maintenance costs. Global variables can be used to replace long and difficult variables, simplifying complex parameters and improving the readability of SQL statements.
+
+This section describes how to create a global variable.
 
 Creating Variables
 ------------------
@@ -19,15 +21,17 @@ Creating Variables
 
    .. table:: **Table 1** Parameters description
 
-      +-----------+-----------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Description                                                                                                           |
-      +===========+=======================================================================================================================+
-      | Variable  | Name of the created global variable.                                                                                  |
-      +-----------+-----------------------------------------------------------------------------------------------------------------------+
-      | Sensitive | If the value is sensitive information, such as passwords, set this parameter to **Yes**. Otherwise, set it to **No**. |
-      +-----------+-----------------------------------------------------------------------------------------------------------------------+
-      | Value     | Global variable value.                                                                                                |
-      +-----------+-----------------------------------------------------------------------------------------------------------------------+
+      ========= ====================================
+      Parameter Description
+      ========= ====================================
+      Variable  Name of the created global variable.
+      Value     Global variable value.
+      ========= ====================================
+
+   .. note::
+
+      -  Only whitelisted users are allowed to create sensitive variables. To use this function, submit a service ticket to the administrator.
+      -  If passwords or other sensitive information is involved, you can set variables as sensitive ones.
 
 #. After creating a global variable, use **{{xxxx}}** in the SQL statement to replace the parameter value set as the global variable. **xxxx** indicates the variable name. For example, if you set global variable **abc** to represent the table name, replace the actual table name with **{{abc}}** in the table creation statement.
 
@@ -38,7 +42,7 @@ Creating Variables
 
    .. note::
 
-      -  Only the user who creates a global variable can use the variable.
+      -  Existing sensitive variables can only be used by their respective creators. Other common global variables are shared by users under the same account and project.
       -  Do not use global variables in **OPTIONS** of the table creation statements.
 
 Modifying Variables
@@ -48,7 +52,7 @@ On the **Global Variables** page, click **Modify** in the **Operation** column o
 
 .. note::
 
-   Only the user who creates a global variable can modify the variable.
+   If there are multiple global variables with the same name in the same project under an account, delete the redundant global variables to ensure that the global variables are unique in the same project. In this case, all users who have the permission to modify the global variables can change the variable values.
 
 Deleting Variables
 ------------------
@@ -57,5 +61,5 @@ On the **Global Variables** page, click **Delete** in the **Operation** column o
 
 .. note::
 
-   -  Only the user who creates a global variable can delete the variable.
+   -  If there are multiple global variables with the same name in the same project under an account, delete the global variables created by the user first. If there are only unique global variables, all users who have the delete permission can delete the global variables.
    -  After a variable is deleted, the variable cannot be used in SQL statements.

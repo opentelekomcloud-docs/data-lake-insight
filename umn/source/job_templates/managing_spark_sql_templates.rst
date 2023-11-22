@@ -5,8 +5,8 @@
 Managing Spark SQL Templates
 ============================
 
-Scenarios
----------
+Scenario
+--------
 
 You can modify a sample template to meet the Spark job requirements, saving time for editing SQL statements.
 

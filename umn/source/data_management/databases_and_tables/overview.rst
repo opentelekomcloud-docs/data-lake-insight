@@ -23,6 +23,39 @@ Difference Between DLI Tables and OBS Tables
 -  Data stored in DLI tables is applicable to delay-sensitive services, such as interactive queries.
 -  Data stored in OBS tables is applicable to delay-insensitive services, such as historical data statistics and analysis.
 
+Constraints
+-----------
+
+-  **Database**
+
+   -  **default** is the database built in DLI. You cannot create a database named **default**.
+   -  DLI supports a maximum of 50 databases.
+
+-  **Table**
+
+   -  DLI supports a maximum of 5,000 tables.
+   -  DLI supports the following table types:
+
+      -  **MANAGED**: Data is stored in a DLI table.
+      -  **EXTERNAL**: Data is stored in an OBS table.
+      -  **View**: A view can only be created using SQL statements.
+      -  Datasource table: The table type is also **EXTERNAL**.
+
+   -  You cannot specify a storage path when creating a DLI table.
+
+-  **Data import**
+
+   -  Only OBS data can be imported to DLI or OBS.
+   -  You can import data in CSV, Parquet, ORC, JSON, or Avro format from OBS to tables created on DLI.
+   -  To import data in CSV format to a partitioned table, place the partition column in the last column of the data source.
+   -  The encoding format of imported data can only be UTF-8.
+
+-  **Data export**
+
+   -  Data in DLI tables (whose table type is **MANAGED**) can only be exported to OBS buckets, and the export path must contain a folder.
+   -  The exported file is in JSON format, and the text format can only be UTF-8.
+   -  Data can be exported across accounts. That is, after account B authorizes account A, account A has the permission to read the metadata and permission information of account B's OBS bucket as well as the read and write permissions on the path. Account A can export data to the OBS path of account B.
+
 Databases and Tables Page
 -------------------------
 
@@ -48,8 +81,8 @@ The **Databases and Tables** page displays all created databases. You can view t
    | Operation                         | -  **Permissions**: View the permission information and perform user authorization, permission settings, and user permission revocation.                |
    |                                   | -  **Tables**: View the tables in the corresponding database. For details, see :ref:`Table Management Page <dli_01_0228__section4377195513315>`.        |
    |                                   | -  **Create Table**: This permission allows you to create a table in the corresponding database.                                                        |
-   |                                   | -  **Drop Database**: This permission allows you to delete the selected database.                                                                       |
    |                                   | -  **Modify Database**. This permission allows you to change the owner of the database. The username must exist under the same account.                 |
+   |                                   | -  **Drop Database**: This permission allows you to delete the selected database.                                                                       |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_01_0228__section4377195513315:
@@ -57,7 +90,7 @@ The **Databases and Tables** page displays all created databases. You can view t
 Table Management Page
 ---------------------
 
-From the **Data Management** page, click the database name or **Tables** in the **Operation** column to switch to the **Table Management** page.
+From the **Data Management** page, click the database name or **Tables** in the **Operation** column to switch to the table management page.
 
 The displayed page lists all tables created in the current database. You can view the table type, data storage location, and other information. Tables are listed in chronological order by default, with the most recently created tables displayed at the top.
 
@@ -101,6 +134,5 @@ The displayed page lists all tables created in the current database. You can vie
    |                                   |    -  **Delete**: Delete a table from the corresponding database.                                                                                                            |
    |                                   |    -  **Modify Owner**: Change the owner of a table The username must exist under the same account.                                                                          |
    |                                   |    -  **Import**: Import data stored in an OBS bucket to a DLI or OBS table.                                                                                                 |
-   |                                   |    -  **Export**: Export data from a DLI table to an OBS bucket.                                                                                                             |
    |                                   |    -  **Properties**: View data in **Metadata** and **Preview** tabs.                                                                                                        |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

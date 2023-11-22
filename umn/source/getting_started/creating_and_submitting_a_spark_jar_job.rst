@@ -5,8 +5,8 @@
 Creating and Submitting a Spark Jar Job
 =======================================
 
-Scenarios
----------
+Scenario
+--------
 
 DLI can query data stored in OBS. This section describes how to use a Spark Jar job on DLI to query OBS data in real time.
 
@@ -28,7 +28,7 @@ You can use DLI to submit Spark jobs for real-time computing. The general proced
 Step 1: Upload Data to OBS
 --------------------------
 
-Write a Spark Jar job program , and compile and package it as **spark-examples.jar**. Perform the following steps to submit the job:
+Write a Spark Jar job program, and compile and pack it as **spark-examples.jar**. Perform the following steps to submit the job:
 
 Before submitting Spark Jar jobs, upload data files to OBS.
 
@@ -47,9 +47,9 @@ Before submitting Spark Jar jobs, upload data files to OBS.
 
    c. Click **Create Now**.
 
-#. Click **dli-test-obs01** to switch to the **Overview** page.
+#. Click **dli-test-obs01** to switch to the **Objects** tab page.
 
-#. From the left navigation tree, click **Objects**. Click **Upload Object**. In the displayed dialog box, drag files or folders to upload or add file to the file upload box, for example, **spark-examples.jar**. Then, click **Upload**.
+#. Click **Upload Object**. In the dialog box displayed, drag or add files or folders, for example, **spark-examples.jar**, to the upload area. Then, click **Upload**.
 
    After the file is uploaded successfully, the file path is **obs://dli-test-obs01/spark-examples.jar**.
 
@@ -69,7 +69,7 @@ Step 2: Create a Queue
 If you submit a Spark job for the first time, you need to create a queue first. For example, create a queue named **sparktest** and set **Queue Type** to **General Queue**.
 
 #. Log in to the DLI management console.
-#. In the navigation pane of the DLI management console, choose **Queue Management**.
+#. In the navigation pane of the DLI management console, choose **Resources** > **Queue Management**.
 #. In the upper right corner of the **Queue Management** page, click **Create Queue** to create a queue.
 #. Create a queue, name it **sparktest**, and set the queue usage to for general purpose. For details, see Creating a Queue.
 #. Click **Create Now** to create a queue.

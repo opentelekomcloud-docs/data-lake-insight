@@ -14,7 +14,7 @@ The process of using DLI is as follows:
 
 #. **Create a queue.**
 
-   Queues are computing resources of DLI. There are queues for SQL jobs and for general purpose. You can submit Spark SQL jobs only to SQL queues, and Spark programs, Flink SQL jobs, and Flink Jar jobs to general queues.
+   Queues are DLI's compute resources. There are SQL queues and general-purpose queues. For a SQL queue, you can only submit Spark SQL jobs. For a general-purpose queue, you can submit Spark programs, Flink OpenSource SQL jobs, and Flink Jar jobs.
 
 #. **Prepare data.**
 
