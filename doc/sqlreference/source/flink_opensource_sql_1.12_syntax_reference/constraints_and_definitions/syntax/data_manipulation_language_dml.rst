@@ -138,11 +138,11 @@ DML Statements
 
 Flink SQL uses a lexical policy for identifier (table, attribute, function names) similar to Java:
 
--  The case of identifiers is preserved whether or not they are quoted.
+-  The case of identifiers is preserved whether they are quoted.
 -  Identifiers are matched case-sensitively.
 -  Unlike Java, back-ticks allow identifiers to contain non-alphanumeric characters (for example, **SELECT a AS \`my field\` FROM t**).
 
-String literals must be enclosed in single quotes (for example, **SELECT'Hello World'**). Duplicate a single quote for escaping (for example, **SELECT'It''s me.'**). Unicode characters are supported in string literals. If explicit Unicode points are required, use the following syntax:
+String literals must be enclosed in single quotes (for example, **SELECT'Hello World'**). Duplicate a single quote for escaping (for example, **SELECT 'It''s me.'**). Unicode characters are supported in string literals. If explicit Unicode points are required, use the following syntax:
 
 -  Use the backslash (\\) as an escaping character (default): **SELECT U&'\\263A'**
 -  Use a custom escaping character: **SELECT U&'#263A' UESCAPE '#'**

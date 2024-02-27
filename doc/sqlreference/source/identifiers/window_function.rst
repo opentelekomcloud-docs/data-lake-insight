@@ -8,9 +8,9 @@ window_function
 Syntax
 ------
 
-None.
+None
 
 Description
 -----------
 
-Analysis window function. For details, see :ref:`Window Functions <dli_08_0069>`.
+Analysis window function.

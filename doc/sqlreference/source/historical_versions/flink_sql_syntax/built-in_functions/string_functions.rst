@@ -5,9 +5,9 @@
 String Functions
 ================
 
-The common character string functions of DLI are as follows:
+The common string functions of DLI are as follows:
 
-.. table:: **Table 1** String Operators
+.. table:: **Table 1** String operators
 
    +--------------------------------------------------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Operator                                                     | Returned Data Type    | Description                                                                                                                                                                                    |
@@ -76,7 +76,7 @@ The common character string functions of DLI are as follows:
 
 -  Function
 
-   Concatenates two character strings.
+   Concatenates two strings.
 
 -  Syntax
 
@@ -84,10 +84,10 @@ The common character string functions of DLI are as follows:
 
       VARCHAR VARCHAR a || VARCHAR b
 
--  Parameter description
+-  Parameters
 
-   -  **a**: character string.
-   -  **b**: character string.
+   -  **a**: string.
+   -  **b**: string.
 
 -  Example
 
@@ -118,9 +118,9 @@ CHAR_LENGTH
 
       INT CHAR_LENGTH(a)
 
--  Parameter description
+-  Parameters
 
-   -  **a**: character string.
+   -  **a**: string.
 
 -  Example
 
@@ -155,9 +155,9 @@ CHARACTER_LENGTH
 
       INT CHARACTER_LENGTH(a)
 
--  Parameter description
+-  Parameters
 
-   -  **a**: character string.
+   -  **a**: string.
 
 -  Example
 
@@ -192,10 +192,10 @@ CONCAT
 
       VARCHAR CONCAT(VARCHAR var1, VARCHAR var2, ...)
 
--  Parameter description
+-  Parameters
 
-   -  **var1**: character string
-   -  **var2**: character string
+   -  **var1**: string
+   -  **var2**: string
 
 -  Example
 
@@ -230,11 +230,11 @@ CONCAT_WS
 
       VARCHAR CONCAT_WS(VARCHAR separator, VARCHAR var1, VARCHAR var2, ...)
 
--  Parameter description
+-  Parameters
 
    -  **separator**: separator.
-   -  **var1**: character string
-   -  **var2**: character string
+   -  **var1**: string
+   -  **var2**: string
 
 -  Example
 
@@ -265,9 +265,9 @@ HASH_CODE
 
       INT HASH_CODE(VARCHAR str)
 
--  Parameter description
+-  Parameters
 
-   -  **str**: character string.
+   -  **str**: string.
 
 -  Example
 
@@ -298,9 +298,9 @@ INITCAP
 
       VARCHAR INITCAP(a)
 
--  Parameter description
+-  Parameters
 
-   -  **a**: character string.
+   -  **a**: string.
 
 -  Example
 
@@ -327,7 +327,7 @@ IS_ALPHA
 
 -  Function
 
-   Checks whether a character string contains only letters.
+   Checks whether a string contains only letters.
 
 -  Syntax
 
@@ -335,9 +335,9 @@ IS_ALPHA
 
       BOOLEAN IS_ALPHA(VARCHAR content)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
 
 -  Example
 
@@ -367,7 +367,7 @@ IS_DIGITS
 
 -  Function
 
-   Checks whether a character string contains only digits.
+   Checks whether a string contains only digits.
 
 -  Syntax
 
@@ -375,9 +375,9 @@ IS_DIGITS
 
       BOOLEAN IS_DIGITS(VARCHAR content)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
 
 -  Example
 
@@ -408,7 +408,7 @@ IS_NUMBER
 
 -  Function
 
-   This function is used to check whether a character string is a numeric string.
+   This function is used to check whether a string is a numeric one.
 
 -  Syntax
 
@@ -416,9 +416,9 @@ IS_NUMBER
 
       BOOLEAN IS_NUMBER(VARCHAR content)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
 
 -  Example
 
@@ -449,7 +449,7 @@ IS_URL
 
 -  Function
 
-   This function is used to check whether a character string is a valid URL.
+   This function is used to check whether a string is a valid URL.
 
 -  Syntax
 
@@ -457,9 +457,9 @@ IS_URL
 
       BOOLEAN IS_URL(VARCHAR content)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
 
 -  Example
 
@@ -490,7 +490,7 @@ JSON_VALUE
 
 -  Function
 
-   Obtains the value of a specified path in a JSON character string.
+   Obtains the value of a specified path in a JSON string.
 
 -  Syntax
 
@@ -498,9 +498,9 @@ JSON_VALUE
 
       VARCHAR JSON_VALUE(VARCHAR content, VARCHAR path)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
    -  **path**: path to be obtained.
 
 -  Example
@@ -544,9 +544,9 @@ KEY_VALUE
 
       VARCHAR KEY_VALUE(VARCHAR content, VARCHAR split1, VARCHAR split2, VARCHAR key_name)
 
--  Parameter description
+-  Parameters
 
-   -  **content**: Enter a character string.
+   -  **content**: Enter a string.
    -  **split1**: separator of multiple key-value pairs.
    -  **split2**: separator between the key and value.
    -  **key_name**: name of the key to be obtained.
@@ -588,9 +588,9 @@ LOWER
 
       VARCHAR LOWER(A)
 
--  Parameter description
+-  Parameters
 
-   -  **A**: character string.
+   -  **A**: string.
 
 -  Example
 
@@ -625,11 +625,11 @@ LPAD
 
       VARCHAR LPAD(VARCHAR str, INT len, VARCHAR pad)
 
--  Parameter description
+-  Parameters
 
-   -  **str**: character string before concatenation.
-   -  **len**: length of the concatenated character string.
-   -  **pad**: character string to be concatenated.
+   -  **str**: string before concatenation.
+   -  **len**: length of the concatenated string.
+   -  **pad**: string to be concatenated.
 
    .. note::
 
@@ -669,9 +669,9 @@ MD5
 
       VARCHAR MD5(VARCHAR str)
 
--  Parameter description
+-  Parameters
 
-   -  **str**: character string
+   -  **str**: string
 
 -  Example
 
@@ -702,10 +702,10 @@ OVERLAY
 
       VARCHAR OVERLAY ( (VARCHAR x PLACING VARCHAR y FROM INT start_position [ FOR INT length ]) )
 
--  Parameter description
+-  Parameters
 
-   -  **x**: character string
-   -  **y**: character string.
+   -  **x**: string.
+   -  **y**: string.
    -  **start_position**: start position.
    -  **length (optional)**: indicates the character length.
 
@@ -734,7 +734,7 @@ POSITION
 
 -  Function
 
-   Returns the position of the first occurrence of the target string **x** in the queried string **y**. If the target character string **x** does not exist in the queried character string **y**, **0** is returned.
+   Returns the position of the first occurrence of the target string **x** in the queried string **y**. If the target string **x** does not exist in the queried string **y**, **0** is returned.
 
 -  Syntax
 
@@ -742,10 +742,10 @@ POSITION
 
       INTEGER POSITION(x IN y)
 
--  Parameter description
+-  Parameters
 
-   -  **x**: character string
-   -  **y**: character string.
+   -  **x**: string
+   -  **y**: string.
 
 -  Example
 
@@ -772,7 +772,7 @@ REPLACE
 
 -  Function
 
-   The character string replacement function is used to replace all **str2** in the **str1** string with **str3**.
+   The string replacement function is used to replace all **str2** in the **str1** string with **str3**.
 
 -  Syntax
 
@@ -780,7 +780,7 @@ REPLACE
 
       VARCHAR REPLACE(VARCHAR str1, VARCHAR str2, VARCHAR str3)
 
--  Parameter description
+-  Parameters
 
    -  **str1**: original character.
    -  **str2**: target character.
@@ -824,11 +824,11 @@ RPAD
 
       VARCHAR RPAD(VARCHAR str, INT len, VARCHAR pad)
 
--  Parameter description
+-  Parameters
 
-   -  **str**: start character string.
-   -  **len**: indicates the length of the new character string.
-   -  **pad**: character string that needs to be added repeatedly.
+   -  **str**: start string.
+   -  **len**: length of the new string.
+   -  **pad**: string that needs to be added repeatedly.
 
 -  Example
 
@@ -862,9 +862,9 @@ SHA1
 
       STRING SHA1(STRING expr)
 
--  Parameter description
+-  Parameters
 
-   -  **expr**: character string.
+   -  **expr**: string.
 
 -  Example
 
@@ -895,9 +895,9 @@ SHA256
 
       STRING SHA256(STRING expr)
 
--  Parameter description
+-  Parameters
 
-   -  **expr**: character string.
+   -  **expr**: string.
 
 -  Example
 
@@ -920,7 +920,7 @@ STRING_TO_ARRAY
 
 -  Function
 
-   Separates the **value** string as character string arrays by using the delimiter.
+   Separates the **value** string as string arrays by using the delimiter.
 
    .. note::
 
@@ -932,10 +932,10 @@ STRING_TO_ARRAY
 
       ARRAY[String] STRING_TO_ARRAY(STRING value, VARCHAR delimiter)
 
--  Parameter description
+-  Parameters
 
-   -  **value**: character string.
-   -  **delimiter**: specifies the delimiter.
+   -  **value**: string.
+   -  **delimiter**: delimiter.
 
 -  Example
 
@@ -967,7 +967,7 @@ SUBSTRING
 
    .. note::
 
-      The value of **start** starts from **1**. If the value is **0**, it is regarded as **1**. If the value of start is a negative number, the position is calculated from the end of the character string in reverse order.
+      The value of **start** starts from **1**. If the value is **0**, it is regarded as **1**. If the value of start is a negative number, the position is calculated from the end of the string in reverse order.
 
 -  Syntax
 
@@ -981,10 +981,10 @@ SUBSTRING
 
       VARCHAR SUBSTRING(STRING A FROM INT start FOR INT len)
 
--  Parameter description
+-  Parameters
 
-   -  **A**: specified character string.
-   -  **start**: start position for truncating the character string **A**.
+   -  **A**: specified string.
+   -  **start**: start position for truncating the string **A**.
    -  **len**: intercepted length.
 
 -  Example
@@ -1028,10 +1028,10 @@ TRIM
 
       STRING TRIM( { BOTH | LEADING | TRAILING } STRING a FROM STRING b)
 
--  Parameter description
+-  Parameters
 
-   -  **a**: character string.
-   -  **b**: character string.
+   -  **a**: string.
+   -  **b**: string.
 
 -  Example
 
@@ -1062,9 +1062,9 @@ UPPER
 
       VARCHAR UPPER(A)
 
--  Parameter description
+-  Parameters
 
-   -  **A**: character string.
+   -  **A**: string.
 
 -  Example
 

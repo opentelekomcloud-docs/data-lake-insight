@@ -17,8 +17,8 @@ Syntax
 
    ALTER TABLE [db_name.]table_name ADD COLUMNS (col_name1 col_type1 [COMMENT col_comment1], ...);
 
-Keyword
--------
+Keywords
+--------
 
 -  ADD COLUMNS: columns to add
 -  COMMENT: column description
@@ -26,7 +26,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------+----------------------------------------------------------------------------------------------------------------------------------+
    | Parameter   | Description                                                                                                                      |

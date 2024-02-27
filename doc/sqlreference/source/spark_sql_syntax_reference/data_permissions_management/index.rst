@@ -13,7 +13,7 @@ Data Permissions Management
 -  :ref:`Displaying a Role <dli_08_0143>`
 -  :ref:`Granting a Permission <dli_08_0144>`
 -  :ref:`Revoking a Permission <dli_08_0146>`
--  :ref:`Displaying the Granted Permissions <dli_08_0145>`
+-  :ref:`Showing Granted Permissions <dli_08_0145>`
 -  :ref:`Displaying the Binding Relationship Between All Roles and Users <dli_08_0149>`
 
 .. toctree::
@@ -28,5 +28,5 @@ Data Permissions Management
    displaying_a_role
    granting_a_permission
    revoking_a_permission
-   displaying_the_granted_permissions
+   showing_granted_permissions
    displaying_the_binding_relationship_between_all_roles_and_users

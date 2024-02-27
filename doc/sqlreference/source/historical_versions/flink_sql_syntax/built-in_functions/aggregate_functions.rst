@@ -23,7 +23,7 @@ Common Aggregate Functions
 
 .. _dli_08_0104__tb90f8c1797b346ca8ac5fcb1eb5d85df:
 
-.. table:: **Table 1** Common aggregation functions
+.. table:: **Table 1** Common aggregate functions
 
    +------------------------------------------------------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+
    | Function                                                         | Return Data Type | Description                                                                                                              |

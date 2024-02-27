@@ -17,8 +17,8 @@ Syntax
 
    DROP TABLE [IF EXISTS] [db_name.]table_name;
 
-Keyword
--------
+Keywords
+--------
 
 -  If the table is stored in OBS, only the metadata is deleted. The data stored on OBS is not deleted.
 -  If the table is stored in DLI, the data and the corresponding metadata are all deleted.
@@ -26,7 +26,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                          |
@@ -39,7 +39,7 @@ Parameters
 Precautions
 -----------
 
-The to-be-deleted table must exist in the current database. Otherwise, an error is reported. To avoid this error, add **IF EXISTS** in this statement.
+The to-be-deleted table must exist in the current database. Otherwise, an error is reported. To avoid this error, add **IF EXISTS** to this statement.
 
 Example
 -------

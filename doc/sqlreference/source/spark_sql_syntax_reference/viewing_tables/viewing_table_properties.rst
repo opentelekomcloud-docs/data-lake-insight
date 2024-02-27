@@ -17,15 +17,15 @@ Syntax
 
    SHOW TBLPROPERTIES table_name [('property_name')];
 
-Keyword
--------
+Keywords
+--------
 
 TBLPROPERTIES: This statement allows you to add a **key/value** property to a table.
 
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-----------------------------------+---------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                 |

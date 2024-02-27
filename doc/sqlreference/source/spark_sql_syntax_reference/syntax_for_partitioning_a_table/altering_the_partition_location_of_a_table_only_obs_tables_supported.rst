@@ -19,8 +19,8 @@ Syntax
      PARTITION partition_specs
      SET LOCATION obs_path;
 
-Keyword
--------
+Keywords
+--------
 
 -  PARTITION: a specified partition
 -  LOCATION: path of the partition
@@ -28,7 +28,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    =============== ================
    Parameter       Description

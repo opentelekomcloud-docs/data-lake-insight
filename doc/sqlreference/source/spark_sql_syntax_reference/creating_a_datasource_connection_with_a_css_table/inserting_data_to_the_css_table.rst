@@ -37,10 +37,10 @@ Keywords
 
 For details about the SELECT keywords, see :ref:`Basic SELECT Statements <dli_08_0150>`.
 
-Parameter description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------------+----------------------------------------------------------------------------------------------------+
    | Parameter               | Description                                                                                        |
@@ -61,7 +61,7 @@ Parameter description
 Precautions
 -----------
 
--  The target DLI table must exist.
+-  A DLI table is available.
 -  When creating the DLI table, you need to specify the **schema** information. If the number and type of fields selected in the **SELECT** clause or in **Values** do not match the **Schema** information in the CSS table, the system reports an error.
 -  Inconsistent types may not always cause error reports. For example, if the data of the **int** type is inserted, but the **text** type is saved in the CSS **Schema**, the **int** type will be converted to the **text** type and no error will be reported.
 -  You are advised not to concurrently insert data into a table. If you concurrently insert data into a table, there is a possibility that conflicts occur, leading to failed data insertion.

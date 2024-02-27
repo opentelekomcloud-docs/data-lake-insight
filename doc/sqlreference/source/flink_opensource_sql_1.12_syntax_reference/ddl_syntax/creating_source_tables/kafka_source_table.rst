@@ -23,7 +23,6 @@ Precautions
 
 -  When creating a Flink OpenSource SQL job, you need to set **Flink Version** to **1.12** on the **Running Parameters** tab of the job editing page, select **Save Job Log**, and set the OBS bucket for saving job logs.
 -  For details about how to use data types when creating tables, see :ref:`Format <dli_08_0407>`.
--  SASL_SSL cannot be enabled for the interconnected Kafka cluster.
 
 Syntax
 ------

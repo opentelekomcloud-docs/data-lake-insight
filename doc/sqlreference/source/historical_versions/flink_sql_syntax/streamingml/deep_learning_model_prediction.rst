@@ -26,10 +26,10 @@ Syntax
 
    Models and configuration files must be stored on OBS. The path format is obs://**your_ak**:**your_sk**\ @obs.\ **your_obs_region**.xxx.com:443/**your_model_path**.
 
-Parameter Description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter               | Mandatory             | Description                                                                                                                         |

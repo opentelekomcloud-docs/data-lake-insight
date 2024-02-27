@@ -20,7 +20,8 @@ This function is used to forcibly convert types.
 Precautions
 -----------
 
-If the input is **NULL**, **NULL** is returned.
+-  If the input is **NULL**, **NULL** is returned.
+-  The **cast** function does not support converting a string to the JSON format.
 
 Example 1: Convert the amount value to an integer.
 --------------------------------------------------

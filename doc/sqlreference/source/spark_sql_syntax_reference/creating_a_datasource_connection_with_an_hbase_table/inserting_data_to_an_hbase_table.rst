@@ -37,10 +37,10 @@ Keywords
 
 For details about the SELECT keywords, see :ref:`Basic SELECT Statements <dli_08_0150>`.
 
-Parameter description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------------+----------------------------------------------------------------------------------------------------+
    | Parameter               | Description                                                                                        |
@@ -61,7 +61,7 @@ Parameter description
 Precautions
 -----------
 
--  The target DLI table must exist.
+-  A DLI table is available.
 -  In the column family created in :ref:`Creating a Table and Associating It with HBase <dli_08_0119>`, if the column family specified by **Cols** in **OPTIONS** does not exist, an error is reported when **INSERT INTO** is executed.
 -  If the row key, column family, or column you need to insert to the HBase table already exists, the existing data in HBase table will be overwritten.
 -  You are advised not to concurrently insert data into a table. If you concurrently insert data into a table, there is a possibility that conflicts occur, leading to failed data insertion.

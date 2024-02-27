@@ -2,7 +2,7 @@
 
 .. _dli_08_0370:
 
-Flink Opensource SQL 1.12 Syntax Reference
+Flink OpenSource SQL 1.12 Syntax Reference
 ==========================================
 
 -  :ref:`Constraints and Definitions <dli_08_0371>`

@@ -27,16 +27,16 @@ Syntax
 
       SHOW HISTORY FOR TABLE [db_name.]table_name PARTITION (column = value, ...);
 
-Keyword
--------
+Keywords
+--------
 
 -  SHOW HISTORY FOR TABLE: Used to view backup data
 -  PARTITION: Used to specify the partition column
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                          |

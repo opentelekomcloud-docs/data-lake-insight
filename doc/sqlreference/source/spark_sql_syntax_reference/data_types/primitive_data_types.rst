@@ -16,7 +16,7 @@ Primitive Data Types
    +==========================+=======================================================================================+===============+=====================================================================================================+======================+======================+
    | INT                      | Signed integer                                                                        | 4 bytes       | -2147483648 to 2147483647                                                                           | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
-   | STRING                   | Character string                                                                      | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
+   | STRING                   | String                                                                                | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
    | FLOAT                    | Single-precision floating point                                                       | 4 bytes       | ``-``                                                                                               | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
@@ -38,9 +38,9 @@ Primitive Data Types
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
    | TIMESTAMP                | Timestamp in raw data format, indicating the date and time Example: 1621434131222     | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
-   | CHAR                     | Fixed-length character string                                                         | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
+   | CHAR                     | Fixed-length string                                                                   | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
-   | VARCHAR                  | Variable-length character string                                                      | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
+   | VARCHAR                  | Variable-length string                                                                | ``-``         | ``-``                                                                                               | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
    | DATE                     | Date type in the format of **yyyy-mm-dd**, for example, **2014-05-29**                | ``-``         | **DATE** does not contain time information. Its value ranges from **0000-01-01** to **9999-12-31**. | Yes                  | Yes                  |
    +--------------------------+---------------------------------------------------------------------------------------+---------------+-----------------------------------------------------------------------------------------------------+----------------------+----------------------+
@@ -58,7 +58,7 @@ Signed integer with a storage space of 4 bytes. Its value ranges from -214748364
 STRING
 ------
 
-Character string.
+String.
 
 FLOAT
 -----
@@ -102,12 +102,12 @@ Signed integer with a storage space of 8 bytes. Its value ranges from -922337203
 TIMESTAMP
 ---------
 
-Legacy UNIX TIMESTAMP is supported, providing the precision up to the microsecond level. **TIMESTAMP** is defined by the difference between the specified time and UNIX epoch (UNIX epoch time: 1970-01-01 00:00:00) in seconds. Data of the STRING type supports implicit conversion to TIMESTAMP. (The STRING must in the yyyy-MM-dd HH:MM:SS[.ffffff] format. The precision after the decimal point is optional.)
+Legacy UNIX TIMESTAMP is supported, providing the precision up to the microsecond level. **TIMESTAMP** is defined by the difference between the specified time and UNIX epoch (UNIX epoch time: 1970-01-01 00:00:00) in seconds. The data type **STRING** can be implicitly converted to **TIMESTAMP**, but it must be in the **yyyy-MM-dd HH:mm:SS[.ffffff]** format. The precision after the decimal point is optional.)
 
 CHAR
 ----
 
-Character string with a fixed length. In DLI, the STRING type is used.
+String with a fixed length. In DLI, the STRING type is used.
 
 VARCHAR
 -------

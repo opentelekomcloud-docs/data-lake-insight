@@ -14,8 +14,8 @@ Syntax
 
    SELECT * FROM table_name LIMIT number;
 
-Keyword
--------
+Keywords
+--------
 
 LIMIT is used to limit the query results. Only INT type is supported by the **number** parameter.
 
@@ -27,8 +27,8 @@ If schema information is not specified during table creation, the query result c
 Example
 -------
 
-Query data in the **test_mongo** table.
+Query data in the **test_table1** table.
 
 ::
 
-   SELECT * FROM test_mongo limit 100;
+   SELECT * FROM test_table1 limit 100;

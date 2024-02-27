@@ -17,15 +17,15 @@ Syntax
 
    SHOW TABLES [IN | FROM db_name] [LIKE regex_expression];
 
-Keyword
--------
+Keywords
+--------
 
 FROM/IN: followed by the name of a database whose tables and views will be displayed.
 
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter        | Description                                                                                                                                          |

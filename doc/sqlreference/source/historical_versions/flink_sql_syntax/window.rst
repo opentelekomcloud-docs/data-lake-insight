@@ -102,10 +102,10 @@ The difference between Over Window and Group Window is that one record is genera
 
 **Description**
 
-.. table:: **Table 3** Parameter description
+.. table:: **Table 3** Parameters
 
    +--------------+-----------------------------------------------------------------------------------------------+
-   | Parameter    | Parameter Description                                                                         |
+   | Parameter    | Description                                                                                   |
    +==============+===============================================================================================+
    | PARTITION BY | Indicates the primary key of the specified group. Each group separately performs calculation. |
    +--------------+-----------------------------------------------------------------------------------------------+

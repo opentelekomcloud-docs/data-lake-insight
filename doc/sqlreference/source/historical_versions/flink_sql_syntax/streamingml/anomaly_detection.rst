@@ -27,10 +27,10 @@ Syntax
    -  The field names must be of the same type. If the field types are different, you can use the CAST function to escape the field names, for example, [a, CAST(b as DOUBLE)].
    -  The syntax of the optional parameter list is as follows: "key1=value,key2=value2,..."
 
-Parameter Description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter Description
+.. table:: **Table 1** Parameters
 
    +--------------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+
    | Parameter          | Mandatory       | Description                                                                                                                     | Default Value   |

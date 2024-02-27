@@ -23,8 +23,8 @@ Or
 
    ALTER TABLE table_name RECOVER PARTITIONS;
 
-Keyword
--------
+Keywords
+--------
 
 -  PARTITIONS: partition information
 -  SERDEPROPERTIES: Serde attribute
@@ -32,7 +32,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    =============== ================
    Parameter       Description

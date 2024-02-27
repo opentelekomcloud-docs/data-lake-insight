@@ -95,7 +95,7 @@ Syntax
    create table dwsSink (
      attr_name attr_type
      (',' attr_name attr_type)*
-     (','PRIMARY KEY (attr_name, ...) NOT ENFORCED)
+     (','PRIMARY KEY (attr_name) NOT ENFORCED)
    )
    with (
      'connector' = 'redis',
@@ -173,7 +173,7 @@ Parameters
    |                            |             |               |             |                                                                                                                                                                                                  |
    |                            |             |               |             | -  If **key-ttl-mode** is **no-ttl**, this parameter does not need to be configured.                                                                                                             |
    |                            |             |               |             | -  If **key-ttl-mode** is **expire-msec**, set this parameter to a string that can be parsed into the Long type. For example, **5000** indicates that the key will expire in 5000 ms.            |
-   |                            |             |               |             | -  If **key-ttl-mode** is **expire-at-date**, set this parameter to a date. For example, **2011-12-03T10:15:30** indicates that the expiration time is 2011-12-03 18:15:30 (UTC+8).              |
+   |                            |             |               |             | -  If **key-ttl-mode** is **expire-at-date**, set this parameter to a date.                                                                                                                      |
    |                            |             |               |             | -  If **key-ttl-mode** is **expire-at-timestamp**, set this parameter to a timestamp, in milliseconds. For example, **1679385600000** indicates that the expiration time is 2023-03-21 16:00:00. |
    +----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 

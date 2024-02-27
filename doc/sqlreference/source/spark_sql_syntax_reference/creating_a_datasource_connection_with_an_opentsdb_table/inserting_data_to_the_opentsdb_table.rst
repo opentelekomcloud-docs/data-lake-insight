@@ -25,10 +25,10 @@ Syntax
 
    INSERT INTO TABLE TABLE_NAME VALUES(XXX);
 
-Keyword
--------
+Keywords
+--------
 
-.. table:: **Table 1** INSERT INTO parameter description
+.. table:: **Table 1** INSERT INTO keywords
 
    ========== ======================================
    Parameter  Description

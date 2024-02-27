@@ -15,11 +15,21 @@ Syntax
 
 ::
 
-   CREATE [TEMPORARY] FUNCTION [db_name.]function_name AS class_name
+   CREATE FUNCTION [db_name.]function_name AS class_name
      [USING resource,...]
 
    resource:
-     : (JAR|FILE|ARCHIVE)file_uri
+     : JAR file_uri
+
+Or
+
+::
+
+   CREATE OR REPLACE FUNCTION [db_name.]function_name AS class_name
+     [USING resource,...]
+
+   resource:
+     : JAR file_uri
 
 Precautions
 -----------
@@ -31,7 +41,6 @@ Precautions
 Keywords
 --------
 
--  TEMPORARY: The created function is available only in the current session and is not persisted to the underlying metabase, if any. The database name cannot be specified for a temporary function.
 -  USING <resources>: resources to be loaded. It can be a list of JARs, files, or URIs.
 
 Example

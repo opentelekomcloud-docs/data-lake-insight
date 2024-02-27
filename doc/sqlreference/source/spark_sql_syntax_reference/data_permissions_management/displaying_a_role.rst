@@ -17,8 +17,8 @@ Syntax
 
    SHOW [ALL] ROLES [user_name];
 
-Keyword
--------
+Keywords
+--------
 
 ALL: Displays all roles.
 

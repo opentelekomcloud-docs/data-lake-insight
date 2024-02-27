@@ -10,6 +10,10 @@ Function
 
 This statement is used to create a DLI table and associate it with an existing CSS table.
 
+.. note::
+
+   In Spark cross-source development scenarios, there is a risk of password leakage if datasource authentication information is directly configured. You are advised to use the datasource authentication provided by DLI.
+
 Prerequisites
 -------------
 
@@ -33,10 +37,10 @@ Syntax
      'es.nodes.wan.only' = 'true',
      'es.mapping.id' = 'FIELDNAME');
 
-Keyword
--------
+Keywords
+--------
 
-.. table:: **Table 1** CREATE TABLE parameter description
+.. table:: **Table 1** CREATE TABLE keywords
 
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                                                                                                                                                                                                                             |

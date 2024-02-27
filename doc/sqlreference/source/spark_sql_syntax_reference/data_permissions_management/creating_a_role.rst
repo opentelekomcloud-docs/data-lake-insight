@@ -19,8 +19,8 @@ Syntax
 
    CREATE ROLE [db_name].role_name;
 
-Keyword
--------
+Keywords
+--------
 
 None
 

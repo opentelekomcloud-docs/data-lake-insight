@@ -21,7 +21,7 @@ In the preceding statement, regex is a regular expression. For details about its
 
 .. _dli_08_0285__table19771171316361:
 
-.. table:: **Table 1** Parameter examples
+.. table:: **Table 1** regex parameters
 
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Expression                        | Description                                                                                                                                                             |

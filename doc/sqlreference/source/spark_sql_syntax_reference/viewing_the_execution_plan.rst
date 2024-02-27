@@ -17,8 +17,8 @@ Syntax
 
    EXPLAIN [EXTENDED | CODEGEN] statement;
 
-Keyword
--------
+Keywords
+--------
 
 **EXTENDED**: After this keyword is specified, the logical and physical plans are outputted at the same time.
 

@@ -18,8 +18,8 @@ Syntax
    SELECT attr_expr_list FROM table_reference
      GROUP BY groupby_expression [, groupby_expression, ...];
 
-Keyword
--------
+Keywords
+--------
 
 The **groupby_expression** can contain a single field or multiple fields, and also can call aggregate functions or string functions.
 
@@ -32,7 +32,7 @@ Precautions
 Example
 -------
 
-To use the **substr** function to obtain the character string from the **name** field, group the student table according to the obtained character string, and return each sub character string and the number of records, run the following statement:
+To use the **substr** function to obtain the string from the **name** field, group the student table according to the obtained string, and return each sub string and the number of records, run the following statement:
 
 ::
 

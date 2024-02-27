@@ -17,8 +17,8 @@ Syntax
 
    DESCRIBE [EXTENDED|FORMATTED] [db_name.]table_name;
 
-Keyword
--------
+Keywords
+--------
 
 -  EXTENDED: displays all metadata of the specified table. It is used during debugging in general.
 -  FORMATTED: displays all metadata of the specified table in a form.
@@ -26,7 +26,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                                                                                                                                                                 |

@@ -26,8 +26,8 @@ Syntax
      PARTITION partition_specs2
      [LOCATION 'obs_path2'];
 
-Keyword
--------
+Keywords
+--------
 
 -  IF NOT EXISTS: prevents errors when partitions are repeatedly added.
 -  PARTITION: specifies a partition.
@@ -36,7 +36,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    =============== ================
    Parameter       Description
@@ -61,7 +61,11 @@ Precautions
 
    **PARTITION partition_specs LOCATION 'obs_path' PARTITION partition_specs LOCATION 'obs_path'**
 
--  If the path specified in the new partition contains subdirectories (or nested subdirectories), all file types and content in the subdirectories are considered partition records. Ensure that all file types and file content in the partition directory are the same as those in the table. Otherwise, an error is reported.
+-  If the path specified in the new partition contains subdirectories (or nested subdirectories), all file types and content in the subdirectories are considered partition records.
+
+   Ensure that all file types and file content in the partition directory are the same as those in the table. Otherwise, an error is reported.
+
+   You can set **multiLevelDirEnable** to **true** in the **OPTIONS** statement to query the content in the subdirectory. The default value is **false** (Note that this configuration item is a table attribute, exercise caution when performing this operation. Hive tables do not support this configuration item.)
 
 Example
 -------

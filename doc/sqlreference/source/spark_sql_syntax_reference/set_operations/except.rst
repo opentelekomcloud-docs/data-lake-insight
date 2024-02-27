@@ -17,8 +17,8 @@ Syntax
 
    select_statement EXCEPT select_statement;
 
-Keyword
--------
+Keywords
+--------
 
 EXCEPT minus the sets. A EXCEPT B indicates to remove the records that exist in both A and B from A and return the results. The repeated records returned by EXCEPT are not removed by default. The number of columns returned by each SELECT statement must be the same. The types and names of columns do not have to be the same.
 

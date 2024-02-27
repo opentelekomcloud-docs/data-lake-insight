@@ -45,10 +45,10 @@ Syntax
        field_names = ""
      );
 
-Keyword
--------
+Keywords
+--------
 
-.. table:: **Table 1** Keyword description
+.. table:: **Table 1** Keywords
 
    +-----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Mandatory | Description                                                                                                                              |
