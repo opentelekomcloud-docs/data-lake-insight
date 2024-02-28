@@ -13,17 +13,6 @@ Create a password datasource authentication on the DLI console to store password
 Procedure
 ---------
 
-#. Create a Kafka instance.
-
-   When creating a Kafka instance, enable SASL_SSL for Kafka. Once SASL_SSL is enabled, data can be encrypted for transmission, which improves security.
-
-#. Download the authentication credential.
-
-   a. Log in to the Kafka console and click a Kafka instance to access its details page.
-   b. In the connection information, find the SSL certificate and click **Download**.
-
-#. Upload the authentication credential to the OBS bucket.
-
 #. Create a datasource authentication.
 
    a. Log in to the DLI management console.

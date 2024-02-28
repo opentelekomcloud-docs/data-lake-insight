@@ -13,4 +13,4 @@ Error message "DLI.0003: AccessControlException XXX" is reported when a SQL job 
 Solution
 --------
 
-View the OBS bucket in the AccessControlException and check whether you are using an account that has the permission to access the bucket.
+Check the OBS bucket written in the AccessControlException to confirm if your account has the permission to access the bucket.

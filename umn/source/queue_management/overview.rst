@@ -29,6 +29,10 @@ Constraints
 
 -  The region of a queue cannot be changed.
 
+-  Queues with 16 CUs do not support scale-out or scale-in.
+
+-  Queues with 64 CUs do not support scale-in.
+
 -  A newly created queue can be scaled in or out only after a job is executed on the queue.
 
 -  DLI queues cannot access the Internet.

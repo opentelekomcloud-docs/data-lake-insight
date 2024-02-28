@@ -8,9 +8,9 @@ Managing Table Permissions
 Operation Scenario
 ------------------
 
--  You can isolate databases allocated to different users by setting permissions to ensure data query performance.
--  The administrator and database owner have all permissions, which cannot be set or modified by other users.
--  When setting database permissions for a new user, ensure that the user group to which the user belongs has the **Tenant Guest** permission.
+-  By setting permissions, you can assign varying table permissions to different users.
+-  The administrator and table owner have all permissions, which cannot be set or modified by other users.
+-  When setting table permissions for a new user, ensure that the user group the user belongs to has the **Tenant Guest** permission.
 
 Precautions
 -----------

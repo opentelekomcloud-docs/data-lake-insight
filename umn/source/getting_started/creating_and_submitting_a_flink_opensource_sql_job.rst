@@ -351,8 +351,7 @@ After the data source and data output channel are prepared, you can create a Fli
         'connector' = 'jdbc',
         'url' = "jdbc:mysql://172.16.0.116:3306/rds-dliflink", //  testrdsdb indicates the name of the created RDS database. Replace the IP address and port number with those of the RDS for MySQL instance.
         'table-name' = 'orders',
-        'username' = "xxxxx",  //  Username of the RDS for MySQL DB instance
-        'password'="xxxxx",  //  Password of the RDS for MySQL DB instance
+        'pwd_auth_name'="xxxxx", // Name of the datasource authentication of the password type created on DLI. If datasource authentication is used, you do not need to set the username and password for the job.
         'sink.buffer-flush.max-rows' = '1'
       );
 

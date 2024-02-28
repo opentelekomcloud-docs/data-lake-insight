@@ -5,7 +5,7 @@
 Datasource Authentication
 =========================
 
--  :ref:`Introduction <dli_01_0561>`
+-  :ref:`Overview <dli_01_0561>`
 -  :ref:`Creating a CSS Datasource Authentication <dli_01_0427>`
 -  :ref:`Creating a Kerberos Datasource Authentication <dli_01_0558>`
 -  :ref:`Creating a Kafka_SSL Datasource Authentication <dli_01_0560>`
@@ -16,7 +16,7 @@ Datasource Authentication
    :maxdepth: 1
    :hidden: 
 
-   introduction
+   overview
    creating_a_css_datasource_authentication
    creating_a_kerberos_datasource_authentication
    creating_a_kafka_ssl_datasource_authentication

@@ -37,4 +37,4 @@ A sub-user can view queues but cannot view Flink jobs. You can authorize the sub
 
       -  Select the permission policy created in :ref:`2 <dli_03_0139__en-us_topic_0000001117353058_li598911295292>` for **Permissions**.
 
-         You can also select **DLI Service Admin** (with all DLI permissions) for the subuser to view Flink jobs.
+         You can also select **DLI Service Administrator** (with all DLI permissions) for the subuser to view Flink jobs.

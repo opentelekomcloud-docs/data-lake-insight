@@ -12,6 +12,8 @@ Before executing a job, you need to create a queue.
    -  If you use a sub-account to create a queue for the first time, log in to the DLI management console using the main account and keep records in the DLI database before creating a queue.
    -  It takes 6 to 10 minutes for a job running on a new queue for the first time.
    -  After a queue is created, if no job is run within one hour, the system releases the queue.
+   -  Queues with 16 CUs do not support scale-out or scale-in.
+   -  Queues with 64 CUs do not support scale-in.
 
 Procedure
 ---------

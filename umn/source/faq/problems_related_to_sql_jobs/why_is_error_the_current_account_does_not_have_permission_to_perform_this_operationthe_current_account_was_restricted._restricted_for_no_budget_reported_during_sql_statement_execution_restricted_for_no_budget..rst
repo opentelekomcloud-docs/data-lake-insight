@@ -13,6 +13,6 @@ Error message "The current account does not have permission to perform this oper
 Solution
 --------
 
-Check whether your account is in arrears. If it is, renew your account and try again.
+Check if your account is in arrears and renew it if needed.
 
-If the error persists after renewal, log out and log in again.
+If the same error message persists after the renewal, log out of your account and log back in.

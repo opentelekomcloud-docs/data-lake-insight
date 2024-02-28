@@ -17,7 +17,7 @@ Semantic verification for a Flink SQL job (reading DIS data) fails. The followin
 Possible Causes
 ---------------
 
-Before running a Flink job, the permission to obtain DIS data is not granted to the user.
+Before running a Flink job, the user account was not authorized to access DIS data.
 
 Solution
 --------

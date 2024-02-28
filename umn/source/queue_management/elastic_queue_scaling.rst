@@ -13,6 +13,8 @@ Elastic scaling can be performed for a newly created queue only when there were 
 Precautions
 -----------
 
+-  Queues with 16 CUs do not support scale-out or scale-in.
+-  Queues with 64 CUs do not support scale-in.
 -  If **Status of queue xxx is assigning, which is not available** is displayed on the **Elastic Scaling** page, the queue can be scaled only after the queue resources are allocated.
 
 Scaling Out

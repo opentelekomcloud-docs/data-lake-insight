@@ -14,8 +14,8 @@ When a Flink Jar job is submitted to access GaussDB(DWS), an error message is di
 
    FATAL:  Already too many clients, active/non-active/reserved: 5/508/3
 
-Possible Causes
----------------
+Cause Analysis
+--------------
 
 The number of GaussDB(DWS) database connections exceeds the upper limit. In the error information, the value of **non-active** indicates the number of idle connections. For example, if the value of **non-active** is 508, there are 508 idle connections.
 

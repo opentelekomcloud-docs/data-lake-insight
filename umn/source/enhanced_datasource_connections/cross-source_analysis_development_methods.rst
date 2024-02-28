@@ -33,7 +33,7 @@ DLI Supported Data Sources
    APIG         x             x             Y             x
    CSS          Y             Y             Y             Y
    DCS Redis    Y             Y             Y             Y
-   DDS Mongo    Y             Y             Y             Y
+   DDS          Y             Y             Y             Y
    DMS Kafka    x             x             Y             Y
    GaussDB(DWS) Y             Y             Y             Y
    MRS HBase    Y             Y             Y             Y

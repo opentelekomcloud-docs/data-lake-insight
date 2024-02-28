@@ -2,23 +2,23 @@
 
 .. _dli_07_0005:
 
-Constraints
-===========
+Constraints and Limitations
+===========================
 
-Constraints on Jobs
--------------------
+On Jobs
+-------
 
 -  Only the latest 100 jobs are displayed on DLI's SparkUI.
 -  A maximum of 1,000 job results can be displayed on the console. To view more or all jobs, export the job data to OBS.
 -  To export job run logs, you must have the permission to access OBS buckets. You need to configure a DLI job bucket on the **Global Configuration** > **Project** page in advance.
--  **View Log** and **Export Log** buttons are not available for synchronization jobs and jobs running on the default queue.
+-  The **View Log** button is not available for synchronization jobs and jobs running on the default queue.
 -  Only Spark jobs support custom images.
 -  An elastic resource pool supports a maximum of 32,000 CUs.
 
 For details about job constraints, see :ref:`Job Management <dli_01_0567>`.
 
-Constraints on Queues
----------------------
+On Queues
+---------
 
 -  A queue named **default** is preset in DLI for you to experience. Resources are allocated on demand.
 
@@ -31,14 +31,18 @@ Constraints on Queues
 
 -  The region of a queue cannot be changed.
 
+-  Queues with 16 CUs do not support scale-out or scale-in.
+
+-  Queues with 64 CUs do not support scale-in.
+
 -  A newly created queue can be scaled in or out only after a job is executed on the queue.
 
 -  DLI queues cannot access the Internet.
 
 For more constraints on using a DLI queue, see :ref:`Queue Overview <dli_01_0402>`.
 
-Constraints on Resources
-------------------------
+On Resources
+------------
 
 -  **Database**
 
@@ -82,8 +86,8 @@ Constraints on Resources
 
 For details about constraints on resources, see :ref:`Data Management <dli_01_0004>`.
 
-Constraints on Enhanced Datasource Connections
-----------------------------------------------
+On Enhanced Datasource Connections
+----------------------------------
 
 -  Datasource connections cannot be created for the **default** queue.
 -  Flink jobs can directly access DIS, OBS, and SMN data sources without using datasource connections.
@@ -111,10 +115,9 @@ Constraints on Enhanced Datasource Connections
 
 For more constraints on enhanced datasource connections, see :ref:`Enhanced Datasource Connection Overview <dli_01_0003>`.
 
-Constraints on Datasource Authentication
-----------------------------------------
+On Datasource Authentication
+----------------------------
 
--  Compared with datasource authentication provided by DLI, you are advised to use Data Encryption Worksop (DEW) to store data source authentication information.
 -  Only Spark SQL and Flink OpenSource SQL 1.12 jobs support datasource authentication.
 -  DLI supports four types of datasource authentication. Select an authentication type specific to each data source.
 
@@ -125,8 +128,8 @@ Constraints on Datasource Authentication
 
 For more constraints on datasource authentication, see :ref:`Datasource Authentication Introduction <dli_01_0561>`.
 
-Constraints on SQL Syntax
--------------------------
+On SQL Syntax
+-------------
 
 -  Constraints on the SQL syntax:
 
@@ -137,8 +140,8 @@ Constraints on SQL Syntax
    -  Each SQL statement should contain less than 500,000 characters.
    -  The size of each SQL statement must be less than 1 MB.
 
-Other Constraints
------------------
+Other
+-----
 
 -  For details about quota constraints, see :ref:`Quotas <dli_07_0009>`.
 -  Recommended browsers for logging in to DLI:
