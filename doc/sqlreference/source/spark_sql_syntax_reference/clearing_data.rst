@@ -17,10 +17,10 @@ Syntax
 
    TRUNCATE TABLE tablename [PARTITION (partcol1=val1, partcol2=val2 ...)];
 
-Keyword
--------
+Keywords
+--------
 
-.. table:: **Table 1** Parameter
+.. table:: **Table 1** Keywords
 
    +-----------+---------------------------------------------------------------------------+
    | Parameter | Description                                                               |

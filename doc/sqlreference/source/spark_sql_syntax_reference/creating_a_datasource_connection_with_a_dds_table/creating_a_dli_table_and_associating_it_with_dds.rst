@@ -10,6 +10,10 @@ Function
 
 This statement is used to create a DLI table and associate it with an existing DDS collection.
 
+.. note::
+
+   In Spark cross-source development scenarios, there is a risk of password leakage if datasource authentication information is directly configured. You are advised to use the datasource authentication provided by DLI.
+
 Prerequisites
 -------------
 
@@ -31,10 +35,14 @@ Syntax
      'encryption' = 'true'
    );
 
-Keyword
--------
+.. note::
 
-.. table:: **Table 1** CREATE TABLE parameter description
+   Document Database Service (DDS) is fully compatible with the MongoDB protocol. Therefore, the syntax used is **using mongo options**.
+
+Keywords
+--------
+
+.. table:: **Table 1** CREATE TABLE keywords
 
    +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                              |
@@ -69,7 +77,7 @@ Example
 
 ::
 
-   create table 1_datasource_mongo.test_mongo(id string, name string, age int) using mongo options(
+   create table 1_datasource.test_table1(id string, name string, age int) using mongo options(
      'url' = '192.168.4.62:8635,192.168.5.134:8635/test?authSource=admin',
      'database' = 'test',
      'collection' = 'test',

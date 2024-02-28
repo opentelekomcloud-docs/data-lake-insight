@@ -20,8 +20,8 @@ Syntax
      [OPTIONS(key1=value1)]
      select_statement;
 
-Keyword
--------
+Keywords
+--------
 
 -  USING: Specifies the storage format.
 -  OPTIONS: Specifies the list of attributes to be exported. This parameter is optional.
@@ -29,7 +29,7 @@ Keyword
 Parameter
 ---------
 
-.. table:: **Table 1** INSERT OVERWRITE DIRECTORY parameter description
+.. table:: **Table 1** INSERT OVERWRITE DIRECTORY parameters
 
    +-------------+--------------------------------------------------------------------------------------+
    | Parameter   | Description                                                                          |
@@ -41,7 +41,7 @@ Parameter
 
 .. note::
 
-   If the file format is set to **CSV**, see the :ref:`Table 3 <dli_08_0076__en-us_topic_0114776170_table1876517231928>` for the OPTIONS parameters.
+   If **file_format** is set to **csv**, see :ref:`Table 3 <dli_08_0076__dli_08_0076_en-us_topic_0114776170_table1876517231928>` for the OPTIONS parameters.
 
 Precautions
 -----------

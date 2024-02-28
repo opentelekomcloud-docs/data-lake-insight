@@ -18,8 +18,8 @@ Syntax
    SHOW PARTITIONS [db_name.]table_name
      [PARTITION partition_specs];
 
-Keyword
--------
+Keywords
+--------
 
 -  PARTITIONS: partitions in a specified table
 -  PARTITION: a specified partition
@@ -27,7 +27,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Description                                                                                                                                                                                                                                                                                         |

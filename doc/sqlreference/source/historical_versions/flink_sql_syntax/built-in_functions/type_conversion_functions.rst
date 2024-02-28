@@ -26,7 +26,7 @@ Precautions
 Example
 -------
 
-Convert amount into a character string. The specified length of the string is invalid after the conversion.
+Convert amount into a string. The specified length of the string is invalid after the conversion.
 
 .. code-block::
 

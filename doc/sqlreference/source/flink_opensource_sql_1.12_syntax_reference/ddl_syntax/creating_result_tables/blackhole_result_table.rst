@@ -30,8 +30,8 @@ Syntax
    create table blackhole_table (
     attr_name attr_type (',' attr_name attr_type) *
    ) with (
-    'connector = blackhole'
-   )
+    'connector' = 'blackhole'
+   );
 
 Parameters
 ----------

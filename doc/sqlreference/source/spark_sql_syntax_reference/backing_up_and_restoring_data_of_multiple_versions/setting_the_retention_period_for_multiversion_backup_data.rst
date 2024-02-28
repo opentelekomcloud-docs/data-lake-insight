@@ -8,7 +8,9 @@ Setting the Retention Period for Multiversion Backup Data
 Function
 --------
 
-After multiversion is enabled, backup data is retained for seven days by default. You can change the retention period by setting system parameter **dli.multi.version.retention.days**. Multiversion data out of the retention period will be automatically deleted when the **insert overwrite** or **truncate** statement is executed. You can also set table attribute **dli.multi.version.retention.days** to adjust the retention period when adding a column or modifying a partitioned table. For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Multiversion Backup <dli_08_0354>`.
+After multiversion is enabled, backup data is retained for seven days by default. You can change the retention period by setting system parameter **dli.multi.version.retention.days**. Multiversion data out of the retention period will be automatically deleted when the **insert overwrite** or **truncate** statement is executed. You can also set table attribute **dli.multi.version.retention.days** to adjust the retention period when adding a column or modifying a partitioned table.
+
+For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Multiversion Backup <dli_08_0354>`.
 
 Currently, the multiversion function supports only OBS tables created using the Hive syntax. For details about the syntax for creating a table, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.
 
@@ -20,15 +22,15 @@ Syntax
    ALTER TABLE [db_name.]table_name
    SET TBLPROPERTIES ("dli.multi.version.retention.days"="days");
 
-Keyword
--------
+Keywords
+--------
 
 -  TBLPROPERTIES: This keyword is used to add a **key/value** property to a table.
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                          |

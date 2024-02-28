@@ -37,10 +37,10 @@ Keywords
 
 For details about the SELECT keywords, see :ref:`Basic SELECT Statements <dli_08_0150>`.
 
-Parameter description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------------+----------------------------------------------------------------------------------------------------+
    | Parameter               | Description                                                                                        |
@@ -61,7 +61,7 @@ Parameter description
 Precautions
 -----------
 
--  The target DLI table must exist.
+-  A DLI table is available.
 
 -  When creating a DLI table, you need to specify the schema information.
 
@@ -72,7 +72,7 @@ Precautions
       create table test_redis(name string, age int) using redis options(
         'host' = '192.168.4.199',
         'port' = '6379',
-        'password' = '******',
+        'passwdauth' = '******',
         'table' = 'test_with_key_column',
         'key.column' = 'name'
       );
@@ -91,7 +91,7 @@ Precautions
       create table test_redis(name string, age int) using redis options(
         'host' = '192.168.7.238',
         'port' = '6379',
-        'password' = '******',
+        'passwdauth' = '******',
         'table' = 'test_without_key_column'
       );
       insert into test_redis values("James", 35), ("Michael", 22);

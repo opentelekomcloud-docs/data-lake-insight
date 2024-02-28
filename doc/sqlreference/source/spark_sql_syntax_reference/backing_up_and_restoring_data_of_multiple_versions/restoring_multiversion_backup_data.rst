@@ -27,17 +27,17 @@ Syntax
 
       RESTORE TABLE [db_name.]table_name PARTITION (column = value, ...) TO VERSION 'version_id';
 
-Keyword
--------
+Keywords
+--------
 
 -  RESTORE TABLE: Used to restore backup data
 -  PARTITION: Used to specify the partition column
 -  TO VERSION: Used to specify the version number You can run the **SHOW HISTORY** command to obtain the version number. For details, see :ref:`Viewing Multiversion Backup Data <dli_08_0351>`.
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                                                                     |

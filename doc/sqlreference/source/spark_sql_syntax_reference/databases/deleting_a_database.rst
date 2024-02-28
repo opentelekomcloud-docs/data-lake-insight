@@ -17,8 +17,8 @@ Syntax
 
    DROP [DATABASE | SCHEMA] [IF EXISTS] db_name [RESTRICT|CASCADE];
 
-Keyword
--------
+Keywords
+--------
 
 **IF EXISTS**: Prevents system errors if the database to be deleted does not exist.
 
@@ -32,7 +32,7 @@ Precautions
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameter
 
    +-----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter | Description                                                                                                                                          |

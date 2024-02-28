@@ -13,7 +13,7 @@ DLI outputs the Flink job output data to RDS through the JDBC result table.
 Prerequisites
 -------------
 
-An enhanced datasource connection with the instances has been established, so that you can configure security group rules as required.
+-  An enhanced datasource connection with the instances has been established, so that you can configure security group rules as required.
 
 Precautions
 -----------
@@ -46,29 +46,39 @@ Syntax
 Parameters
 ----------
 
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Parameter                  | Mandatory   | Default Value | Data Type   | Description                                                                                                                                                 |
-+============================+=============+===============+=============+=============================================================================================================================================================+
-| connector                  | Yes         | None          | String      | Connector to be used. Set this parameter to **jdbc**.                                                                                                       |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| url                        | Yes         | None          | String      | Database URL.                                                                                                                                               |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| table-name                 | Yes         | None          | String      | Name of the table where the data will be read from the database.                                                                                            |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| driver                     | No          | None          | String      | Driver required for connecting to the database. If you do not set this parameter, it will be automatically derived from the URL.                            |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| username                   | No          | None          | String      | Database authentication username. This parameter must be configured in pair with **password**.                                                              |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| password                   | No          | None          | String      | Database authentication password. This parameter must be configured in pair with **username**.                                                              |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| sink.buffer-flush.max-rows | No          | 100           | Integer     | Maximum size of buffered records before flush. You can set this parameter to **0** to disable it.                                                           |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| sink.buffer-flush.interval | No          | 1s            | Duration    | Flush interval, during which asynchronous threads will flush data. You can set this parameter to **0** to disable it.                                       |
-|                            |             |               |             |                                                                                                                                                             |
-|                            |             |               |             | Note that **sink.buffer-flush.max-rows** can be set to **0** with the flush interval set allowing for complete asynchronous processing of buffered actions. |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| sink.max-retries           | No          | 3             | Integer     | Maximum number of retries if writing records to the database failed.                                                                                        |
-+----------------------------+-------------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter                  | Mandatory   | Default Value | Data Type   | Description                                                                                                                                                              |
++============================+=============+===============+=============+==========================================================================================================================================================================+
+| connector                  | Yes         | None          | String      | Connector to be used. Set this parameter to **jdbc**.                                                                                                                    |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| url                        | Yes         | None          | String      | Database URL.                                                                                                                                                            |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| table-name                 | Yes         | None          | String      | Name of the table where the data will be read from the database.                                                                                                         |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| driver                     | No          | None          | String      | Driver required for connecting to the database. If you do not set this parameter, it will be automatically derived from the URL.                                         |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| username                   | No          | None          | String      | Database authentication username. This parameter must be configured in pair with **password**.                                                                           |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| password                   | No          | None          | String      | Database authentication password. This parameter must be configured in pair with **username**.                                                                           |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sink.buffer-flush.max-rows | No          | 100           | Integer     | Maximum number of rows to buffer for each write request.                                                                                                                 |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | It can improve the performance of writing data, but may increase the latency.                                                                                            |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | You can set this parameter to **0** to disable it.                                                                                                                       |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sink.buffer-flush.interval | No          | 1s            | Duration    | Interval for refreshing the buffer, during which data is refreshed by asynchronous threads.                                                                              |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | It can improve the performance of writing data, but may increase the latency.                                                                                            |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | You can set this parameter to **0** to disable it.                                                                                                                       |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | Note: If **sink.buffer-flush.max-rows** is set to **0** and the buffer refresh interval is configured, the buffer is asynchronously refreshed.                           |
+|                            |             |               |             |                                                                                                                                                                          |
+|                            |             |               |             | The format is *{length value}{time unit label}*, for example, **123ms, 321s**. The supported time units include **d**, **h**, **min**, **s**, and **ms** (default unit). |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sink.max-retries           | No          | 3             | Integer     | Maximum number of retries if writing records to the database failed.                                                                                                     |
++----------------------------+-------------+---------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Data Type Mapping
 -----------------

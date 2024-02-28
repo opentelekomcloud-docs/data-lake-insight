@@ -35,16 +35,16 @@ Syntax
 
       RESTORE TABLE [db_name.]table_name TO initial layout;
 
-Keyword
--------
+Keywords
+--------
 
 -  SET TBLPROPERTIES: Used to set table properties and enable multiversion.
 -  UNSET TBLPROPERTIES: Used to unset table properties and disable multiversion.
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+----------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                      |

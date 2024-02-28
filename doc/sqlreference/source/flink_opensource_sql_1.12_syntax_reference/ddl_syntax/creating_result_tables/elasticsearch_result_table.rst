@@ -16,19 +16,13 @@ Prerequisites
 -------------
 
 -  When creating a Flink OpenSource SQL job, you need to set **Flink Version** to **1.12** on the **Running Parameters** tab of the job editing page, select **Save Job Log**, and set the OBS bucket for saving job logs.
-
 -  You have created a cluster on CSS.
-
-   If you need to access Elasticsearch using the cluster username and password, enable the security mode and disable HTTPS for the created CSS cluster.
-
 -  An enhanced datasource connection has been created for DLI to connect to CSS, so that jobs can run on the dedicated queue of DLI and you can set the security group rules as required.
 
 Precautions
 -----------
 
 -  Currently, only CSS 7.X and later versions are supported. Version 7.6.2 is recommended.
-
--  If the username and password are not used, the security mode must be enabled and HTTPS must be disabled for the created CSS cluster.
 
 -  ICMP must be enabled for the security group inbound rules of the CSS cluster.
 
@@ -74,13 +68,11 @@ Parameters
    +=====================================+=============+===============+=============+=======================================================================================================================================================================================================================================================================+
    | connector                           | Yes         | None          | String      | Connector to be used. Set this parameter to **elasticsearch-7**, indicating to connect to a cluster of Elasticsearch 7.x or later.                                                                                                                                    |
    +-------------------------------------+-------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | hosts                               | Yes         | None          | String      | Host name of the cluster where Elasticsearch locates. Use semicolons (;) to separate multiple host names. Ensure that the host name starts with **http**, for example, **http://**\ x.x.x.x\ **:9200**.                                                               |
+   | hosts                               | Yes         | None          | String      | Host name of the cluster where Elasticsearch is located. Use semicolons (;) to separate multiple host names.                                                                                                                                                          |
    +-------------------------------------+-------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | index                               | Yes         | None          | String      | Elasticsearch index for every record. The index can be a static index (for example, **'myIndex'**) or a dynamic index (for example, **'index-{log_ts|yyyy-MM-dd}'**).                                                                                                 |
    +-------------------------------------+-------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | username                            | No          | None          | String      | Username of the cluster where Elasticsearch locates. This parameter must be configured in pair with **password**.                                                                                                                                                     |
-   |                                     |             |               |             |                                                                                                                                                                                                                                                                       |
-   |                                     |             |               |             | If the username and password are used, the security mode must be enabled and HTTPS must be disabled for the created CSS cluster.                                                                                                                                      |
    +-------------------------------------+-------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | password                            | No          | None          | String      | Password of the cluster where Elasticsearch locates. This parameter must be configured in pair with **username**.                                                                                                                                                     |
    +-------------------------------------+-------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

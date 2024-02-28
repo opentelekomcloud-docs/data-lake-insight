@@ -18,16 +18,16 @@ Syntax
    LOAD DATA INPATH 'folder_path' INTO TABLE [db_name.]table_name
      OPTIONS(property_name=property_value, ...);
 
-Keyword
--------
+Keywords
+--------
 
 -  INPATH: path of data to be imported
 -  OPTIONS: list of properties
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------+--------------------------------------------------------------------------------------------+
    | Parameter   | Description                                                                                |
@@ -158,7 +158,7 @@ The following configuration options can be used during data import:
    .. note::
 
       -  Default value: yyyy-MM-dd HH:mm:ss.
-      -  The timestamp format is specified by the Java time pattern character string. For details, see :ref:`Table 3 Definition of date and time pattern characters <dli_08_0100__en-us_topic_0114776194_en-us_topic_0093946741_table489265920252>`.
+      -  The timestamp format is specified by the Java time pattern string. For details, see :ref:`Table 3 <dli_08_0100__en-us_topic_0114776194_en-us_topic_0093946741_table489265920252>`.
 
 -  **Mode**: Specifies the processing mode of error records while importing. The options are as follows: **PERMISSIVE**, **DROPMALFORMED**, and **FAILFAST**.
 

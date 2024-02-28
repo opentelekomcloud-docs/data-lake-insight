@@ -30,7 +30,7 @@ Auto-Regressive Integrated Moving Average (ARIMA) is a classical model used for 
    ARMA_COEF(field, degree): Return the weight of the ARMA model.
    ARIMA_PRED(field, degree, derivativeOrder): Use ARIMA to forecast new data.
 
-.. table:: **Table 1** Parameter Description
+.. table:: **Table 1** Parameters
 
    +-----------------+-----------+-------------------------------------------------------------------------------------------------------------------------------------+---------------+
    | Parameter       | Mandatory | Description                                                                                                                         | Default Value |
@@ -65,7 +65,7 @@ The Holt-Winters algorithm is one of the Exponential smoothing methods used to f
 
    HOLT_WINTERS(field, seasonality, forecastOrder)
 
-.. table:: **Table 2** Parameter Description
+.. table:: **Table 2** Parameters
 
    +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Mandatory             | Description                                                                                                                                                                    |

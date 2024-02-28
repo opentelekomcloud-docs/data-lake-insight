@@ -20,10 +20,10 @@ Syntax
      )
      (TIMESTAMP BY timeindicator (',' timeindicator)?);timeindicator:PROCTIME '.' PROCTIME| ID '.' ROWTIME
 
-Keyword
--------
+Keywords
+--------
 
-.. table:: **Table 1** Keyword description
+.. table:: **Table 1** Keywords
 
    +----------------------+-----------+------------------------------------------------------------------------------------------------------------+
    | Parameter            | Mandatory | Description                                                                                                |

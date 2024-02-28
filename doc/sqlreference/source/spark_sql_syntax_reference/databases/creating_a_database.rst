@@ -19,8 +19,8 @@ Syntax
      [COMMENT db_comment]
      [WITH DBPROPERTIES (property_name=property_value, ...)];
 
-Keyword
--------
+Keywords
+--------
 
 -  **IF NOT EXISTS**: Prevents system errors if the database to be created exists.
 -  **COMMENT**: Describes a database.
@@ -30,7 +30,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter      | Description                                                                                                                                          |

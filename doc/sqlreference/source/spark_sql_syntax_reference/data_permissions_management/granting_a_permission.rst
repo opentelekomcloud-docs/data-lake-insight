@@ -17,8 +17,8 @@ Syntax
 
    GRANT (privilege,...) ON (resource,..) TO ((ROLE [db_name].role_name) | (USER user_name)),...);
 
-Keyword
--------
+Keywords
+--------
 
 ROLE: The subsequent **role_name** must be a role.
 

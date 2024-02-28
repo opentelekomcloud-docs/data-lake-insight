@@ -23,10 +23,10 @@ Syntax
 
    -  Clustering algorithms can be applied in **unbounded streams**.
 
-Parameter Description
----------------------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter Description
+.. table:: **Table 1** Parameters
 
    +--------------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter          | Mandatory | Description                                                                                                                                   |

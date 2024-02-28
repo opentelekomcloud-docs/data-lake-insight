@@ -40,7 +40,7 @@ Syntax
    -  Specify the logical conditions required to map a row to a row pattern variable in the DEFINE clause.
    -  Define measures, which are expressions usable in other parts of the SQL query, in the MEASURES clause.
 
-Syntax description
+Syntax Description
 ------------------
 
 .. table:: **Table 1** Syntax description

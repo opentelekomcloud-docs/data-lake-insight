@@ -19,16 +19,16 @@ Delete multiversion backup data out of the retention period.
 
    clear history for table [db_name.]table_name older_than 'timestamp';
 
-Keyword
--------
+Keywords
+--------
 
 -  clear history for table: Used to delete multiversion backup data
 -  older_than: Used to specify the time range for deleting multiversion backup data
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Description                                                                                                                                          |

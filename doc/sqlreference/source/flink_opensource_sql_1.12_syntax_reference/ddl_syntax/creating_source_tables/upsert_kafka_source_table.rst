@@ -15,7 +15,7 @@ As a source, the upsert-kafka connector produces a changelog stream, where each 
 Prerequisites
 -------------
 
-An enhanced datasource connection has been created for DLI to connect to Kafka clusters, so that jobs can run on the dedicated queue of DLI and you can set the security group rules as required.
+-  An enhanced datasource connection has been created for DLI to connect to Kafka clusters, so that jobs can run on the dedicated queue of DLI and you can set the security group rules as required.
 
 Precautions
 -----------

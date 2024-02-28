@@ -18,8 +18,8 @@ Syntax
    SELECT attr_expr_list FROM table_reference
      GROUP BY col_name_list;
 
-Keyword
--------
+Keywords
+--------
 
 Column-based GROUP BY can be categorized into single-column GROUP BY and multi-column GROUP BY.
 

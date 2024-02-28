@@ -17,8 +17,8 @@ Syntax
 
    SHOW PRINCIPALS ROLE;
 
-Keyword
--------
+Keywords
+--------
 
 None
 

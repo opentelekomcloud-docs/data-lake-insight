@@ -169,7 +169,7 @@ None
 
 **Example**
 
-Use the substring function to obtain the character string from the name field, group the **student** table according to the obtained character string, and return each sub character string and the number of records.
+Use the substring function to obtain the string from the name field, group the **student** table according to the obtained string, and return each sub string and the number of records.
 
 ::
 

@@ -17,8 +17,8 @@ Syntax
 
    DROP VIEW [IF EXISTS] [db_name.]view_name;
 
-Keyword
--------
+Keywords
+--------
 
 DROP: Deletes the metadata of a specified view. Although views and tables have many common points, the DROP TABLE statement cannot be used to delete views.
 

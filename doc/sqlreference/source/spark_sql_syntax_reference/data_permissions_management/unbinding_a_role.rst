@@ -17,8 +17,8 @@ Syntax
 
    REVOKE ([db_name].role_name,...) FROM (user_name,...);
 
-Keyword
--------
+Keywords
+--------
 
 None
 

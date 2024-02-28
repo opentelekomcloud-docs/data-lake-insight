@@ -14,8 +14,8 @@ Syntax
 
    SELECT * FROM table_name LIMIT number;
 
-Keyword
--------
+Keywords
+--------
 
 LIMIT is used to limit the query results. Only INT type is supported by the **number** parameter.
 

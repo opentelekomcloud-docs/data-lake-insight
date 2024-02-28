@@ -17,15 +17,15 @@ Syntax
 
    SHOW CREATE TABLE table_name;
 
-Keyword
--------
+Keywords
+--------
 
 CREATE TABLE: statement for creating a table
 
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameter
 
    ========== ===========
    Parameter  Description
@@ -41,10 +41,27 @@ The table specified in this statement must exist. Otherwise, an error will occur
 Example
 -------
 
-#. Create a table. For details, see :ref:`Creating an OBS Table <dli_08_0223>` or :ref:`Creating a DLI Table <dli_08_0224>`.
+**Example of Spark 2.4.5:**
 
-#. Run the following statement to view the statement that is used to create table **test**:
+-  Run the following command to return the statement for creating the **testDB01.testTable5** table:
 
-   ::
+   **SHOW CREATE TABLE testDB01.testTable5**
 
-      SHOW CREATE TABLE test;
+-  Return the statement for creating the **test** table.
+
+   .. code-block::
+
+      createtab_stmt
+       CREATE TABLE `testDB01`.`testTable5`(`id` INT, `age` INT, `money` DOUBLE)
+      COMMENT 'test'
+      ROW FORMAT SERDE 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+      WITH SERDEPROPERTIES (
+        'serialization.format' = '1'
+      )
+      STORED AS
+        INPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+        OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+      TBLPROPERTIES (
+        'hive.serialization.extend.nesting.levels' = 'true',
+        'ddlUpdateTime' = '1707202585460'
+      )

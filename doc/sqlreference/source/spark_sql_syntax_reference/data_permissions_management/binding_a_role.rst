@@ -17,8 +17,8 @@ Syntax
 
    GRANT ([db_name].role_name,...) TO (user_name,...);
 
-Keyword
--------
+Keywords
+--------
 
 None
 

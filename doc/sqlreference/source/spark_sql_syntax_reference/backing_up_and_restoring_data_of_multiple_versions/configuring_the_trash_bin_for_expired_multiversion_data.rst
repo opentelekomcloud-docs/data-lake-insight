@@ -20,15 +20,15 @@ Syntax
    ALTER TABLE [db_name.]table_name
    SET TBLPROPERTIES ("dli.multi.version.trash.dir"="OBS bucket for expired multiversion backup data");
 
-Keyword
--------
+Keywords
+--------
 
 -  TBLPROPERTIES: This keyword is used to add a **key/value** property to a table.
 
-Parameter
----------
+Parameters
+----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                                       | Description                                                                                                                                                                                                                                                                                                                                     |

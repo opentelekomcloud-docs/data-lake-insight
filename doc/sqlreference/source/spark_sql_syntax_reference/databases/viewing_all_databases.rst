@@ -17,15 +17,15 @@ Syntax
 
    SHOW [DATABASES | SCHEMAS] [LIKE regex_expression];
 
-Keyword
--------
+Keywords
+--------
 
 None
 
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameter
 
    ================ =============
    Parameter        Description

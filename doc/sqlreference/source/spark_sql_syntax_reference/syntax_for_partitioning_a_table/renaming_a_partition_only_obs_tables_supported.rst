@@ -19,8 +19,8 @@ Syntax
      PARTITION partition_specs
      RENAME TO PARTITION partition_specs;
 
-Keyword
--------
+Keywords
+--------
 
 -  PARTITION: a specified partition
 -  RENAME: new name of the partition
@@ -28,7 +28,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    =============== ================
    Parameter       Description

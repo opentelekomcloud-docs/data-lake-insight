@@ -5,7 +5,7 @@
 Reserved Keywords
 =================
 
-Flink SQL reserves some strings as keywords. If you want to use the following character strings as field names, ensure that they are enclosed by back quotes, for example, \`value\` and \`count`.
+Flink SQL reserves some strings as keywords. If you want to use the following strings as field names, ensure that they are enclosed by back quotes, for example, \`value\` and \`count`.
 
 A
 -

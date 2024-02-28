@@ -13,7 +13,7 @@ Create a source stream to obtain data from Redis as input for jobs.
 Prerequisites
 -------------
 
-An enhanced datasource connection has been created for DLI to connect to the Redis database, so that you can configure security group rules as required.
+-  An enhanced datasource connection has been created for DLI to connect to the Redis database, so that you can configure security group rules as required.
 
 .. _dli_08_0389__en-us_topic_0000001262335926_section2069551919512:
 

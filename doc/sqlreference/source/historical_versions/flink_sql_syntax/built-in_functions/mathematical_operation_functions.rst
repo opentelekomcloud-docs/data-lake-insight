@@ -16,7 +16,7 @@ Relationship operators are binary operators. Two compared data types must be of 
 
 .. _dli_08_0191__t16c03594f4e14f9b890b3229307ab86f:
 
-.. table:: **Table 1** Relational Operators
+.. table:: **Table 1** Relational operators
 
    +---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Operator                                    | Returned Data Type    | Description                                                                                                                                                                           |
@@ -74,8 +74,8 @@ Relationship operators are binary operators. Two compared data types must be of 
 
          abs(0.9999999999 - 1.0000000000) < 0.000000001 //The precision decimal places of 0.9999999999 and 1.0000000000 are 10, while the precision decimal place of 0.000000001 is 9. Therefore, 0.9999999999 can be regarded equal to 1.0000000000.
 
-   -  Comparison between data of the numeric type and character strings is allowed. During comparison using relational operators, including >, <, <=, and >=, data of the string type is converted to numeric type by default. No characters other than numeric characters are allowed.
-   -  Character strings can be compared using relational operators.
+   -  Comparison between data of the numeric type and strings is allowed. During comparison using relational operators, including >, <, <=, and >=, data of the string type is converted to numeric type by default. No characters other than numeric characters are allowed.
+   -  Strings can be compared using relational operators.
 
 Logical Operators
 -----------------
@@ -86,7 +86,7 @@ Common logical operators are AND, OR, and NOT. Their priority order is NOT > AND
 
 .. _dli_08_0191__t3f78edfe9a364a4ab8775083055e6b82:
 
-.. table:: **Table 2** Logical Operators
+.. table:: **Table 2** Logical operators
 
    +------------------+-------------+-----------------------------------------------------------------------------------+
    | Operator         | Result Type | Description                                                                       |
@@ -121,7 +121,7 @@ Arithmetic operators include binary operators and unary operators, for all of wh
 
 .. _dli_08_0191__t5788dd0bf9554fa599615d5d6ef50bd0:
 
-.. table:: **Table 3** Arithmetic Operators
+.. table:: **Table 3** Arithmetic operators
 
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Operator              | Result Type           | Description                                                                                                                                                                     |

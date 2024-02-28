@@ -10,6 +10,10 @@ Function
 
 This statement is used to create a DLI table and associate it with an existing RDS table. This function supports access to the MySQL and PostgreSQL clusters of RDS.
 
+.. note::
+
+   In Spark cross-source development scenarios, there is a risk of password leakage if datasource authentication information is directly configured. You are advised to use the datasource authentication provided by DLI.
+
 Prerequisites
 -------------
 
@@ -31,7 +35,7 @@ Syntax
 Keywords
 --------
 
-.. table:: **Table 1** CREATE TABLE parameter description
+.. table:: **Table 1** CREATE TABLE keywords
 
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -121,7 +125,7 @@ When creating a table associated with RDS, you do not need to specify the **Sche
 Example
 -------
 
-Accessing MySQL:
+Accessing MySQL
 
 ::
 
@@ -133,7 +137,7 @@ Accessing MySQL:
      'passwdauth' = 'xxx',
      'encryption' = 'true');
 
-Accessing PostgreSQL:
+Accessing PostgreSQL
 
 ::
 

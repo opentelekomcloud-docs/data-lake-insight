@@ -17,15 +17,15 @@ Syntax
 
    DESCRIBE DATABASE [EXTENDED] db_name;
 
-Keyword
--------
+Keywords
+--------
 
 EXTENDED: Displays the database properties.
 
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameter
 
    +-----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter | Description                                                                                                                                          |

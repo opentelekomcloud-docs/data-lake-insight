@@ -17,8 +17,8 @@ Syntax
 
    SHOW COLUMNS {FROM | IN} table_name [{FROM | IN} db_name];
 
-Keyword
--------
+Keywords
+--------
 
 -  COLUMNS: columns in the current table
 -  FROM/IN: followed by the name of a database whose tables and views will be displayed. Keyword FROM is equivalent to IN. You can use either of them in a statement.
@@ -26,7 +26,7 @@ Keyword
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    ========== =============
    Parameter  Description
