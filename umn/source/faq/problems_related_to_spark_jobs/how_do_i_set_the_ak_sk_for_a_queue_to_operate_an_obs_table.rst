@@ -5,6 +5,10 @@
 How Do I Set the AK/SK for a Queue to Operate an OBS Table?
 ===========================================================
 
+.. note::
+
+   Hard-coded or plaintext AK and SK pose significant security risks. To ensure security, encrypt your AK and SK, store them in configuration files or environment variables, and decrypt them when needed.
+
 -  If the AK and SK are obtained, set the parameters as follows:
 
    -  Create SparkContext using code
@@ -48,7 +52,3 @@ How Do I Set the AK/SK for a Queue to Operate an OBS Table?
                .config("spark.hadoop.fs.obs.session.token", sts)
                .enableHiveSupport()
                .getOrCreate()
-
-.. note::
-
-   For security purposes, you are advised not to include the AK and SK information in the OBS path. In addition, if a table is created in the OBS directory, the OBS path specified by the **Path** field cannot contain the AK and SK information.

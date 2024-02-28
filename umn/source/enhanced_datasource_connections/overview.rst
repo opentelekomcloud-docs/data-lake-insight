@@ -8,11 +8,18 @@ Overview
 What Is Enhanced Datasource Connection?
 ---------------------------------------
 
-Typically, you cannot use DLI to directly access a data source in a VPC other than the one where DLI is because the network between DLI and the data source is disconnected. For proper access, you need to establish a network connection between them.
+In cross-source data analysis scenarios, DLI needs to connect to external data sources. However, due to the different VPCs between the data source and DLI, the network cannot be connected, which results in DLI being unable to read data from the data source. DLI's enhanced datasource connection feature enables network connectivity between DLI and the data source.
 
-DLI provides enhanced connections. Establishing a VPC peering connection allows DLI to communicate with the VPC of the data source, supporting cross-source data analysis.
+This section will introduce a solution for cross-VPC data source network connectivity:
+
+-  Creating an enhanced datasource connection: Establish a VPC peering connection to connect DLI and the data source's VPC network.
+-  Testing network connectivity: Verify the connectivity between the queue and the data source's network.
 
 For details about the data sources that support cross-source access, see :ref:`Cross-Source Analysis Development Methods <dli_01_0410>`.
+
+.. caution::
+
+   In cross-source development scenarios, there is a risk of password leakage if datasource authentication information is directly configured. You are advised to use the datasource authentication provided by DLI. For details, see :ref:`Overview <dli_01_0561>`.
 
 Constraints
 -----------

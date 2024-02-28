@@ -59,13 +59,6 @@ On the **Overview** page, click **Spark Jobs** to go to the SQL job management p
    |                                   | -  **Terminate Job**: Cancel a job that is being started or running.                                         |
    |                                   | -  **Re-execute**: Run the job again.                                                                        |
    |                                   | -  **Archive Log**: Save job logs to the temporary bucket created by DLI.                                    |
-   |                                   | -  **Export Log**: Export logs to the created OBS bucket.                                                    |
-   |                                   |                                                                                                              |
-   |                                   |    .. note::                                                                                                 |
-   |                                   |                                                                                                              |
-   |                                   |       -  You have the permission to create OBS buckets.                                                      |
-   |                                   |       -  If the job is in the **Running** state, logs cannot be exported.                                    |
-   |                                   |                                                                                                              |
    |                                   | -  **Commit Log**: View the logs of submitted jobs.                                                          |
    |                                   | -  **Driver Log**: View the logs of running jobs.                                                            |
    +-----------------------------------+--------------------------------------------------------------------------------------------------------------+
@@ -90,8 +83,3 @@ Terminating a Job
 -----------------
 
 On the **Spark Jobs** page, choose **More** > **Terminate Job** in the **Operation** column of the job that you want to stop.
-
-Exporting Logs
---------------
-
-On the **Spark Jobs** page, choose **More** > **Export Log** in the Operation column of the corresponding job. In the dialog box that is displayed, enter the path of the created OBS bucket and click **OK**.

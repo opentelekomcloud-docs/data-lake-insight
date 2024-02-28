@@ -2,18 +2,22 @@
 
 .. _dli_01_0561:
 
-Introduction
-============
+Overview
+========
 
 What Is Datasource Authentication?
 ----------------------------------
 
-Datasource authentication is used to manage authentication information for accessing specified data sources. After datasource authentication is configured, you do not need to repeatedly configure data source authentication information in jobs, improving data source authentication security while enabling DLI to securely access data sources.
+When analyzing across multiple sources, it is not recommended to configure authentication information directly in a job as it can lead to password leakage. Instead, you are advised to use either Data Encryption Workshop (DEW) or datasource authentication provided by DLI to securely store data source authentication information.
+
+-  DEW is a comprehensive cloud-based encryption service that addresses data security, key security, and complex key management issues. You are advised to use DEW to store authentication information for data sources.
+-  Datasource authentication is used to manage authentication information for accessing specified data sources. After datasource authentication is configured, you do not need to repeatedly configure data source authentication information in jobs, improving data source authentication security while enabling DLI to securely access data sources.
+
+This section describes how to use datasource authentication provided by DLI.
 
 Constraints
 -----------
 
--  Compared with datasource authentication provided by DLI, you are advised to use Data Encryption Worksop (DEW) to store data source authentication information.
 -  Only Spark SQL and Flink OpenSource SQL 1.12 jobs support datasource authentication.
 -  DLI supports four types of datasource authentication. Select an authentication type specific to each data source.
 

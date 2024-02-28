@@ -199,7 +199,7 @@ Example Custom Policies
 
 -  Example 1: Allow policies
 
-   -  Allow users to create tables in all databases of all regions:
+   -  Allow users to create tables across all databases in all regions:
 
       .. code-block::
 

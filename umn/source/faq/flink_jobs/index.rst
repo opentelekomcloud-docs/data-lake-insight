@@ -36,7 +36,7 @@ Flink Jobs
 -  :ref:`How Do I Prevent Data Loss After Flink Job Restart? <dli_03_0096>`
 -  :ref:`How Do I Locate a Flink Job Submission Error? <dli_03_0103>`
 -  :ref:`How Do I Locate a Flink Job Running Error? <dli_03_0105>`
--  :ref:`How Do I Know Whether a Flink Job Can Be Restored from a Checkpoint After Being Restarted? <dli_03_0136>`
+-  :ref:`How Can I Check if a Flink Job Can Be Restored From a Checkpoint After Restarting It? <dli_03_0136>`
 -  :ref:`Why Does DIS Stream Not Exist During Job Semantic Check? <dli_03_0040>`
 -  :ref:`Why Is the OBS Bucket Selected for Job Not Authorized? <dli_03_0045>`
 -  :ref:`Why Are Logs Not Written to the OBS Bucket After a DLI Flink Job Fails to Be Submitted for Running? <dli_03_0064>`
@@ -79,7 +79,7 @@ Flink Jobs
    how_do_i_prevent_data_loss_after_flink_job_restart
    how_do_i_locate_a_flink_job_submission_error
    how_do_i_locate_a_flink_job_running_error
-   how_do_i_know_whether_a_flink_job_can_be_restored_from_a_checkpoint_after_being_restarted
+   how_can_i_check_if_a_flink_job_can_be_restored_from_a_checkpoint_after_restarting_it
    why_does_dis_stream_not_exist_during_job_semantic_check
    why_is_the_obs_bucket_selected_for_job_not_authorized
    why_are_logs_not_written_to_the_obs_bucket_after_a_dli_flink_job_fails_to_be_submitted_for_running

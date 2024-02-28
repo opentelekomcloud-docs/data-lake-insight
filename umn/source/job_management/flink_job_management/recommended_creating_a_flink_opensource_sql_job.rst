@@ -13,7 +13,7 @@ Prerequisites
 -------------
 
 -  You have prepared the data input and data output channels. For details, see :ref:`Preparing Flink Job Data <dli_01_0454>`.
--  Before creating a Flink OpenSource SQL job to access other external data sources, such as OpenTSDB, HBase, Kafka, GaussDB(DWS), RDS, CSS, CloudTable, DCS Redis, and DDS MongoDB, you need to create a cross-source connection to connect the job running queue to the external data source.
+-  Before creating a Flink OpenSource SQL job to access other external data sources, such as OpenTSDB, HBase, Kafka, GaussDB(DWS), RDS, CSS, CloudTable, DCS Redis, and DDS, you need to create a cross-source connection to connect the job running queue to the external data source.
 
    -  For details about the external data sources that can be accessed by Flink jobs, see :ref:`Cross-Source Analysis Development Methods <dli_01_0410>`.
 
@@ -205,10 +205,14 @@ Simplified Stream Graph
 
 On the OpenSource SQL job editing page, click **Simplified Stream Graph**.
 
-Static stream graph
+Static Stream Graph
 -------------------
 
 On the OpenSource SQL job editing page, click **Static Stream Graph**.
+
+.. note::
+
+   If you use a UDF in a Flink OpenSource SQL job, it is not possible to generate a static stream graph.
 
 The **Static Stream Graph** page also allows you to:
 

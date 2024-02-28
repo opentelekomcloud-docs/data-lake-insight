@@ -13,4 +13,4 @@ Error message "DLI.0001: org.apache.hadoop.security.AccessControlException: veri
 Solution
 --------
 
-The current account does not have the permission to access the OBS bucket where the foreign table is located. Obtain the OBS permission and perform the query again.
+Your account does not have the permission to access the OBS bucket where the foreign table is located. Obtain the OBS permission and try the query again.

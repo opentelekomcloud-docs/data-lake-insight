@@ -34,8 +34,9 @@ Dynamic scaling applies to Flink OpenSource SQL and Flink Jar jobs.
 #. Log in to the DLI management console.
 #. In the navigation pane on the left, choose **Job Management** > **Flink Jobs**.
 #. Select the job for which you want to enable dynamic scaling and click **Edit** in the **Operation** column.
-#. On the right of the page displayed, click **Runtime Configuration**.
-#. Configure the following parameters:
+
+   -  For a Flink OpenSource SQL job, click **Runtime Configuration** on the right to configure dynamic scaling parameters.
+   -  For a Flink Jar job, click the **Runtime Configuration** box to configure dynamic scaling parameters.
 
    .. table:: **Table 1** Dynamic scaling parameters
 

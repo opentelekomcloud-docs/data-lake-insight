@@ -20,6 +20,6 @@ Constraints
 -  Only the latest 100 jobs are displayed on DLI's SparkUI.
 -  A maximum of 1,000 job results can be displayed on the console. To view more or all jobs, export the job data to OBS.
 -  To export job run logs, you must have the permission to access OBS buckets. You need to configure a DLI job bucket on the **Global Configuration** > **Project** page in advance.
--  **View Log** and **Export Log** buttons are not available for synchronization jobs and jobs running on the default queue.
+-  The **View Log** button is not available for synchronization jobs and jobs running on the default queue.
 -  Only Spark jobs support custom images.
 -  An elastic resource pool supports a maximum of 32,000 CUs.
