@@ -8,7 +8,7 @@ Querying an Enhanced Datasource Connection
 Function
 --------
 
-This API is used to query the created enhanced datasource connections.
+This API is used to query a created enhanced datasource connection.
 
 URI
 ---
@@ -55,7 +55,7 @@ Response
    |                      |                 |                  | -  Active: The connection has been activated.                                                                                 |
    |                      |                 |                  | -  DELETED: The connection has been deleted.                                                                                  |
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
-   | available_queue_info | No              | Array of Objects | For details about how to create a datasource connection for each queue, see :ref:`Table 3 <dli_02_0189__table9559942155012>`. |
+   | available_queue_info | No              | Array of objects | For details about how to create a datasource connection for each queue, see :ref:`Table 3 <dli_02_0189__table9559942155012>`. |
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
    | dest_vpc_id          | No              | String           | The VPC ID of the connected service.                                                                                          |
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
@@ -63,7 +63,7 @@ Response
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
    | create_time          | No              | Long             | Time when a link is created. The time is converted to a UTC timestamp.                                                        |
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
-   | hosts                | No              | Array of Objects | User-defined host information. For details, see :ref:`hosts parameter description <dli_02_0189__table6991727151310>`.         |
+   | hosts                | No              | Array of objects | User-defined host information. For details, see :ref:`hosts parameter description <dli_02_0189__table6991727151310>`.         |
    +----------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0189__table9559942155012:

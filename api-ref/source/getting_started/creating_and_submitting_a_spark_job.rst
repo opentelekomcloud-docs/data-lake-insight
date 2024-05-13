@@ -19,11 +19,11 @@ Involved APIs
 -------------
 
 -  :ref:`Creating a Queue <dli_02_0194>`: Create a queue.
--  :ref:`Uploading a Package Group <dli_02_0130>`: Upload the resource package required by the Spark job.
--  :ref:`Querying Resource Packages in a Group <dli_02_0172>`: Check whether the uploaded resource package is correct.
+-  :ref:`Uploading a Package Group (Discarded) <dli_02_0130>`: Upload the resource package required by the Spark job.
+-  :ref:`Querying Resource Packages in a Group (Discarded) <dli_02_0172>`: Check whether the uploaded resource package is correct.
 -  :ref:`Creating a Batch Processing Job <dli_02_0124>`: Create and submit a Spark batch processing job.
 -  :ref:`Querying a Batch Job Status <dli_02_0127>`: View the status of a batch processing job.
--  :ref:`Querying Batch Job Logs <dli_02_0128>`: View batch processing job logs.
+-  :ref:`Querying Batch Job Logs (Discarded) <dli_02_0128>`: View batch processing job logs.
 
 Procedure
 ---------
@@ -39,7 +39,7 @@ Procedure
       URI format: POST /v2.0/{*project_id*}/resources
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the request parameters, see :ref:`Uploading a Package Group <dli_02_0130>`.
+      -  For details about the request parameters, see :ref:`Uploading a Package Group (Discarded) <dli_02_0130>`.
 
    -  Request example
 
@@ -111,7 +111,7 @@ Procedure
       URI format: GET /v2.0/{*project_id*}/resources/{*resource_name*}
 
       -  Obtain the value of {project_id} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the query parameters, see :ref:`Creating a Table <dli_02_0034>`.
+      -  For details about the query parameters, see :ref:`Creating a Table (Discarded) <dli_02_0034>`.
 
    -  Request example
 
@@ -235,7 +235,7 @@ Procedure
       URI format: GET /v2.0/{*project_id*}/batches/{*batch_id*}/log
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the query parameters, see :ref:`Querying Batch Job Logs <dli_02_0128>`.
+      -  For details about the query parameters, see :ref:`Querying Batch Job Logs (Discarded) <dli_02_0128>`.
 
    -  Request example
 

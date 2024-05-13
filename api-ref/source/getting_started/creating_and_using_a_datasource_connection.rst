@@ -82,7 +82,7 @@ Procedure
       URI format: GET /v2.0/{*project_id*}/datasource/enhanced-connections/{*connection_id*}
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the query parameters, see :ref:`Creating a Database <dli_02_0028>`.
+      -  For details about the query parameters, see :ref:`Creating a Database (Discarded) <dli_02_0028>`.
 
    -  Request example
 

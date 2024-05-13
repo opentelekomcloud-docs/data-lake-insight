@@ -41,7 +41,7 @@ Request
    +-----------+-----------+------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | sql_body  | No        | String           | Stream SQL statement, which includes at least the following three parts: source, query, and sink. Length range: 0 to 2,048 characters. |
    +-----------+-----------+------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-   | tags      | No        | Array of Objects | Label of a Flink job template. For details, see :ref:`Table 3 <dli_02_0245__table9391124139>`.                                         |
+   | tags      | No        | Array of objects | Label of a Flink job template. For details, see :ref:`Table 3 <dli_02_0245__table9391124139>`.                                         |
    +-----------+-----------+------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | job_type  | No        | String           | Flink job template type.                                                                                                               |
    +-----------+-----------+------------------+----------------------------------------------------------------------------------------------------------------------------------------+
@@ -50,12 +50,25 @@ Request
 
 .. table:: **Table 3** tags parameter
 
-   ========= ========= ====== ===========
-   Parameter Mandatory Type   Description
-   ========= ========= ====== ===========
-   key       Yes       String Tag key.
-   value     Yes       String Tag key.
-   ========= ========= ====== ===========
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                     |
+   +=================+=================+=================+=================================================================================================================================================================================================================+
+   | key             | Yes             | String          | Tag key.                                                                                                                                                                                                        |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 |    A tag key can contain a maximum of 36 characters. Special characters ``(=*<>\|)`` are not allowed, and the key cannot start with a space.                                                                    |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | value           | Yes             | String          | Tag key.                                                                                                                                                                                                        |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 |    A tag value can contain a maximum of 43 characters. Special characters ``(=*<>\|)`` are not allowed, and the value cannot start with a space.                                                                |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -96,7 +109,8 @@ Create a job template named **simple_stream_sql**.
    {
        "name": "simple_stream_sql",
        "desc": "Example of quick start",
-       "sql_body": "select * from source_table"
+       "sql_body": "select * from source_table",
+       "job_type": "flink_sql_job"
    }
 
 Example Response
@@ -112,7 +126,7 @@ Example Response
            "name": "IoT_example",
           "desc": "Example of quick start",
            "create_time": 1516952710040,
-           "job_type": "flink_sql_job"
+           "job_type": "flink_opensource_sql_job"
        }
    }
 
