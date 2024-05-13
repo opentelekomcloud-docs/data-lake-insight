@@ -28,8 +28,8 @@ Federated Analysis of Heterogeneous Data Sources
 
 -  Advantages
 
-   -  No need for migration in multi-source data analysis: RDS stores the basic information about vehicles and vehicle owners, table store saves real-time vehicle location and health status, and DWS stores periodic metric statistics. DLI allows federated analysis on data from multiple sources without data migration.
-   -  Tiered data storage: Car companies need to retain all historical data to support auditing and other services that require infrequent data access. Warm and cold data is stored in OBS and frequently accessed data is stored in DWS, reducing the overall storage cost.
+   -  No need for migration in multi-source data analysis: RDS stores the basic information about vehicles and vehicle owners, table store saves real-time vehicle location and health status, and GaussDB(DWS) stores periodic metric statistics. DLI allows federated analysis on data from multiple sources without data migration.
+   -  Tiered data storage: Car companies need to retain all historical data to support auditing and other services that require infrequent data access. Warm and cold data is stored in OBS and frequently accessed data is stored in GaussDB(DWS), reducing the overall storage cost.
    -  Rapid and agile alarm triggering: There are no special requirements for the CPU, memory, hard disk space, and bandwidth.
 
 Big Data ETL Processing

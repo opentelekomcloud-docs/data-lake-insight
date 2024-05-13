@@ -46,7 +46,7 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
 
    Before creating a Kafka instance, ensure the availability of resources, including a virtual private cloud (VPC), subnet, security group, and security group rules.
 
-   -  For details about how to create a VPC and subnet, see "Creating a VPC and Subnet" in the *Virtual Private Cloud User Guide*. For details about how to create and use a subnet in an existing VPC, see "Create a subnet for the VPC" in the *Virtual Private Cloud User Guide*.
+   -  For details about how to create a VPC and subnet, see "Creating a VPC and Subnet" in *Virtual Private Cloud User Guide*. For details about how to create and use a subnet in an existing VPC, see "Create a Subnet for the VPC" in *Virtual Private Cloud User Guide*.
 
       .. note::
 
@@ -95,7 +95,7 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
       -  **Partitions**: Set the value to **1**.
       -  **Replicas**: Set the value to **1**.
 
-      Retain default values for other parameters.
+      Retain the default values for other parameters.
 
 .. _dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section10891114913473:
 
@@ -180,7 +180,7 @@ For details about how to create a bucket, see "Creating a Bucket" in the *Object
 Step 4: Create a Queue
 ----------------------
 
-Flink OpenSource SQL jobs cannot run on the default queue. You need to create a queue, for example, **Flinktest**. For details, see Creating a Queue.
+Flink OpenSource SQL jobs cannot run on the default queue. You need to create a queue, for example, **Flinktest**. For details, see "Creating a Queue".
 
 #. Log in to the DLI management console. On the **Overview** page, click **Buy Queue** in the upper right corner.
 
@@ -243,7 +243,7 @@ You need to create an enhanced datasource connection for the Flink OpenSource SQ
 
       Click **OK**. Click the name of the created datasource connection to view its status. You can perform subsequent steps only after the connection status changes to **Active**.
 
-   c. Choose **Resources** > **Queue Management** and locate the queue created in :ref:`Step 4: Create a Queue <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`. In the **Operation** column, choose **More** > **Test Address Connectivity**.
+   c. Choose **Resources** > **Queue Management** and locate the queue created in :ref:`Step 4: Create a Queue <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`. In the **Operation** column, click **More** and select **Test Address Connectivity**.
 
    d. In the displayed dialog box, enter *Kafka instance address (private network)*\ **:**\ *port* in the **Address** box and click **Test** to check whether the instance is reachable. Note that multiple addresses must be tested separately.
 
@@ -258,7 +258,7 @@ Step 6: Create an Enhanced Datasource Connection Between DLI and RDS
 
    a. Go to the RDS console, click the name of the target RDS for MySQL DB instance on the **Instances** page. Basic information of the instance is displayed.
    b. In the **Connection Information** pane, obtain the floating IP address, database port, VPC, and subnet.
-   c. Click the security group name. On the displayed page, click the **Inbound Rules** tab and add a rule to allow access from the DLI queue. For example, if the CIDR block of the queue is 10.0.0.0/16, set **Priority** to **1**, **Action** to **Allow**, **Protocol** to **TCP**, **Type** to **IPv4**, **Source** to **10.0.0.0/16**, and click **OK**.
+   c. Click the security group name. On the displayed page, click the **Inbound Rules** tab and add a rule to allow access from the DLI queue. For example, if the CIDR block of the queue is **10.0.0.0/16**, set **Priority** to **1**, **Action** to **Allow**, **Protocol** to **TCP**, **Type** to **IPv4**, **Source** to **10.0.0.0/16**, and click **OK**.
 
 #. Create an enhanced datasource connection to RDS.
 
@@ -278,7 +278,7 @@ Step 6: Create an Enhanced Datasource Connection Between DLI and RDS
 
       Click **OK**. Click the name of the created datasource connection to view its status. You can perform subsequent steps only after the connection status changes to **Active**.
 
-   c. Choose **Resources** > **Queue Management** and locate the queue created in :ref:`Step 4: Create a Queue <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`. In the **Operation** column, choose **More** > **Test Address Connectivity**.
+   c. Choose **Resources** > **Queue Management** and locate the queue created in :ref:`Step 4: Create a Queue <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`. In the **Operation** column, click **More** and select **Test Address Connectivity**.
 
    d. In the displayed dialog box, enter *floating IP address*\ **:**\ *database port* of the RDS DB instance in the **Address** box and click **Test** to check whether the database is reachable.
 
@@ -363,7 +363,7 @@ After the data source and data output channel are prepared, you can create a Fli
 
    After the job is started, the system automatically switches to the **Flink Jobs** page, and the created job is displayed in the job list. You can view the job status in the **Status** column. After a job is successfully submitted, **Status** of the job will change from **Submitting** to **Running**.
 
-   If **Status** of a job is **Submission failed** or **Running exception**, the job fails to be submitted or fails to run. In this case, you can move the cursor over the status icon to view the error details. You can click |image1| to copy these details. After handling the fault based on the provided information, resubmit the job.
+   If **Status** of a job is **Submission failed** or **Running exception**, the job fails to be submitted or fails to run. In this case, you can hover over the status icon to view the error details. You can click |image1| to copy these details. After handling the fault based on the provided information, resubmit the job.
 
 #. Connect to the Kafka cluster and send the following test data to the Kafka topics:
 

@@ -27,31 +27,6 @@ Flink job management provides the following functions:
 -  :ref:`Runtime Configuration <dli_01_0461__section48961252113110>`
 -  :ref:`Job Details <dli_01_0462>`
 
-Assigning Agency Permissions
-----------------------------
-
-Agencies are required for DLI to execute Flink jobs. You can set the agency when logging in to the management console for the first time or go to **Global Configurations** > :ref:`Service Authorization <dli_01_0486>` to modify the agencies.
-
-The permissions are as follows:
-
--  **Tenant Administrator (global)** permissions are required to access data from OBS to execute Flink jobs on DLI, for example, obtaining OBS/GaussDB(DWS) data sources, log dump (including bucket authorization), checkpointing enabling, and job import and export.
-
-   .. note::
-
-      Due to cloud service cache differences, permission setting operations require about 60 minutes to take effect.
-
--  **DIS Administrator** permissions are required to use DIS data as the data source of DLI Flink jobs.
-
-   .. note::
-
-      Due to cloud service cache differences, permission setting operations require about 30 minutes to take effect.
-
--  To use CloudTable data as the data source of DLI Flink jobs, **CloudTable Administrator** permissions are required.
-
-   .. note::
-
-      Due to cloud service cache differences, permission setting operations require about 3 minutes to take effect.
-
 Flink Jobs Page
 ---------------
 

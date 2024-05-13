@@ -113,7 +113,7 @@ Procedure
       Currently, only the first 10 records are displayed.
 
    -  Choose **Data Management** > **Databases and Tables** in the navigation pane of the console. Locate the row that contains the database where the target table belongs and click **More** > **View Properties** in the **Operation** column. In the displayed dialog box, click the **Preview** tab to view the imported data.
-   -  In the **Databases** tab of the **SQL Editor**, click the database name to go to the table list. Click |image3| on the right of a table name and choose **View Properties** from the shortcut menu. In the displayed dialog box, click **Preview** to view the imported data.
+   -  On the **Databases** tab of the **SQL Editor**, click the database name to go to the table list. Click |image3| on the right of a table name and choose **View Properties** from the shortcut menu. In the displayed dialog box, click **Preview** to view the imported data.
 
 #. (Optional) View the status and execution result of the importing job on the **Job Management** > **SQL Jobs** page.
 

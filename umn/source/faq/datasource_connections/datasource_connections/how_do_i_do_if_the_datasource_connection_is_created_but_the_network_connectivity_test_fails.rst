@@ -23,7 +23,7 @@ Troubleshoot the issue by ruling out the causes described here, one by one.
 
 -  :ref:`Check Whether a Port Number Is Added to the End of the Domain Name or IP Address <dli_03_0179__en-us_topic_0000001250602862_section1598718651714>`
 -  :ref:`Check Whether the Information of the Peer VPC and Subnet Are Correct. <dli_03_0179__en-us_topic_0000001250602862_section1248131717217>`
--  :ref:`Check Whether the CIDR Block of the Queue Overlaps That of the Data Source <dli_03_0179__en-us_topic_0000001250602862_section11573112152719>`
+-  :ref:`Check Whether the CIDR Block of the Queue Overlaps with That of the Data Source <dli_03_0179__en-us_topic_0000001250602862_section11573112152719>`
 -  :ref:`Check Whether the VPC Administrator Permission Is Granted to DLI <dli_03_0179__en-us_topic_0000001250602862_section10740107124612>`
 -  :ref:`Check Whether the Destination Security Group Allows Access from the CIDR Block of the Queue <dli_03_0179__en-us_topic_0000001250602862_section96661220175613>`
 -  :ref:`Check the Route Information of the VPC Peering Connection Corresponding to an Enhanced Datasource Connection <dli_03_0179__en-us_topic_0000001250602862_section1510101713111>`
@@ -51,8 +51,8 @@ For example, to test the connectivity between a queue and a specified RDS DB ins
 
 .. _dli_03_0179__en-us_topic_0000001250602862_section11573112152719:
 
-Check Whether the CIDR Block of the Queue Overlaps That of the Data Source
---------------------------------------------------------------------------
+Check Whether the CIDR Block of the Queue Overlaps with That of the Data Source
+-------------------------------------------------------------------------------
 
 The CIDR block of the DLI queue bound with a datasource connection cannot overlap the CIDR block of the data source.
 
@@ -71,23 +71,7 @@ Check Whether the VPC Administrator Permission Is Granted to DLI
 
 View the connection logs to check whether there is the required permission.
 
-:ref:`Figure 1 <dli_03_0179__en-us_topic_0000001250602862_fig10740878465>` and :ref:`Figure 2 <dli_03_0179__en-us_topic_0000001250602862_fig19762856104817>` show the logs when subnet ID and route ID of the destination cannot be obtained because there is no permission.
-
 **Solution**: Grant DLI the VPC Administrator permission and cancel the IAM ReadOnlyAccess authorization.
-
-.. _dli_03_0179__en-us_topic_0000001250602862_fig10740878465:
-
-.. figure:: /_static/images/en-us_image_0000001377545298.png
-   :alt: **Figure 1** Viewing connection logs
-
-   **Figure 1** Viewing connection logs
-
-.. _dli_03_0179__en-us_topic_0000001250602862_fig19762856104817:
-
-.. figure:: /_static/images/en-us_image_0000001427744557.png
-   :alt: **Figure 2** Viewing connection logs
-
-   **Figure 2** Viewing connection logs
 
 .. _dli_03_0179__en-us_topic_0000001250602862_section96661220175613:
 

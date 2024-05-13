@@ -5,7 +5,7 @@
 Testing Address Connectivity
 ============================
 
-It can be used to test the connectivity between the DLI queue and the peer IP address specified by the user in common scenarios, or the connectivity between the DLI queue and the peer IP address bound to the datasource connection in cross-source connection scenarios. The operation is as follows:
+It can be used to test the connectivity between the DLI queue and the peer IP address specified by the user in common scenarios, or the connectivity between the DLI queue and the peer IP address bound to the datasource connection in datasource connection scenarios. The operation is as follows:
 
 #. On the **Queue Management** page, locate the row containing the target queue, click **More** in the **Operation** column, and select **Test Address Connectivity**.
 

@@ -7,7 +7,7 @@ Creating an IAM User and Granting Permissions
 
 You can use Identity and Access Management (IAM) to implement fine-grained permissions control on DLI resources. For details, see :ref:`Overview <dli_01_0440>`.
 
-If your cloud account does not need individual IAM users, then you may skip over this chapter.
+If your cloud account does not need individual IAM users, then you may skip over this section.
 
 This section describes how to create an IAM user and grant DLI permissions to the user. :ref:`Figure 1 <dli_01_0418__fig4118155455715>` shows the procedure.
 

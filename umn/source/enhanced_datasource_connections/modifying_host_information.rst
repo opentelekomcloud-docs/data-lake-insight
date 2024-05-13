@@ -56,7 +56,7 @@ How Do I Obtain MRS Host Information?
    #. On the **Active Clusters** page displayed, click your desired cluster to access its details page.
    #. Click the **Components** tab.
    #. Click **ZooKeeper**.
-   #. Click the **Instance** tab to view corresponding service IP addresses. You can select any service IP address.
+   #. Click the **Instance** tab to view the corresponding service IP addresses. You can select any service IP address.
    #. Modify host information by referring to :ref:`Modifying Host Information <dli_01_0013__section6859216954>`.
 
    .. note::

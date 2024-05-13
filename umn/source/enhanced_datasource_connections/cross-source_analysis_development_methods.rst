@@ -27,18 +27,18 @@ DLI Supported Data Sources
 
 .. table:: **Table 1** Supported data sources
 
-   ============ ============= ============= ============= =============
-   Service      Spark SQL Job Spark Jar Job Flink SQL Job Flink Jar Job
-   ============ ============= ============= ============= =============
-   APIG         x             x             Y             x
-   CSS          Y             Y             Y             Y
-   DCS Redis    Y             Y             Y             Y
-   DDS          Y             Y             Y             Y
-   DMS Kafka    x             x             Y             Y
-   GaussDB(DWS) Y             Y             Y             Y
-   MRS HBase    Y             Y             Y             Y
-   MRS Kafka    x             x             Y             Y
-   MRS OpenTSDB Y             Y             x             Y
-   RDS MySQL    Y             Y             Y             Y
-   RDS PostGre  Y             Y             Y             Y
-   ============ ============= ============= ============= =============
+   ============= ============= ============= ============= =============
+   Service       Spark SQL Job Spark Jar Job Flink SQL Job Flink Jar Job
+   ============= ============= ============= ============= =============
+   APIG          x             x             Y             x
+   CSS           Y             Y             Y             Y
+   DCS Redis     Y             Y             Y             Y
+   DDS           Y             Y             Y             Y
+   DMS Kafka     x             x             Y             Y
+   GaussDB(DWS)  Y             Y             Y             Y
+   MRS HBase     Y             Y             Y             Y
+   MRS Kafka     x             x             Y             Y
+   MRS OpenTSDB  Y             Y             x             Y
+   RDS for MySQL Y             Y             Y             Y
+   RDS PostGre   Y             Y             Y             Y
+   ============= ============= ============= ============= =============

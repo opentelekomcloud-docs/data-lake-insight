@@ -5,7 +5,7 @@
 SQL Job Management
 ==================
 
-SQL jobs allow you to execute SQL statements entered in the :ref:`SQL job editing window <dli_01_0320>`, import data, and export data.
+SQL jobs allow you to execute SQL statements in the SQL job editing window, import data, and export data.
 
 SQL job management provides the following functions:
 
@@ -34,7 +34,7 @@ On the **Overview** page of the DLI console, click **SQL Jobs** to go to the SQL
    |                                   | -  **EXPORT**: A job that exports data from DLI                                                                                                                                                                                                                                                                                                                                                                                                   |
    |                                   | -  **DCL**: Conventional DCLs and operations related to queue permissions                                                                                                                                                                                                                                                                                                                                                                         |
    |                                   | -  **DDL**:Conventional DDLs, including creating and deleting databases and tables                                                                                                                                                                                                                                                                                                                                                                |
-   |                                   | -  **QUERY**: A job that querys data by running SQL statements                                                                                                                                                                                                                                                                                                                                                                                    |
+   |                                   | -  **QUERY**: A job that queries data by running SQL statements                                                                                                                                                                                                                                                                                                                                                                                   |
    |                                   | -  **INSERT**: A job that inserts data by running SQL statements                                                                                                                                                                                                                                                                                                                                                                                  |
    |                                   | -  **UPDATE**: A job that updates data.                                                                                                                                                                                                                                                                                                                                                                                                           |
    |                                   | -  **DELETE**: A job that deletes a SQL job.                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -144,23 +144,23 @@ You can export results on the **SQL Jobs** page or the **SQL Editor** page.
 
 .. note::
 
-   If no column of the numeric type is displayed in the query result, the result cannot be exported.
+   If there are no numerical columns in the query results, job results cannot be exported.
 
-.. table:: **Table 2** Exporting parameters
+.. table:: **Table 2** Parameters
 
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                             |
    +===================================+=========================================================================================================================================================================+
    | Data Format                       | Format of the exported query result file. This parameter can be set to **json** or **csv**.                                                                             |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | **Queues**                        | The queue where the jobs are executed. SQL jobs can be executed only in SQL queues. For details about how to create a queue, see :ref:`Creating a Queue <dli_01_0363>`. |
+   | **Queues**                        | The queue where the jobs are executed. SQL jobs can only be executed on SQL queues. For details about how to create a queue, see :ref:`Creating a Queue <dli_01_0363>`. |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | **Compression Format**            | Compression format of the data to be exported. The following options are supported:                                                                                     |
+   | **Compression Format**            | Compression format of the data to be exported. The options are:                                                                                                         |
    |                                   |                                                                                                                                                                         |
-   |                                   | -  none                                                                                                                                                                 |
-   |                                   | -  bzip2                                                                                                                                                                |
-   |                                   | -  deflate                                                                                                                                                              |
-   |                                   | -  gzip                                                                                                                                                                 |
+   |                                   | -  **none**                                                                                                                                                             |
+   |                                   | -  **bzip2**                                                                                                                                                            |
+   |                                   | -  **deflate**                                                                                                                                                          |
+   |                                   | -  **gzip**                                                                                                                                                             |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | **Storage Path**                  | OBS path to store the result.                                                                                                                                           |
    |                                   |                                                                                                                                                                         |

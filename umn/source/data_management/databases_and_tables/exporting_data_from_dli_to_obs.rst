@@ -50,10 +50,10 @@ Procedure
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
       | Compression Format                | Compression format of the data to be exported. The following compression formats are supported:                                                   |
       |                                   |                                                                                                                                                   |
-      |                                   | -  none                                                                                                                                           |
-      |                                   | -  bzip2                                                                                                                                          |
-      |                                   | -  deflate                                                                                                                                        |
-      |                                   | -  gzip                                                                                                                                           |
+      |                                   | -  **none**                                                                                                                                       |
+      |                                   | -  **bzip2**                                                                                                                                      |
+      |                                   | -  **deflate**                                                                                                                                    |
+      |                                   | -  **gzip**                                                                                                                                       |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
       | Storage Path                      | -  Enter or select an OBS path.                                                                                                                   |
       |                                   | -  The export path must be a folder that does not exist in the OBS bucket. Specifically, you need to create a folder in the target OBS directory. |

@@ -11,6 +11,7 @@ Data Lake Insight - User Guide
    sql_editor
    job_management/index
    queue_management/index
+   elastic_resource_pool/index
    data_management/index
    job_templates/index
    enhanced_datasource_connections/index

@@ -27,11 +27,6 @@ Metadata
 
 Metadata is used to define data types. It describes information about the data, including the source, size, format, and other data features. In database fields, metadata interprets data content in the data warehouse.
 
-Compute Resource
-----------------
-
-Queues in DLI are computing resources, which are the basis for using DLI. SQL jobs and Spark jobs performed by users require computing resources.
-
 Storage Resource
 ----------------
 

@@ -27,7 +27,7 @@ Notes
 
 -  SQL statements can be executed in batches on the SQL editor page.
 
--  Commonly used keyworks in the job editing window are highlighted in different colors.
+-  Commonly used syntax in the job editing window is highlighted in different colors.
 -  Both single-line comment and multi-line comment are allowed. Use two consecutive hyphens (--) in each line to comment your statements.
 
 Navigation pane
@@ -54,9 +54,11 @@ The navigation pane on the left consists of **Databases**, **Queues**, and **Tem
 SQL Editing Window
 ------------------
 
-SQL job editing window is displayed in the upper right part of the page.
+SQL job editing window is displayed in the upper right part of the page. For details about the parameters, see :ref:`Table 2 <dli_01_0320__table18913103220552>`.
 
 The SQL statement editing area is below the operation bar. For details about keyboard shortcuts, see :ref:`Table 3 <dli_01_0320__table209301155311>`.
+
+.. _dli_01_0320__table18913103220552:
 
 .. table:: **Table 2** Components of the SQL job editing window
 
@@ -65,7 +67,7 @@ The SQL statement editing area is below the operation bar. For details about key
    +=======================+=========================+=========================================================================================================================================================================================================================+
    | 2                     | Queues                  | Select a queue from the drop-down list box. If no queue is available, the **default** queue is displayed. Refer to :ref:`Creating a Queue <dli_01_0363>` and create a queue.                                            |
    |                       |                         |                                                                                                                                                                                                                         |
-   |                       |                         | SQL jobs can be executed only on SQL queues.                                                                                                                                                                            |
+   |                       |                         | SQL jobs can only be executed on SQL queues.                                                                                                                                                                            |
    +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | 3                     | Database                | Select a database from the drop-down list box. If no database is available, the **default** database is displayed. For details about how to create a database, see :ref:`Creating a Database or a Table <dli_01_0005>`. |
    |                       |                         |                                                                                                                                                                                                                         |
@@ -169,17 +171,17 @@ After the SQL job is executed, you can view the execution history and result in 
 
 -  **View Result**
 
-   .. table:: **Table 5** Operations in the result tab
+   .. table:: **Table 5** Operations on the result tab
 
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | Operation         | Description                                                                                                           |
-      +===================+=======================================================================================================================+
-      | Clear the result  | Clear the displayed SQL statement query results.                                                                      |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | View chart/table  | Click |image2| to view the query result in a chart or table.                                                          |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | Export the result | Export the job execution results to the created OBS bucket. For details, see :ref:`SQL Job Management <dli_01_0017>`. |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------+
+      +--------------------+--------------------------------------------------------------+
+      | Operation          | Description                                                  |
+      +====================+==============================================================+
+      | Clear the result   | Clear the displayed SQL statement query results.             |
+      +--------------------+--------------------------------------------------------------+
+      | View chart/table   | Click |image2| to view the query result in a chart or table. |
+      +--------------------+--------------------------------------------------------------+
+      | Export job results | Export the job execution results to the created OBS bucket.  |
+      +--------------------+--------------------------------------------------------------+
 
 SQL Query Procedure
 -------------------

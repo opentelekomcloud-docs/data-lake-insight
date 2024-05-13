@@ -13,7 +13,7 @@ When using a Flink SQL job, you need to create an OBS partition table for subseq
 Procedure
 ---------
 
-In the following example, the **day** field is used as the partition field with the parquet encoding format (only the parquet format is supported currently) to dump **car_info** data to OBS.
+In the following example, the **day** field is used as the partition field with the parquet encoding format to dump **car_info** data to OBS.
 
 ::
 

@@ -1,12 +1,19 @@
-:original_name: dli_03_0264.html
+:original_name: dli_01_0550.html
 
-.. _dli_03_0264:
+.. _dli_01_0550:
 
-Why Is Error "Failed to create the database. {"error_code":"DLI.1028";"error_msg":"Already reached the maximum quota of databases:XXX"." Reported?
-==================================================================================================================================================
+Quota Management
+================
 
-Viewing My Quotas
------------------
+What Is a Quota?
+----------------
+
+A quota limits the quantity of a resource available to users, thereby preventing spikes in the usage of the resource.
+
+You can also request for an increased quota if your existing quota cannot meet your service requirements.
+
+How Do I View My Quotas?
+------------------------
 
 #. Log in to the management console.
 
@@ -29,7 +36,7 @@ Before dialing the hotline number or sending an email, ensure that the following
 
 -  Domain name, project name, and project ID
 
-   Log in to the management console using the cloud account, click the username in the upper right corner, select **My Credentials** from the drop-down list, and obtain the domain name, project name, and project ID on the **My Credentials** page.
+   To obtain the preceding information, log in to the management console, click the username in the upper right corner, and choose **My Credentials** from the drop-down list.
 
 -  Quota information, including:
 
