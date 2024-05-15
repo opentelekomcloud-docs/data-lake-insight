@@ -25,7 +25,7 @@ You can query and analyze heterogeneous data sources such as RDS, and GaussDB(DW
 
 -  Federated analysis of heterogeneous data sources
 
-   -  Spark datasource connection: Data sources such as DWS, RDS, and CSS can be accessed through DLI.
+   -  Spark datasource connection: Data sources such as GaussDB(DWS), RDS, and CSS can be accessed through DLI.
    -  Interconnection with multiple cloud services is supported in Flink jobs to form a rich stream ecosystem. The DLI stream ecosystem consists of cloud service ecosystems and open source ecosystems.
 
       -  Cloud service ecosystem: DLI can interconnect with other services in Flink SQL. You can directly use SQL to read and write data from cloud services.
@@ -39,6 +39,50 @@ You can query and analyze heterogeneous data sources such as RDS, and GaussDB(DW
 
    -  Multi-AZ storage means data is stored in multiple AZs, improving data reliability. If the multi-AZ storage is enabled for a bucket, data is stored in multiple AZs in the same region. If one AZ becomes unavailable, data can still be properly accessed from the other AZs. The multi-AZ storage is ideal for scenarios that demand high reliability. You are advised to use this policy.
    -  Single-AZ storage means that data is stored in a single AZ, with lower costs.
+
+-  Elastic resource pool
+
+   Elastic resource pools support the CCE cluster architecture for heterogeneous resources so you can centrally manage and allocate them. For details, see :ref:`Elastic Resource Pool <dli_01_0508>`.
+
+   Elastic resource pools have the following advantages:
+
+   -  **Unified management**
+
+      -  You can manage multiple internal clusters and schedule jobs. You can manage millions of cores for compute resources.
+      -  Elastic resource pools can be deployed across multiple AZs to support high availability.
+
+   -  **Tenant resource isolation**
+
+      Resources of different queues are isolated to reduce the impact on each other.
+
+   -  **Shared access and flexibility**
+
+      -  Minute-level scaling helps you to handle request peaks.
+      -  Queue priorities and CU quotas can be set at different time to improve resource utilization.
+
+   -  **Job-level isolation (supported in later versions)**
+
+      SQL jobs can run on independent Spark instances, reducing mutual impacts between jobs.
+
+   -  **Automatic scaling (supported in later versions)**
+
+      The queue quota is updated in real time based on workload and priority.
+
+   Using elastic resource pools has the following advantages.
+
+   +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Advantage             | No Elastic Resource Pool                                                                                                                       | Use Elastic Resource Pool                                                                                                                        |
+   +=======================+================================================================================================================================================+==================================================================================================================================================+
+   | Efficiency            | You need to set scaling tasks repeatedly to improve the resource utilization.                                                                  | Dynamic scaling can be done in seconds.                                                                                                          |
+   +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Resource utilization  | Resources cannot be shared among different queues.                                                                                             | Queues added to the same elastic resource pool can share compute resources.                                                                      |
+   |                       |                                                                                                                                                |                                                                                                                                                  |
+   |                       | For example, a queue has idle CUs and another queue is heavily loaded. Resources cannot be shared. You can only scale up the second queue.     |                                                                                                                                                  |
+   +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   |                       | When you set a data source, you must allocate different network segments to each queue, which requires a large number of VPC network segments. | You can add multiple general-purpose queues in the same elastic resource pool to one network segment, simplifying the data source configuration. |
+   +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Resource allocation   | If resources are insufficient for scale-out tasks of multiple queues, some queues will fail to be scaled out.                                  | You can set the priority for each queue in the elastic resource pool based on the peak hours to ensure proper resource allocation.               |
+   +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 DLI Core Engine: Spark+Flink
 ----------------------------

@@ -36,7 +36,7 @@ Before dialing the hotline number or sending an email, ensure that the following
 
 -  Domain name, project name, and project ID
 
-   Log in to the management console using the cloud account, click the username in the upper right corner, select **My Credentials** from the drop-down list, and obtain the domain name, project name, and project ID on the **My Credentials** page.
+   To obtain the preceding information, log in to the management console, click the username in the upper right corner, and choose **My Credentials** from the drop-down list.
 
 -  Quota information, including:
 

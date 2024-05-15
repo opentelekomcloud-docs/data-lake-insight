@@ -13,7 +13,7 @@ Prerequisites
 -------------
 
 -  You have prepared the data input and data output channels. For details, see :ref:`Preparing Flink Job Data <dli_01_0454>`.
--  When you use a Flink SQL job to access other external data sources, such as OpenTSDB, HBase, Kafka, DWS, RDS, CSS, CloudTable, DCS Redis, and DDS, you need to create a cross-source connection to connect the job running queue to the external data source.
+-  When you use a Flink SQL job to access other external data sources, such as OpenTSDB, HBase, Kafka, GaussDB(DWS), RDS, CSS, CloudTable, DCS Redis, and DDS, you need to create a datasource connection to connect the job running queue to the external data source.
 
    -  For details about the external data sources that can be accessed by Flink jobs, see :ref:`Cross-Source Analysis Development Methods <dli_01_0410>`.
    -  For details about how to create a datasource connection, see :ref:`Enhanced Datasource Connections <dli_01_0426>`. After a datasource connection is created, you can choose **More** > **Test Address Connectivity** in the **Operation** column on the **Queue Management** page to check whether the network connection between the queue and the external data source is normal. For details, see :ref:`Testing Address Connectivity <dli_01_0489>`.
@@ -63,7 +63,7 @@ Creating a Flink SQL Job
       |                                   |                                                                                                                                                                                                                                                                                                                     |
       |                                   |    .. note::                                                                                                                                                                                                                                                                                                        |
       |                                   |                                                                                                                                                                                                                                                                                                                     |
-      |                                   |       A tag value can contain a maximum of 225 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                                                                                                                              |
+      |                                   |       A tag value can contain a maximum of 255 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                                                                                                                              |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **OK** to enter the editing page.

@@ -8,7 +8,7 @@ Flink Job Details
 After creating a job, you can view the job details to learn about the following information:
 
 -  :ref:`Viewing Job Details <dli_01_0462__section18786181516319>`
--  :ref:`Checking the Job Monitoring Information <dli_01_0462__section93781115103311>`
+-  :ref:`Checking Job Monitoring Information <dli_01_0462__section93781115103311>`
 -  :ref:`Viewing the Task List of a Job <dli_01_0462__section11677164916529>`
 -  :ref:`Viewing the Job Execution Plan <dli_01_0462__section9397163320>`
 -  :ref:`Viewing Job Submission Logs <dli_01_0462__section18556377020>`
@@ -102,8 +102,8 @@ This section describes how to view job details. After you create and save a job,
 
 .. _dli_01_0462__section93781115103311:
 
-Checking the Job Monitoring Information
----------------------------------------
+Checking Job Monitoring Information
+-----------------------------------
 
 You can use Cloud Eye to view details about job data input and output.
 

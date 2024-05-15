@@ -41,6 +41,21 @@ On Queues
 
 For more constraints on using a DLI queue, see :ref:`Queue Overview <dli_01_0402>`.
 
+On Elastic Resource Pools
+-------------------------
+
+-  The region of an elastic resource pool cannot be changed.
+
+-  Jobs of Flink 1.10 or later can run in elastic resource pools.
+
+-  The network segment of an elastic resource pool cannot be changed after being set.
+
+-  You can only view the scaling history of resource pools in the last 30 days.
+
+-  Elastic resource pools cannot access the Internet.
+
+For more constraints on elastic resource pools, see :ref:`Elastic Resource Pool Overview <dli_01_0504>`.
+
 On Resources
 ------------
 

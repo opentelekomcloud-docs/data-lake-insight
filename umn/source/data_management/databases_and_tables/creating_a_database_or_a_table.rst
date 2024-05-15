@@ -38,7 +38,7 @@ Creating a Database
    -  To create a database on the **SQL Editor** page:
 
       a. On the left of the management console, click **SQL Editor**.
-      b. In the navigation pane on the left, click |image1| beside **Databases**.
+      b. In the navigation pane on the left, click |image1| next to **Databases**.
 
 #. In the displayed **Create Database** dialog box, specify **Name** and **Description** by referring to :ref:`Table 1 <dli_01_0005__table055917491187>`.
 
@@ -77,7 +77,7 @@ Creating a Database
       |                                   |                                                                                                                                                                                                                                                                                                                     |
       |                                   |    .. note::                                                                                                                                                                                                                                                                                                        |
       |                                   |                                                                                                                                                                                                                                                                                                                     |
-      |                                   |       A tag value can contain a maximum of 225 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                                                                                                                              |
+      |                                   |       A tag value can contain a maximum of 255 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                                                                                                                              |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **OK**.
@@ -93,7 +93,7 @@ Before creating a table, ensure that a database has been created.
 
    .. note::
 
-      Datasource connection tables, such as View tables, HBase (MRS) tables, OpenTSDB (MRS) tables, DWS tables, RDS tables, and CSS tables, cannot be created. You can use SQL to create views and datasource connection tables. For details, see sections **Creating a View** and **Creating a Datasource Connection Table** in the *Data Lake Insight SQL Syntax Reference*.
+      Datasource connection tables, such as View tables, HBase (MRS) tables, OpenTSDB (MRS) tables, GaussDB(DWS) tables, RDS tables, and CSS tables, cannot be created. You can use SQL to create views and datasource connection tables. For details, see sections **Creating a View** and **Creating a Datasource Connection Table** in the *Data Lake Insight SQL Syntax Reference*.
 
    -  To create a table on the **Data Management** page:
 

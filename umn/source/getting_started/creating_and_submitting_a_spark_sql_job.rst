@@ -72,9 +72,9 @@ Before you use DLI to query and analyze data, upload data files to OBS.
 Step 2: Create a Queue
 ----------------------
 
-A queue is the basis for using DLI. Before executing an SQL job, you need to create a queue.
+A queue is the basis for using DLI. Before executing a SQL job, you need to create a queue.
 
--  An available queue **default** is preset in DLI.
+-  DLI provides a preconfigured queue named **default**.
 -  You can also create queues as needed.
 
    #. Log in to the DLI management console.

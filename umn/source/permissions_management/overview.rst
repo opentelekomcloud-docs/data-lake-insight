@@ -14,15 +14,15 @@ When using DLI on the cloud, enterprise users need to manage DLI resources (queu
 
 DLI uses IAM for refined enterprise-level multi-tenant management. IAM provides identity authentication, permissions management, and access control, helping you securely access to your cloud resources.
 
-With IAM, you can use your cloud account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, some software developers in your enterprise need to use DLI resources but must not delete them or perform any high-risk operations. To achieve this result, you can create IAM users for the software developers and grant them only the permissions required for using DLI resources.
+With IAM, you can use your account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, some software developers in your enterprise need to use DLI resources but must not delete them or perform any high-risk operations. To achieve this result, you can create IAM users for the software developers and grant them only the permissions required for using DLI resources.
 
 .. note::
 
    For a new user, you need to log in for the system to record the metadata before using DLI.
 
-IAM is free of charge. You pay only for the resources you use.
+IAM is free to use, and you only need to pay for the resources in your account.
 
-If your cloud account does not need individual IAM users for permissions management, skip this chapter.
+If your account does not need individual IAM users for permissions management, skip over this section.
 
 .. _dli_01_0440__section6224422143120:
 
