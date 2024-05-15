@@ -7,7 +7,7 @@ APIs Related to Enhanced Datasource Connections
 
 -  :ref:`Creating an Enhanced Datasource Connection <dli_02_0187>`
 -  :ref:`Deleting an Enhanced Datasource Connection <dli_02_0188>`
--  :ref:`Querying an Enhanced Datasource Connection List <dli_02_0190>`
+-  :ref:`Listing Enhanced Datasource Connections <dli_02_0190>`
 -  :ref:`Querying an Enhanced Datasource Connection <dli_02_0189>`
 -  :ref:`Binding a Queue <dli_02_0191>`
 -  :ref:`Unbinding a Queue <dli_02_0192>`
@@ -20,7 +20,7 @@ APIs Related to Enhanced Datasource Connections
 
    creating_an_enhanced_datasource_connection
    deleting_an_enhanced_datasource_connection
-   querying_an_enhanced_datasource_connection_list
+   listing_enhanced_datasource_connections
    querying_an_enhanced_datasource_connection
    binding_a_queue
    unbinding_a_queue

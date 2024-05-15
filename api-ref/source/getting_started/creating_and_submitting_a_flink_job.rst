@@ -19,8 +19,8 @@ Involved APIs
 -------------
 
 -  :ref:`Creating a Queue <dli_02_0194>`: Create a queue.
--  :ref:`Uploading a Package Group <dli_02_0130>`: Upload the resource package required by the Flink custom job.
--  :ref:`Querying Resource Packages in a Group <dli_02_0172>`: Check whether the uploaded resource package is correct.
+-  :ref:`Uploading a Package Group (Discarded) <dli_02_0130>`: Upload the resource package required by the Flink custom job.
+-  :ref:`Querying Resource Packages in a Group (Discarded) <dli_02_0172>`: Check whether the uploaded resource package is correct.
 -  :ref:`Creating a Flink Jar job <dli_02_0230>` Create a user-defined Flink job.
 -  :ref:`Running Jobs in Batches <dli_02_0233>`: Run a user-defined Flink job.
 
@@ -37,7 +37,7 @@ Procedure
       URI format: POST /v1.0/{*project_id*}/streaming/flink-jobs
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the request parameters, see :ref:`Creating a Database <dli_02_0028>`.
+      -  For details about the request parameters, see :ref:`Creating a Database (Discarded) <dli_02_0028>`.
 
    -  Request example
 

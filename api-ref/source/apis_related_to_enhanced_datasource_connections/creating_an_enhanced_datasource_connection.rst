@@ -48,9 +48,9 @@ Request
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | routetable_id   | No              | String           | Route table associated with the subnet of the service.                                                                                                            |
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | hosts           | No              | Array of Objects | The user-defined host information. A maximum of 20,000 records are supported. For details, see :ref:`hosts request parameters <dli_02_0187__table6991727151310>`. |
+   | hosts           | No              | Array of objects | The user-defined host information. A maximum of 20,000 records are supported. For details, see :ref:`hosts request parameters <dli_02_0187__table6991727151310>`. |
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags            | No              | Array of Objects | Tags of datasource connections. For details, see :ref:`Table 4 <dli_02_0187__table9391124139>`.                                                                   |
+   | tags            | No              | Array of objects | Tags of datasource connections. For details, see :ref:`Table 4 <dli_02_0187__table9391124139>`.                                                                   |
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0187__table6991727151310:
@@ -69,12 +69,21 @@ Request
 
 .. table:: **Table 4** tags parameter
 
-   ========= ========= ====== ===========
-   Parameter Mandatory Type   Description
-   ========= ========= ====== ===========
-   key       Yes       String Tag key.
-   value     Yes       String Tag key.
-   ========= ========= ====== ===========
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                     |
+   +=================+=================+=================+=================================================================================================================================================================================================================+
+   | key             | Yes             | String          | Tag key.                                                                                                                                                                                                        |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | value           | Yes             | String          | Tag key.                                                                                                                                                                                                        |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                 |
+   |                 |                 |                 |    A tag value can contain a maximum of 255 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                             |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -125,7 +134,7 @@ Example Response
 
    {
      "is_success": true,
-   "message": "Create peer connection for queues:{queue list in the request parameter}",
+     "message": "Create peer connection for queues:{Queue list in the request parameter}",
      "connection_id": "2a620c33-5609-40c9-affd-2b6453071b0f"
    }
 

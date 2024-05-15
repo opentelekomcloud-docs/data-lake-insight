@@ -19,9 +19,9 @@ Involved APIs
 -------------
 
 -  :ref:`Creating a Queue <dli_02_0194>`: Create a queue.
--  :ref:`Creating a Database <dli_02_0028>`: Create a database.
--  :ref:`Creating a Table <dli_02_0034>`: Create a table.
--  :ref:`Importing Data <dli_02_0019>`: Import the data to be queried.
+-  :ref:`Creating a Database (Discarded) <dli_02_0028>`: Create a database.
+-  :ref:`Creating a Table (Discarded) <dli_02_0034>`: Create a table.
+-  :ref:`Importing Data (Discarded) <dli_02_0019>`: Import the data to be queried.
 -  :ref:`Querying Job Details <dli_02_0022>`: Check whether the imported data is correct.
 -  :ref:`Submitting a SQL Job (Recommended) <dli_02_0102>`: Submit a query job.
 
@@ -36,7 +36,7 @@ Procedure
       URI format: POST /v1.0/{project_id}/databases
 
       -  Obtain the value of {project_id} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the request parameters, see :ref:`Creating a Database <dli_02_0028>`.
+      -  For details about the request parameters, see :ref:`Creating a Database (Discarded) <dli_02_0028>`.
 
    -  Request example
 
@@ -69,7 +69,7 @@ Procedure
       URI format: POST /v1.0/{*project_id*}/databases/{*database_name*}/tables
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the request parameters, see :ref:`Creating a Table <dli_02_0034>`.
+      -  For details about the request parameters, see :ref:`Creating a Table (Discarded) <dli_02_0034>`.
 
    -  Request example
 
@@ -118,7 +118,7 @@ Procedure
            "message": ""
          }
 
-#. (Optional) If the table to be created does not contain data, use the :ref:`Importing Data <dli_02_0019>` API to import data to the table.
+#. (Optional) If the table to be created does not contain data, use the :ref:`Importing Data (Discarded) <dli_02_0019>` API to import data to the table.
 #. (Optional) After data is imported, you can use the :ref:`Querying Job Details <dli_02_0022>` API to check whether the imported data is correct.
 #. Submit a query job.
 
@@ -127,7 +127,7 @@ Procedure
       URI format: POST /v1.0/{*project_id*}/jobs/submit-job
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the request parameters, see :ref:`Creating a Database <dli_02_0028>`.
+      -  For details about the request parameters, see :ref:`Creating a Database (Discarded) <dli_02_0028>`.
 
    -  Request example
 
