@@ -30,7 +30,7 @@ Constraints
 -  If you use an enhanced datasource connection, the CIDR block of the elastic resource pool or queue cannot overlap with that of the data source.
 -  Only queues bound with datasource connections can access datasource tables.
 -  Datasource tables do not support the preview function.
--  When checking the connectivity of datasource connections, the constraints on IP addresses are as follows:
+-  When checking the connectivity of datasource connections, the notes and constraints on IP addresses are:
 
    -  The IP address must be valid, which consists of four decimal numbers separated by periods (.). The value ranges from 0 to 255.
 
@@ -38,7 +38,7 @@ Constraints
 
       For example, **192.168.**\ *xx*\ **.**\ *xx* or **192.168.**\ *xx*\ **.**\ *xx*\ **:8181**.
 
--  When checking the connectivity of datasource connections, the constraints on domain names are as follows:
+-  When checking the connectivity of datasource connections, the notes and constraints on domain names are:
 
    -  The domain name can contain 1 to 255 characters. Only letters, digits, underscores (_), and hyphens (-) are allowed.
 

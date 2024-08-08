@@ -23,9 +23,4 @@ The default queue is a public preset queue in the system for function trials. Wh
 Solution
 --------
 
-Buy a custom queue for your jobs. The procedure is as follows:
-
-#. In the navigation pane of the DLI management console, choose **Queue Management**.
-#. In the upper right corner of the **Queue Management** page, click **Buy Queue** to create a queue.
-#. On the **Buy Queue** page, set the required parameters as you need. Especially, set **Type** to **For SQL**.
-#. Submit your SQL jobs to the newly created queue.
+Buy a custom queue for your jobs.

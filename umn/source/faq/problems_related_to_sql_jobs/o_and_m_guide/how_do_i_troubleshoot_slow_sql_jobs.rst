@@ -109,7 +109,7 @@ Shuffle data skew is caused by unbalanced number of key values in join.
 
 #. Use **concat(cast(round(rand() \* 999999999) as string)** to generate a random number for each key value.
 
-#. If the skew is serious and random numbers cannot be generated, see :ref:`How Do I Eliminate Data Skew by Configuring AE Parameters? <dli_03_0093>`
+#. If the skew is serious and random numbers cannot be generated, see :ref:`How Do I Do When Data Skew Occurs During the Execution of a SQL Job? <dli_03_0093>`
 
 .. |image1| image:: /_static/images/en-us_image_0000001299472334.png
 .. |image2| image:: /_static/images/en-us_image_0000001299478654.png

@@ -11,7 +11,7 @@ Queue Management
 -  :ref:`Deleting a Queue <dli_01_0016>`
 -  :ref:`Allocating a Queue to an Enterprise Project <dli_01_0565>`
 -  :ref:`Modifying the CIDR Block <dli_01_0443>`
--  :ref:`Elastic Queue Scaling <dli_01_0487>`
+-  :ref:`Elastic Scaling of Queues <dli_01_0487>`
 -  :ref:`Scheduling CU Changes <dli_01_0488>`
 -  :ref:`Testing Address Connectivity <dli_01_0489>`
 -  :ref:`Creating an SMN Topic <dli_01_0421>`
@@ -28,7 +28,7 @@ Queue Management
    deleting_a_queue
    allocating_a_queue_to_an_enterprise_project
    modifying_the_cidr_block
-   elastic_queue_scaling
+   elastic_scaling_of_queues
    scheduling_cu_changes
    testing_address_connectivity
    creating_an_smn_topic

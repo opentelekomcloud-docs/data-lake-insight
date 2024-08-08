@@ -23,8 +23,8 @@ Difference Between DLI Tables and OBS Tables
 -  Data stored in DLI tables is applicable to delay-sensitive services, such as interactive queries.
 -  Data stored in OBS tables is applicable to delay-insensitive services, such as historical data statistics and analysis.
 
-Constraints
------------
+Notes and Constraints
+---------------------
 
 -  **Database**
 
@@ -127,6 +127,8 @@ The displayed page lists all tables created in the current database. You can vie
    | Created                           | Time when the table is created.                                                                                                                                              |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Last Accessed                     | Last time when an operation was performed on the table.                                                                                                                      |
+   |                                   |                                                                                                                                                                              |
+   |                                   | The last access time of a table refers only to the last time it was updated, not the time it was read (SELECT operation).                                                    |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Operation                         | -  **Manage Permissions**: This operation allows you to view the permission information and perform user authorization, permission settings, and user permission revocation. |
    |                                   | -  **More**:                                                                                                                                                                 |

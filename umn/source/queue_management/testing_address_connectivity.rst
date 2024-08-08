@@ -15,4 +15,4 @@ It can be used to test the connectivity between the DLI queue and the peer IP ad
 
    If the test address is reachable, a message is displayed on the page, indicating that the address is reachable.
 
-   If the test address is unreachable, the system displays a message indicating that the address is unreachable. Check the network configurations and try again. Network configurations include the VPC peering and the datasource connection. Check whether they have been activated.
+   If the test address is unreachable, the system displays a message indicating that the address is unreachable. Check the network configurations and retry. Network configurations include the VPC peering and the datasource connection. Check whether they have been activated.

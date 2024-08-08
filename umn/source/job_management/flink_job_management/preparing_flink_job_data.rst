@@ -54,4 +54,4 @@ Flink jobs support the following data sources and output channels:
 
 -  DCS as the output channel
 
-   To use DCS as the output channel, create a Redis cache instance in DCS and obtain the address used for Flink jobs to connect to the Redis instance. For detailed operations, see **Getting Started** in the *Distributed Cache Service User Guide*.
+   To use DCS as the output channel, create a Redis cache instance in DCS and obtain the address used for Flink jobs to connect to the Redis instance. For details, see "Buying a DCS Redis Instance" in *Distributed Cache Service User Guide*.

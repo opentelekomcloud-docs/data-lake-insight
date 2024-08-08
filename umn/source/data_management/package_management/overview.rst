@@ -17,8 +17,8 @@ Package management provides the following functions:
 
 -  :ref:`Modifying the Owner <dli_01_0478>`
 
-Constraints
------------
+Notes and Constraints
+---------------------
 
 -  A package can be deleted, but a package group cannot be deleted.
 -  The following types of packages can be uploaded:
