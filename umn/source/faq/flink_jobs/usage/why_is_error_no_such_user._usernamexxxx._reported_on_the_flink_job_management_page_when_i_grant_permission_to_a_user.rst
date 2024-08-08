@@ -13,4 +13,5 @@ Choose **Job Management** > **Flink Jobs**. In the **Operation** column of the t
 Solution
 --------
 
-Check whether the username exists and whether the user has logged in to the system before authorization.
+-  Check whether the username exists.
+-  If the username exists, relog in to the management console to grant permissions.

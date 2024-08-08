@@ -2,8 +2,8 @@
 
 .. _dli_01_0013:
 
-Modifying Host Information
-==========================
+Modifying Host Information in an Elastic Resource Pool
+======================================================
 
 Scenario
 --------
@@ -18,7 +18,6 @@ Constraints
 You have obtained the MRS host information by referring to :ref:`How Do I Obtain MRS Host Information? <dli_01_0013__section3607172865810>`
 
 .. _dli_01_0013__section6859216954:
-
 
 Modifying Host Information
 --------------------------

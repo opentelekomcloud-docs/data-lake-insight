@@ -23,7 +23,7 @@ Prerequisites
 
    -  For details about how to create a datasource connection, see :ref:`Enhanced Datasource Connections <dli_01_0426>`.
 
-      On the **Resources** > **Queue Management** page, locate the queue you have created, and choose **More** > **Test Address Connectivity** in the **Operation** column to check whether the network connection between the queue and the data source is normal. For details, see :ref:`Testing Address Connectivity <dli_01_0489>`.
+      On the **Resources** > **Queue Management** page, locate the queue you have created, click **More** in the **Operation** column, and select **Test Address Connectivity** to check if the network connection between the queue and the data source is normal. For details, see :ref:`Testing Address Connectivity <dli_01_0489>`.
 
 Procedure
 ---------

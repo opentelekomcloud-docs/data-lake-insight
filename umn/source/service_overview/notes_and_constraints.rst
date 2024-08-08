@@ -2,8 +2,8 @@
 
 .. _dli_07_0005:
 
-Constraints and Limitations
-===========================
+Notes and Constraints
+=====================
 
 On Jobs
 -------
@@ -15,7 +15,7 @@ On Jobs
 -  Only Spark jobs support custom images.
 -  An elastic resource pool supports a maximum of 32,000 CUs.
 
-For details about job constraints, see :ref:`Job Management <dli_01_0567>`.
+For more notes and constraints on jobs, see :ref:`Job Management <dli_01_0567>`.
 
 On Queues
 ---------
@@ -39,7 +39,7 @@ On Queues
 
 -  DLI queues cannot access the Internet.
 
-For more constraints on using a DLI queue, see :ref:`Queue Overview <dli_01_0402>`.
+For more notes and constraints on using a DLI queue, see :ref:`Queue Overview <dli_01_0402>`.
 
 On Elastic Resource Pools
 -------------------------
@@ -54,7 +54,21 @@ On Elastic Resource Pools
 
 -  Elastic resource pools cannot access the Internet.
 
-For more constraints on elastic resource pools, see :ref:`Elastic Resource Pool Overview <dli_01_0504>`.
+-  Changes to elastic resource pool CUs can occur when setting the CU, adding or deleting queues in an elastic resource pool, or modifying the scaling policies of queues in an elastic resource pool, or when the system automatically triggers elastic resource pool scaling. However, in some cases, the system cannot guarantee that the scaling will reach the target CUs as planned.
+
+   -  If there are not enough physical resources, an elastic resource pool may not be able to scale out to the desired target size.
+
+   -  The system does not guarantee that an elastic resource pool will be scaled in to the desired target size.
+
+      The system checks the resource usage before scaling in the elastic resource pool to determine if there is enough space for scaling in. If the existing resources cannot be scaled in according to the minimum scaling step, the pool may not be scaled in successfully or only partially.
+
+      The scaling step may vary depending on the resource specifications, usually 16 CUs, 32 CUs, 48 CUs, 64 CUs, etc.
+
+      For example, if the elastic resource pool has a capacity of 192 CUs and the queues in the pool are using 68 CUs due to running jobs, the plan is to scale in to 64 CUs.
+
+      When executing a scaling in task, the system determines that there are 124 CUs remaining and scales in by the minimum step of 64 CUs. However, the remaining 60 CUs cannot be scaled in any further. Therefore, after the elastic resource pool executes the scaling in task, its capacity is reduced to 128 CUs.
+
+For more notes and constraints on elastic resource pools, see :ref:`Elastic Resource Pool Overview <dli_01_0504>`.
 
 On Resources
 ------------
@@ -99,7 +113,7 @@ On Resources
       -  **File**: User file
       -  **ModelFile**: User AI model file
 
-For details about constraints on resources, see :ref:`Data Management <dli_01_0004>`.
+For more notes and constraints on resources, see :ref:`Data Management <dli_01_0004>`.
 
 On Enhanced Datasource Connections
 ----------------------------------
@@ -110,7 +124,7 @@ On Enhanced Datasource Connections
 -  If you use an enhanced datasource connection, the CIDR block of the elastic resource pool or queue cannot overlap with that of the data source.
 -  Only queues bound with datasource connections can access datasource tables.
 -  Datasource tables do not support the preview function.
--  When checking the connectivity of datasource connections, the constraints on IP addresses are as follows:
+-  When checking the connectivity of datasource connections, the notes and constraints on IP addresses are:
 
    -  The IP address must be valid, which consists of four decimal numbers separated by periods (.). The value ranges from 0 to 255.
 
@@ -118,7 +132,7 @@ On Enhanced Datasource Connections
 
       For example, **192.168.**\ *xx*\ **.**\ *xx* or **192.168.**\ *xx*\ **.**\ *xx*\ **:8181**.
 
--  When checking the connectivity of datasource connections, the constraints on domain names are as follows:
+-  When checking the connectivity of datasource connections, the notes and constraints on domain names are:
 
    -  The domain name can contain 1 to 255 characters. Only letters, digits, underscores (_), and hyphens (-) are allowed.
 
@@ -128,7 +142,7 @@ On Enhanced Datasource Connections
 
       For example, **example.com:8080**.
 
-For more constraints on enhanced datasource connections, see :ref:`Enhanced Datasource Connection Overview <dli_01_0003>`.
+For more notes and constraints on enhanced datasource connections, see :ref:`Enhanced Datasource Connection Overview <dli_01_0003>`.
 
 On Datasource Authentication
 ----------------------------
@@ -141,7 +155,7 @@ On Datasource Authentication
    -  Kafka_SSL: applies to Kafka with SSL enabled.
    -  Password: applies to GaussDB(DWS), RDS, DDS, and DCS.
 
-For more constraints on datasource authentication, see :ref:`Datasource Authentication Introduction <dli_01_0561>`.
+For more notes and constraints on datasource authentication, see :ref:`Datasource Authentication Introduction <dli_01_0561>`.
 
 On SQL Syntax
 -------------
@@ -158,7 +172,7 @@ On SQL Syntax
 Other
 -----
 
--  For details about quota constraints, see :ref:`Quotas <dli_07_0009>`.
+-  For quota notes and constraints, see :ref:`Quotas <dli_07_0009>`.
 -  Recommended browsers for logging in to DLI:
 
    -  Google Chrome 43.0 or later

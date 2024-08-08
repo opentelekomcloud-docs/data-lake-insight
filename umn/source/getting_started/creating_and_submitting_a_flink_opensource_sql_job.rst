@@ -38,7 +38,7 @@ In this example, Kafka is the data source.
 
 For more information about Flink job data, see :ref:`Preparing Flink Job Data <dli_01_0454>`.
 
-Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instance" in the *Distributed Message Service Kafka User Guide*.
+Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instance" in *Distributed Message Service Kafka User Guide*.
 
 #. .. _dli_01_0531__en-us_topic_0000001354966081_li485218325375:
 
@@ -377,7 +377,7 @@ After the data source and data output channel are prepared, you can create a Fli
 
    .. code-block::
 
-      select * from order;
+      select * from orders;
 
    The following is an example of the execution result copied from the MySQL database:
 

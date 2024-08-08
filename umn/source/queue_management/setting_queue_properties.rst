@@ -14,8 +14,8 @@ You can set Spark driver parameters to improve the scheduling efficiency of queu
 
 This section describes how to set queue properties on the management console.
 
-Constraints and Limitations
----------------------------
+Notes and Constraints
+---------------------
 
 -  Only SQL queues of the Spark engine support configuring queue properties.
 -  Setting queue properties is only supported after the queue has been created.

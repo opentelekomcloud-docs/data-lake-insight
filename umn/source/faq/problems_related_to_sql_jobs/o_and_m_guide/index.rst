@@ -8,7 +8,7 @@ O&M Guide
 -  :ref:`How Do I Troubleshoot Slow SQL Jobs? <dli_03_0196>`
 -  :ref:`How Do I View DLI SQL Logs? <dli_03_0091>`
 -  :ref:`How Do I View SQL Execution Records? <dli_03_0116>`
--  :ref:`How Do I Eliminate Data Skew by Configuring AE Parameters? <dli_03_0093>`
+-  :ref:`How Do I Do When Data Skew Occurs During the Execution of a SQL Job? <dli_03_0093>`
 -  :ref:`What Can I Do If a Table Cannot Be Queried on the DLI Console? <dli_03_0184>`
 -  :ref:`The Compression Ratio of OBS Tables Is Too High <dli_03_0013>`
 -  :ref:`How Can I Avoid Garbled Characters Caused by Inconsistent Character Codes? <dli_03_0009>`
@@ -31,7 +31,7 @@ O&M Guide
    how_do_i_troubleshoot_slow_sql_jobs
    how_do_i_view_dli_sql_logs
    how_do_i_view_sql_execution_records
-   how_do_i_eliminate_data_skew_by_configuring_ae_parameters
+   how_do_i_do_when_data_skew_occurs_during_the_execution_of_a_sql_job
    what_can_i_do_if_a_table_cannot_be_queried_on_the_dli_console
    the_compression_ratio_of_obs_tables_is_too_high
    how_can_i_avoid_garbled_characters_caused_by_inconsistent_character_codes

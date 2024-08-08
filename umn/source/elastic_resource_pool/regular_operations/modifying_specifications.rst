@@ -8,14 +8,7 @@ Modifying Specifications
 Scenario
 --------
 
-If CUs of a yearly/monthly elastic resource pool cannot meet your service requirements, you can modify the CUs. In this case, you will be charged based on the number of CUs exceeding that of the yearly/monthly elastic resource pool.
-
-For example, you have purchased an elastic resource pool with 64 CUs, and you find that most time data processing needs 128 CUs. You can add 64 CUs to the elastic resource pool and be billed based on a CU/hour basis. To save more, you can scale up your elastic resource pool to 128 CUs and be billed on a yearly/monthly basis for the 128-CU package.
-
-Precautions
------------
-
-Currently, only yearly/monthly elastic resource pools can be scaled.
+If the current specifications of your elastic resource pool do not meet your service needs, you can modify them using the change specifications function.
 
 Scaling Up
 ----------

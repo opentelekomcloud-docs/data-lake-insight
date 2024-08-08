@@ -36,7 +36,7 @@ Solution
 
 #. .. _dli_03_0172__en-us_topic_0000001204269300_li147241748216:
 
-   Click **Buy Queue** to create a queue. Set **Type** to **For SQL**, set other parameters required, and click **Buy**.
+   Choose **Resources** > **Resource Pool**. On the displayed page, locate the purchased elastic resource pool, and click **Add Queue** in the **Operation** column. Set **Type** to **For SQL**, set other parameters, and submit the creation request.
 
 #. .. _dli_03_0172__en-us_topic_0000001204269300_li15230171718316:
 

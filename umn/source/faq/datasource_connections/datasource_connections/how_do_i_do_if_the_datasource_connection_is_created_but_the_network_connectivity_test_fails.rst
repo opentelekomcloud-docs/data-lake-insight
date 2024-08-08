@@ -24,7 +24,7 @@ Troubleshoot the issue by ruling out the causes described here, one by one.
 -  :ref:`Check Whether a Port Number Is Added to the End of the Domain Name or IP Address <dli_03_0179__en-us_topic_0000001250602862_section1598718651714>`
 -  :ref:`Check Whether the Information of the Peer VPC and Subnet Are Correct. <dli_03_0179__en-us_topic_0000001250602862_section1248131717217>`
 -  :ref:`Check Whether the CIDR Block of the Queue Overlaps with That of the Data Source <dli_03_0179__en-us_topic_0000001250602862_section11573112152719>`
--  :ref:`Check Whether the VPC Administrator Permission Is Granted to DLI <dli_03_0179__en-us_topic_0000001250602862_section10740107124612>`
+-  :ref:`Check Whether the DLI Datasource Connections Agency Access Permission Is Granted to DLI <dli_03_0179__en-us_topic_0000001250602862_section10740107124612>`
 -  :ref:`Check Whether the Destination Security Group Allows Access from the CIDR Block of the Queue <dli_03_0179__en-us_topic_0000001250602862_section96661220175613>`
 -  :ref:`Check the Route Information of the VPC Peering Connection Corresponding to an Enhanced Datasource Connection <dli_03_0179__en-us_topic_0000001250602862_section1510101713111>`
 -  :ref:`Check Whether VPC Network ACL Rules Are Configured to Restrict Network Access <dli_03_0179__en-us_topic_0000001250602862_section1789710470256>`
@@ -66,12 +66,12 @@ Planing the CIDR blocks for your queues helps you to avoid this problem.
 
 .. _dli_03_0179__en-us_topic_0000001250602862_section10740107124612:
 
-Check Whether the VPC Administrator Permission Is Granted to DLI
-----------------------------------------------------------------
+Check Whether the DLI Datasource Connections Agency Access Permission Is Granted to DLI
+---------------------------------------------------------------------------------------
 
-View the connection logs to check whether there is the required permission.
+You can determine if a connection failure is due to insufficient permissions by checking the connection logs.
 
-**Solution**: Grant DLI the VPC Administrator permission and cancel the IAM ReadOnlyAccess authorization.
+Solution: Add the **DLI Datasource Connections Agency Access** authorization on the **Global Configuration** > **Service Authorization** page.
 
 .. _dli_03_0179__en-us_topic_0000001250602862_section96661220175613:
 

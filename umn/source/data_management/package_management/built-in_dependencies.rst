@@ -756,6 +756,21 @@ Spark 2.3.2 Dependencies
    | hamcrest-core-1.3.jar                                 | log4j-rolling-appender-20131024-2017.jar                       | zstd-jni-1.4.4-11.jar                                                   |
    +-------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------------------+
 
+Flink 1.15 Dependencies
+-----------------------
+
+Obtain information about the Flink 1.15 dependencies from the logs of a Flink job.
+
+#. Check the logs of a Flink job.
+
+   a. Log in to the DLI console. In the navigation pane on the left, choose **Job Management** > **Flink Jobs**.
+   b. Click the name of the desired job. On the displayed page, click the **Run Log** tab.
+   c. Check the latest run logs. For more logs, check the OBS bucket where the job logs are stored.
+
+#. Search for dependency information in the logs.
+
+   Search for **Classpath:** in the logs to check the dependencies.
+
 Flink 1.12 Dependencies
 -----------------------
 

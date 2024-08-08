@@ -15,8 +15,8 @@ When analyzing across multiple sources, it is not recommended to configure authe
 
 This section describes how to use datasource authentication provided by DLI.
 
-Constraints
------------
+Notes and Constraints
+---------------------
 
 -  Only Spark SQL and Flink OpenSource SQL 1.12 jobs support datasource authentication.
 -  DLI supports four types of datasource authentication. Select an authentication type specific to each data source.
@@ -49,7 +49,7 @@ Different types of jobs can connect to data sources through different types of d
 .. table:: **Table 1** Data sources that Spark SQL jobs can connect to through datasource authentication
 
    +--------------------------------+-----------------------------------+---------------------------------------------------------+
-   | Datasource Authentication Type | Data Source                       | Constraints                                             |
+   | Datasource Authentication Type | Data Source                       | Notes and Constraints                                   |
    +================================+===================================+=========================================================+
    | CSS                            | CSS                               | The CSS cluster version must be 6.5.4 or later.         |
    |                                |                                   |                                                         |
@@ -63,7 +63,7 @@ Different types of jobs can connect to data sources through different types of d
 .. table:: **Table 2** Data sources that Flink SQL jobs can connect to through datasource authentication
 
    +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   | Table Type      | Datasource Authentication Type | Data Source                | Constraints                                                   |
+   | Table Type      | Datasource Authentication Type | Data Source                | Notes and Constraints                                         |
    +=================+================================+============================+===============================================================+
    | Source table    | Kerberos                       | Kafka                      | Kerberos authentication has been enabled for MRS Kafka.       |
    +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+

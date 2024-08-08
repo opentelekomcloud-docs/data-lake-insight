@@ -2,8 +2,8 @@
 
 .. _dli_03_0119:
 
-Why Does the Submission Fail Due to Flink JAR File Conflict?
-============================================================
+Why Does a Flink Jar Package Conflict Result in Submission Failure?
+===================================================================
 
 Symptom
 -------
