@@ -4,6 +4,12 @@
     default-branch: main
     templates:
       - helpcenter-base-jobs
+    vars:
+      sphinx_pdf_files:
+        - dli-umn.pdf
+        - dli-api-ref.pdf
+        - dli-sqlreference.pdf
+        - dli-dev-guide.pdf
     check:
       jobs:
         - noop

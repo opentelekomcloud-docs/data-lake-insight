@@ -109,8 +109,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'dli-dev-guide.tex',
-     u'Data Lake Insight - Developer Guide',
+     'dli-dev-guide.tex',u'Data Lake Insight - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

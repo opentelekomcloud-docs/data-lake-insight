@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dli-sqlreference.tex',
-     u'Data Lake Insight - Sql Syntax Reference',
+    u'Data Lake Insight - Sql Syntax Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
