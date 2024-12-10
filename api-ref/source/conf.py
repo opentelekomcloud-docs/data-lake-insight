@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dli-api-ref.tex',
-     u'Data Lake Insight - API Reference',
+    u'Data Lake Insight - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

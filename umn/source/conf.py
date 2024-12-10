@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dli-umn.tex',
-     u'Data Lake Insight - User Guide',
+    u'Data Lake Insight - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
