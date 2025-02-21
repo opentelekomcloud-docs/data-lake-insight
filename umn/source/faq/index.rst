@@ -5,28 +5,28 @@
 FAQ
 ===
 
+-  :ref:`DLI Basics <dli_03_0001>`
+-  :ref:`DLI Elastic Resource Pools and Queues <dli_03_0049>`
+-  :ref:`DLI Databases and Tables <dli_03_0211>`
+-  :ref:`Enhanced Datasource Connections <dli_03_0022>`
+-  :ref:`SQL Jobs <dli_03_0020>`
 -  :ref:`Flink Jobs <dli_03_0037>`
--  :ref:`Problems Related to SQL Jobs <dli_03_0020>`
--  :ref:`Problems Related to Spark Jobs <dli_03_0021>`
--  :ref:`Product Consultation <dli_03_0001>`
--  :ref:`Quota <dli_03_0053>`
--  :ref:`Permission <dli_03_0054>`
--  :ref:`Queue <dli_03_0049>`
--  :ref:`Datasource Connections <dli_03_0022>`
--  :ref:`APIs <dli_03_0056>`
--  :ref:`SDKs <dli_03_0058>`
+-  :ref:`Spark Jobs <dli_03_0021>`
+-  :ref:`DLI Resource Quotas <dli_03_0053>`
+-  :ref:`DLI Permissions Management <dli_03_0054>`
+-  :ref:`DLI APIs <dli_03_0056>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
+   dli_basics/index
+   dli_elastic_resource_pools_and_queues/index
+   dli_databases_and_tables/index
+   enhanced_datasource_connections/index
+   sql_jobs/index
    flink_jobs/index
-   problems_related_to_sql_jobs/index
-   problems_related_to_spark_jobs/index
-   product_consultation/index
-   quota/index
-   permission/index
-   queue/index
-   datasource_connections/index
-   apis/index
-   sdks/index
+   spark_jobs/index
+   dli_resource_quotas/index
+   dli_permissions_management/index
+   dli_apis/index
