@@ -27,8 +27,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -52,17 +52,17 @@ Request
    |                 |                 |                  |                                                                                                                                                                                                                                                                                                   |
    |                 |                 |                  |    You are advised to use the **queue** parameter. The **queue** and **cluster_name** parameters cannot coexist.                                                                                                                                                                                  |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | args            | No              | Array of Strings | Input parameters of the main class, that is, application parameters.                                                                                                                                                                                                                              |
+   | args            | No              | Array of strings | Input parameters of the main class, that is, application parameters.                                                                                                                                                                                                                              |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sc_type         | No              | String           | Compute resource type. Currently, resource types A, B, and C are available. If this parameter is not specified, the minimum configuration (type A) is used. For details about resource types, see :ref:`Table 3 <dli_02_0124__en-us_topic_0103343292_en-us_topic_0102902454_table1656812183429>`. |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | jars            | No              | Array of Strings | Name of the package that is of the JAR type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                         |
+   | jars            | No              | Array of strings | Name of the package that is of the JAR type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                         |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | pyFiles         | No              | Array of Strings | Name of the package that is of the PyFile type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                      |
+   | pyFiles         | No              | Array of strings | Name of the package that is of the PyFile type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                      |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | files           | No              | Array of Strings | Name of the package that is of the file type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                        |
+   | files           | No              | Array of strings | Name of the package that is of the file type and has been uploaded to the DLI resource management system. You can also specify an OBS path, for example, **obs://**\ *Bucket name*\ **/**\ *Package name*.                                                                                        |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | modules         | No              | Array of Strings | Name of the dependent system resource module. You can view the module name using the API related to :ref:`Querying Resource Packages in a Group (Discarded) <dli_02_0172>`.                                                                                                                       |
+   | modules         | No              | Array of strings | Name of the dependent system resource module. You can view the module name using the API related to :ref:`Querying Resource Packages in a Group (Deprecated) <dli_02_0172>`.                                                                                                                      |
    |                 |                 |                  |                                                                                                                                                                                                                                                                                                   |
    |                 |                 |                  | DLI provides dependencies for executing datasource jobs. The following table lists the dependency modules corresponding to different services.                                                                                                                                                    |
    |                 |                 |                  |                                                                                                                                                                                                                                                                                                   |
@@ -81,11 +81,11 @@ Request
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | name            | No              | String           | Batch processing task name. The value contains a maximum of 128 characters.                                                                                                                                                                                                                       |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | driverMemory    | No              | String           | Driver memory of the Spark application, for example, **2 GB** and **2048 MB**. This configuration item replaces the default parameter in **sc_type**. The unit must be provided. Otherwise, the startup fails.                                                                                    |
+   | driverMemory    | No              | String           | Driver memory of the Spark application, for example, **2 GB** and **2048 MB**. This configuration will replace the default settings in **sc_type**. When using it, you must include the unit, otherwise it will fail to start.                                                                    |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | driverCores     | No              | Integer          | Number of CPU cores of the Spark application driver. This configuration item replaces the default parameter in **sc_type**.                                                                                                                                                                       |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | executorMemory  | No              | String           | Executor memory of the Spark application, for example, **2 GB** and **2048 MB**. This configuration item replaces the default parameter in **sc_type**. The unit must be provided. Otherwise, the startup fails.                                                                                  |
+   | executorMemory  | No              | String           | Executor memory of the Spark application, for example, **2 GB** and **2048 MB**. This configuration will replace the default settings in **sc_type**. When using it, you must include the unit, otherwise it will fail to start.                                                                  |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | executorCores   | No              | Integer          | Number of CPU cores of each Executor in the Spark application. This configuration item replaces the default parameter in **sc_type**.                                                                                                                                                             |
    +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -107,16 +107,16 @@ Request
    +---------------+-------------------------+-------------+---------------+--------------+----------------+-------------+
    | Resource Type | Physical Resource       | driverCores | executorCores | driverMemory | executorMemory | numExecutor |
    +===============+=========================+=============+===============+==============+================+=============+
-   | A             | 8 vCPUs, 32-GB memory   | 2           | 1             | 7 GB         | 4 GB           | 6           |
+   | A             | 8 vCPUs, 32 GB memory   | 2           | 1             | 7 GB         | 4 GB           | 6           |
    +---------------+-------------------------+-------------+---------------+--------------+----------------+-------------+
-   | B             | 16 vCPUs, 64-GB memory  | 2           | 2             | 7 GB         | 8 GB           | 7           |
+   | B             | 16 vCPUs, 64 GB memory  | 2           | 2             | 7 GB         | 8 GB           | 7           |
    +---------------+-------------------------+-------------+---------------+--------------+----------------+-------------+
-   | C             | 32 vCPUs, 128-GB memory | 4           | 2             | 15 GB        | 8 GB           | 14          |
+   | C             | 32 vCPUs, 128 GB memory | 4           | 2             | 15 GB        | 8 GB           | 14          |
    +---------------+-------------------------+-------------+---------------+--------------+----------------+-------------+
 
 .. _dli_02_0124__table31211426423:
 
-.. table:: **Table 4** **resources** parameters
+.. table:: **Table 4** resources parameters
 
    +-----------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
    | Parameter | Mandatory | Type   | Description                                                                                                    |
@@ -128,7 +128,7 @@ Request
 
 .. _dli_02_0124__table1212244016391:
 
-.. table:: **Table 5** **groups** parameters
+.. table:: **Table 5** groups parameters
 
    +-----------+-----------+------------------+--------------------------------------------------------------------------------------+
    | Parameter | Mandatory | Type             | Description                                                                          |
@@ -138,8 +138,8 @@ Request
    | resources | No        | Array of objects | User group resource For details, see :ref:`Table 4 <dli_02_0124__table31211426423>`. |
    +-----------+-----------+------------------+--------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 6** Response parameters
 
@@ -221,7 +221,7 @@ Create a Spark job. Set the Spark main class of the job to **org.apache.spark.ex
 
 .. note::
 
-   The **batchTest/spark-examples_2.11-2.1.0.luxor.jar** file has been uploaded through API involved in :ref:`Uploading a Package Group (Discarded) <dli_02_0130>`.
+   The **batchTest/spark-examples_2.11-2.1.0.luxor.jar** file has been uploaded through API involved in :ref:`Uploading a Package Group (Deprecated) <dli_02_0130>`.
 
 Example Response
 ----------------
@@ -251,7 +251,7 @@ Status Codes
 
 .. _dli_02_0124__tb12870f1c5f24b27abd55ca24264af36:
 
-.. table:: **Table 8** Status code
+.. table:: **Table 8** Status codes
 
    =========== ================================
    Status Code Description

@@ -19,7 +19,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** URI parameters
+   .. table:: **Table 1** URI parameter
 
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter  | Mandatory | Type   | Description                                                                                                                                   |

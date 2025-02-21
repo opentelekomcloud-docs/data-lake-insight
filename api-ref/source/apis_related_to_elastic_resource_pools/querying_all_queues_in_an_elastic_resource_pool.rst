@@ -39,13 +39,13 @@ URI
       queue_name No        String  You can filter data by queue name.
       ========== ========= ======= ========================================
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

@@ -27,8 +27,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -76,17 +76,17 @@ Request
    |                 |                 |                 |                                                                                                                                                                                                                 |
    |                 |                 |                 | .. note::                                                                                                                                                                                                       |
    |                 |                 |                 |                                                                                                                                                                                                                 |
-   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
+   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, numbers, spaces, and special characters ``(_.:+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | value           | Yes             | String          | Tag key.                                                                                                                                                                                                        |
    |                 |                 |                 |                                                                                                                                                                                                                 |
    |                 |                 |                 | .. note::                                                                                                                                                                                                       |
    |                 |                 |                 |                                                                                                                                                                                                                 |
-   |                 |                 |                 |    A tag value can contain a maximum of 255 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                             |
+   |                 |                 |                 |    A tag value can contain a maximum of 255 characters. Only letters, numbers, spaces, and special characters ``(_.:+-@)`` are allowed.                                                                         |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 5** Response parameters
 

@@ -43,13 +43,13 @@ Response
 
 .. table:: **Table 2** Response parameters
 
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type    | Description                                                                                                       |
-   +============+===========+=========+===================================================================================================================+
-   | is_success | No        | Boolean | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
-   | message    | No        | String  | System prompt. If execution succeeds, the parameter setting may be left blank.                                    |
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type   | Description                                                                                                       |
+   +============+===========+========+===================================================================================================================+
+   | is_success | No        | String | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
+   | message    | No        | String | System prompt. If execution succeeds, the parameter setting may be left blank.                                    |
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -66,8 +66,8 @@ Example Response
        "message": "The job is deleted successfully.",
    }
 
-Status Code
------------
+Status Codes
+------------
 
 :ref:`Table 3 <dli_02_0242__t43c1f1c0ba344f4cbcb270953d9cca2a>` describes status codes.
 

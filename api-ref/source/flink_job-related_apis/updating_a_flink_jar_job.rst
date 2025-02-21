@@ -29,8 +29,8 @@ URI
       | job_id     | Yes       | Long   | Job ID. Refer to :ref:`Creating a Flink Jar job <dli_02_0230>` to obtain the value.                                                           |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Parameter description
 
@@ -66,14 +66,22 @@ Request
    | restart_when_exception | No              | Boolean          | Whether to enable the function of restart upon exceptions. The default value is **false**.                                                                                               |
    +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | entrypoint             | No              | String           | Name of the package that has been uploaded to the DLI resource management system. This parameter is used to customize the JAR file where the job main class is located.                  |
-   +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dependency_jars        | No              | Array of Strings | Name of the package that has been uploaded to the DLI resource management system. This parameter is used to customize other dependency packages.                                         |
    |                        |                 |                  |                                                                                                                                                                                          |
-   |                        |                 |                  | Example: **myGroup/test.jar,myGroup/test1.jar**.                                                                                                                                         |
-   +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dependency_files       | No              | Array of Strings | Name of the resource package that has been uploaded to the DLI resource management system. This parameter is used to customize dependency files.                                         |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                          |
    |                        |                 |                  |                                                                                                                                                                                          |
-   |                        |                 |                  | Example: **myGroup/test.cvs,myGroup/test1.csv**.                                                                                                                                         |
+   |                        |                 |                  | Example: **obs://bucket_name/test.jar**                                                                                                                                                  |
+   +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dependency_jars        | No              | Array of strings | Name of the package that has been uploaded to the DLI resource management system. This parameter is used to customize other dependency packages.                                         |
+   |                        |                 |                  |                                                                                                                                                                                          |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                          |
+   |                        |                 |                  |                                                                                                                                                                                          |
+   |                        |                 |                  | Example: **obs://bucket_name/test1.jar, obs://bucket_name/test2.jar**                                                                                                                    |
+   +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dependency_files       | No              | Array of strings | Name of the resource package that has been uploaded to the DLI resource management system. This parameter is used to customize dependency files.                                         |
+   |                        |                 |                  |                                                                                                                                                                                          |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                          |
+   |                        |                 |                  |                                                                                                                                                                                          |
+   |                        |                 |                  | Example: **[obs://bucket_name/file1, obs://bucket_name/file2]**                                                                                                                          |
    +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tm_cus                 | No              | Integer          | Number of CUs for each TaskManager. The default value is **1**.                                                                                                                          |
    +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -90,8 +98,8 @@ Request
    | job_type               | No              | String           | Job types.                                                                                                                                                                               |
    +------------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
@@ -107,7 +115,7 @@ Response
 
 .. _dli_02_0231__table128621016345:
 
-.. table:: **Table 4** **job** parameters
+.. table:: **Table 4** job parameter
 
    +-------------+-----------+------+------------------------------------------------------+
    | Parameter   | Mandatory | Type | Description                                          |

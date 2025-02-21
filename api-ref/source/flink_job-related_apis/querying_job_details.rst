@@ -29,13 +29,13 @@ URI
       | job_id     | Yes       | String | Job ID.                                                                                                                                       |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
@@ -133,7 +133,7 @@ Response
 
 .. _dli_02_0235__table10265738183119:
 
-.. table:: **Table 4** **job_config** parameters
+.. table:: **Table 4** job_config parameters
 
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter               | Mandatory       | Type             | Description                                                                                                                                                             |
@@ -297,7 +297,7 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 5 <dli_02_0235__table181259166119>` describes the status code.
+:ref:`Table 5 <dli_02_0235__table181259166119>` describes the status codes.
 
 .. _dli_02_0235__table181259166119:
 
