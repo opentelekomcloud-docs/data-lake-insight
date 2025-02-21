@@ -27,8 +27,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Parameter description
 
@@ -63,15 +63,23 @@ Request
    +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | restart_when_exception | No              | Boolean          | Whether to enable the function of restart upon exceptions. The default value is **false**.                                                                                                                                                                     |
    +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | entrypoint             | No              | String           | Name of the package that has been uploaded to the DLI resource management system. This parameter is used to customize the JAR file where the job main class is located.                                                                                        |
-   +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dependency_jars        | No              | Array of Strings | Name of the package that has been uploaded to the DLI resource management system. This parameter is used to customize other dependency packages.                                                                                                               |
+   | entrypoint             | No              | String           | Name of the package uploaded to OBS. You can customize the JAR file where the main job class is.                                                                                                                                                               |
    |                        |                 |                  |                                                                                                                                                                                                                                                                |
-   |                        |                 |                  | Example: **myGroup/test.jar,myGroup/test1.jar**.                                                                                                                                                                                                               |
-   +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dependency_files       | No              | Array of Strings | Name of the resource package that has been uploaded to the DLI resource management system. This parameter is used to customize dependency files.                                                                                                               |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                                                                                                |
    |                        |                 |                  |                                                                                                                                                                                                                                                                |
-   |                        |                 |                  | Example: **myGroup/test.cvs,myGroup/test1.csv**.                                                                                                                                                                                                               |
+   |                        |                 |                  | Example: **obs://bucket_name/test.jar**                                                                                                                                                                                                                        |
+   +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dependency_jars        | No              | Array of strings | Name of the package uploaded to OBS. You can customize other dependency packages of the job.                                                                                                                                                                   |
+   |                        |                 |                  |                                                                                                                                                                                                                                                                |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                                                                                                |
+   |                        |                 |                  |                                                                                                                                                                                                                                                                |
+   |                        |                 |                  | Example: **obs://bucket_name/test1.jar, obs://bucket_name/test2.jar**                                                                                                                                                                                          |
+   +------------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dependency_files       | No              | Array of strings | Name of the resource package uploaded to OBS. You can customize the dependency files of the job.                                                                                                                                                               |
+   |                        |                 |                  |                                                                                                                                                                                                                                                                |
+   |                        |                 |                  | For Flink 1.15 or later, you can only select packages from OBS, instead of DLI.                                                                                                                                                                                |
+   |                        |                 |                  |                                                                                                                                                                                                                                                                |
+   |                        |                 |                  | Example: **[obs://bucket_name/file1, obs://bucket_name/file2]**                                                                                                                                                                                                |
    |                        |                 |                  |                                                                                                                                                                                                                                                                |
    |                        |                 |                  | You can add the following content to the application to access the corresponding dependency file: In the command, **fileName** indicates the name of the file to be accessed, and **ClassName** indicates the name of the class that needs to access the file. |
    |                        |                 |                  |                                                                                                                                                                                                                                                                |
@@ -118,8 +126,8 @@ Request
    |                 |                 |                 |    A tag value can contain a maximum of 43 characters. Special characters ``(=*<>\|)`` are not allowed, and the value cannot start with a space.                                                                |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 
@@ -135,7 +143,7 @@ Response
 
 .. _dli_02_0230__table86492245453:
 
-.. table:: **Table 5** **job** parameters
+.. table:: **Table 5** job parameters
 
    +-------------+-----------+--------+---------------------------------------------------------------------+
    | Parameter   | Mandatory | Type   | Description                                                         |
