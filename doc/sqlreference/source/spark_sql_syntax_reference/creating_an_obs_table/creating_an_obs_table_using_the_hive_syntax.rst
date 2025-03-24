@@ -28,6 +28,12 @@ Precautions
    -  A maximum of 200,000 partitions can be created in a single table.
    -  CTAS table creation statements cannot be used to create partitioned tables.
 
+-  **Instructions on setting the multi-character delimiter during table creation:**
+
+   -  The field delimiter can contain multiple characters only when **ROW FORMAT SERDE** is set to **org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe**.
+   -  You can only specify multi-character delimiters when creating Hive OBS tables.
+   -  Tables with multi-character delimiters specified do not support data writing statements such as **INSERT** and **IMPORT**. To insert data into these tables, save the data file in the OBS path where the tables are located. For example, in :ref:`Example 7: Creating a Table and Setting a Multi-Character Delimiter <dli_08_0077__section91150194616>`, store the data file in **obs://**\ *bucketName*\ **/**\ *filePath*.
+
 Syntax
 ------
 
@@ -81,12 +87,12 @@ Keywords
          |                                   | -  **ZLIB**                                                                                                                 |
          |                                   | -  **SNAPPY**                                                                                                               |
          |                                   | -  **NONE**                                                                                                                 |
-         |                                   | -  PARQUET                                                                                                                  |
          +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
          | auto.purge                        | If this parameter is set to **true**, the deleted or overwritten data is removed and will not be dumped to the recycle bin. |
          +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
--  AS: You can run the CREATE TABLE AS statement to create a table.
+-  **AS**: Run the **CREATE TABLE AS** statement to create a table.
+-  The field delimiter can contain multiple characters only when **ROW FORMAT SERDE** is set to **org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe**. For details, see :ref:`Example 7: Creating a Table and Setting a Multi-Character Delimiter <dli_08_0077__section91150194616>`.
 
 Parameters
 ----------
@@ -208,8 +214,8 @@ The **SELECT** syntax is as follows: **SELECT <**\ *Column name* **> FROM <**\ *
    ::
 
       CREATE TABLE IF NOT EXISTS table1_ctas
-      USING parquet
-      OPTIONS (path 'obs:// bucketName/filePath')
+      STORED AS parquet
+      LOCATION  'obs:// bucketName/filePath'
       AS
       SELECT  col_1
       FROM    table1
@@ -299,3 +305,33 @@ Example description: Create a non-partitioned table named **table4** in the **te
    MAP KEYS TERMINATED           BY '#'
    LINES TERMINATED              BY '\n'
    NULL DEFINED                  AS 'null';
+
+.. _dli_08_0077__section91150194616:
+
+Example 7: Creating a Table and Setting a Multi-Character Delimiter
+-------------------------------------------------------------------
+
+Example description: A Hive table named **table5** is created. The serialization and deserialization class **ROW FORMAT SERDE** is specified for the table, with a field delimiter set to **/#** and data stored in a text file format.
+
+-  The field delimiter can contain multiple characters only when **ROW FORMAT SERDE** is set to **org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe**.
+
+-  You can only specify multi-character delimiters when creating Hive OBS tables.
+
+-  Tables with multi-character delimiters specified do not support data writing statements such as **INSERT** and **IMPORT**. To insert data into these tables, save the data file in the OBS path where the tables are located. For example, in this example, store the data file in **obs://**\ *bucketName*\ **/**\ *filePath*.
+
+-  In this example, **field.delim** is set to **/#**.
+
+-  The ROW FORMAT function is available only for textfile tables.
+
+   ::
+
+      CREATE TABLE IF NOT EXISTS table5 (
+          col_1   STRING,
+          col_2   INT
+      )
+      ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
+      WITH SERDEPROPERTIES (
+        'field.delim' = '/#'
+      )
+      STORED AS textfile
+      LOCATION 'obs://bucketName/filePath';

@@ -54,7 +54,7 @@ Example Code
 
    .. code-block::
 
-      select warehourseId, avg(items) from warehourse group by warehourseId;
+      select warehouseId, avg(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 

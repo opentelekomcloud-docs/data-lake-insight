@@ -77,7 +77,7 @@ Example
 
 ::
 
-   create table 1_datasource.test_table1(id string, name string, age int) using mongo options(
+   create table 1_datasource_mongo.test_momgo(id string, name string, age int) using mongo options(
      'url' = '192.168.4.62:8635,192.168.5.134:8635/test?authSource=admin',
      'database' = 'test',
      'collection' = 'test',

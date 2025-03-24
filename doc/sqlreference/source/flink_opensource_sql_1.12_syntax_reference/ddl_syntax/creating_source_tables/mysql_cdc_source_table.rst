@@ -31,7 +31,12 @@ Precautions
    -  If multiple jobs share the same server ID, Binlog locations will be disordered, making data read inaccurate. Therefore, you are advised to configure different server IDs for each MySQL CDC job.
 
 -  Watermarks cannot be defined for MySQL CDC source tables. For details about window aggregation, see :ref:`FAQ <dli_08_0387__en-us_topic_0000001262815682_section09412772314>`.
+
 -  If you connect to a sink source that supports upsert, such as GaussDB(DWS) and MySQL, you need to define the primary key in the statement for creating the sink table. For details, see the printSink table creation statement in :ref:`Example <dli_08_0387__en-us_topic_0000001262815682_section2787228135313>`.
+
+-  When using the MySQL CDM source table, do not manually disable **debezium.connect.keep.alive** in the source table parameters. Make sure that **debezium.connect.keep.alive** is set to **true** (default value).
+
+   If **debezium.connect.keep.alive** is manually disabled and there is a connection exception between the Binlog thread and the MySQL server, the Binlog thread will not attempt to reconnect automatically. This may result in the inability to properly pull binlog logs from the source.
 
 Syntax
 ------
@@ -55,7 +60,7 @@ Syntax
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-------------------+-------------+----------------------------------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter         | Mandatory   | Default Value                    | Data Type   | Description                                                                                                                                                                                                                                    |

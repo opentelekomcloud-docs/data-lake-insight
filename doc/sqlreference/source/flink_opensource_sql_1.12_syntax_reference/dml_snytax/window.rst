@@ -23,10 +23,8 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
       +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | HOP(time_attr, interval, interval) | Defines a hopping time window (called sliding window in the Table API). A hopping time window has a fixed duration (second interval parameter) and hops by a specified hop interval (first interval parameter). If the hop interval is smaller than the window size, hopping windows are overlapping. Thus, rows can be assigned to multiple windows. For example, a hopping window of 15 minutes size and 5 minute hop interval assigns each row to 3 different windows of 15 minute size, which are evaluated in an interval of 5 minutes. Hopping windows can be defined on event-time (stream + batch) or processing-time (stream). |
       +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | SESSION(time_attr, interval)       | Defines a session time window. Session time windows do not have a fixed duration but their bounds are defined by a time interval of inactivity, that is, a session window is closed if no event appears for a defined gap period. For example a session window with a 30 minute gap starts when a row is observed after 30 minutes inactivity (otherwise the row would be added to an existing window) and is closed if no row is added within 30 minutes. Session windows can work on event-time (stream + batch) or processing-time (stream).                                                                                         |
+      | SESSION(time_attr, interval)       | Defines a session time window. Session time windows do not have a fixed duration but their bounds are defined by a time interval of inactivity, i.e., a session window is closed if no event appears for a defined gap period. For example a session window with a 30 minute gap starts when a row is observed after 30 minutes inactivity (otherwise the row would be added to an existing window) and is closed if no row is added within 30 minutes. Session windows can work on event-time (stream + batch) or processing-time (stream).                                                                                            |
       +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-   Notes:
 
    .. caution::
 
@@ -37,14 +35,14 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
 
       In batch mode, the **time_attr** argument of the group window function must be an attribute of type timestamp.
 
--  Window auxiliary functions
+-  Window helper functions
 
-   The start and end timestamps of group windows as well as time attributes can be selected with the following auxiliary functions.
+   You can use the following helper functions to select the start and end timestamps, as well as the time attribute, for grouping windows.
 
-   .. table:: **Table 2** Window auxiliary functions
+   .. table:: **Table 2** Window helper functions
 
       +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Auxiliary Function                          | Description                                                                                                                                                                                                                                                                            |
+      | Helper Function                             | Description                                                                                                                                                                                                                                                                            |
       +=============================================+========================================================================================================================================================================================================================================================================================+
       | TUMBLE_START(time_attr, interval)           | Returns the timestamp of the inclusive lower bound of the corresponding tumbling, hopping, or session window.                                                                                                                                                                          |
       |                                             |                                                                                                                                                                                                                                                                                        |
@@ -71,7 +69,7 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
       | SESSION_PROCTIME(time_attr, interval)       |                                                                                                                                                                                                                                                                                        |
       +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   Note: Auxiliary functions must be called with exactly same arguments as the group window function in the GROUP BY clause.
+   Note: When calling helper functions, it is important to use the same parameters as those used in the **GROUP BY** clause for grouping window functions.
 
 **Example**
 
@@ -125,7 +123,7 @@ The extension functions of the DLI tumbling window are as follows:
 
 -  Latency settings only take effect for event time and not for proctime.
 
--  Auxiliary functions must be called with the same parameters as the grouping window functions in the GROUP BY clause.
+-  When calling helper functions, it is important to use the same parameters as those used in the **GROUP BY** clause for grouping window functions.
 
 -  If event time is used, watermark must be used. The code is as follows (**order_time** is identified as the event time column and watermark is set to 3 seconds):
 
@@ -231,12 +229,12 @@ The current time attribute column is **testtime**, the window interval is 10 sec
    -  If neither of the two parameters is set, both periodic triggering and latency are disabled and only the regular tumbling window functions are available .
    -  If only the latency function needs to be used, set period_interval **INTERVAL '0' SECOND**.
 
-**Auxiliary Functions**
+**Helper Functions**
 
-.. table:: **Table 4** Auxiliary function
+.. table:: **Table 4** Helper functions
 
    +------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | Auxiliary Function                                                           | Description                                                                              |
+   | Helper Function                                                              | Description                                                                              |
    +==============================================================================+==========================================================================================+
    | TUMBLE_START(time_attr, window_interval, period_interval, lateness_interval) | Returns the timestamp of the inclusive lower bound of the corresponding tumbling window. |
    +------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
@@ -356,7 +354,7 @@ The difference between Over Window and Group Window is that one record is genera
 
 **Description**
 
-.. table:: **Table 5** Parameter description
+.. table:: **Table 5** Parameters
 
    +--------------+-----------------------------------------------------------------------------------------------+
    | Parameter    | Description                                                                                   |

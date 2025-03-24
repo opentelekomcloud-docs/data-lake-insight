@@ -14,10 +14,6 @@ DLI supports the following three types of user-defined functions (UDFs):
 -  User-defined table-generating function (UDTF): takes in one or more input parameters and returns multiple rows or columns.
 -  User-defined aggregate function (UDAF): aggregates multiple records into one value.
 
-.. note::
-
-   UDFs can only be used in dedicated queues.
-
 POM Dependency
 --------------
 

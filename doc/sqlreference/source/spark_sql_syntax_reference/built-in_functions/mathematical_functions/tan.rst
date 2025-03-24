@@ -39,7 +39,7 @@ The return value is of the DOUBLE type.
 Example Code
 ------------
 
-The value **0.99999999999999999999** is returned.
+The value **0.9999999999999999** is returned.
 
 .. code-block::
 

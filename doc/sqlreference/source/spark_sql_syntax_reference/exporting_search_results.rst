@@ -57,9 +57,8 @@ Precautions
    For CSV data, the following delimiters are supported:
 
    -  Tab character, for example, **'DELIMITER'='\\t'**.
-   -  Any binary character, for example, **'DELIMITER'='\\u0001(^A)'**.
+   -  You can specify a delimiter using Unicode encoding, for example: **'DELIMITER'='\\u0001'**.
    -  Single quotation mark ('). A single quotation mark must be enclosed in double quotation marks (" "). For example, **'DELIMITER'= "'"**.
-   -  **\\001(^A)** and **\\017(^Q)** are also supported, for example, **'DELIMITER'='\\001(^A)'** and **'DELIMITER'='\\017(^Q)'**.
 
 Example
 -------

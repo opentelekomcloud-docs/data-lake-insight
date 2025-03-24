@@ -38,15 +38,12 @@ Parameters
    |                 |                 |                 |                                                                                                             |
    |                 |                 |                 | The value is a combination of the time unit (year, month, day, hour, minute, and second) and any character. |
    |                 |                 |                 |                                                                                                             |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                                 |
-   |                 |                 |                 | -  **MM** indicates the month.                                                                              |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                             |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                             |
+   |                 |                 |                 | -  **mm** indicates the month.                                                                              |
    |                 |                 |                 | -  **dd** indicates the day.                                                                                |
-   |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                                      |
-   |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                                      |
+   |                 |                 |                 | -  **hh** indicates the hour.                                                                               |
    |                 |                 |                 | -  **mi** indicates the minute.                                                                             |
    |                 |                 |                 | -  **ss** indicates the second.                                                                             |
-   |                 |                 |                 | -  **SSS** indicates the millisecond.                                                                       |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
 Return Values
@@ -64,11 +61,11 @@ The return value is of the STRING type.
 Example Code
 ------------
 
-The value **NULL** is returned.
+The value **2023-08-16 10:54:36** is returned.
 
 .. code-block::
 
-   select to_date1('2023-08-16 10:54:36','yyyy-mm-dd');
+   select to_date1('2023-08-16 10:54:36','yyyy-mm-dd hh:mi:ss');
 
 The value **2023-08-16 00:00:00** is returned.
 
@@ -80,7 +77,7 @@ The value **NULL** is returned.
 
 .. code-block::
 
-   select to_date(null);
+   select to_date1(null);
 
 The value **2023-08-16** is returned.
 

@@ -57,7 +57,7 @@ Example Code
 
    .. code-block::
 
-      select warehourseId, max(items) from warehouse group by warehourseId;
+      select warehouseId, max(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 

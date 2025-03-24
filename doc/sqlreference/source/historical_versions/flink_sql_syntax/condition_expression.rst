@@ -26,8 +26,8 @@ or
 
 **Description**
 
--  If the value of **value** is **value1**, **result1** is returned. If the value is not any of the values listed in the clause, **resultZ** is returned. If no else statement is specified, **null** is returned.
--  If the value of **condition1** is **true**, **result1** is returned. If the value does not match any condition listed in the clause, **resultZ** is returned. If no else statement is specified, **null** is returned.
+-  If the value of **value** is **value1**, **result1** is returned; otherwise, **resultZ** is returned. If there is no else statement, **null** is returned.
+-  If the value of **condition1** is **true**, **result1** is returned; otherwise, **resultZ** is returned. If there is no else statement, **null** is returned.
 
 **Precautions**
 

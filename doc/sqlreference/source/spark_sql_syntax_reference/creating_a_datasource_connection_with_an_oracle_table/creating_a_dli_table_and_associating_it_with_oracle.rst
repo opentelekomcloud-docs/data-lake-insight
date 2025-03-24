@@ -17,8 +17,6 @@ Prerequisites
 
    For details about operations on the management console, see .
 
--  Only enhanced datasource connections can be used to connect to Oracle, and only pay-per-use and yearly/monthly queues support enhanced datasource connections. So, only SQL jobs on pay-per-use and yearly/monthly queues can be connected to Oracle databases.
-
 Syntax
 ------
 

@@ -41,26 +41,32 @@ Example Code
 
    .. code-block::
 
-      select stddev_samp(items,0.5, 100) from warehouse;
+      select PERCENTILE_APPROX(items,0.5,100) from warehouse;
 
    The command output is as follows:
 
    .. code-block::
 
-      _c0
-      500
+      +------------+
+      | _c0        |
+      +------------+
+      | 521        |
+      +------------+
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the 0.5 percentile of the offering inventory (items) in the same group, with an accuracy of 100. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the 0.5 percentile of the offering inventory (items) in the same group, with an accuracy of 100. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, stddev_samp(items, 0.5, 100) from warehourse group by warehourseId;
+      select warehouseId, PERCENTILE_APPROX(items, 0.5, 100) from warehouse group by warehouseId;
 
    The command output is as follows:
 
    .. code-block::
 
-      warehouseId _c1
-      city1     499
-      city2     354
-      city3     565
+      +------------+------------+
+      | warehouseId| _c1        |
+      +------------+------------+
+      | city1    | 499     |
+      | city2    | 354     |
+      | city3    | 565     |
+      +------------+------------+

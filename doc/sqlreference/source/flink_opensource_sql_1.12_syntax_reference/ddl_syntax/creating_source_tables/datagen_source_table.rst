@@ -38,7 +38,7 @@ Syntax
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +-----------------+-------------+----------------------------------------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory   | Default Value                                      | Data Type                     | Description                                                                                                                                                                                                                                  |
@@ -87,7 +87,7 @@ When you create a job, set **Flink Version** to **1.12** on the **Running Parame
 
 .. code-block::
 
-   create table dataGenSOurce(
+   create table dataGenSource(
      user_id string,
      amount int
    ) with (
@@ -104,7 +104,7 @@ When you create a job, set **Flink Version** to **1.12** on the **Running Parame
      'connector' = 'print'
    );
 
-   insert into printSink select * from dataGenSOurce;
+   insert into printSink select * from dataGenSource;
 
 After the job is submitted, the job status changes to **Running**. You can perform the following operations to view the output result:
 

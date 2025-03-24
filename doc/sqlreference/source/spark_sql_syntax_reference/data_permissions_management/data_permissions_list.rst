@@ -83,14 +83,14 @@ For privilege granting or revocation on databases and tables, DLI supports the f
    -  INSERT_OVERWRITE_TABLE (Overwriting)
    -  GRANT_PRIVILEGE (Granting permissions to a database)
    -  REVOKE_PRIVILEGE (Revoking permissions from a database)
-   -  SHOW_PRIVILEGES (Viewing the database permissions of other users)
+   -  SHOW_PRIVILEGES (Checking the database permissions of other users)
    -  ALTER_TABLE_ADD_PARTITION (Adding partitions to a partitioned table)
    -  ALTER_TABLE_DROP_PARTITION (Deleting partitions from a partitioned table)
    -  ALTER_TABLE_RENAME_PARTITION (Renaming table partitions)
    -  ALTER_TABLE_RECOVER_PARTITION (Restoring table partitions)
    -  ALTER_TABLE_SET_LOCATION (Setting the path of a partition)
    -  SHOW_PARTITIONS (Displaying all partitions)
-   -  SHOW_CREATE_TABLE (Viewing table creation statements)
+   -  SHOW_CREATE_TABLE (Checking table creation statements)
 
 -  Permissions that can be assigned or revoked on tables are as follows:
 
@@ -101,7 +101,7 @@ For privilege granting or revocation on databases and tables, DLI supports the f
    -  INSERT_OVERWRITE_TABLE (Overwriting)
    -  GRANT_PRIVILEGE (Granting permissions to a table)
    -  REVOKE_PRIVILEGE (Revoking permissions from a table)
-   -  SHOW_PRIVILEGES (Viewing the table permissions of other users)
+   -  SHOW_PRIVILEGES (Checking the table permissions of other users)
    -  ALTER_TABLE_ADD_COLUMNS (Adding a column)
    -  ALTER_TABLE_RENAME (Renaming a table)
    -  ALTER_TABLE_ADD_PARTITION (Adding partitions to a partitioned table)
@@ -110,4 +110,4 @@ For privilege granting or revocation on databases and tables, DLI supports the f
    -  ALTER_TABLE_RECOVER_PARTITION (Restoring table partitions)
    -  ALTER_TABLE_SET_LOCATION (Setting the path of a partition)
    -  SHOW_PARTITIONS (Displaying all partitions)
-   -  SHOW_CREATE_TABLE (Viewing table creation statements)
+   -  SHOW_CREATE_TABLE (Checking table creation statements)

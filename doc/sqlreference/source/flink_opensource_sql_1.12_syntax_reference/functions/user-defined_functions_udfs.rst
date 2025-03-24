@@ -16,8 +16,8 @@ DLI supports the following three types of user-defined functions (UDFs):
 
 .. note::
 
-   -  UDFs can only be used in dedicated queues.
-   -  **Currently, Python is not supported for programming UDFs, UDTFs, and UDAFs.**
+   -  **Currently, UDF, UDTF, or UDAF custom functions cannot be written using Python.**
+   -  If you use a UDF in a Flink OpenSource SQL job, it is not possible to generate a static stream graph.
 
 POM Dependency
 --------------

@@ -34,15 +34,13 @@ Parameters
    |                 |                 |                 |                                                                                                             |
    |                 |                 |                 | The value is a combination of the time unit (year, month, day, hour, minute, and second) and any character. |
    |                 |                 |                 |                                                                                                             |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                                 |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                             |
    |                 |                 |                 | -  **MM** indicates the month.                                                                              |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                             |
    |                 |                 |                 | -  **dd** indicates the day.                                                                                |
    |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                                      |
    |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                                      |
-   |                 |                 |                 | -  **mi** indicates the minute.                                                                             |
+   |                 |                 |                 | -  **mm** indicates the minute.                                                                             |
    |                 |                 |                 | -  **ss** indicates the second.                                                                             |
-   |                 |                 |                 | -  **SSS** indicates millisecond.                                                                           |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
 Return Values
@@ -59,14 +57,6 @@ The return value is of the STRING type.
 
 Example Code
 ------------
-
-Assume that the current time is **2023-08-14 16:59**.
-
-The value **2023-08-14 04:59:15.997** is returned.
-
-.. code-block::
-
-   select date_format(from_utc_timestamp(getdate(), 'UTC'),'yyyy-MM-dd hh:mm:ss.SSS');
 
 The value **2023-08-14** is returned.
 

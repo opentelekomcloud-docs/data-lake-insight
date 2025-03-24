@@ -5,6 +5,8 @@
 DMS Sink Stream
 ===============
 
-DMS (Distributed Message Service) is a message middleware service based on distributed, high-availability clustering technology. It provides reliable, scalable, fully managed queues for sending, receiving, and storing messages. DMS for Kafka is a message queuing service based on Apache Kafka. This service provides Kafka premium instances.
+DMS for Kafka is a message queuing service based on Apache Kafka. This service provides Kafka premium instances.
 
-DLI can write the job output data into the Kafka instance. The syntax for creating a Kafka sink stream is the same as that for creating an open source Apache Kafka sink stream. For details, see :ref:`MRS Kafka Sink Stream <dli_08_0254>`.
+DLI can write the job output data into the Kafka instance.
+
+The syntax for creating a Kafka sink stream is the same as that for creating an open source Apache Kafka sink stream. For details, see :ref:`MRS Kafka Sink Stream <dli_08_0254>`.

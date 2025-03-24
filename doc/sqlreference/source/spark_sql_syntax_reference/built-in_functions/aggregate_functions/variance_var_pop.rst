@@ -51,13 +51,13 @@ Example Code
       _c0
       203.42352
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the variance of the offering inventory (items) in the same group. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the variance of the offering inventory (items) in the same group. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, variance(items) from warehourse group by warehourseId;
+      select warehouseId, variance(items) from warehouse group by warehouseId;
       -- It is equivalent to the following statement:
-      select warehourseId, var_pop(items) from warehourse group by warehourseId;
+      select warehouseId, var_pop(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 

@@ -26,6 +26,10 @@ Prerequisites
 Syntax
 ------
 
+.. note::
+
+   Do not set all attributes in a GaussDB(DWS) result table to **PRIMARY KEY**.
+
 ::
 
    create table dwsSink (

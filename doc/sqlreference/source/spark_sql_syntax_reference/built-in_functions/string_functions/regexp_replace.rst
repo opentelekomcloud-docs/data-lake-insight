@@ -8,7 +8,7 @@ regexp_replace
 This function has slight variations in its functionality depending on the version of Spark being used.
 
 -  For Spark 2.4.5 or earlier: Replaces the substring that matches **pattern** in the string **source** with the specified string **replace_string** and returns the result string.
--  For Spark 3.3.1: Replaces the substring that matches the pattern for the occurrence time in the source string and the substring that matches the pattern later with the specified string **replace_string** and returns the result string.
+-  For Spark 3.1.1: Replaces the substring that matches the pattern for the occurrence time in the source string and the substring that matches the pattern later with the specified string **replace_string** and returns the result string.
 
 Similar function: :ref:`regexp_replace1 <dli_spark_regexp_replace1>`. The **regexp_replace1** function is used to replace the substring that matches pattern for the occurrence time in the source string with the specified string **replace_string** and return the result string. However, the egexp_replace1 function applies only to Spark 2.4.5 or earlier.
 

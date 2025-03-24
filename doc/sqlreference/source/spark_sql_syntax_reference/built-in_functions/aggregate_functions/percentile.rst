@@ -43,26 +43,32 @@ Example Code
 
    .. code-block::
 
-      select stddev_samp(items,0.5) from warehouse;
+      select percentile(items,0.5) from warehouse;
 
    The command output is as follows:
 
    .. code-block::
 
-      _c0
-      500.6
+      +------------+
+      | _c0        |
+      +------------+
+      | 500.6      |
+      +------------+
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the 0.5 percentile of the offering inventory (items) in the same group. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the 0.5 percentile of the offering inventory (items) in the same group. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, stddev_samp(items, 0.5) from warehourse group by warehourseId;
+      select warehouseId, percentile(items, 0.5) from warehouse group by warehouseId;
 
    The command output is as follows:
 
    .. code-block::
 
-      warehouseId _c1
-      city1    499.6
-      city2    354.8
-      city3    565.7
+      +------------+------------+
+      | warehouseId| _c1        |
+      +------------+------------+
+      | city1    | 499.6      |
+      | city2    | 354.8      |
+      | city3    | 565.7      |
+      +------------+------------+

@@ -28,7 +28,7 @@ Description
 
 -  ROW_NUMBER(): Assigns a unique, sequential number to each row, starting with one.
 -  PARTITION BY col1[, col2...]: Specifies the partition columns, i.e. the deduplicate key.
--  ORDER BY time_attr [asc|desc]: Specifies the ordering column, it must be a time attribute. Currently Flink supports proctime only. Ordering by ASC means keeping the first row, ordering by DESC means keeping the last row.
+-  ORDER BY time_attr [asc|desc]: Specifies the ordering column, it must be a time attribute. Currently Flink supports proctime only. Ascending (ASC) sorting keeps only the first row, while descending (DESC) sorting keeps only the last row.
 -  WHERE rownum = 1: The rownum = 1 is required for Flink to recognize this query is deduplication.
 
 Precautions

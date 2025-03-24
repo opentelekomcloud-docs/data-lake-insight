@@ -23,24 +23,24 @@ Parameters
 
 .. table:: **Table 1** Parameters
 
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                               |
-   +=================+=================+=================+===========================================================================+
-   | start_date      | Yes             | DATE            | Start date                                                                |
-   |                 |                 |                 |                                                                           |
-   |                 |                 | or              | The following formats are supported:                                      |
-   |                 |                 |                 |                                                                           |
-   |                 |                 | STRING          | -  yyyy-mm-dd                                                             |
-   |                 |                 |                 | -  yyyy-mm-dd hh:mi:ss                                                    |
-   |                 |                 |                 | -  yyyy-mm-dd hh:mi:ss.ff3                                                |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------+
-   | days            | Yes             | BIGINT          | Number of days to be reduced                                              |
-   |                 |                 |                 |                                                                           |
-   |                 |                 |                 | -  If the value is greater than 0, the number of days is increased.       |
-   |                 |                 |                 | -  If the value of days is less than 0, the number of days is subtracted. |
-   |                 |                 |                 | -  If the value is 0, the date does not change.                           |
-   |                 |                 |                 | -  If the value is **NULL**, **NULL** is returned.                        |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                        |
+   +=================+=================+=================+====================================================================================================+
+   | start_date      | Yes             | DATE            | Start date                                                                                         |
+   |                 |                 |                 |                                                                                                    |
+   |                 |                 | or              | The following formats are supported:                                                               |
+   |                 |                 |                 |                                                                                                    |
+   |                 |                 | STRING          | -  yyyy-mm-dd                                                                                      |
+   |                 |                 |                 | -  yyyy-mm-dd hh:mi:ss                                                                             |
+   |                 |                 |                 | -  yyyy-mm-dd hh:mi:ss.ff3                                                                         |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
+   | days            | Yes             | BIGINT          | Number of days to be reduced                                                                       |
+   |                 |                 |                 |                                                                                                    |
+   |                 |                 |                 | -  When **days** is greater than 0, the specified number of days is subtracted from **startdate**. |
+   |                 |                 |                 | -  When **days** is less than 0, the specified number of days is added to **startdate**.           |
+   |                 |                 |                 | -  When **days** equals 0, that means adding 0 days, so the date does not change.                  |
+   |                 |                 |                 | -  When the value is **NULL**, **NULL** is returned.                                               |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
 
 Return Values
 -------------
@@ -69,7 +69,7 @@ The value **2023-08-15** is returned after one day is added.
 
    select date_sub(date'2023-08-14', -1);
 
-If the current time is **2023-08-14 17:00:00**, **2022-08-13** is returned.
+If the current time is **2023-08-14 17:00:00**, **2023-08-13** is returned.
 
 .. code-block::
 

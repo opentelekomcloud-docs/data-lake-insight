@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001621382957.html
+:original_name: dli_08_0467.html
 
-.. _en-us_topic_0000001621382957:
+.. _dli_08_0467:
 
 Modifying the Lifecycle of a Table
 ==================================
@@ -12,8 +12,8 @@ This section describes how to modify the lifecycle of an existing partitioned or
 
 When the lifecycle function is enabled for the first time, the system scans tables or partitions, scans table data files in the path, and updates **LAST_ACCESS_TIME** of tables or partitions. The time required depends on the number of partitions and files.
 
-Constraints and Limitations
----------------------------
+Notes and Constraints
+---------------------
 
 -  The table lifecycle function currently only supports creating tables and versioning tables using Hive and Datasource syntax.
 -  The unit of the lifecycle is in days. The value should be a positive integer.

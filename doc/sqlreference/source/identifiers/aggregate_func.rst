@@ -8,9 +8,11 @@ aggregate_func
 Syntax
 ------
 
-None.
+None
 
 Description
 -----------
 
 Aggregate function.
+
+**aggregate_func** is typically used in database queries to perform calculations on a set of values and return a single result.
