@@ -31,8 +31,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -90,17 +90,17 @@ Request
    |                 |                 |                 |                                                                                                                                                                                                                 |
    |                 |                 |                 | .. note::                                                                                                                                                                                                       |
    |                 |                 |                 |                                                                                                                                                                                                                 |
-   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
+   |                 |                 |                 |    A tag key can contain a maximum of 128 characters. Only letters, numbers, spaces, and special characters ``(_.:+-@)`` are allowed, but the value cannot start or end with a space or start with **\_sys\_**. |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | value           | Yes             | String          | Tag value.                                                                                                                                                                                                      |
    |                 |                 |                 |                                                                                                                                                                                                                 |
    |                 |                 |                 | .. note::                                                                                                                                                                                                       |
    |                 |                 |                 |                                                                                                                                                                                                                 |
-   |                 |                 |                 |    A tag value can contain a maximum of 255 characters. Only letters, digits, spaces, and special characters ``(_.:=+-@)`` are allowed. The value cannot start or end with a space.                             |
+   |                 |                 |                 |    A tag value can contain a maximum of 255 characters. Only letters, numbers, spaces, and special characters ``(_.:+-@)`` are allowed.                                                                         |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 
@@ -163,7 +163,7 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 5 <dli_02_0194__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
+:ref:`Table 5 <dli_02_0194__tb12870f1c5f24b27abd55ca24264af36>` describes the status codes.
 
 .. _dli_02_0194__tb12870f1c5f24b27abd55ca24264af36:
 

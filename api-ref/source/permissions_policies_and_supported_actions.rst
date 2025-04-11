@@ -33,11 +33,15 @@ VBS provides system-defined policies that can be directly used in IAM. You can a
 
 -  IAM or enterprise projects: Type of projects for which an action will take effect. Policies that contain actions supporting both IAM and enterprise projects can be assigned to user groups and take effect in both IAM and Enterprise Management. Policies that only contain actions supporting IAM projects can be assigned to user groups and only take effect for IAM. Such policies will not take effect if they are assigned to user groups in Enterprise Project.
 
+   Only the APIs listed in :ref:`Table 1 <dli_02_0201__table92701082013>` support custom authorization.
+
 .. note::
 
    The check mark (Y) indicates that an action takes effect. The cross mark (x) indicates that an action does not take effect.
 
 DLI supports the following actions that can be defined in custom policies:
+
+.. _dli_02_0201__table92701082013:
 
 .. table:: **Table 1** Actions
 
@@ -177,8 +181,6 @@ DLI supports the following actions that can be defined in custom policies:
    | Granting security authentication permissions to a specified user               | PUT /v1.0/{project_id}/user-authorization                                       | dli:datasourceauth:grantPrivilege       | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
    | Removing security authentication permissions of a specified user               | PUT /v1.0/{project_id}/user-authorization                                       | dli:datasourceauth:revokePrivilege      | Y           | x                    |
-   +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
-   | Granting job permissions to a specified user                                   | PUT /v1.0/{{project_id}}/authorization                                          | dli:jobs:grantPrivilege                 | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
    | Removing job permissions of a specified user                                   | PUT /v1.0/{{project_id}}/authorization                                          | dli:jobs:revokePrivilege                | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
