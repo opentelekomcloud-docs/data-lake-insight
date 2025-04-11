@@ -5,18 +5,16 @@
 Flink Jobs
 ==========
 
--  :ref:`Usage <dli_03_0137>`
--  :ref:`Flink SQL <dli_03_0131>`
+-  :ref:`Flink Job Consulting <dli_03_0137>`
+-  :ref:`Flink SQL Jobs <dli_03_0131>`
 -  :ref:`Flink Jar Jobs <dli_03_0132>`
--  :ref:`Performance Tuning <dli_03_0133>`
--  :ref:`O&M Guide <dli_03_0135>`
+-  :ref:`Flink Job Performance Tuning <dli_03_0133>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   usage/index
-   flink_sql/index
+   flink_job_consulting/index
+   flink_sql_jobs/index
    flink_jar_jobs/index
-   performance_tuning/index
-   o_and_m_guide/index
+   flink_job_performance_tuning/index

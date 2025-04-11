@@ -10,8 +10,8 @@ Symptom
 
 The storage path of the Flink Jar job checkpoints was set to an OBS bucket. The job failed to be submitted, and an error message indicating an invalid OBS bucket name was displayed.
 
-Cause Analysis
---------------
+Possible Causes
+---------------
 
 #. Check that the OBS bucket name is correct.
 #. Check that the AK/SK has the required permission.

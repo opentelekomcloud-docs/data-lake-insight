@@ -12,7 +12,11 @@ You can upload configuration files for custom jobs (Jar).
 
 #. Upload the configuration file to DLI through **Package Management**.
 #. In the **Other Dependencies** area of the Flink Jar job, select the created DLI package.
-#. Load the file through **ClassName.class.getClassLoader().getResource("userData/fileName")** in the code. In the file name, **fileName** indicates the name of the file to be accessed, and **ClassName** indicates the name of the class that needs to access the file.
+#. Load the file through **ClassName.class.getClassLoader().getResource("userData/fileName")** in the code.
+
+   -  **ClassName** indicates the name of the class that needs to access the file.
+   -  **userData** is a fixed file path name, which cannot be changed or customized.
+   -  **fileName** indicates the name of the file to be accessed.
 
 Using a Configuration File
 --------------------------
