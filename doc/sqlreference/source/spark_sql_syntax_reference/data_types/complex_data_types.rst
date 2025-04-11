@@ -132,11 +132,11 @@ Create a **struct_test** table and set **info** to the **STRUCT<name:STRING, age
 
 #. Run the following statements to insert test data:
 
-   **INSERT INTO struct_test VALUES (8, struct('zhang',23));**
+   **INSERT INTO struct_test VALUES (8, struct('user1',23));**
 
-   **INSERT INTO struct_test VALUES (9, struct('li',25));**
+   **INSERT INTO struct_test VALUES (9, struct('user2,25));**
 
-   **INSERT INTO struct_test VALUES (10, struct('wang',26));**
+   **INSERT INTO struct_test VALUES (10, struct('user3',26));**
 
 #. Query the result.
 
@@ -146,9 +146,9 @@ Create a **struct_test** table and set **info** to the **STRUCT<name:STRING, age
 
    .. code-block::
 
-      8    {"name":"zhang","age":23}
-      10  {"name":"wang","age":26}
-      9   {"name":"li","age":25}
+      8{"name":"user1,"age":23}
+      10{"name":"user2,"age":26}
+      9{"name":"user3,"age":25}
 
    Query **name** and **age** in the **struct_test** table.
 
@@ -156,6 +156,6 @@ Create a **struct_test** table and set **info** to the **STRUCT<name:STRING, age
 
    .. code-block::
 
-      8    zhang   23
-      10  wang    26
-      9   li  25
+      8       user1   23
+      10      user2   26
+      9   user3   25

@@ -107,26 +107,26 @@ Example Code
 
    .. code-block::
 
-      insert into table json_table (id, json) values ("1", "{\"China.hangzhou\":{\"region\":{\"rid\":6}}}");
+      insert into table json_table (id, json) values ("1", "{\"city1\":{\"region\":{\"rid\":6}}}");
 
    Insert data into the table. The key does not contain a period (.).
 
    .. code-block::
 
-      insert into table json_table (id, json) values ("2", "{\"China_hangzhou\":{\"region\":{\"rid\":7}}}");
+      insert into table json_table (id, json) values ("2", "{\"city1\":{\"region\":{\"rid\":7}}}");
 
-   Obtain the value of **rid**. If the key is **China.hangzhou**, **6** is returned. Only [''] can be used for parsing because a period (.) is included.
-
-   .. code-block::
-
-      select get_json_object(json, "$['China.hangzhou'].region['id']") from json_table where id =1;
-
-   Obtain the value of **rid**. If the key is **China_hangzhou**, **7** is returned. You can use either of the following methods:
+   Obtain the value of **rid**. If the key is **city1**, **6** is returned. Only [''] can be used for parsing because a period (.) is included.
 
    .. code-block::
 
-      select get_json_object(json, "$['China_hangzhou'].region['id']") from json_table where id =2;
-      select get_json_object(json, "$.China_hangzhou.region['id']") from json_table where id =2;
+      select get_json_object(json, "$['city1'].region['id']") from json_table where id =1;
+
+   Obtain the value of **rid**. If the key is **city1**, **7** is returned. You can use either of the following methods:
+
+   .. code-block::
+
+      select get_json_object(json, "$['city1'].region['id']") from json_table where id =2;
+      select get_json_object(json, "$.city1.region['id']") from json_table where id =2;
 
 -  The **json** parameter is either empty or has an invalid format. An example command is as follows:
 

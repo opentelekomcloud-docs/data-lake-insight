@@ -7,8 +7,8 @@ Databases
 
 -  :ref:`Creating a Database <dli_08_0071>`
 -  :ref:`Deleting a Database <dli_08_0072>`
--  :ref:`Viewing a Specified Database <dli_08_0073>`
--  :ref:`Viewing All Databases <dli_08_0074>`
+-  :ref:`Checking a Specified Database <dli_08_0073>`
+-  :ref:`Checking All Databases <dli_08_0074>`
 
 .. toctree::
    :maxdepth: 1
@@ -16,5 +16,5 @@ Databases
 
    creating_a_database
    deleting_a_database
-   viewing_a_specified_database
-   viewing_all_databases
+   checking_a_specified_database
+   checking_all_databases

@@ -13,12 +13,16 @@ The temporary stream is used to simplify SQL logic. If complex SQL logic is foll
 Syntax
 ------
 
+The syntax for creating a temporary stream is as follows:
+
 ::
 
    CREATE TEMP STREAM stream_id (attr_name attr_type (',' attr_name attr_type)* )
 
 Example
 -------
+
+The following is an example of creating a temporary stream:
 
 ::
 

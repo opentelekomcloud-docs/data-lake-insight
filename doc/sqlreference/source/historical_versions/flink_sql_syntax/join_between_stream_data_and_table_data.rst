@@ -56,7 +56,7 @@ Perform equivalent JOIN between the vehicle information source stream and the ve
      * Reconfigure the following options according to actual conditions:
      * value_type: indicates the value type of the Redis key value. The value can be STRING, HASH, SET, ZSET, or LIST. For the HASH type, you need to specify hash_key_column as the layer-2 primary key. For the SET type, you need to concatenate all queried values using commas (,).
      * key_column: indicates the column name corresponding to the primary key of the dimension table.
-     * hash_key_column: indicates the column name corresponding to the KEY of the HASHMAP when value_type is HASH. If value_type is not HASH, you do not need to set this option.
+     * hash_key_column: indicates the column name that corresponds to the KEY in the HASHMAP when value_type is set to HASH. If value_type is not HASH, you do not need to set this option.
      * cluster_address: indicates the DCS Redis cluster address.
      * password: indicates the DCS Redis cluster password.
      **/

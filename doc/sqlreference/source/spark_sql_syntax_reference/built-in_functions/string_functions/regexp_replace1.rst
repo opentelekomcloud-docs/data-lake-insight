@@ -56,28 +56,28 @@ The value **2222** is returned.
 
 .. code-block::
 
-   select regexp_replace('abcd', '[a-z]', '2');
+   select regexp_replace1('abcd', '[a-z]', '2');
 
 The value **2bcd** is returned.
 
 .. code-block::
 
-   select regexp_replace('abcd', '[a-z]', '2', 1);
+   select regexp_replace1('abcd', '[a-z]', '2', 1);
 
 The value **a2cd** is returned.
 
 .. code-block::
 
-   select regexp_replace('abcd', '[a-z]', '2', 2);
+   select regexp_replace1('abcd', '[a-z]', '2', 2);
 
 The value **ab2d** is returned.
 
 .. code-block::
 
-   select regexp_replace('abcd', '[a-z]', '2', 3);
+   select regexp_replace1('abcd', '[a-z]', '2', 3);
 
 The value **abc2** is returned.
 
 .. code-block::
 
-   select regexp_replace('abcd', '[a-z]', '2', 4);
+   select regexp_replace1('abcd', '[a-z]', '2', 4);

@@ -34,9 +34,9 @@ Precautions
 
       The following table lists the permission types supported by a queue.
 
-      ================ ========================================
+      ================ =========================================
       Operation        Description
-      ================ ========================================
+      ================ =========================================
       DROP_QUEUE       Deleting a queue
       SUBMIT_JOB       Submitting a job
       CANCEL_JOB       Cancel a job
@@ -44,8 +44,8 @@ Precautions
       SCALE_QUEUE      Scaling out/in a queue
       GRANT_PRIVILEGE  Granting queue permissions
       REVOKE_PRIVILEGE Revoking queue permissions
-      SHOW_PRIVILEGES  Viewing queue permissions of other users
-      ================ ========================================
+      SHOW_PRIVILEGES  Checking queue permissions of other users
+      ================ =========================================
 
    -  Database format: databases.db_name
 

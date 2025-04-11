@@ -5,6 +5,16 @@
 String Functions
 ================
 
+
+String Functions
+----------------
+
+DLI offers a wide range of string functions for processing and transforming string data. These functions include concatenation, case conversion, substring extraction, replacement, regex matching, encoding and decoding, format conversion, and more. Additionally, it supports string length calculation, position searching, padding, reversing, and even extracting values from JSON strings using the **JSON_VAL** function. These features are widely used in data cleansing, text processing, and data analysis scenarios, providing developers with powerful tool support.
+
+For detailed string functions, see :ref:`Table 1 <dli_08_0428__en-us_topic_0000001310215805_table157276446018>`. For more information, see `Apache Flink <https://nightlies.apache.org/flink>`__.
+
+.. _dli_08_0428__en-us_topic_0000001310215805_table157276446018:
+
 .. table:: **Table 1** String Functions
 
    +-----------------------------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,6 +199,8 @@ String Functions
    |                                                                 |                       | Returns NULL if integer is negative.                                                                                                                                                                                                                                      |
    |                                                                 |                       |                                                                                                                                                                                                                                                                           |
    |                                                                 |                       | Returns NULL if any argument is NULL.                                                                                                                                                                                                                                     |
+   |                                                                 |                       |                                                                                                                                                                                                                                                                           |
+   |                                                                 |                       | For details about this function, see :ref:`SPLIT_INDEX Function <dli_08_0428__en-us_topic_0000001310215805_section13321914173210>`.                                                                                                                                       |
    +-----------------------------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | STR_TO_MAP(string1[, string2, string3]])                        | MAP                   | Returns a map after splitting the string1 into key/value pairs using delimiters.                                                                                                                                                                                          |
    |                                                                 |                       |                                                                                                                                                                                                                                                                           |
@@ -211,6 +223,61 @@ String Functions
    |                                                                 |                       |    #. If **json_string** is an empty string, the function returns an empty string.                                                                                                                                                                                        |
    |                                                                 |                       |    #. If **json_path** is an empty string or the path does not exist, the function returns **NULL**.                                                                                                                                                                      |
    +-----------------------------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _dli_08_0428__en-us_topic_0000001310215805_section13321914173210:
+
+SPLIT_INDEX Function
+--------------------
+
+SPLIT_INDEX(string1, string2, integer1)
+
+-  **Parameter description**
+
+   -  **string1:**
+
+      -  Type: STRING
+      -  Description: Original string to be split.
+      -  Example: 'a,b,c,d' or 'a\\bc\\bd'
+
+   -  **string2:**
+
+      -  Type: STRING
+      -  Description: Delimiter that splits strings.
+      -  Special character processing:
+
+         -  If the delimiter contains special characters (such as \\\\.*), you need to use a double backslash (\\\\) for escaping.
+         -  If the delimiter is a period (.), escape is not required.
+         -  If the delimiter is a double backslash (\\\\), enter **\\\\\\\\**.
+
+   -  **integer1:**
+
+      -  Type: INT
+      -  Description: Specifies the index of the extracted split part, starting from 0.
+      -  Example: **0** indicates the extraction of the first part, **1** indicates the extraction of the second part, and so on.
+
+-  **Return values**
+
+   Returns the part of the split string at the specified index.
+
+   If the index is out of range or the input parameter is NULL, **NULL** is returned.
+
+-  **Example 1**
+
+   SELECT SPLIT_INDEX('a,b,c,d', ',', 1); -- Returns **b**.
+
+-  **Example 2**
+
+   If the delimiter is a period (.), escape is not required.
+
+   SELECT SPLIT_INDEX('a.b.c.d', '.', 2); -- Returns **c**.
+
+-  **Example 3**
+
+   Using a backslash (\\) as a delimiter:
+
+   The backslash itself also needs to be escaped, using **\\\\\\\\**:
+
+   SELECT SPLIT_INDEX('a\\\\bc\\\\bd', '\\\\\\\\', 1); -- Returns **bc**.
 
 .. _dli_08_0428__en-us_topic_0000001310215805_section624613301257:
 
@@ -254,8 +321,8 @@ JSON_VAL Function
 
       .. code-block::
 
-         {name:James,age:24,sex:male,grade:{math:95,science:[80,85],english:100}}
-         {name:James,age:24,sex:male,grade:{math:95,science:[80,85],english:100}]
+         {name:James,age:24,gender:male,grade:{math:95,science:[80,85],english:100}}
+         {name:James,age:24,gender:male,grade:{math:95,science:[80,85],english:100}]
 
    #. Use JSON_VAL in SQL statements.
 

@@ -49,7 +49,7 @@ Keywords
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | cluster_id            | Yes                   | ID of the cluster to which the data table to be read belongs.                                                                                                     |
    |                       |                       |                                                                                                                                                                   |
-   |                       |                       | For details about how to view the ID of the CloudTable cluster, see section "**Viewing Basic Cluster Information**" in the *CloudTable Service User Guide*.       |
+   |                       |                       | For how to check the ID of the CloudTable cluster, see "Checking Basic Cluster Information" in the *CloudTable Service User Guide*.                               |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | table_name            | Yes                   | Name of the table from which data is to be read. If a namespace needs to be specified, set it to **namespace_name:table_name**.                                   |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+

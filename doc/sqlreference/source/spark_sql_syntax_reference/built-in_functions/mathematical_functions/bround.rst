@@ -47,26 +47,26 @@ The return value is of the DOUBLE type.
 Example Code
 ------------
 
-The value **1** is returned.
+The value **123.4** is returned.
 
 .. code-block::
 
-   select bin(1);
+   select bround(123.45,1);
+
+The value **123.6** is returned.
+
+.. code-block::
+
+   select bround(123.55,1);
 
 The value **NULL** is returned.
 
 .. code-block::
 
-   select bin(null);
+   select bround(null);
 
-The value **1000** is returned.
-
-.. code-block::
-
-   select bin(8);
-
-The value **1000** is returned.
+The value **123.457** is returned.
 
 .. code-block::
 
-   select bin(8.123456);
+   select bround(123.456789,3.123456);

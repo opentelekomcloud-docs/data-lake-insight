@@ -36,15 +36,8 @@ Parameters
    |                 |                 |                 |                                                                                                             |
    |                 |                 |                 | The value is a combination of the time unit (year, month, day, hour, minute, and second) and any character. |
    |                 |                 |                 |                                                                                                             |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                                 |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                             |
    |                 |                 |                 | -  **MM** indicates the month.                                                                              |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                             |
-   |                 |                 |                 | -  **dd** indicates the day.                                                                                |
-   |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                                      |
-   |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                                      |
-   |                 |                 |                 | -  **mi** indicates the minute.                                                                             |
-   |                 |                 |                 | -  **ss** indicates the second.                                                                             |
-   |                 |                 |                 | -  **SSS** indicates the millisecond.                                                                       |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
 Return Values

@@ -15,11 +15,9 @@ ClickHouse is a column-based database oriented to online analysis and processing
 Prerequisites
 -------------
 
--  Ensure your jobs run on an exclusive queue (non-shared queue) of DLI.
+You have established an enhanced datasource connection to ClickHouse and set the port in the security group rule of the ClickHouse cluster as needed.
 
--  You have established an enhanced datasource connection to ClickHouse and set the port in the security group rule of the ClickHouse cluster as needed.
-
-   For details about how to set up an enhanced datasource connection. For details, see "Enhanced Datasource Connection" in the *Data Lake Insight User Guide*.
+For details about how to set up an enhanced datasource connection. For details, see "Enhanced Datasource Connection" in the *Data Lake Insight User Guide*.
 
 Precautions
 -----------

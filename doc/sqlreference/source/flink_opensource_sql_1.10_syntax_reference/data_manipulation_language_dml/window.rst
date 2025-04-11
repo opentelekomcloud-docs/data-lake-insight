@@ -14,6 +14,11 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
 
 -  Array functions
 
+   .. caution::
+
+      -  For SQL queries in stream processing tables, the **time_attr** parameter of the grouping window function must reference a valid time attribute, which needs to specify the processing time or event time of the row.
+      -  For batch SQL queries, the **time_attr** parameter of the grouping window function must be a TIMESTAMP type attribute.
+
    .. table:: **Table 1** Array functions
 
       +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -26,15 +31,13 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
       | SESSION(time_attr, interval)       | Defines a session time window. Session time windows do not have a fixed duration but their bounds are defined by a time interval of inactivity, i.e., a session window is closed if no event appears for a defined gap period. For example a session window with a 30 minute gap starts when a row is observed after 30 minutes inactivity (otherwise the row would be added to an existing window) and is closed if no row is added within 30 minutes. Session windows can work on event-time (stream + batch) or processing-time (stream).                                                                                            |
       +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   Notes:
-
-   In streaming mode, the **time_attr** argument of the group window function must refer to a valid time attribute that specifies the processing time or event time of rows.
-
-   In batch mode, the **time_attr** argument of the group window function must be an attribute of type TIMESTAMP.
-
 -  Window auxiliary functions
 
-   The start and end timestamps of group windows as well as time attributes can be selected with the following auxiliary functions.
+   You can use the following helper functions to select the start and end timestamps, as well as the time attribute, for grouping windows.
+
+   .. caution::
+
+      When calling helper functions, it is important to use the same parameters as those used in the **GROUP BY** clause for grouping window functions.
 
    .. table:: **Table 2** Window auxiliary functions
 
@@ -65,8 +68,6 @@ Group Window is defined in GROUP BY. One record is generated from each group. Gr
       |                                             |                                                                                                                                                                                                                                                                                        |
       | SESSION_PROCTIME(time_attr, interval)       |                                                                                                                                                                                                                                                                                        |
       +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-   Note: Auxiliary functions must be called with exactly same arguments as the group window function in the GROUP BY clause.
 
 **Example**
 

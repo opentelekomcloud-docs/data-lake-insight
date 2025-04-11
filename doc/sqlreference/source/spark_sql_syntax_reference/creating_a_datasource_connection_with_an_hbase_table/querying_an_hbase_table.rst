@@ -27,7 +27,7 @@ The table to be queried must exist. Otherwise, an error is reported.
 Example
 -------
 
-Query data in the **test_ct** table.
+Query data in the table.
 
 ::
 

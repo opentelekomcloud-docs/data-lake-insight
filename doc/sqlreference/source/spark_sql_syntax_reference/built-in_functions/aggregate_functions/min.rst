@@ -57,7 +57,7 @@ Example Code
 
    .. code-block::
 
-      select warehourseId, min(items) from warehouse group by warehourseId;
+      select warehouseId, min(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 

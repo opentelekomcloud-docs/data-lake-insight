@@ -46,11 +46,11 @@ Example Code
       _c0
       1.342355
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the deviation of the offering inventory (items) in the same group. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the deviation of the offering inventory (items) in the same group. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, stddev_pop(items) from warehourse group by warehourseId;
+      select warehouseId, stddev_pop(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 

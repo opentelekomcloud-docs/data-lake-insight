@@ -1,13 +1,13 @@
-:original_name: en-us_topic_0000001571023676.html
+:original_name: dli_08_0465.html
 
-.. _en-us_topic_0000001571023676:
+.. _dli_08_0465:
 
 Table Lifecycle Management
 ==========================
 
--  :ref:`Specifying the Lifecycle of a Table When Creating the Table <en-us_topic_0000001621263317>`
--  :ref:`Modifying the Lifecycle of a Table <en-us_topic_0000001621382957>`
--  :ref:`Disabling or Restoring the Lifecycle of a Table <en-us_topic_0000001621542965>`
+-  :ref:`Specifying the Lifecycle of a Table When Creating the Table <dli_08_0466>`
+-  :ref:`Modifying the Lifecycle of a Table <dli_08_0467>`
+-  :ref:`Disabling or Restoring the Lifecycle of a Table <dli_08_0468>`
 
 .. toctree::
    :maxdepth: 1

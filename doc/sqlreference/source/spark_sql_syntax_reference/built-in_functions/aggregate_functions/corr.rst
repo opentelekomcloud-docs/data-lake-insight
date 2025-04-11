@@ -48,11 +48,11 @@ Example Code
       _c0
       1.242355
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the correlation coefficient between the inventory (items) and the price of offerings within each group. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the correlation coefficient between the inventory (items) and the price of offerings within each group. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, corr(items,price) from warehourse group by warehourseId;
+      select warehouseId, corr(items,price) from warehouse group by warehouseId;
 
    The command output is as follows:
 

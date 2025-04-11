@@ -72,18 +72,18 @@ Example
 
 Create a Flink OpenSource SQL job. Run the following script to generate random data through the DataGen table and output the data to the Print result table.
 
-When you create a job, set **Flink Version** to **1.12** on the **Running Parameters** tab. Select **Save Job Log**, and specify the OBS bucket for saving job logs.
+When you create a job, set **Flink Version** to **1.12** in the **Running Parameters** tab. Select **Save Job Log**, and specify the OBS bucket for saving job logs.
 
 .. code-block::
 
-   create table dataGenSOurce(
+   create table dataGenSource(
      user_id string,
      amount int
    ) with (
      'connector' = 'datagen',
-     'rows-per-second' = '1', --Generate a piece of data per second.
-     'fields.user_id.kind' = 'random', --Specify a random generator for the user_id field.
-     'fields.user_id.length' = '3' --Limit the length of user_id to 3.
+     'rows-per-second' = '1', --Generates a piece of data per second.
+     'fields.user_id.kind' = 'random', --Specifies a random generator for the user_id field.
+     'fields.user_id.length' = '3' --Limits the length of user_id to 3.
    );
 
    create table printSink(
@@ -93,14 +93,14 @@ When you create a job, set **Flink Version** to **1.12** on the **Running Parame
      'connector' = 'print'
    );
 
-   insert into printSink select * from dataGenSOurce;
+   insert into printSink select * from dataGenSource;
 
-After the job is submitted, the job status changes to **Running**. You can perform the following operations of either method to view the output result:
+After the job is submitted, the job status changes to **Running**. You can perform the following operations to view the output result:
 
 -  Method 1:
 
    #. Log in to the DLI console. In the navigation pane, choose **Job Management** > **Flink Jobs**.
-   #. Locate the row that contains the target Flink job, and choose **More** > **FlinkUI** in the **Operation** column.
+   #. Locate the row that contains the target Flink job, click **More** in the **Operation** column, and select **FlinkUI**.
    #. On the Flink UI, choose **Task Managers**, click the task name, and select **Stdout** to view job logs.
 
 -  Method 2: If you select **Save Job Log** on the **Running Parameters** tab before submitting the job, perform the following operations:

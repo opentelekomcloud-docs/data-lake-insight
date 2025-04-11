@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001621542965.html
+:original_name: dli_08_0468.html
 
-.. _en-us_topic_0000001621542965:
+.. _dli_08_0468:
 
 Disabling or Restoring the Lifecycle of a Table
 ===============================================
@@ -15,8 +15,8 @@ You can disable or restore the lifecycle of a table in either of the following s
 #. If the lifecycle function has been enabled for a table or partitioned table, the system allows you to disable or restore the lifecycle of the table by changing the value of **dli.table.lifecycle.status**.
 #. If the lifecycle function is not enabled for a table or partitioned table, the system will add the **dli.table.lifecycle.status** property to allow you to disable or restore the lifecycle function of the table.
 
-Constraints and Limitations
----------------------------
+Notes and Constraints
+---------------------
 
 -  The table lifecycle function currently only supports creating tables and versioning tables using Hive and Datasource syntax.
 -  The unit of the lifecycle is in days. The value should be a positive integer.

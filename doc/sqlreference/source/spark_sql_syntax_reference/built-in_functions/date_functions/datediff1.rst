@@ -44,15 +44,12 @@ Parameters
    |                 |                 |                 |                                                                                                 |
    |                 |                 |                 | This parameter supports the following extended date formats: year, month or mon, day, and hour. |
    |                 |                 |                 |                                                                                                 |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                     |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                 |
    |                 |                 |                 | -  **MM** indicates the month.                                                                  |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                 |
    |                 |                 |                 | -  **dd** indicates the day.                                                                    |
-   |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                          |
-   |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                          |
+   |                 |                 |                 | -  **hh** indicates the hour.                                                                   |
    |                 |                 |                 | -  **mi** indicates the minute.                                                                 |
    |                 |                 |                 | -  **ss** indicates the second.                                                                 |
-   |                 |                 |                 | -  **SSS** indicates millisecond.                                                               |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
 
 Return Values

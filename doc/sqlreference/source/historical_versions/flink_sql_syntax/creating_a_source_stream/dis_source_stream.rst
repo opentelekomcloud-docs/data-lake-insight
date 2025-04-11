@@ -221,20 +221,20 @@ Example
 
       Message-ID: <200906291839032504254@sample.com>
       Date: Fri, 11 May 2001 09:54:00 -0700 (PDT)
-      From: zhangsan@sample.com
-      To: lisi@sample.com, wangwu@sample.com
+      From: user1@sample.com
+      To: user2@sample.com, user3@sample.com
       Subject:  "Hello World"
-      Cc: lilei@sample.com, hanmei@sample.com
+      Cc: user4@sample.com, user5@sample.com
       Mime-Version: 1.0
       Content-Type: text/plain; charset=us-ascii
       Content-Transfer-Encoding: 7bit
-      Bcc: jack@sample.com, lily@sample.com
-      X-From: Zhang San
-      X-To: Li Si, Wang Wu
-      X-cc: Li Lei, Han Mei
+      Bcc: user6@sample.com, user7@sample.com
+      X-From: user1
+      X-To: user2, user3
+      X-cc: user4, user5
       X-bcc:
-      X-Folder: \Li_Si_June2001\Notes Folders\Notes inbox
-      X-Origin: Lucy
+      X-Folder: \user2_June2001\Notes Folders\Notes inbox
+      X-Origin: user8
       X-FileName: sample.nsf
 
       Dear Associate / Analyst Committee:
@@ -244,4 +244,4 @@ Example
       Thank you,
 
       Associate / Analyst Program
-      zhangsan
+      user1

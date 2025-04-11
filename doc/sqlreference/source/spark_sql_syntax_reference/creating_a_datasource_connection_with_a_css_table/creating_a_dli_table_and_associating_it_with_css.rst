@@ -17,7 +17,7 @@ This statement is used to create a DLI table and associate it with an existing C
 Prerequisites
 -------------
 
-Before creating a DLI table and associating it with CSS, you need to create a datasource connection. For details about operations on the management console, see
+Before creating a DLI table and associating it with CSS, you need to create a datasource connection.
 
 Syntax
 ------
@@ -45,7 +45,7 @@ Keywords
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                         | Description                                                                                                                                                                                                                                                                                                                                                             |
    +===================================+=========================================================================================================================================================================================================================================================================================================================================================================+
-   | es.nodes                          | Before obtaining the CSS IP address, you need to create a datasource connection first..                                                                                                                                                                                                                                                                                 |
+   | es.nodes                          | Create a datasource connection before you can obtain this CSS connection address.                                                                                                                                                                                                                                                                                       |
    |                                   |                                                                                                                                                                                                                                                                                                                                                                         |
    |                                   | If you have created an enhanced datasource connection, you can use the internal IP address provided by CSS. The format is **IP1:PORT1,\ IP2:PORT2**.                                                                                                                                                                                                                    |
    +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -89,9 +89,9 @@ Example
 
    CREATE TABLE IF NOT EXISTS dli_to_css (doc_id String, name string, age int)
      USING CSS OPTIONS (
-     es.nodes 'to-css-1174404703-LzwpJEyx.datasource.com:9200',
-     resource '/dli_index/dli_type',
-     pushdown 'false',
-     strict 'true',
-     es.nodes.wan.only 'true',
-     es.mapping.id 'doc_id');
+     'es.nodes' ='to-css-1174404703-LzwpJEyx.datasource.com:9200',
+     'resource' ='/dli_index/dli_type',
+     'pushdown' ='false',
+     'strict' ='true',
+     'es.nodes.wan.only' ='true',
+     'es.mapping.id' ='doc_id');

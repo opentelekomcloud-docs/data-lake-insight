@@ -73,7 +73,7 @@ Example Code
 
 -  Removes all substrings from both the left and right ends of the string **yxabcxx** that consist of characters in the set **xy**.
 
-   The function returns **Txyom**, as any substring starting with **x** or **y** from both the left and right ends is removed.
+   The function returns **abc**, as any substring starting with **x** or **y** from both the left and right ends is removed.
 
    .. code-block::
 

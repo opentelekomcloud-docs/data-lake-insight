@@ -13,7 +13,7 @@ Run the CREATE TABLE statement to create the DLI table and associate it with the
 Prerequisites
 -------------
 
-Before creating a DLI table and associating it with OpenTSDB, you need to create a datasource connection. For details about operations on the management console, see
+Before creating a DLI table and associating it with OpenTSDB, you need to create a datasource connection.
 
 Syntax
 ------
@@ -36,7 +36,7 @@ Keywords
    +===================================+====================================================================================================================================================================================================================================================================================+
    | host                              | OpenTSDB IP address.                                                                                                                                                                                                                                                               |
    |                                   |                                                                                                                                                                                                                                                                                    |
-   |                                   | Before obtaining the OpenTSDB IP address, you need to create a datasource connection first..                                                                                                                                                                                       |
+   |                                   | Create a datasource connection before you can obtain this IP address.                                                                                                                                                                                                              |
    |                                   |                                                                                                                                                                                                                                                                                    |
    |                                   | -  After successfully created a connection, you can access the CloudTable OpenTSDB by entering the IP address of the OpenTSDB.                                                                                                                                                     |
    |                                   | -  You can also access the MRS OpenTSDB. If you have created an enhanced datasource connection, enter the IP address and port number of the node where the OpenTSDB is located. The format is **IP:PORT**. If the OpenTSDB has multiple nodes, enter one of the node IP addresses. |

@@ -19,7 +19,7 @@ Supported Connectors
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter
+.. table:: **Table 1** Parameters
 
    +------------+-----------+---------------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Mandatory | Default value | Type   | Description                                                                                                                                            |
@@ -36,9 +36,7 @@ Currently, the Avro schema is derived from the table schema and cannot be explic
 
 In addition to the following types, Flink supports reading/writing nullable types. Flink maps nullable types to Avro **union(something, null)**, where **something** is an Avro type converted from Flink type.
 
-You can refer to `Apache Avro 1.11.0 Specification <https://avro.apache.org/docs/current/spec.html>`__ for more information about Avro types.
-
-.. table:: **Table 2** Data Type Mapping
+.. table:: **Table 2** Data type mapping
 
    +-------------------------------------------------------------------+-----------+-------------------+
    | Flink SQL Type                                                    | Avro Type | Avro Logical Type |

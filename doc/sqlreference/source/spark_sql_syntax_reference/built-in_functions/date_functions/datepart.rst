@@ -34,15 +34,12 @@ Parameters
    |                 |                 |                 |                                                                                                 |
    |                 |                 |                 | This parameter supports the following extended date formats: year, month or mon, day, and hour. |
    |                 |                 |                 |                                                                                                 |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                     |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                 |
    |                 |                 |                 | -  **MM** indicates the month.                                                                  |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                 |
    |                 |                 |                 | -  **dd** indicates the day.                                                                    |
-   |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                          |
-   |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                          |
+   |                 |                 |                 | -  **hh** indicates the hour.                                                                   |
    |                 |                 |                 | -  **mi** indicates the minute.                                                                 |
    |                 |                 |                 | -  **ss** indicates the second.                                                                 |
-   |                 |                 |                 | -  **SSS** indicates millisecond.                                                               |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
 
 Return Values
@@ -72,11 +69,11 @@ The value **2023** is returned.
 
    select datepart('2023-08-14 17:00:00', 'yyyy');
 
-The value **0** is returned.
+The value **59** is returned.
 
 .. code-block::
 
-   select datepart(date '2023-08-14 17:00:00', 'mi');
+   select datepart('2023-08-14 17:59:59', 'mi')
 
 The value **NULL** is returned.
 

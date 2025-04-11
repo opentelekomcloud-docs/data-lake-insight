@@ -33,30 +33,36 @@ The return value is of the DOUBLE type.
 Example Code
 ------------
 
--  Calculates the sample covariance between the inventory (items) and the price of all offerings. An example command is as follows:
+-  Calculates the sample deviation of all offering inventories (items). An example command is as follows:
 
    .. code-block::
 
-      select covar_samp(items,price) from warehouse;
+      select stddev_samp(items) from warehouse;
 
    The command output is as follows:
 
    .. code-block::
 
-      _c0
-      1.242355
+      +------------+
+      | _c0        |
+      +------------+
+      | 1.342355   |
+      +------------+
 
--  When used with **group by**, it groups all offerings by warehouse (warehourseId) and returns the sample covariance between the inventory (items) and the price of offerings within each group. An example command is as follows:
+-  When used with **group by**, it groups all offerings by warehouse (warehouseId) and returns the sample deviation of the offering inventory (items) in the same group. An example command is as follows:
 
    .. code-block::
 
-      select warehourseId, covar_samp(items,price) from warehourse group by warehourseId;
+      select warehouseId, stddev_samp(items) from warehouse group by warehouseId;
 
    The command output is as follows:
 
    .. code-block::
 
-      warehouseId _c1
-      city1    1.03124
-      city2    1.03344
-      city3    1.33425
+      +------------+------------+
+      | warehouseId| _c1        |
+      +------------+------------+
+      | city1    | 1.23124   |
+      | city2    | 1.23344   |
+      | city3    | 1.43425   |
+      +------------+------------+

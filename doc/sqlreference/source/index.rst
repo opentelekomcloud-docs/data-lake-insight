@@ -6,6 +6,7 @@ Data Lake Insight - Sql Syntax Reference
    :maxdepth: 1
 
    spark_sql_syntax_reference/index
+   flink_opensource_sql_1.15_syntax_reference/index
    flink_opensource_sql_1.12_syntax_reference/index
    flink_opensource_sql_1.10_syntax_reference/index
    historical_versions/index

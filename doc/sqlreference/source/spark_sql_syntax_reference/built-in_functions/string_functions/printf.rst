@@ -36,8 +36,8 @@ The value is returned after the parameters that filled in **Obj** are specified 
 Example Code
 ------------
 
-The string **name: Zhang San, age: 20, gender: female, place of origin: city 1** is returned.
+The string **name: user1, age: 20, gender: female, place of origin: city 1** is returned.
 
 .. code-block::
 
-   SELECT printf('Name: %s, Age: %d, Gender: %s, Place of origin: %s', "Zhang San", 20, "Female", "City 1");
+   SELECT printf('Name: %s, Age: %d, Gender: %s, Place of origin: %s', "user1", 20, "Female", "City 1");

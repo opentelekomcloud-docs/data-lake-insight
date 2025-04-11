@@ -34,19 +34,16 @@ Parameters
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
    | pattern         | No              | STRING          | Format to be converted                                                                                      |
    |                 |                 |                 |                                                                                                             |
-   |                 |                 |                 | If this parameter is left blank, the default format **yyyy-mm-dd hh:mm:ss** is used.                        |
+   |                 |                 |                 | If this parameter is left blank, the default format **yyyy-MM-dd hh:mm:ss** is used.                        |
    |                 |                 |                 |                                                                                                             |
    |                 |                 |                 | The value is a combination of the time unit (year, month, day, hour, minute, and second) and any character. |
    |                 |                 |                 |                                                                                                             |
-   |                 |                 |                 | -  **YYYY** or **yyyy** indicates the year.                                                                 |
+   |                 |                 |                 | -  **yyyy** indicates the year.                                                                             |
    |                 |                 |                 | -  **MM** indicates the month.                                                                              |
-   |                 |                 |                 | -  **mm** indicates the minute.                                                                             |
    |                 |                 |                 | -  **dd** indicates the day.                                                                                |
-   |                 |                 |                 | -  **HH** indicates the 24-hour clock.                                                                      |
-   |                 |                 |                 | -  **hh** indicates the 12-hour clock.                                                                      |
+   |                 |                 |                 | -  **hh** indicates the hour.                                                                               |
    |                 |                 |                 | -  **mi** indicates the minute.                                                                             |
    |                 |                 |                 | -  **ss** indicates the second.                                                                             |
-   |                 |                 |                 | -  **SSS** indicates the millisecond.                                                                       |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
 Return Values

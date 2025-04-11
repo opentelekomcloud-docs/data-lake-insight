@@ -250,8 +250,8 @@ JSON_VAL Function
 
       .. code-block::
 
-         "{name:James,age:24,sex:male,grade:{math:95,science:[80,85],english:100}}"
-         "{name:James,age:24,sex:male,grade:{math:95,science:[80,85],english:100}]"
+         "{name:James,age:24,gender:male,grade:{math:95,science:[80,85],english:100}}"
+         "{name:James,age:24,gender:male,grade:{math:95,science:[80,85],english:100}]"
 
    #. Use JSON_VAL in SQL statements.
 

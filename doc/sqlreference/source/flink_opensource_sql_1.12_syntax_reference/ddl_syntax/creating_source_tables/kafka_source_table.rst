@@ -437,7 +437,7 @@ Example (SASL_SSL Enabled for the Kafka Cluster)
 
    -  Click the **Components** tab and click **Kafka**. In the displayed page, click the **Service Configuration** tab, locate the **security.protocol**, and set it to **SASL_SSL**.
 
-   -  Log in to the FusionInsight Manager of the MRS cluster and download the user credential. Choose **System** > **Permission** > **User**. Locate the row that contains the target user, choose **More** > **Download Authentication Credential**.
+   -  Download the user credential. Log in to the MRS Manager of the MRS cluster and choose **System** > **Permission** > **User**. Locate the row that contains the target user, click **More**, and select **Download Authentication Credential**.
 
       Obtain the **truststore.jks** file using the authentication credential and store the credential and **truststore.jks** file in OBS.
 
@@ -509,7 +509,7 @@ Example (SASL_SSL Enabled for the Kafka Cluster)
 
    -  Enable Kerberos authentication for the MRS cluster.
    -  Click the **Components** tab and click **Kafka**. In the displayed page, click the **Service Configuration** tab, locate the **security.protocol**, and set it to **SASL_PLAINTEXT**.
-   -  Log in to the FusionInsight Manager of the MRS cluster and download the user credential. Choose **System** > **Permission** > **User**. Locate the row that contains the target user, choose **More** > **Download Authentication Credential**. Upload the credential to OBS.
+   -  Log in to the MRS Manager of the MRS cluster and download the user credential. Choose **System** > **Permission** > **User**. Locate the row that contains the target user, choose **More** > **Download Authentication Credential**. Upload the credential to OBS.
    -  If error message "Message stream modified (41)" is displayed, the JDK version may be incorrect. Change the JDK version in the sample code to a version earlier than 8u_242 or delete the **renew_lifetime = 0m** configuration item from the **krb5.conf** configuration file.
    -  Set the port to the **sasl.port** configured in the Kafka service configuration.
    -  In the following statements, set **security.protocol** to **SASL_PLAINTEXT**.
@@ -572,7 +572,7 @@ Example (SASL_SSL Enabled for the Kafka Cluster)
 
    -  Do not enable Kerberos authentication for the MRS cluster.
 
-   -  Log in to the FusionInsight Manager of the MRS cluster and download the user credential. Choose **System** > **Permission** > **User**. Locate the row that contains the target user, choose **More** > **Download Authentication Credential**.
+   -  Download the user credential. Log in to the MRS Manager of the MRS cluster and choose **System** > **Permission** > **User**. Locate the row that contains the target user, click **More**, and select **Download Authentication Credential**.
 
       Obtain the **truststore.jks** file using the authentication credential and store the credential and **truststore.jks** file in OBS.
 

@@ -13,7 +13,6 @@ DLI can output Flink job data to the ClickHouse database. ClickHouse is a column
 Prerequisites
 -------------
 
--  Your jobs are running on a dedicated queue (non-shared queue) of DLI.
 -  You have established an enhanced datasource connection to ClickHouse and set the port in the security group rule of the ClickHouse cluster as needed.
 
 Precautions

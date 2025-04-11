@@ -10,6 +10,19 @@ Function
 
 This statement is used to insert the SELECT query result or a certain data record into a table.
 
+Notes and Constraints
+---------------------
+
+-  The **INSERT OVERWRITE** syntax is not suitable for "read-write" scenarios, where data is continuously processed and updated. Using this syntax in such scenarios may result in data loss.
+
+   "Read-write" refers to the ability to read data while generating new data or modifying existing data during data processing.
+
+-  When using Hive and Datasource tables (excluding Hudi), executing data modification commands (such as **insert into** and **load data**) may result in data duplication or inconsistency if the data source does not support transactions and there is a system failure or queue restart.
+
+   To avoid this situation, you are advised to prioritize data sources that support transactions, such as Hudi data sources. This type of data source has Atomicity, Consistency, Isolation, Durability (ACID) capabilities, which helps ensure data consistency and accuracy.
+
+   To learn more, refer to :ref:`How Do I Handle Duplicate Records After Executing the INSERT INTO Statement? <dli_08_0095__section1516329541>`
+
 Syntax
 ------
 
@@ -77,7 +90,7 @@ Precautions
 
 -  The source table and the target table must have the same data types and column field quantity. Otherwise, data insertion fails.
 
--  You are advised not to concurrently insert data into a table. If you concurrently insert data into a table, there is a possibility that conflicts occur, leading to failed data insertion.
+-  You are not advised to insert data concurrently into the same table as it may result in abnormal data insertion due to concurrency conflicts.
 
 -  The **INSERT INTO** statement is used to add the query result to the target table.
 
@@ -159,3 +172,22 @@ Example
 
          INSERT OVERWRITE TABLE hive_serde_tab1 PARTITION (p1 = 3, p2 = 4)
            VALUES (3), (4);
+
+.. _dli_08_0095__section1516329541:
+
+How Do I Handle Duplicate Records After Executing the INSERT INTO Statement?
+----------------------------------------------------------------------------
+
+-  **Symptom**
+
+   When using Hive and Datasource tables (excluding Hudi), executing data modification commands (such as **insert into** and **load data**) may result in data duplication or inconsistency if the data source does not support transactions and there is a system failure or queue restart.
+
+-  **Possible causes**
+
+   If queue resources are restarted in the data commit phase, data may have been restored to a formal directory. If an **insert into** statement is executed and a retry is triggered after a resource restart, there is a possibility that data will be repeatedly written.
+
+-  **Solution**
+
+   #. Hudi data sources that support ACID properties are recommended.
+   #. Use idempotent syntax such as **insert overwrite** instead of non-idempotent syntax such as **insert into** to insert data.
+   #. If it is strictly required that data cannot be duplicated, you are advised to perform deduplication on the table data after executing the **insert into** statement to prevent duplicate data.

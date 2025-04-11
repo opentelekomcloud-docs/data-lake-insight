@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001621263317.html
+:original_name: dli_08_0466.html
 
-.. _en-us_topic_0000001621263317:
+.. _dli_08_0466:
 
 Specifying the Lifecycle of a Table When Creating the Table
 ===========================================================
@@ -35,10 +35,10 @@ Table Reclamation Rules
 
 -  After a table is deleted, all properties of the table, including the lifecycle, will be deleted. After a table with the same name is created again, the lifecycle of the table will be determined by the new property.
 
-Constraints and Limitations
----------------------------
+Notes and Constraints
+---------------------
 
--  Before using the lifecycle function, log in to the DLI console, choose **Global Configuration** > **Service Authorization**, select **Tenant Administrator(Project-level)**, and click **Update** on the **Assign Agency Permissions** page.
+-  Before using the lifecycle function, log in to the DLI console, choose **Global Configuration** > **Service Authorization**, select **dli_admin_agency**, and click **Update**.
 -  The table lifecycle function currently only supports creating tables and versioning tables using Hive and Datasource syntax.
 -  The unit of the lifecycle is in days. The value should be a positive integer.
 -  The lifecycle can be set only at the table level. The lifecycle specified for a partitioned table applies to all partitions of the table.
