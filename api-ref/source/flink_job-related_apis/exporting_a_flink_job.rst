@@ -54,7 +54,7 @@ Response
    +------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
    | Parameter  | Mandatory | Type             | Description                                                                                                                 |
    +============+===========+==================+=============================================================================================================================+
-   | is_success | No        | Boolean          | Indicates whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
+   | is_success | No        | String           | Indicates whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
    +------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
    | message    | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank.                                              |
    +------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+

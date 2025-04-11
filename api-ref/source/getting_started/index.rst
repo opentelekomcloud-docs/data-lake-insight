@@ -5,7 +5,6 @@
 Getting Started
 ===============
 
--  :ref:`Creating a Queue <dli_02_0307>`
 -  :ref:`Creating and Submitting a SQL Job <dli_02_0308>`
 -  :ref:`Creating and Submitting a Spark Job <dli_02_0309>`
 -  :ref:`Creating and Submitting a Flink Job <dli_02_0310>`
@@ -15,7 +14,6 @@ Getting Started
    :maxdepth: 1
    :hidden: 
 
-   creating_a_queue
    creating_and_submitting_a_sql_job
    creating_and_submitting_a_spark_job
    creating_and_submitting_a_flink_job
