@@ -10,6 +10,8 @@ Function
 
 This API is used to generate a static stream graph for a Flink SQL job.
 
+Flink 1.15 does not support the generation of static stream graphs.
+
 URI
 ---
 
@@ -32,38 +34,51 @@ Request
 
 .. table:: **Table 2** Request parameters
 
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | Parameter               | Mandatory       | Type            | Description                                                                           |
-   +=========================+=================+=================+=======================================================================================+
-   | sql_body                | Yes             | String          | SQL                                                                                   |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | cu_number               | No              | Integer         | Total number of CUs.                                                                  |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | manager_cu_number       | No              | Integer         | Number of CUs of the management unit.                                                 |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | parallel_number         | No              | Integer         | Maximum degree of parallelism.                                                        |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | tm_cus                  | No              | Integer         | Number of CUs in a taskManager.                                                       |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | tm_slot_num             | No              | Integer         | Number of slots in a taskManager.                                                     |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | operator_config         | No              | String          | Operator configurations.                                                              |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | static_estimator        | No              | Boolean         | Whether to estimate static resources.                                                 |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | job_type                | No              | String          | Job types.                                                                            |
-   |                         |                 |                 |                                                                                       |
-   |                         |                 |                 | Only **flink_opensource_sql_job job** is supported.                                   |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | graph_type              | No              | String          | Stream graph type. Currently, the following two types of stream graphs are supported: |
-   |                         |                 |                 |                                                                                       |
-   |                         |                 |                 | -  **simple_graph**: Simplified stream graph                                          |
-   |                         |                 |                 | -  **job_graph**: Static stream graph                                                 |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | static_estimator_config | No              | String          | Traffic or hit ratio of each operator, which is a string in JSON format.              |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
-   | flink_version           | No              | String          | Flink version. Currently, only 1.10 and 1.12 are supported.                           |
-   +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter               | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                          |
+   +=========================+=================+=================+======================================================================================================================================================================================================================================================================================================+
+   | sql_body                | Yes             | String          | SQL                                                                                                                                                                                                                                                                                                  |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | cu_number               | No              | Integer         | Total number of CUs used by the job configured on the job editing page, which should match the actual number of CUs used. The actual number of CUs used is determined by the number of parallel operators.                                                                                           |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | Total number of CUs used by the job = Number of manager CUs + (Total number of concurrent operators / Number of slots of a TaskManager) x Number of TaskManager CUs                                                                                                                                  |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | manager_cu_number       | No              | Integer         | Number of CUs of the management unit.                                                                                                                                                                                                                                                                |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | parallel_number         | No              | Integer         | Maximum degree of parallelism.                                                                                                                                                                                                                                                                       |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | Concurrent tasks of each job operator. Appropriately increasing the value will improve the overall computing performance of a job. Considering switchover overheads due to increasing threads, the maximum value is four times the number of CUs. One to two times the number of CUs is the optimal. |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tm_cus                  | No              | Integer         | Number of CUs in a taskManager.                                                                                                                                                                                                                                                                      |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tm_slot_num             | No              | Integer         | Number of slots in a taskManager.                                                                                                                                                                                                                                                                    |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | operator_config         | No              | String          | Operator configurations.                                                                                                                                                                                                                                                                             |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | You can call this API to obtain the operator ID. That is, the ID in **operator_list** contained in **stream_graph** in the response message is the operator ID.                                                                                                                                      |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | static_estimator        | No              | Boolean         | Whether to estimate static resources.                                                                                                                                                                                                                                                                |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | If this parameter is set to **true**, resources used by the job are estimated based on the operator ID and traffic.                                                                                                                                                                                  |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | static_estimator_config | No              | String          | Traffic or hit ratio of each operator, which is a string in JSON format.                                                                                                                                                                                                                             |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | This parameter is mandatory when **static_estimator** is set to **true**. During the configuration, the operator ID and operator traffic configuration are required.                                                                                                                                 |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | -  You can call this API to obtain the operator ID. That is, the ID in **operator_list** contained in **stream_graph** in the response message is the operator ID.                                                                                                                                   |
+   |                         |                 |                 | -  The operator traffic is estimated based on the actual service conditions.                                                                                                                                                                                                                         |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | job_type                | No              | String          | Job types.                                                                                                                                                                                                                                                                                           |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | Only **flink_opensource_sql_job job** is supported.                                                                                                                                                                                                                                                  |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | graph_type              | No              | String          | Stream graph type. Currently, the following two types of stream graphs are supported:                                                                                                                                                                                                                |
+   |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
+   |                         |                 |                 | -  **simple_graph**: Simplified stream graph                                                                                                                                                                                                                                                         |
+   |                         |                 |                 | -  **job_graph**: Static stream graph                                                                                                                                                                                                                                                                |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | flink_version           | No              | String          | Flink version. Currently, only 1.10 and 1.12 are supported.                                                                                                                                                                                                                                          |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -90,17 +105,19 @@ Generate a static stream graph for a Flink SQL job.
 .. code-block::
 
    {
-      "cu_number": 4,
-      "manager_cu_number": 1,
-      "parallel_number": 4,
-      "tm_cus": 1,
-      "tm_slot_num": 1,
-      "sql_body": "",
-      "operator_config": "",
-      "static_estimator": true,
-      "job_type": "flink_opensource_sql_job",
-      "graph_type": "job_graph"
-    }
+     "job_type": "flink_opensource_sql_job",
+     "graph_type": "job_graph",
+     "sql_body": "create table orders(\r\n  name string,\r\n  num int\r\n) with (\r\n  'connector' = 'datagen',\r\n  'rows-per-second' = '1', --Generates a data record per second.\r\n  'fields.name.kind' = 'random', --Specify a random generator for the user_id field.\r\n  'fields.name.length' = '5' --Limit the length of user_id to 3.\r\n);\r\n \r\nCREATE TABLE sink_table (\r\n  name string,\r\n  num int\r\n) WITH (\r\n   'connector' = 'print'\r\n);\r\nINSERT into sink_table SELECT * FROM orders;",
+     "cu_number": 2,
+     "manager_cu_number": 1,
+     "parallel_number": 2,
+     "tm_cus": 1,
+     "tm_slot_num": 0,
+     "operator_config": "",
+     "static_estimator": true,
+     "flink_version": "1.12",
+     "static_estimator_config": "{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"output_rate\":1000},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":1000}]}"
+   }
 
 Example Response
 ----------------
@@ -108,11 +125,78 @@ Example Response
 .. code-block::
 
    {
-       "is_success": true,
        "message": "",
+       "is_success": true,
        "error_code": "",
-       "stream_graph": "{\n  \"nodes\" : [ {\n    \"id\" : 1,\n    \"operator_id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n    \"type\" : \"Source\",\n
-    \"contents\" : \"kafkaSource\",\n    \"parallelism\" : 1\n  }, {\n    \"id\" : 2,\n    \"operator_id\" : \"0a448493b4782967b150582570326227\",\n    \"type\" : \"select\",\n    \"contents\" : \"car_id, car_owner, car_brand, car_speed\",\n    \"parallelism\" : 1,\n    \"predecessors\" : [ {\n      \"id\" : 1\n    } ]\n  }, {\n    \"id\" : 4,\n    \"operator_id\" : \"6d2677a0ecc3fd8df0b72ec675edf8f4\",\n    \"type\" : \"Sink\",\n    \"contents\" : \"kafkaSink\",\n    \"parallelism\" : 1,\n    \"predecessors\" : [ {\n      \"id\" : 2\n    } ]\n  } ]\n}"
+       "stream_graph": "{\n  \"jid\" : \"44334c4259f6714bddef1ac525364052\",\n  \"name\" : \"InternalJob_1715392878428\",\n  \"nodes\" : [ {\n    \"id\" : \"0a448493b4782967b150582570326227\",\n    \"parallelism\" : 1,\n    \"operator\" : \"\",\n    \"operator_strategy\" : \"\",\n    \"description\" : \"Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"chain_operators_id\" : [ \"0a448493b4782967b150582570326227\" ],\n    \"inputs\" : [ {\n      \"num\" : 0,\n      \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n      \"ship_strategy\" : \"FORWARD\",\n      \"exchange\" : \"pipelined_bounded\"\n    } ],\n    \"optimizer_properties\" : {}\n  }, {\n    \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n    \"parallelism\" : 2,\n    \"operator\" : \"\",\n    \"operator_strategy\" : \"\",\n    \"description\" : \"Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"chain_operators_id\" : [ \"bc764cd8ddf7a0cff126f51c16239658\" ],\n    \"optimizer_properties\" : {}\n  } ],\n  \"operator_list\" : [ {\n    \"id\" : \"0a448493b4782967b150582570326227\",\n    \"name\" : \"Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"type\" : \"Sink\",\n    \"contents\" : \"Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"parallelism\" : 1,\n    \"tags\" : \"[SINK]\",\n    \"input_operators_id\" : [ \"bc764cd8ddf7a0cff126f51c16239658\" ]\n  }, {\n    \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n    \"name\" : \"Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"type\" : \"Source\",\n    \"contents\" : \"TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"parallelism\" : 2,\n    \"tags\" : \"[PROCESS, UDF]\",\n    \"input_operators_id\" : [ ]\n  } ]\n}"
+   }
+
+To make it easier to view the response information, we format **stream_graph** as follows:
+
+.. code-block::
+
+       "jid": "65b6a7b0c1ad95b1722a92b49d2f6eba",
+       "name": "InternalJob_1715392245413",
+       "nodes": [
+           {
+               "id": "0a448493b4782967b150582570326227",
+               "parallelism": 1,
+               "operator": "",
+               "operator_strategy": "",
+               "description": "Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])",
+               "chain_operators_id": [
+                   "0a448493b4782967b150582570326227"
+               ],
+               "inputs": [
+                   {
+                       "num": 0,
+                       "id": "bc764cd8ddf7a0cff126f51c16239658",
+                       "ship_strategy": "FORWARD",
+                       "exchange": "pipelined_bounded"
+                   }
+               ],
+               "optimizer_properties": {
+
+               }
+           },
+           {
+               "id": "bc764cd8ddf7a0cff126f51c16239658",
+               "parallelism": 2,
+               "operator": "",
+               "operator_strategy": "",
+               "description": "Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])",
+               "chain_operators_id": [
+                   "bc764cd8ddf7a0cff126f51c16239658"
+               ],
+               "optimizer_properties": {
+
+               }
+           }
+       ],
+       "operator_list": [
+           {
+               "id": "0a448493b4782967b150582570326227",
+               "name": "Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])",
+               "type": "Sink",
+               "contents": "Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])",
+               "parallelism": 1,
+               "tags": "[SINK]",
+               "input_operators_id": [
+                   "bc764cd8ddf7a0cff126f51c16239658"
+               ]
+           },
+           {
+               "id": "bc764cd8ddf7a0cff126f51c16239658",
+               "name": "Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])",
+               "type": "Source",
+               "contents": "TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])",
+               "parallelism": 2,
+               "tags": "[PROCESS, UDF]",
+               "input_operators_id": [
+
+               ]
+           }
+       ]
    }
 
 Status Codes

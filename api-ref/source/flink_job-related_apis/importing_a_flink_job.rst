@@ -52,11 +52,11 @@ Response
    +-------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
    | Parameter   | Mandatory | Type             | Description                                                                                                                 |
    +=============+===========+==================+=============================================================================================================================+
-   | is_success  | No        | Boolean          | Indicates whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
+   | is_success  | No        | String           | Indicates whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
    +-------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
    | message     | No        | String           | System prompt. If execution succeeds, the parameter setting may be left blank.                                              |
    +-------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
-   | job_mapping | No        | Array of Objects | Information about the imported job. For details, see :ref:`Table 4 <dli_02_0255__table9244145865320>`.                      |
+   | job_mapping | No        | Array of objects | Information about the imported job. For details, see :ref:`Table 4 <dli_02_0255__table9244145865320>`.                      |
    +-------------+-----------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0255__table9244145865320:

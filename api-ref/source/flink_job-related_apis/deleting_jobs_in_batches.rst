@@ -19,7 +19,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** URI parameters
+   .. table:: **Table 1** URI parameter
 
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter  | Mandatory | Type   | Description                                                                                                                                   |
@@ -30,7 +30,7 @@ URI
 Request
 -------
 
-.. table:: **Table 2** Request parameters
+.. table:: **Table 2** Request parameter
 
    ========= ========= ====== ===========
    Parameter Mandatory Type   Description
@@ -43,13 +43,23 @@ Response
 
 .. table:: **Table 3** Response parameters
 
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type    | Description                                                                                                       |
-   +============+===========+=========+===================================================================================================================+
-   | is_success | No        | Boolean | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
-   | message    | No        | String  | System prompt. If execution succeeds, the parameter setting may be left blank.                                    |
-   +------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------+
+   +----------------+-----------+------------------+-----------------------------------------------------------------------------------------------+
+   | Parameter      | Mandatory | Type             | Description                                                                                   |
+   +================+===========+==================+===============================================================================================+
+   | Array elements | No        | Array of Objects | Returned response message. For details, see :ref:`Table 4 <dli_02_0243__table3383103182713>`. |
+   +----------------+-----------+------------------+-----------------------------------------------------------------------------------------------+
+
+.. _dli_02_0243__table3383103182713:
+
+.. table:: **Table 4** Array element parameters
+
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type   | Description                                                                                                       |
+   +============+===========+========+===================================================================================================================+
+   | is_success | No        | String | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
+   | message    | No        | String | Message content.                                                                                                  |
+   +------------+-----------+--------+-------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -75,11 +85,11 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 4 <dli_02_0243__t43c1f1c0ba344f4cbcb270953d9cca2a>` describes status codes.
+:ref:`Table 5 <dli_02_0243__t43c1f1c0ba344f4cbcb270953d9cca2a>` describes status codes.
 
 .. _dli_02_0243__t43c1f1c0ba344f4cbcb270953d9cca2a:
 
-.. table:: **Table 4** Status codes
+.. table:: **Table 5** Status codes
 
    =========== ================================
    Status Code Description
