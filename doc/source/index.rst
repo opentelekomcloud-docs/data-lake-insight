@@ -7,6 +7,7 @@ Data Lake Insight (DLI) is a serverless data processing and analysis service ful
    :class: container-sbv
 
    .. service_card::
+      :environment: internal
       :service_type: dli
       :umn: This document provides you with the DLI workflow and resource usage from console.
       :api-ref: This document introduces API reference provided by DLI and describes functions and parameters of each API.
