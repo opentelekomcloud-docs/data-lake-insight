@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000002172127506.html
+:original_name: dli_08_15000.html
 
-.. _en-us_topic_0000002172127506:
+.. _dli_08_15000:
 
 Flink OpenSource SQL 1.15 Syntax Reference
 ==========================================

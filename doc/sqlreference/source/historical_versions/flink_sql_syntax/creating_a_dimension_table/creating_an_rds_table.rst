@@ -5,7 +5,7 @@
 Creating an RDS Table
 =====================
 
-Create an RDS/DWS table to connect to the source stream.
+Create an RDS or GaussDB(DWS) table to connect to the source stream.
 
 For details about the JOIN syntax, see :ref:`JOIN <dli_08_0106>`.
 
@@ -64,7 +64,7 @@ Keywords
    |                       |                       |                                                                                                                                                                                                                                                                                                           |
    |                       |                       |    .. note::                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                           |
-   |                       |                       |       To create a DWS dimension table, set the database connection address to a DWS database address. If the DWS database version is later than 8.1.0, the open-source PostgreSQL driver cannot be used for connection. You need to use the GaussDB driver for connection.                                |
+   |                       |                       |       To create a GaussDB(DWS) dimension table, set the database connection address to a GaussDB(DWS) database address. If the GaussDB(DWS) database version is later than 8.1.0, the open-source PostgreSQL driver cannot be used for connection. You need to use the GaussDB driver for connection.     |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | table_name            | Yes                   | Indicates the name of the database table for data query.                                                                                                                                                                                                                                                  |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -131,4 +131,4 @@ The RDS table is used to connect to the source stream.
 
 .. note::
 
-   To create a DWS dimension table, set the database connection address to a DWS database address. If the DWS database version is later than 8.1.0, the open-source PostgreSQL driver cannot be used for connection. You need to use the GaussDB driver for connection.
+   To create a GaussDB(DWS) dimension table, set the database connection address to a GaussDB(DWS) database address. If the GaussDB(DWS) database version is later than 8.1.0, the open-source PostgreSQL driver cannot be used for connection. You need to use the GaussDB driver for connection.

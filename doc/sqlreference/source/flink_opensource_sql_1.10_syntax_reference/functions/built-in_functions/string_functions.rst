@@ -5,6 +5,16 @@
 String Functions
 ================
 
+
+String Functions
+----------------
+
+DLI offers a wide range of string functions for processing and transforming string data. These functions include concatenation, case conversion, substring extraction, replacement, regex matching, encoding and decoding, format conversion, and more. Additionally, it supports string length calculation, position searching, padding, reversing, and even extracting values from JSON strings using the **JSON_VAL** function. These features are widely used in data cleansing, text processing, and data analysis scenarios, providing developers with powerful tool support.
+
+For detailed string functions, see :ref:`Table 1 <dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table157276446018>`. For more information, see `Apache Flink <https://nightlies.apache.org/flink>`__.
+
+.. _dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table157276446018:
+
 .. table:: **Table 1** String functions
 
    +-----------------------------------------------------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,36 +223,36 @@ String Functions
 JSON_VAL Function
 -----------------
 
--  Syntax
+-  **Syntax**
 
-.. code-block::
+   .. code-block::
 
-   STRING JSON_VAL(STRING json_string, STRING json_path)
+      STRING JSON_VAL(STRING json_string, STRING json_path)
 
-.. table:: **Table 2** Parameter description
+   .. table:: **Table 2** Parameter description
 
-   +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Type   | Description                                                                                                                                                                               |
-   +=============+========+===========================================================================================================================================================================================+
-   | json_string | STRING | JSON object to be parsed                                                                                                                                                                  |
-   +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | json_path   | STRING | Path expression for parsing the JSON string For the supported expressions, see :ref:`Table 3 <dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table147467547297>`. |
-   +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter   | Type   | Description                                                                                                                                                                               |
+      +=============+========+===========================================================================================================================================================================================+
+      | json_string | STRING | JSON object to be parsed                                                                                                                                                                  |
+      +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | json_path   | STRING | Path expression for parsing the JSON string For the supported expressions, see :ref:`Table 3 <dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table147467547297>`. |
+      +-------------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. _dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table147467547297:
+   .. _dli_08_0333__en-us_topic_0000001165951931_en-us_topic_0000001081579112_table147467547297:
 
-.. table:: **Table 3** Expressions supported
+   .. table:: **Table 3** Expressions supported
 
-   ========== =====================
-   Expression Description
-   ========== =====================
-   $          Root node in the path
-   []         Access array elements
-   \*         Array wildcard
-   .          Access child elements
-   ========== =====================
+      ========== =====================
+      Expression Description
+      ========== =====================
+      $          Root node in the path
+      []         Access array elements
+      \*         Array wildcard
+      .          Access child elements
+      ========== =====================
 
--  Example
+-  **Example**
 
    #. Test input data.
 

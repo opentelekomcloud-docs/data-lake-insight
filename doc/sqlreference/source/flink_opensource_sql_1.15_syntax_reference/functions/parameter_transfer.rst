@@ -194,6 +194,8 @@ Output
 
 On the Flin Jobs page, locate your job, and click **More** > **FlinkUI** in the **Operation** column. On the displayed page, click **Task Managers** > **Stdout** to view the job output.
 
-|image1|
 
-.. |image1| image:: /_static/images/en-us_image_0000001742720709.gif
+.. figure:: /_static/images/en-us_image_0000002264181102.png
+   :alt: **Figure 1** Flink job output result
+
+   **Figure 1** Flink job output result

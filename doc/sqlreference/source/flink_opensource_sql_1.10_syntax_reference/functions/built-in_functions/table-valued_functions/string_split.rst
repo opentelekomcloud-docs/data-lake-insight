@@ -27,7 +27,7 @@ Description
    |                       |                       |    -  If **target** contains two or more consecutive separators, an empty substring is returned.                  |
    |                       |                       |    -  If **target** does not contain a specified separator, the original string passed to **target** is returned. |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------+
-   | separator             | VARCHAR               | Delimiter. Currently, only single-character delimiters are supported.                                             |
+   | separator             | VARCHAR               | Separator. Currently, only single-character separators are supported.                                             |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------+
 
 Example

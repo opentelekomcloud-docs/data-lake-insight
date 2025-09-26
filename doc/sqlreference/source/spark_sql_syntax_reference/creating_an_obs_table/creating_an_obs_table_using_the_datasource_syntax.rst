@@ -14,7 +14,7 @@ The main differences between the DataSource and the Hive syntax lie in the suppo
 
 .. note::
 
-   You are advised to use the OBS parallel file system for storage. A parallel file system is a high-performance file system that provides latency in milliseconds, TB/s-level bandwidth, and millions of IOPS. It applies to interactive big data analysis scenarios.
+   You are advised to use an OBS parallel file system for storage. A parallel file system is a high-performance file system that provides latency in milliseconds, TB/s-level bandwidth, and millions of IOPS. It applies to interactive big data analysis scenarios.
 
 Precautions
 -----------
@@ -366,3 +366,14 @@ In this example, a non-partitioned table named **table4** is created with a **cs
        compression      = 'deflate',
        encoding         = 'utf - 8'
    );
+
+FAQ
+---
+
+-  **What should I do if the error message "xxx dli datasource v2 tables is only supported in spark3.3 or later version." appears when I create a DataSource table using the default queue?**
+
+   Ensure that you use Spark 3.3.1 or a later version when creating such a table. If the error message appears, use the Hive syntax to create the table. For details, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.
+
+-  **What should I do if the error message "xxx don`t support dli v1 table." appears when I use Spark 3.3.1 to run a Jar job?**
+
+   This error message indicates that table operations cannot be performed when Spark 3.3.1 is used to execute the Jar job. Use the Hive syntax to recreate the tables' data structure. For example, you can use **[STORED AS file_format] CTAS** to recreate the table and then run the job. For details, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.

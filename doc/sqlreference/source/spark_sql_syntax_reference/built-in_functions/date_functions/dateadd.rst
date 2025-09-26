@@ -34,7 +34,7 @@ Parameters
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
    | delta           | Yes             | BIGINT          | Amplitude, based on which the date is modified                                                  |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
-   | datepart        | Yes             | BIGINT          | Unit, based on which the date is modified                                                       |
+   | datepart        | Yes             | STRING          | Unit, based on which the date is modified                                                       |
    |                 |                 |                 |                                                                                                 |
    |                 |                 |                 | This parameter supports the following extended date formats: year, month or mon, day, and hour. |
    |                 |                 |                 |                                                                                                 |

@@ -2,13 +2,15 @@
 
 .. _dli_08_0351:
 
-Checking Multiversion Backup Data
-=================================
+Viewing Multi-Versioning Backup Data (Deprecated, Not Recommended)
+==================================================================
 
 Function
 --------
 
-After the multiversion function is enabled, you can run the **SHOW HISTORY** command to view the backup data of a table. For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Multiversion Backup <dli_08_0354>`.
+The multi-versioning feature is to be deprecated and is not recommended.
+
+After the multiversion function is enabled, you can run the **SHOW HISTORY** command to view the backup data of a table. For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Data Multi-Versioning (Deprecated, Not Recommended) <dli_08_0354>`.
 
 Currently, the multiversion function supports only OBS tables created using the Hive syntax. For details about the syntax for creating a table, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.
 

@@ -24,7 +24,7 @@ Parameters
    +===========+===========+========+===================================================================================================================================================+
    | input     | Yes       | STRING | String to be entered                                                                                                                              |
    +-----------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-   | endcoding | No        | STRING | Encoding format. Standard encoding formats such as GBK and UTF-8 are supported. If this parameter is not specified, **UTF-8** is used by default. |
+   | encoding  | No        | STRING | Encoding format. Standard encoding formats such as GBK and UTF-8 are supported. If this parameter is not specified, **UTF-8** is used by default. |
    +-----------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Return Values

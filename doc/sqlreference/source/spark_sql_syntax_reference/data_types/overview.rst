@@ -5,6 +5,8 @@
 Overview
 ========
 
-Data type is a basic attribute of data. It is used to distinguish different types of data. Different data types occupy different storage space and support different operations. Data is stored in data tables in the database. A data type is specified for each column of a data table. Therefore, data to be stored in a data table must comply with the attribute of the specific data type. Otherwise, errors may occur.
+Data type is a basic attribute of data and used to distinguish different types of data. Different data types occupy different storage space and support different operations.
+
+Data is stored in data tables in the database. Each column of a table defines the data type. During storage, data must be stored according to data types.
 
 DLI only supports primitive data types.

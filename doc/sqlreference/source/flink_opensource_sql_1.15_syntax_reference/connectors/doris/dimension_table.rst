@@ -159,7 +159,7 @@ This example reads data from a Doris source table and inputs it into the Print c
         orders.user_name,
         dim.city,
         dim.age,
-        dim.sex
+        dim.gender
       from ordersSource orders
       left join dorisDemo for system_time as of orders.proctime as dim on orders.user_id = dim.user_id;
 

@@ -2,13 +2,15 @@
 
 .. _dli_08_0354:
 
-Enabling or Disabling Multiversion Backup
-=========================================
+Enabling or Disabling Data Multi-Versioning (Deprecated, Not Recommended)
+=========================================================================
 
 Function
 --------
 
-DLI controls multiple versions of backup data for restoration. After the multiversion function is enabled, the system automatically backs up table data when you delete or modify the data using **insert overwrite** or **truncate**, and retains the data for a certain period. You can quickly restore data within the retention period. For details about the syntax related to the multiversion function, see :ref:`Backing Up and Restoring Data of Multiple Versions <dli_08_0349>`.
+The multi-versioning feature is to be deprecated and is not recommended.
+
+DLI controls multiple versions of backup data for restoration. After the multiversion function is enabled, the system automatically backs up table data when you delete or modify the data using **insert overwrite** or **truncate**, and retains the data for a certain period. You can quickly restore data within the retention period. For details about the syntax related to the multiversion function, see :ref:`Backing Up and Restoring Multi-Versioning Data (Deprecated, Not Recommended) <dli_08_0349>`.
 
 Currently, the multiversion function supports only OBS tables created using the Hive syntax. For details about the syntax for creating a table, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.
 
