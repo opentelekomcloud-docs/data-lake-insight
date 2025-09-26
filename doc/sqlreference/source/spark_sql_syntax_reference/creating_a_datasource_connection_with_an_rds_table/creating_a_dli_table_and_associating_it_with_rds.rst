@@ -44,7 +44,7 @@ Keywords
    |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                     |
    |                                   | After an enhanced datasource connection is created, use the internal network domain name or internal network address and database port number provided by RDS to connect to DLI. If MySQL is used, the format is **protocol header://internal IP address:internal network port number**. If PostgreSQL is used, the format is **protocol header://internal IP address:internal network port number/database name**. |
    |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                     |
-   |                                   | For example: **jdbc:mysql://192.168.0.193:3306** or **jdbc:postgresql://192.168.0.193:3306/postgres**.                                                                                                                                                                                                                                                                                                              |
+   |                                   | For example: **jdbc:mysql://192.168.0.193:3306** or **jdbc:postgresql://192.168.0.193:5432/postgres**.                                                                                                                                                                                                                                                                                                              |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | driver                            | JDBC driver class name. To connect to a MySQL cluster, enter **com.mysql.jdbc.Driver**. To connect to a PostgreSQL cluster, enter **org.postgresql.Driver**.                                                                                                                                                                                                                                                        |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -120,7 +120,9 @@ Keywords
 Precautions
 -----------
 
-When creating a table associated with RDS, you do not need to specify the **Schema** of the associated table. DLI automatically obtains the schema of the table in the **dbtable** parameter of RDS.
+When creating up an RDS association table for the first time, there is no need to define the table's schema. DLI will automatically retrieve the schema from the RDS parameter **dbtable** to create the association table.
+
+If you make changes to the fields in the RDS table, the associated table will not update automatically. In such cases, you need to recreate the association table to ensure its schema matches the modified RDS table.
 
 Example
 -------
@@ -143,7 +145,7 @@ Accessing PostgreSQL
 
    CREATE TABLE IF NOT EXISTS dli_to_rds
      USING JDBC OPTIONS (
-     'url'='jdbc:postgresql://to-rds-1174405119-oLRHAGE7.datasource.com:3306/postgreDB',
+     'url'='jdbc:postgresql://to-rds-1174405119-oLRHAGE7.datasource.com:5432/postgreDB',
      'driver'='org.postgresql.Driver',
      'dbtable'='pg_schema.test1',
      'passwdauth' = 'xxx',

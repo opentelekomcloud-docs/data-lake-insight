@@ -68,7 +68,7 @@ Keywords
 -  LOCATION: Specifies the path of OBS. This keyword is mandatory when you create OBS tables.
 -  TBLPROPERTIES: Allows you to add the **key/value** properties to a table.
 
-   -  You can use this statement to enable the multiversion function to back up and restore table data. After the multiversion function is enabled, the system automatically backs up table data when you delete or modify the data using **insert overwrite** or **truncate**, and retains the data for a certain period. You can quickly restore data within the retention period. For details about the SQL syntax for the multiversion function, see :ref:`Enabling or Disabling Multiversion Backup <dli_08_0354>` and :ref:`Backing Up and Restoring Data of Multiple Versions <dli_08_0349>`.
+   -  (The multi-versioning function has been deprecated and is not recommended.) Enables data multi-versioning for table data backup and restoration. After the multiversion function is enabled, the system automatically backs up table data when you delete or modify the data using **insert overwrite** or **truncate**, and retains the data for a certain period. You can quickly restore data within the retention period. For details about the SQL syntax for the multiversion function, see :ref:`Enabling or Disabling Data Multi-Versioning (Deprecated, Not Recommended) <dli_08_0354>` and :ref:`Backing Up and Restoring Multi-Versioning Data (Deprecated, Not Recommended) <dli_08_0349>`.
 
       When creating an OBS table, you can use **TBLPROPERTIES ("dli.multi.version.enable"="true")** to enable multiversion. For details, see the following example.
 

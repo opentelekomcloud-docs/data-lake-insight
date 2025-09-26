@@ -6,7 +6,7 @@ Spark SQL Syntax Reference
 ==========================
 
 -  :ref:`Common Configuration Items of Batch SQL Jobs <dli_08_0266>`
--  :ref:`SQL Syntax Overview of Batch Jobs <dli_08_0219>`
+-  :ref:`SQL Syntax Overview for Batch Jobs <dli_08_0219>`
 -  :ref:`Spark Open Source Commands <dli_08_0477>`
 -  :ref:`Databases <dli_08_0070>`
 -  :ref:`Creating an OBS Table <dli_08_0223>`
@@ -20,7 +20,7 @@ Spark SQL Syntax Reference
 -  :ref:`Reusing Results of Subqueries <en-us_topic_0000001873107668>`
 -  :ref:`Clearing Data <dli_08_0217>`
 -  :ref:`Exporting Search Results <dli_08_0205>`
--  :ref:`Backing Up and Restoring Data of Multiple Versions <dli_08_0349>`
+-  :ref:`Backing Up and Restoring Multi-Versioning Data (Deprecated, Not Recommended) <dli_08_0349>`
 -  :ref:`Table Lifecycle Management <dli_08_0465>`
 -  :ref:`Creating a Datasource Connection with an HBase Table <dli_08_0118>`
 -  :ref:`Creating a Datasource Connection with an OpenTSDB Table <dli_08_0220>`
@@ -53,7 +53,7 @@ Spark SQL Syntax Reference
    :hidden: 
 
    common_configuration_items_of_batch_sql_jobs
-   sql_syntax_overview_of_batch_jobs
+   sql_syntax_overview_for_batch_jobs
    spark_open_source_commands
    databases/index
    creating_an_obs_table/index
@@ -67,7 +67,7 @@ Spark SQL Syntax Reference
    reusing_results_of_subqueries
    clearing_data
    exporting_search_results
-   backing_up_and_restoring_data_of_multiple_versions/index
+   backing_up_and_restoring_multi-versioning_data_deprecated_not_recommended/index
    table_lifecycle_management/index
    creating_a_datasource_connection_with_an_hbase_table/index
    creating_a_datasource_connection_with_an_opentsdb_table/index

@@ -38,10 +38,20 @@ Table Reclamation Rules
 Notes and Constraints
 ---------------------
 
--  Before using the lifecycle function, log in to the DLI console, choose **Global Configuration** > **Service Authorization**, select **dli_admin_agency**, and click **Update**.
+-  You are advised to configure the **dli_data_clean_agency** agency before using the lifecycle feature.
+
+   For details about agency permission policies, refer to "Agency Permission Policies in Common Scenarios" in *Data Lake Insight User Guide*.
+
+   If the **dli_data_clean_agency** agency is not configured, the system reads the previous-generation DLI system agency **dli_admin_agency** by default. However, if **dli_admin_agency** is not configured for your account, the current table lifecycle feature cannot be used.
+
+   You can check whether you have the **dli_admin_agency** agency in IAM agencies.
+
 -  The table lifecycle function currently only supports creating tables and versioning tables using Hive and Datasource syntax.
+
 -  The unit of the lifecycle is in days. The value should be a positive integer.
+
 -  The lifecycle can be set only at the table level. The lifecycle specified for a partitioned table applies to all partitions of the table.
+
 -  After the lifecycle is set, DLI and OBS tables will support data backup. The backup directory for OBS tables needs to be set manually. The backup directory must be in the parallel file system and in the same bucket as the original table directory. It cannot have the same directory or subdirectory name as the original table.
 
 Syntax

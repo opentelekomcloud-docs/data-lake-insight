@@ -2,13 +2,15 @@
 
 .. _dli_08_0353:
 
-Configuring the Trash Bin for Expired Multiversion Data
-=======================================================
+Configuring the Recycle Bin for Expired Multi-Versioning Data (Deprecated, Not Recommended)
+===========================================================================================
 
 Function
 --------
 
-After the multiversion function is enabled, expired backup data will be directly deleted by the system when the **insert overwrite** or **truncate** statement is executed. You can configure the trash bin of the OBS parallel file system to accelerate the deletion of expired backup data. To enable the trash bin, add **dli.multi.version.trash.dir** to the table properties. For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Multiversion Backup <dli_08_0354>`.
+The multi-versioning feature is to be deprecated and is not recommended.
+
+After the multiversion function is enabled, expired backup data will be directly deleted by the system when the **insert overwrite** or **truncate** statement is executed. You can configure the trash bin of the OBS parallel file system to accelerate the deletion of expired backup data. To enable the trash bin, add **dli.multi.version.trash.dir** to the table properties. For details about the syntax for enabling or disabling the multiversion function, see :ref:`Enabling or Disabling Data Multi-Versioning (Deprecated, Not Recommended) <dli_08_0354>`.
 
 Currently, the multiversion function supports only OBS tables created using the Hive syntax. For details about the syntax for creating a table, see :ref:`Creating an OBS Table Using the Hive Syntax <dli_08_0077>`.
 

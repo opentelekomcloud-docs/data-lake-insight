@@ -13,9 +13,23 @@ This statement is used to insert the SELECT query result or a certain data recor
 Notes and Constraints
 ---------------------
 
--  The **INSERT OVERWRITE** syntax is not suitable for "read-write" scenarios, where data is continuously processed and updated. Using this syntax in such scenarios may result in data loss.
+-  The **insert overwrite** syntax does not apply to self-read and self-write scenarios within the same table (including both partitioned and non-partitioned tables). Directly executing **insert overwrite** on the original table may lead to risks of data loss or inconsistency.
 
-   "Read-write" refers to the ability to read data while generating new data or modifying existing data during data processing.
+   To implement data operations in self-read and self-write scenarios, you are advised to use a temporary table to handle the data. See :ref:`Figure 1 <dli_08_0095__fig8181339957>`.
+
+   Self-read and self-write means that the destination table and the data source table are the same table. For example, suppose you want to extract information of students with **class_no = 1** from the **student** table and overwrite the original table, the following statements represent typical operations in self-read and self-write scenarios:
+
+   .. code-block::
+
+      INSERT OVERWRITE TABLE student
+      SELECT name FROM student WHERE class_no = 1;
+
+   .. _dli_08_0095__fig8181339957:
+
+   .. figure:: /_static/images/en-us_image_0000002272860560.png
+      :alt: **Figure 1** Alternative solution for self-read and self-write scenarios by running insert overwrite
+
+      **Figure 1** Alternative solution for self-read and self-write scenarios by running insert overwrite
 
 -  When using Hive and Datasource tables (excluding Hudi), executing data modification commands (such as **insert into** and **load data**) may result in data duplication or inconsistency if the data source does not support transactions and there is a system failure or queue restart.
 
@@ -127,7 +141,7 @@ Example
 
    Before importing data, you must create a table. For details, see :ref:`Creating an OBS Table <dli_08_0223>` or :ref:`Creating a DLI Table <dli_08_0224>`.
 
--  Insert the SELECT query result into a table.
+-  Example 1: Insert the SELECT query result into a table.
 
    -  Use the DataSource syntax to create a parquet partitioned table.
 
@@ -150,7 +164,7 @@ Example
          INSERT OVERWRITE TABLE data_source_tab1 PARTITION (p1 = 3, p2 = 4)
            SELECT id FROM RANGE(3, 5);
 
--  Insert a data record into a table.
+-  Example 2: Insert a piece of data into a table.
 
    -  Create a Parquet partitioned table with Hive format
 

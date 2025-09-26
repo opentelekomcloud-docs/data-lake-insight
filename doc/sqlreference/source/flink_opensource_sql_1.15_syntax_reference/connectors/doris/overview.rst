@@ -5,7 +5,7 @@
 Overview
 ========
 
-The Flink Doris Connector can support operations (read, insert, modify, delete) data stored in Doris through Flink.
+The Flink Doris Connector can support operations (read, insert, modify, delete) data stored in Doris through Flink. For details, see `Flink Doris Connector <https://doris.apache.org/docs/2.0/ecosystem/flink-doris-connector>`__.
 
 .. note::
 

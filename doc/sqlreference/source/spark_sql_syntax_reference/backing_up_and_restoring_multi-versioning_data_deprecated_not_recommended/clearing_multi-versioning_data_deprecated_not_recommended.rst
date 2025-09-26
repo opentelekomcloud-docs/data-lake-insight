@@ -2,11 +2,13 @@
 
 .. _dli_08_0355:
 
-Deleting Multiversion Backup Data
-=================================
+Clearing Multi-Versioning Data (Deprecated, Not Recommended)
+============================================================
 
 Function
 --------
+
+The multi-versioning feature is to be deprecated and is not recommended.
 
 The retention period of multiversion backup data takes effect each time the **insert overwrite** or **truncate** statement is executed. If neither statement is executed for the table, multiversion backup data out of the retention period will not be automatically deleted. You can run the SQL commands described in this section to manually delete multiversion backup data.
 

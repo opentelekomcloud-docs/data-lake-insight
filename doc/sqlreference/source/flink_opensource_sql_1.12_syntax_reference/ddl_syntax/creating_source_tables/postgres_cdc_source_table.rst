@@ -13,7 +13,7 @@ The Postgres CDC source table, that is, Postgres streaming source table, is used
 Prerequisites
 -------------
 
--  The PostgreSQL version be 9.6, 10, 11, or 12.
+-  The PostgreSQL version is 9.6, 10, 11, or 12.
 -  An enhanced datasource connection with the database has been established, so that you can configure security group rules as required.
 
 Precautions
@@ -60,7 +60,7 @@ Syntax
 Parameters
 ----------
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** Parameters
 
    +----------------------+-------------+---------------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter            | Mandatory   | Default Value | Data Type   | Description                                                                                                                                                                        |

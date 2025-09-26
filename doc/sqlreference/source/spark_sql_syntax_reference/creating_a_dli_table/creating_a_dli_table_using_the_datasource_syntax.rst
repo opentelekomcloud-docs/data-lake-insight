@@ -216,3 +216,14 @@ In this example, a DLI partitioned table named **table3** is created and partiti
           multiLeveldirenable    = true,
           compression            = 'zstd'
       );
+
+FAQ
+---
+
+-  **What should I do if the error message "xxx dli datasource v2 tables is only supported in spark3.3 or later version." appears when I create a DataSource table using the default queue?**
+
+   Ensure that you use Spark 3.3.1 or a later version when creating such a table. If the error message appears, use the Hive syntax to create the table. For details, see :ref:`Creating a DLI Table Using the Hive Syntax <dli_08_0204>`.
+
+-  **What should I do if the error message "xxx don`t support dli v1 table." appears when I use Spark 3.3.1 to run a Jar job?**
+
+   This error message indicates that table operations cannot be performed when Spark 3.3.1 is used to execute the Jar job. Use the Hive syntax to recreate the tables' data structure. For example, you can use **[STORED AS file_format] CTAS** to recreate the table and then run the job. For how to create a table, see :ref:`Creating a DLI Table Using the Hive Syntax <dli_08_0204>`.
