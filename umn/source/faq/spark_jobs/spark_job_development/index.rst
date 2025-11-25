@@ -13,6 +13,7 @@ Spark Job Development
 -  :ref:`How Do I Run a Complex PySpark Program in DLI? <dli_03_0082>`
 -  :ref:`How Do I Use JDBC to Set the spark.sql.shuffle.partitions Parameter to Improve the Task Concurrency? <dli_03_0068>`
 -  :ref:`How Do I Read Uploaded Files for a Spark Jar Job? <dli_03_0118>`
+-  :ref:`Why Are View Attributes Empty in Spark 3.3.1 Client? <dli_03_0279>`
 -  :ref:`Why Can't I Find the Specified Python Environment After Adding the Python Package? <dli_03_0077>`
 -  :ref:`Why Is a Spark Jar Job Stuck in the Submitting State? <dli_03_0220>`
 
@@ -28,5 +29,6 @@ Spark Job Development
    how_do_i_run_a_complex_pyspark_program_in_dli
    how_do_i_use_jdbc_to_set_the_spark.sql.shuffle.partitions_parameter_to_improve_the_task_concurrency
    how_do_i_read_uploaded_files_for_a_spark_jar_job
+   why_are_view_attributes_empty_in_spark_3.3.1_client
    why_cant_i_find_the_specified_python_environment_after_adding_the_python_package
    why_is_a_spark_jar_job_stuck_in_the_submitting_state

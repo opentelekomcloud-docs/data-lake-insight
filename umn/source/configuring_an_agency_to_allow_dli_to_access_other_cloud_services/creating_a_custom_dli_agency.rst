@@ -7,7 +7,7 @@ Creating a Custom DLI Agency
 
 When Flink 1.15, Spark 3.3, or a later version is used to execute jobs and the required agency is not included in the DLI system agency **dli_management_agency**, you need to create an agency on the IAM console and add information about the new agency to the job configuration. **dli_management_agency** contains the permissions required for datasource operations, message notifications, and user authorization operations. For other agency permission requirements, you need to create custom DLI agencies. For details about **dli_management_agency**, see :ref:`DLI Agency Overview <dli_01_0419>`.
 
-This section walks you through on how to create a custom agency, complete service authorization, and add information about the new agency to the job configuration.
+This section walks you through how to create a custom agency, complete service authorization, and add information about the new agency to the job configuration.
 
 DLI Custom Agency Scenarios
 ---------------------------
@@ -45,6 +45,8 @@ Notes and Constraints
 -  Custom agencies can be configured only for jobs executed by engines like Flink 1.15, Spark 3.3.1 (Spark general queue scenario), or later versions.
 -  Once the agency permissions are updated, your **dli_admin_agency** will be upgraded to **dli_management_agency**. This new agency will have the necessary permissions for datasource operations, notifications, and user authorization operations. If you have other agency permission needs, you will need to create custom agencies. For details about **dli_management_agency**, see :ref:`DLI Agency Overview <dli_01_0419>`.
 -  Common scenarios for creating an agency: DLI is allowed to read and write data from and to OBS, dump logs, and read and write Flink checkpoints. DLI is allowed to access DEW to obtain data access credentials and access catalogs to obtain metadata. For details about agency permissions in these scenarios, see :ref:`Agency Permission Policies in Common Scenarios <dli_01_0617>`.
+
+.. _dli_01_0616__section1250814405585:
 
 Step 1: Create a Cloud Service Agency on the IAM Console and Grant Permissions
 ------------------------------------------------------------------------------
@@ -144,7 +146,7 @@ Step 1: Create a Cloud Service Agency on the IAM Console and Grant Permissions
 Step 2: Set Agency Permissions for a Job
 ----------------------------------------
 
-When Flink 1.15, Spark 3.3, or a later version is used to execute jobs, you need to add information about the new agency to the job configuration.
+When Spark 3.3.1, Flink 1.15, or a later version is used to execute jobs, you need to add information about the new agency to the job configuration.
 
 Otherwise, If you do not specify an agency for Spark 3.3.1 jobs, the jobs cannot use OBS. If you do not specify an agency for a Flink 1.15 job, checkpointing cannot be enabled, savepoints cannot be used, logs cannot be transferred, and data sources such as OBS and GaussDB(DWS) cannot be used.
 
@@ -161,9 +163,9 @@ Otherwise, If you do not specify an agency for Spark 3.3.1 jobs, the jobs cannot
 
       -  **Flink Version**: Select **1.15**.
 
-      -  **Runtime Configuration**: Configure the key-value information of the new agency. The key is fixed to **flink.dli.job.agency.name**, and the value is the custom agency name.
+      -  **Agency**: Select the agency created in :ref:`Step 1: Create a Cloud Service Agency on the IAM Console and Grant Permissions <dli_01_0616__section1250814405585>`.
 
-         In this example, set the key-value information to **flink.dli.job.agency.name=dli_obs_agency_access**.
+         In this example, set it to **dli_obs_agency_access**.
 
 -  **Specifying an agency for a Flink OpenSource SQL job**
 
@@ -173,18 +175,18 @@ Otherwise, If you do not specify an agency for Spark 3.3.1 jobs, the jobs cannot
 
       -  On the **Running Parameters** tab, ensure that the selected Flink version is **1.15**.
 
-      -  Click **Runtime Configuration**. Configure the key-value information of the new agency. The key is fixed to **flink.dli.job.agency.name**, and the value is the custom agency name.
+      -  **Agency**: Select the agency created in :ref:`Step 1: Create a Cloud Service Agency on the IAM Console and Grant Permissions <dli_01_0616__section1250814405585>`.
 
-         In this example, set the key-value information to **flink.dli.job.agency.name=dli_obs_agency_access**.
+         In this example, set it to **dli_obs_agency_access**.
 
 -  **Specifying an agency for a Spark job**
 
    #. Log in to the DLI console. In the navigation pane, choose **Job Management** > **Spark Jobs**.
-   #. Select the target job and click **Edit** in the **Operation** column.
+   #. Select a desired job and click **Edit** in the **Operation** column.
    #. In the job configuration area on the right, configure agency information.
 
-      -  Ensure that the selected Spark version is **3.3.1**.
+      -  **Spark Version**: Make sure to select **3.3.1**.
 
-      -  In the **Spark Arguments(--conf)** area, configure the key-value information of the new agency. The key is fixed to **spark.dli.job.agency.name**, and the value is the custom agency name.
+      -  **Agency**: Select the agency created in :ref:`Step 1: Create a Cloud Service Agency on the IAM Console and Grant Permissions <dli_01_0616__section1250814405585>`.
 
-         In this example, set the key-value information to **spark.dli.job.agency.name=dli_obs_agency_access**.
+         In this example, set it to **dli_obs_agency_access**.

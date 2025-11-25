@@ -5,10 +5,10 @@
 Basic Concepts
 ==============
 
-Use Elastic Resource Pool
--------------------------
+Elastic Resource Pool
+---------------------
 
-Dedicated computing resources. They are isolated by resource pools and can only be shared by queues in the same elastic resource pool. You can set scaling policies of different priorities for these queues to adjust compute resources according to queue workload in different periods of a day.
+An elastic resource pool consists of dedicated compute resources where the resources in different pools are completely isolated from each other. Within a single elastic resource pool, multiple queues can share the resources available in that pool. Additionally, you can configure policies based on the resource load of these queues to enable time-based elastic scaling to meet diverse business needs.
 
 DLI Storage Resource
 --------------------
@@ -18,29 +18,35 @@ DLI storage resources are the internal storage capacities of the DLI service. Th
 Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
 ------------------------------------------------------------------------------
 
--  **Actual CUs**: number of CUs that can be allocated in the elastic resource pool.
+-  **Actual CUs**: actual size of resources currently allocated to the elastic resource pool (in CUs).
 
-   -  **Formula for calculating actual CUs:**
+   -  When there is no queue in the resource pool, the actual CUs are equal to the minimum CUs when the elastic resource pool is created.
 
-      -  Actual CUs = min{sum(maximum CUs of the queue), maximum CUs of the elastic resource pool}.
-      -  The calculation result must be a multiple of 16 CUs. If it is not exactly divisible by 16, round up to the nearest multiple.
+   -  When there are queues in the resource pool, the formula for calculating actual CUs is:
 
-   -  **Example of actual CU allocation:**
+      -  Actual CUs = max{(min[sum(maximum CUs of queues), maximum CUs of the elastic resource pool]), minimum CUs of the elastic resource pool}.
+      -  The calculation result must be a multiple of 16 CUs. If it cannot be exactly divided by 16 CUs, round up to the nearest multiple.
 
-      In :ref:`Table 1 <dli_07_0003__table834712811506>`, the calculation process for the actual allocation of CUs in an elastic resource pool is as follows:
+   -  Scaling out or in an elastic resource pool means adjusting the actual CUs of the resource pool. Refer to :ref:`Scaling Out or In an Elastic Resource Pool <dli_01_0686>`.
+
+   -  Example of actual CU allocation:
+
+      In :ref:`Table 1 <dli_07_0003__dli_07_0003_table4844638152415>`, the calculation process for the actual allocation of CUs in an elastic resource pool is as follows:
 
       #. Calculate the sum of maximum CUs of the queues: sum(maximum CUs) = 32 + 56 = 88 CUs.
 
       #. Compare the sum of maximum CUs of the queues with the maximum CUs of the elastic resource pool and take the smaller value: min{88 CUs, 112 CUs} = 88 CUs.
 
+      #. Compare the value with the minimum CUs of the elastic resource pool and take the larger value: max(88 CUs, 64 CUs) = 88 CUs.
+
       #. Check if 88 CUs is a multiple of 16 CUs. Since 88 is not divisible by 16, round up to 96 CUs.
 
-         .. _dli_07_0003__table834712811506:
+         .. _dli_07_0003__dli_07_0003_table4844638152415:
 
          .. table:: **Table 1** Example of actual CU allocation of an elastic resource pool
 
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-            | Scenario                                                                                          | Resource              | CU Range              |
+            | Scenario                                                                                          | Resource Type         | CU Range              |
             +===================================================================================================+=======================+=======================+
             | New elastic resource pool: 64-112 CUs                                                             | Elastic resource pool | 64-112 CUs            |
             |                                                                                                   |                       |                       |
@@ -51,15 +57,16 @@ Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
             |                                                                                                   | Queue A               | 16-32 CUs             |
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
-            |                                                                                                   | Queue B               | 16-56 CUs             |
+            |                                                                                                   | Queue B               | 16-56CUS              |
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
 
--  **Used CUs**: CUs that have been used by jobs or tasks. These CU resources may be currently engaged in computing tasks and therefore temporarily unavailable.
+-  **Used CUs**: CUs that have been used by jobs or tasks. These resources may be executing computing tasks.
 -  **CU range**: CU settings are used to control the maximum and minimum CU ranges for elastic resource pools to avoid unlimited resource scaling.
 
    -  The total minimum CUs of all queues in an elastic resource pool must be no more than the minimum CUs of the pool.
    -  The maximum CUs of any queue in an elastic resource pool must be no more than the maximum CUs of the pool.
    -  An elastic resource pool should at least ensure that all queues in it can run with the minimum CUs and should try to ensure that all queues in it can run with the maximum CUs.
+   -  When expanding the specifications of an elastic resource pool, the minimum value of the CU range is linked to the specifications of the elastic resource pool. After changing the specifications of the elastic resource pool, the minimum value of the CU range is modified to match the specifications.
 
 -  **Specifications**: The minimum CUs selected during elastic resource pool purchase are elastic resource pool specifications.
 
@@ -109,7 +116,7 @@ Spark jobs are those submitted by users through visualized interfaces and RESTfu
 CU
 --
 
-Compute unit (CU) is the unit of compute resources in DLI, where 1 CU equals 1 vCPU and 4 GB of memory. The higher the specifications of compute resources, the better its computing power.
+CU is the unit of compute resources in DLI, where 1 CU equals 1 vCPU and 4 GB of memory. The higher the specifications of compute resources, the better its computing power.
 
 Constants and Variables
 -----------------------

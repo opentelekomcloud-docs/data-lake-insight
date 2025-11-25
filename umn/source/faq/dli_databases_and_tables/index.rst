@@ -17,6 +17,7 @@ DLI Databases and Tables
 -  :ref:`Why Does the "create_date" Field in an RDS Table (Datetime Data Type) Appear as a Timestamp in DLI Queries? <dli_03_0214>`
 -  :ref:`How Do I Do If Renaming a Table After a SQL Job Causes Incorrect Data Size? <dli_03_0215>`
 -  :ref:`How Can I Resolve Data Inconsistencies When Importing Data from DLI to OBS? <dli_03_0231>`
+-  :ref:`Why Is a Hudi Table Not Displayed on the DLI Console? <dli_03_0277>`
 
 .. toctree::
    :maxdepth: 1
@@ -34,3 +35,4 @@ DLI Databases and Tables
    why_does_the_create_date_field_in_an_rds_table_datetime_data_type_appear_as_a_timestamp_in_dli_queries
    how_do_i_do_if_renaming_a_table_after_a_sql_job_causes_incorrect_data_size
    how_can_i_resolve_data_inconsistencies_when_importing_data_from_dli_to_obs
+   why_is_a_hudi_table_not_displayed_on_the_dli_console

@@ -15,6 +15,8 @@ Decoupled Storage and Compute
 
 DLI compute and storage loads are decoupled. This architecture allows you to flexibly configure storage and compute resources on demand, improving resource utilization and reducing costs.
 
+DLI's elastic resource pool feature effectively boosts compute resource utilization. The same compute resources can support multiple compute engines like Flink and Spark simultaneously.
+
 Serverless DLI
 --------------
 

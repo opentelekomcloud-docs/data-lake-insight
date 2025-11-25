@@ -5,15 +5,16 @@
 Configuring DLI Agency Permissions
 ==================================
 
-To use DLI, you must first configure permissions.
+Scenarios of dli_management_agency
+----------------------------------
 
-This section applies to the following scenarios:
+Before using DLI, configure DLI agency permissions. This section describes the scenarios and steps for configuring DLI agency permissions (**dli_management_agency**).
 
 -  **If you use DLI for the first time, configure DLI agency permissions by referring to this section.**
 
    DLI needs to work with other cloud services. You must grant DLI basic operation permissions of these services so that DLI can access them and perform resource O&M operations on your behalf.
 
--  **If you are still using the previous-generation agency dli_admin_agency, update it by referring to this section.**
+-  If you are currently using the older DLI agency **dli_admin_agency**, follow the instructions in this section to upgrade it to the newer version, **dli_management_agency**.
 
    To balance practical business needs with the risk of excessive delegation, DLI upgraded its system agency to achieve more granular control over permissions. The previous **dli_admin_agency** was upgraded to **dli_management_agency**, which includes permissions for accessing IAM user information, datasource operations, and message notifications. This effectively prevents uncontrolled permission issues related to the services associated with DLI. After the upgrade, the DLI agency is more flexible and more suitable for scenario-based agency customization for medium- and large-sized enterprises.
 
@@ -23,7 +24,7 @@ Notes and Constraints
 ---------------------
 
 -  Only the tenant account or a member account of user group **admin** can authorize the service.
--  DLI authorization needs to be conducted by project. The permissions of required agencies must be updated separately in each project. This means you need to switch to the corresponding project and then update the agency by following the instructions provided in this section.
+-  DLI authorization (**dli_management_agency**) needs to be conducted by project. The permissions of required agencies must be updated separately in each project. This means you need to switch to the corresponding project and then update the agency by following the instructions provided in this section.
 
 Updating DLI Agency Permissions (dli_management_agency)
 -------------------------------------------------------
@@ -73,7 +74,7 @@ Updating DLI Agency Permissions (dli_management_agency)
    -  To maintain compatibility with existing job agency permission requirements, **dli_admin_agency** will still be listed in the IAM agency list even after the update.
    -  Do not delete the agency created by the system by default.
 
-Follow-Up Operations
+Follow-up Operations
 --------------------
 
 In addition to the permissions provided by **dli_management_agency**, you need to create an agency on the IAM console and add information about the new agency to the job configuration for scenarios like allowing DLI to read and write data from and to OBS to transfer logs, or allowing DLI to access DEW to obtain data access credentials. For details, see :ref:`Creating a Custom DLI Agency <dli_01_0616>` and :ref:`Agency Permission Policies in Common Scenarios <dli_01_0617>`.
@@ -89,7 +90,7 @@ In addition to the permissions provided by **dli_management_agency**, you need t
 -  Data cleanup agency required for clearing data according to the lifecycle of a table and clearing lakehouse table data. You need to create a DLI agency named **dli_data_clean_agency** on IAM and grant permissions to it. You need to create an agency and customize permissions for it. However, the agency name is fixed to **dli_data_clean_agency**.
 -  **Tenant Administrator** permissions are required to access data from OBS to execute Flink jobs on DLI, for example, obtaining OBS data sources, log dump (including bucket authorization), checkpointing enabling, and job import and export.
 -  The AK/SK required by DLI Flink jobs is stored in DEW. To allow DLI to access DEW data during job execution, you need to create an agency to delegate the permissions to operate on DEW data to DLI.
--  To allow DLI to access DLI catalogs to retrieve metadata when executing jobs, you need to create a new agency that grants DLI catalog data operation permissions to DLI. This will enable DLI to access DLI catalogs on your behalf.
+-  To allow DLI to access DLI catalogs to retrieve metadata when executing jobs, you need to create an agency that grants DLI catalog data operation permissions to DLI. This will enable DLI to access DLI catalogs on your behalf.
 -  Cloud data required by DLI Flink jobs is stored in LakeFormation. To allow DLI to access catalogs to retrieve metadata during job execution, you need to create an agency to delegate the permissions to operate on catalog data to DLI.
 
 When creating an agency, you cannot use the default agency names **dli_admin_agency**, **dli_management_agency**, or **dli_data_clean_agency**. It must be unique.

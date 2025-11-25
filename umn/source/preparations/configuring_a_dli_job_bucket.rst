@@ -9,6 +9,10 @@ Before using DLI, you need to configure a DLI job bucket. The bucket is used to 
 
 Configure a DLI job bucket on the **Global Configuration** > **Project** page of the DLI management console.
 
+.. note::
+
+   If you have enabled the function to save job results to a DLI job bucket for your SQL queue, make sure to configure the DLI job bucket before submitting SQL jobs. Failure to do so may result in SQL jobs not being submitted successfully. For details, refer to :ref:`How Do I Check if Job Result Saving to a DLI Job Bucket Is Enabled for a SQL Queue? <dli_01_0563>`
+
 Preparations
 ------------
 
@@ -20,10 +24,24 @@ Notes
 -----
 
 -  Do not use the OBS bucket for other purposes.
+
 -  The OBS bucket must be set and modified by the main account. Member users do not have the permission.
--  If the bucket is not configured, you will not be able to view job logs.
+
+-  If the bucket is not configured, you will not be able to view job results and logs.
+
 -  You can create lifecycle rules to automatically delete objects or change storage classes for objects that meet specified conditions.
+
 -  Inappropriate modifications of the job bucket may lead to loss of historical data.
+
+-  If your SQL queue has been configured to save job results to a DLI job bucket, the system will write the results directly to the specified OBS bucket when executing a SQL job. Ensure the following preparations are completed before submitting the job:
+
+   -  Configure DLI job bucket information before submitting a SQL job. Otherwise, the SQL job may fail to be submitted.
+
+   -  Ensure that the user executing the SQL job has read and write permissions for the DLI job bucket. Otherwise, the job results cannot be properly saved or retrieved.
+
+      When executing a job, the system accesses the job bucket using the identity credentials of the user who submitted the job. If permissions are insufficient, it results in failure to save or retrieve the job results.
+
+   For details, refer to :ref:`How Do I Check if Job Result Saving to a DLI Job Bucket Is Enabled for a SQL Queue? <dli_01_0563>`
 
 Procedure
 ---------
