@@ -6,10 +6,10 @@
       - helpcenter-base-jobs-no-check
     vars:
       sphinx_pdf_files:
-        - dli-dev-guide.pdf
         - dli-umn.pdf
         - dli-api-ref.pdf
         - dli-sqlreference.pdf
+        - dli-dev-guide.pdf
     check:
       jobs:
         - noop
