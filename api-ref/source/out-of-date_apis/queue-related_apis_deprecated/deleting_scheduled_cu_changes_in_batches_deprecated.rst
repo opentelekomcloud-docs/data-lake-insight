@@ -33,8 +33,8 @@ URI
       | queue_name | Yes       | String | Name of the queue for which the scheduled CU change is to be deleted. The name contains 1 to 128 characters. Use commas (,) to separate multiple queue names. |
       +------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -44,8 +44,8 @@ Request
    | plan_ids  | Yes       | Array of Long | Scaling policy IDs of the queues you want to delete. For details, see :ref:`Viewing a Scheduled CU Change (Deprecated) <dli_02_0292>`. Example: "plan_ids": [8,10] |
    +-----------+-----------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

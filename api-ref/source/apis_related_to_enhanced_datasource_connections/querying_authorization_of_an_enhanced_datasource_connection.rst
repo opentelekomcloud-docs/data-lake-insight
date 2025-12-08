@@ -29,13 +29,13 @@ URI
       | connection_id | Yes       | String | Connection ID. Identifies the UUID of a datasource connection.                                                                                |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

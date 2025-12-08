@@ -33,13 +33,13 @@ URI
       | database_name | Yes       | Name of the database to be queried.                                                                                                           |
       +---------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

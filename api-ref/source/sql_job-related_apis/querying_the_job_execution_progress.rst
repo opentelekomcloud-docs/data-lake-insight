@@ -17,7 +17,7 @@ URI
 
    GET /v1/{project_id}/jobs/{job_id}/progress
 
--  Parameter description
+-  Parameter descriptions
 
    .. table:: **Table 1** URI parameters
 
@@ -29,26 +29,33 @@ URI
       | job_id     | Yes       | String | Job ID                                                                                                                                        |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                                 |
    +=================+=================+=================+=============================================================================================================================================================================================================================================================================================================================+
-   | is_success      | Yes             | Boolean         | Indicates whether the request is successfully sent. Value **true** indicates that the request is successfully sent.                                                                                                                                                                                                         |
+   | is_success      | Yes             | Boolean         | Indicates whether the request is successfully sent. **true** indicates that the request is successfully sent.                                                                                                                                                                                                               |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | message         | Yes             | String          | System prompt. If execution succeeds, the parameter setting may be left blank.                                                                                                                                                                                                                                              |
+   | message         | Yes             | String          | System prompt. If the execution succeeds, this parameter may be left blank.                                                                                                                                                                                                                                                 |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | job_id          | No              | String          | ID of a job returned after a job is generated and submitted by using SQL statements. The job ID can be used to query the job status and results.                                                                                                                                                                            |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | status          | Yes             | String          | Job status. The status can be **RUNNING**, **SCALING**, **LAUNCHING**, **FINISHED**, **FAILED**, or **CANCELLED**.                                                                                                                                                                                                          |
+   | status          | Yes             | String          | Job status. Options:                                                                                                                                                                                                                                                                                                        |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | -  **RUNNING**: The job is running.                                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | -  **SCALING**: The job is modifying specifications.                                                                                                                                                                                                                                                                        |
+   |                 |                 |                 | -  **LAUNCHING**: The job is being submitted.                                                                                                                                                                                                                                                                               |
+   |                 |                 |                 | -  **FINISHED**: The job has been completed.                                                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  **FAILED**: The job has failed.                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 | -  **CANCELLED**: The job has been canceled.                                                                                                                                                                                                                                                                                |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sub_job_id      | No              | Integer         | ID of a subjob that is running. If the subjob is not running or it is already finished, the subjob ID may be empty.                                                                                                                                                                                                         |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -153,7 +160,7 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 4 <dli_02_0296__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
+:ref:`Table 4 <dli_02_0296__tb12870f1c5f24b27abd55ca24264af36>` describes status codes.
 
 .. _dli_02_0296__tb12870f1c5f24b27abd55ca24264af36:
 
@@ -169,7 +176,7 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
+If an error occurs when this API is called, the system does not return the result similar to the preceding example, but returns an error code and error message. For details, see :ref:`Error Codes <dli_02_0056>`.
 
 .. table:: **Table 5** Error codes
 

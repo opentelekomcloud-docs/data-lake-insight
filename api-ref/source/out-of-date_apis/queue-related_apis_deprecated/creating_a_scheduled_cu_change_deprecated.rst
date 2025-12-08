@@ -33,8 +33,8 @@ URI
       | queue_name | Yes       | String | Name of the queue for which you want to set a scheduled scaling plan. The name can contain only digits, letters, and underscores (_), but cannot contain only digits or start with an underscore (_). The name contains 1 to 128 characters. |
       +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -62,8 +62,8 @@ Request
    | activate         | No              | Boolean          | Indicates whether the scheduled CU change is activated. The default value is **true**, indicating that the change is activated.                                                                                                                                                                                |
    +------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

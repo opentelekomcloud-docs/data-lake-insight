@@ -31,13 +31,13 @@ URI
       | task_id    | Yes       | String | Job ID. You can call :ref:`Creating an Address Connectivity Test Request <dli_02_0284>` to obtain the value.                                  |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

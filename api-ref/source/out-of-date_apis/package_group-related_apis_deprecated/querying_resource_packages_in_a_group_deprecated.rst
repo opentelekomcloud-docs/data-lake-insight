@@ -12,7 +12,7 @@ This API is used to query resource information of a package group in a **Project
 
 .. note::
 
-   This API has been deprecated and is not recommended.
+   This API is deprecated for Flink 1.15 or later and Spark 3.3.1 or later, and its use is not recommended.
 
 URI
 ---
@@ -47,13 +47,13 @@ URI
 
       GET /v2.0/{project_id}/resources/{resource_name}?group=\ *{group}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

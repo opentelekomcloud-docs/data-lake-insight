@@ -35,13 +35,13 @@ URI
       | table_name    | Yes       | Name of a table that is to be queried.                                                                                                        |
       +---------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

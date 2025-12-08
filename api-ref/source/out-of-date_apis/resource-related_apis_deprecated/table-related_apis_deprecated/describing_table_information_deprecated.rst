@@ -35,13 +35,13 @@ URI
       | table_name    | Yes       | String | Name of the target table.                                                                                                                     |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

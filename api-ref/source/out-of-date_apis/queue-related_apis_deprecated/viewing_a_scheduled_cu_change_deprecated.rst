@@ -33,13 +33,13 @@ URI
       | queue_name | Yes       | String | Name of the queue for which the scheduled CU change is to be deleted. The name contains 1 to 128 characters. Use commas (,) to separate multiple queue names. |
       +------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

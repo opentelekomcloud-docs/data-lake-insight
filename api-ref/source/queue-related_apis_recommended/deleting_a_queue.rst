@@ -33,13 +33,13 @@ URI
       | queue_name | Yes       | String | Name of a queue to be deleted.                                                                                                                |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

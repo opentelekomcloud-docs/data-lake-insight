@@ -69,13 +69,13 @@ URI
 
       GET /v1.0/{project_id}/databases?with-priv=\ *{is_with_priv}*\ &offset=\ *{offsetValue}*\ &limit=\ *{limitValue}*\ &keyword=\ *{keywordValue}*?tags=\ *{tagsValue}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

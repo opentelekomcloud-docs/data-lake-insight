@@ -147,7 +147,7 @@ Response Parameters
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | checkpoint_interval     | No              | Integer          | Snapshot interval. The unit is second. The default value is **10**.                                                                                                     |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | checkpoint_mode         | No              | String           | Snapshot mode. There are two options:                                                                                                                                   |
+   | checkpoint_mode         | No              | String           | Snapshot mode. Options:                                                                                                                                                 |
    |                         |                 |                  |                                                                                                                                                                         |
    |                         |                 |                  | -  **exactly_once**: indicates that data is processed only once.                                                                                                        |
    |                         |                 |                  | -  **at_least_once**: indicates that data is processed at least once.                                                                                                   |
@@ -218,9 +218,11 @@ Response Parameters
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tm_slot_num             | No              | int              | Number of slots per TaskManager node.                                                                                                                                   |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | execution_agency_urn    | No              | String           | Name of the agency authorized to DLI. This parameter is configurable in Flink 1.15.                                                                                     |
+   +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | operator_config         | No              | String           | Operator's parallelism degree. The operator ID and degree of parallelism are displayed in JSON format.                                                                  |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | static_estimator_config | No              | String           | Estimation of static flow diagram resources.                                                                                                                            |
+   | static_estimator_config | No              | String           | Resource estimation for the static stream graph, which is displayed in JSON format.                                                                                     |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | runtime_config          | No              | String           | Customizes optimization parameters when a Flink job is running.                                                                                                         |
    +-------------------------+-----------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -274,6 +276,7 @@ Example Response
                   "udf_jar_url": null,
                   "dirty_data_strategy": null,
                   "entrypoint": "FemaleInfoCollection.jar",
+                  "execution_agency_urn": "myAgencyName",
                   "dependency_jars": [
                       "FemaleInfoCollection.jar",
                       "ObsBatchTest.jar"

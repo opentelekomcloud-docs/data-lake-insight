@@ -49,13 +49,13 @@ URI
 
       GET /v1.0/{project_id}/databases/{database_name}/tables/{table_name}/preview?mode=\ *{previewMode}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

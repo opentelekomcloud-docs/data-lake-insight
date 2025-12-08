@@ -41,7 +41,7 @@ Request Parameters
    +-------------+-----------+---------+-----------------------------------------------------------------+
    | max_cu      | No        | Integer | Maximum CUs allowed for an elastic resource pool.               |
    +-------------+-----------+---------+-----------------------------------------------------------------+
-   | min_cu      | No        | Integer | Maximum CUs allowed for an elastic resource pool.               |
+   | min_cu      | No        | Integer | Minimum CUs allowed for an elastic resource pool.               |
    +-------------+-----------+---------+-----------------------------------------------------------------+
 
 Response Parameters

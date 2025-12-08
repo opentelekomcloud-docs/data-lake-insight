@@ -37,13 +37,13 @@ URI
       | user_name     | Yes       | String | Name of the user whose permission is to be queried.                                                                                           |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

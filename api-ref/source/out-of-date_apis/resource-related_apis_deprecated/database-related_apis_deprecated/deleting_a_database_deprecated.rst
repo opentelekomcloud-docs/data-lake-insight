@@ -49,13 +49,13 @@ URI
 
       DELETE /v1.0/{project_id}/databases/{database_name}?cascade=\ *{is_cascade}*\ &async=\ *{is_asyn}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

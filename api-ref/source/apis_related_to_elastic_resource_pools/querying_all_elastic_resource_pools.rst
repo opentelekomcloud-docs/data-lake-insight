@@ -27,7 +27,7 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 2** query parameters
+   .. table:: **Table 2** Query parameters
 
       +-----------------+-----------------+-----------------+-------------------------------------------------------+
       | Parameter       | Mandatory       | Type            | Description                                           |
@@ -97,7 +97,7 @@ Response Parameters
    +----------------------------+-----------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | current_cu                 | No              | Integer             | Number of current CUs.                                                                                                                                       |
    +----------------------------+-----------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | status                     | No              | String              | Status of the elastic resource pool. Possible values are as follows:                                                                                         |
+   | status                     | No              | String              | Status of the elastic resource pool. The options are:                                                                                                        |
    |                            |                 |                     |                                                                                                                                                              |
    |                            |                 |                     | -  **AVAILABLE**                                                                                                                                             |
    |                            |                 |                     | -  **SCALING**                                                                                                                                               |

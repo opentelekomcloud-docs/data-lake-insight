@@ -31,13 +31,13 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
@@ -114,9 +114,9 @@ If an error occurs when this API is invoked, the system does not return the resu
 
 .. table:: **Table 4** Error codes
 
-   ========== ==========================
+   ========== =========================
    Error Code Error Message
-   ========== ==========================
-   DLI.0002   The object does not exist.
-   DLI.0999   An internal error occurre
-   ========== ==========================
+   ========== =========================
+   DLI.0002   The object does not exist
+   DLI.0999   An internal error occurs
+   ========== =========================

@@ -29,8 +29,8 @@ URI
       | connection_id | Yes       | String | Connection ID. Identifies the UUID of a datasource connection.                                                                                |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -52,8 +52,8 @@ Request
    | ip        | No        | String | The IPv4 address of the host.                                                                                                                                               |
    +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 

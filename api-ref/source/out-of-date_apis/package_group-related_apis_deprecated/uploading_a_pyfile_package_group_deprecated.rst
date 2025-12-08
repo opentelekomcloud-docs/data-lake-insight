@@ -12,7 +12,7 @@ This API is used to upload a group of **PyFile** packages to a **project**. When
 
 .. note::
 
-   This API has been deprecated and is not recommended.
+   This API is deprecated for Flink 1.15 or later and Spark 3.3.1 or later, and its use is not recommended.
 
 URI
 ---
@@ -31,8 +31,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -44,8 +44,8 @@ Request
    | group     | Yes       | String           | Name of a package group.                                                    |
    +-----------+-----------+------------------+-----------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

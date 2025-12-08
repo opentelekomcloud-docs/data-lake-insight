@@ -23,14 +23,14 @@ URI
 
    .. table:: **Table 1** URI parameter
 
-      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter  | Mandatory | Type   | Description                                                                                                                                   |
-      +============+===========+========+===============================================================================================================================================+
-      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
-      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter  | Mandatory | Type   | Description                                                                                                                                      |
+      +============+===========+========+==================================================================================================================================================+
+      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain a project ID, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
+      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -49,7 +49,7 @@ Request
    |                         |                 |                 |                                                                                                                                                                                                                                                                                                      |
    |                         |                 |                 | Concurrent tasks of each job operator. Appropriately increasing the value will improve the overall computing performance of a job. Considering switchover overheads due to increasing threads, the maximum value is four times the number of CUs. One to two times the number of CUs is the optimal. |
    +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tm_cus                  | No              | Integer         | Number of CUs in a taskManager.                                                                                                                                                                                                                                                                      |
+   | tm_cus                  | No              | Integer         | Number of CUs in a TaskManager.                                                                                                                                                                                                                                                                      |
    +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tm_slot_num             | No              | Integer         | Number of slots in a taskManager.                                                                                                                                                                                                                                                                    |
    +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -80,8 +80,8 @@ Request
    | flink_version           | No              | String          | Flink version. Currently, only 1.10 and 1.12 are supported.                                                                                                                                                                                                                                          |
    +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
@@ -131,7 +131,7 @@ Example Response
        "stream_graph": "{\n  \"jid\" : \"44334c4259f6714bddef1ac525364052\",\n  \"name\" : \"InternalJob_1715392878428\",\n  \"nodes\" : [ {\n    \"id\" : \"0a448493b4782967b150582570326227\",\n    \"parallelism\" : 1,\n    \"operator\" : \"\",\n    \"operator_strategy\" : \"\",\n    \"description\" : \"Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"chain_operators_id\" : [ \"0a448493b4782967b150582570326227\" ],\n    \"inputs\" : [ {\n      \"num\" : 0,\n      \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n      \"ship_strategy\" : \"FORWARD\",\n      \"exchange\" : \"pipelined_bounded\"\n    } ],\n    \"optimizer_properties\" : {}\n  }, {\n    \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n    \"parallelism\" : 2,\n    \"operator\" : \"\",\n    \"operator_strategy\" : \"\",\n    \"description\" : \"Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"chain_operators_id\" : [ \"bc764cd8ddf7a0cff126f51c16239658\" ],\n    \"optimizer_properties\" : {}\n  } ],\n  \"operator_list\" : [ {\n    \"id\" : \"0a448493b4782967b150582570326227\",\n    \"name\" : \"Sink: Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"type\" : \"Sink\",\n    \"contents\" : \"Sink(table=[default_catalog.default_database.sink_table], fields=[name, num])\",\n    \"parallelism\" : 1,\n    \"tags\" : \"[SINK]\",\n    \"input_operators_id\" : [ \"bc764cd8ddf7a0cff126f51c16239658\" ]\n  }, {\n    \"id\" : \"bc764cd8ddf7a0cff126f51c16239658\",\n    \"name\" : \"Source: TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"type\" : \"Source\",\n    \"contents\" : \"TableSourceScan(table=[[default_catalog, default_database, orders]], fields=[name, num])\",\n    \"parallelism\" : 2,\n    \"tags\" : \"[PROCESS, UDF]\",\n    \"input_operators_id\" : [ ]\n  } ]\n}"
    }
 
-To make it easier to view the response information, we format **stream_graph** as follows:
+To make it easier to view the response information, format **stream_graph** as follows:
 
 .. code-block::
 

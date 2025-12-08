@@ -43,13 +43,13 @@ URI
       | offset    | Yes       | Integer | Specifies the offset of the page-based query.              |
       +-----------+-----------+---------+------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

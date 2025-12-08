@@ -17,25 +17,25 @@ URI
 
    GET /v1.0/{project_id}/streaming/jobs/{job_id}/execute-graph
 
--  Parameter description
+-  Parameter descriptions
 
    .. table:: **Table 1** URI parameters
 
-      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter  | Mandatory | Type   | Description                                                                                                                                   |
-      +============+===========+========+===============================================================================================================================================+
-      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
-      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-      | job_id     | Yes       | Long   | Job ID.                                                                                                                                       |
-      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter  | Mandatory | Type   | Description                                                                                                                                      |
+      +============+===========+========+==================================================================================================================================================+
+      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain a project ID, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
+      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+      | job_id     | Yes       | Long   | Job ID.                                                                                                                                          |
+      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
@@ -53,17 +53,35 @@ Response
 
 .. table:: **Table 3** **execute_graph** parameters
 
-   =========== ========= ======= =============================
-   Parameter   Mandatory Type    Description
-   =========== ========= ======= =============================
-   jid         No        String  ID of a Flink job.
-   name        No        String  Name of a Flink job.
-   isStoppable No        Boolean Whether a job can be stopped.
-   state       No        String  Execution status of a job.
-   start-time  No        Long    Time when a job is started.
-   end-time    No        Long    Time when a job is stopped.
-   duration    No        Long    Running duration of a job.
-   =========== ========= ======= =============================
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                              |
+   +=================+=================+=================+==========================================================+
+   | jid             | No              | String          | ID of a Flink job.                                       |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | name            | No              | String          | Name of a Flink job.                                     |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | isStoppable     | No              | Boolean         | Whether a job can be stopped.                            |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | state           | No              | String          | Execution status of a job. Options:                      |
+   |                 |                 |                 |                                                          |
+   |                 |                 |                 | -  **INITIALIZING**: The job is being initialized.       |
+   |                 |                 |                 | -  **CREATED**: The job has been created.                |
+   |                 |                 |                 | -  **RUNNING**: The job is running.                      |
+   |                 |                 |                 | -  **FAILING**: A failure occurs.                        |
+   |                 |                 |                 | -  **FAILED**: The job has failed.                       |
+   |                 |                 |                 | -  **CANCELLING**: The job is being canceled.            |
+   |                 |                 |                 | -  **CANCELED**: The job has been canceled.              |
+   |                 |                 |                 | -  **FINISHED**: The job has been completed.             |
+   |                 |                 |                 | -  **RESTARTING**: The job is being restarted.           |
+   |                 |                 |                 | -  **SUSPENDED**: The job has been suspended.            |
+   |                 |                 |                 | -  **RECONCILING**: The system is performing self-check. |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | start-time      | No              | Long            | Time when a job is started.                              |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | end-time        | No              | Long            | Time when a job is stopped.                              |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
+   | duration        | No              | Long            | Running duration of a job.                               |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------+
 
 Example Request
 ---------------
@@ -104,4 +122,4 @@ Status Codes
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
+If an error occurs when this API is called, the system does not return the result similar to the preceding example, but returns an error code and error message. For details, see :ref:`Error Codes <dli_02_0056>`.
