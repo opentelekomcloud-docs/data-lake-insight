@@ -23,7 +23,7 @@ Creating Compute Resources and Metadata Required for Running Jobs
 
    Alternatively, you can enhance DLI's computing environment by creating custom images. Specifically, to enhance the functions and performance of Spark and Flink jobs, you can create custom images by downloading the base images provided by DLI and adding dependencies (files, JAR files, or software) and private capabilities required for job execution. This changes the container runtime environment for the jobs.
 
-   For example, you can add a Python package or C library related to machine learning to a custom image to help you extend functions. For how to create a custom image, see :ref:`Using a Custom Image to Enhance the Job Running Environment <dli_01_0494>`.
+   For example, you can add a Python package or C library related to machine learning to a custom image to help you extend functions. For how to create a custom image, see :ref:`Enhancing the Job Runtime Environment Using a Custom Image <dli_01_0494>`.
 
 -  DLI metadata is the basis for developing SQL and Spark jobs. Before executing a job, you need to define databases and tables based on your business scenario.
 
@@ -31,7 +31,7 @@ Creating Compute Resources and Metadata Required for Running Jobs
 
       Flink allows for dynamic data types, enabling the definition of data structures at runtime without the need for predefined metadata.
 
-   -  Define your data structures, including data catalogs, databases, and tables. For details, see :ref:`Creating Databases and Tables <dli_01_0390>`.
+   -  Define your data structures, including data catalogs, databases, and tables. For details, see :ref:`Creating a Data Directory, Database, and Table <dli_01_0390>`.
    -  Create a bucket to store temporary data generated during job running, such as job logs and job results. For details, see :ref:`Configuring a DLI Job Bucket <dli_01_0536>`.
    -  Configure the permission to access metadata. For details, see :ref:`Configuring Database Permissions on the DLI Console <dli_01_0447>` and :ref:`Configuring Table Permissions on the DLI Console <dli_01_0448>`.
 
@@ -40,7 +40,7 @@ Importing Data to DLI
 
 -  DLI allows you to analyze and query data stored in OBS without the need to migrate it. Simply upload your data to OBS and use DLI for data analysis.
 
--  Cross-source access can reduce data duplication and latency when real-time access and processing of data from different sources is required for service needs.
+-  Cross-source access can reduce data replication and latency when real-time access and processing of data from different sources is required for service needs.
 
    The prerequisites for cross-source access are that DLI can communicate with the data source network and DLI can obtain the access credentials to the data source.
 
@@ -53,7 +53,9 @@ Importing Data to DLI
 
       -  You can also use DEW to manage access credentials for data sources and use a custom agency to authorize DLI to access DEW.
 
-         This applies to Spark 3.3.1 or later and Flink 1.15 or later. For details, see :ref:`Using DEW to Manage Access Credentials for Data Sources <dli_01_0636>` and :ref:`Configuring an Agency to Allow DLI to Access Other Cloud Services <dli_01_0486>`.
+         This applies to Spark 3.3.1 or later and Flink 1.15 or later.
+
+         For details, see :ref:`Managing Data Source Access Credentials Using DEW <dli_01_0636>` and :ref:`Configuring an Agency to Allow DLI to Access Other Cloud Services <dli_01_0486>`.
 
 Submitting a Job Using DLI
 --------------------------
@@ -97,7 +99,7 @@ Using Cloud Eye to Monitor DLI
 
 You can query DLI monitoring metrics and alarms through Cloud Eye management console or APIs.
 
-For example, you can monitor the resource usage and job status of a DLI queue. For details about DLI metrics, see :ref:`Using Cloud Eye to Monitor DLI <dli_01_0445>`.
+For example, you can monitor the resource usage and job status of a DLI queue. For details about DLI metrics, see :ref:`Monitoring DLI Using Cloud Eye <dli_01_0445>`.
 
 Using CTS to Audit DLI
 ----------------------

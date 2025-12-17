@@ -19,7 +19,7 @@ Before dialing the hotline number or sending an email, ensure that the following
 
 -  Quota information, including:
 
-   -  ServiceName
+   -  Service name
    -  Quota type
    -  Required quota
 

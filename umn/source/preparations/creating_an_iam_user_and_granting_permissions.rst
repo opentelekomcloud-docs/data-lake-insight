@@ -5,7 +5,7 @@
 Creating an IAM User and Granting Permissions
 =============================================
 
-You can use Identity and Access Management (IAM) to implement fine-grained permissions control on DLI resources. For details, see :ref:`Overview <dli_01_0440>`.
+You can use Identity and Access Management (IAM) to implement fine-grained permissions management for your DLI resources. For details, see :ref:`Overview <dli_01_0417>`.
 
 If your cloud account does not need individual IAM users, then you may skip over this section.
 
@@ -14,31 +14,33 @@ This section describes how to create an IAM user and grant DLI permissions to th
 Prerequisites
 -------------
 
-Before assigning permissions to user groups, you should learn about system policies and select the policies based on service requirements. For details about system permissions supported by DLI, see :ref:`DLI System Permissions <dli_01_0440__section6224422143120>`.
+Before granting permissions to a user group, familiarize yourself with the DLI permissions that can be added to the user group and select them as needed.
 
 Process Flow
 ------------
 
 .. _dli_01_0418__fig4118155455715:
 
-.. figure:: /_static/images/en-us_image_0206789726.jpg
+.. figure:: /_static/images/en-us_image_0000002415789969.png
    :alt: **Figure 1** Process for granting DLI permissions
 
    **Figure 1** Process for granting DLI permissions
 
-#. .. _dli_01_0418__li895020818018:
+.. table:: **Table 1** Procedure
 
-   Create a user group and grant the permission to it.
-
-   Create a user group on the IAM console and grant the **DLI ReadOnlyAccess** permission to it.
-
-#. Create a user and add the user to the user group.
-
-   Create a user on the IAM console and add the user to the group created in :ref:`1 <dli_01_0418__li895020818018>`.
-
-#. Log in and verify the permission.
-
-   Log in to the management console using the newly created user, and verify that the user's permissions.
-
-   -  Choose **Service List** > **Data Lake Insight**. The DLI management console is displayed. If you can view the queue list on the **Queue Management** page but cannot buy DLI queues by clicking **Buy Queue** in the upper right corner (assume that the current permission contains only **DLI ReadOnlyAccess**), the **DLI ReadOnlyAccess** permission has taken effect.
-   -  Choose any other service in **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **DLI ReadOnlyAccess** permission has already taken effect.
+   +-----------------------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | No.                   | Step                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                       |
+   +=======================+==============================================================+===================================================================================================================================================================================================================================================================================================================================================================================================+
+   | 1                     | Create a user group and grant permissions to it.             | Create a user group on the IAM console and grant the **DLI ReadOnlyAccess** permission to it.                                                                                                                                                                                                                                                                                                     |
+   +-----------------------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 2                     | Create a user and add them to the user group.                | Create a user on the IAM console and add them to the created user group.                                                                                                                                                                                                                                                                                                                          |
+   +-----------------------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 3                     | Log in as the IAM user and verify permissions.               | Log in to the console using the newly created user, switch to the authorized region, and verify permissions.                                                                                                                                                                                                                                                                                      |
+   |                       |                                                              |                                                                                                                                                                                                                                                                                                                                                                                                   |
+   |                       |                                                              | -  Choose **Service List** > **Data Lake Insight**. If you can view the elastic resource pool list on the **Resources** > **Resource Pool** page but cannot purchase an elastic resource pool by clicking **Buy Resource Pool** in the upper right corner (assuming the current permission includes only **DLI ReadOnlyAccess**), the **DLI ReadOnlyAccess** permission has already taken effect. |
+   |                       |                                                              | -  Choose any other service in **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **DLI ReadOnlyAccess** permission has already taken effect.                                                                                                                                                                                    |
+   +-----------------------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 4                     | Create a custom policy and associate it with the user group. | If the predefined DLI permissions in the system do not meet your authorization requirements, you can create custom policies.                                                                                                                                                                                                                                                                      |
+   |                       |                                                              |                                                                                                                                                                                                                                                                                                                                                                                                   |
+   |                       |                                                              | For details about how to create a custom policy, see :ref:`Creating a Custom Policy <dli_01_0451__en-us_topic_0206789937_section15041715821>`.                                                                                                                                                                                                                                                    |
+   +-----------------------+--------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

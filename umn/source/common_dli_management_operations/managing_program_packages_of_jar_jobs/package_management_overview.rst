@@ -10,13 +10,13 @@ Before running DLI jobs, UDF JAR files or Jar job packages need to be uploaded t
 There are two ways to manage packages:
 
 -  (Recommended) Upload packages to OBS: Upload Jar packages to an OBS bucket in advance and select the OBS path when configuring a job.
--  Upload packages to DLI: Upload Jar packages to an OBS bucket in advance, create a package on the **Data Management** > **Package Management** page of the DLI management console, and select the DLI package when configuring a job.
+-  The DLI package function will soon be discontinued. Upload packages to DLI: Upload Jar packages to an OBS bucket in advance, create a package on the **Data Management** > **Package Management** page of the DLI management console, and select the DLI package when configuring a job.
 
 This section describes how to upload and manage packages on the DLI management console.
 
 .. note::
 
-   -  When using Spark 3.3.1 or later or Flink1.15 or later to run jobs, you are advised to select packages stored in OBS.
+   -  The DLI package function will soon be discontinued. When using Spark 3.3.1 or later or Flink 1.15 or later to run jobs, you are advised to select packages stored in OBS.
    -  When packaging Spark or Flink Jar jobs, do not upload the dependency packages that the platform already has to avoid conflicts with the built-in dependency packages of the platform. Refer to :ref:`DLI Built-in Dependencies <dli_01_0397>` for built-in dependency packages.
 
 Notes and Constraints

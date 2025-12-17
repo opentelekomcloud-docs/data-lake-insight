@@ -8,7 +8,9 @@ How Do I Specify an OBS Path When Creating an OBS Table?
 Scenario
 --------
 
-When creating an OBS table, you must specify a table path in the database. The path format is as follows: obs://xxx/database name/table name.
+When creating an OBS table, you must specify a table path in the database.
+
+The path format is as follows: obs://xxx/database name/table name.
 
 Correct Example
 ---------------
