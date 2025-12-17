@@ -1,0 +1,160 @@
+:original_name: dli_02_0016.html
+
+.. _dli_02_0016:
+
+Querying Queue Details
+======================
+
+Function
+--------
+
+This API is used to list details of a specific queue in a project.
+
+URI
+---
+
+-  URI format
+
+   GET /v1.0/{project_id}/queues/{queue_name}
+
+-  Parameter descriptions
+
+   .. table:: **Table 1** URI parameters
+
+      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                                                                        |
+      +=================+=================+=================+====================================================================================================================================+
+      | project_id      | Yes             | String          | Project ID, which is used for resource isolation. For how to obtain a project ID, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
+      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+
+      | queue_name      | Yes             | String          | Specifies the name of a queue to be queried.                                                                                       |
+      |                 |                 |                 |                                                                                                                                    |
+      |                 |                 |                 | .. note::                                                                                                                          |
+      |                 |                 |                 |                                                                                                                                    |
+      |                 |                 |                 |    The queue name is case-insensitive. The uppercase letters will be automatically converted to lowercase letters.                 |
+      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+.. table:: **Table 2** Response parameters
+
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | Parameter                    | Mandatory       | Type            | Description                                                                                                           |
+   +==============================+=================+=================+=======================================================================================================================+
+   | is_success                   | No              | Boolean         | Indicates whether the request is successfully executed. **true** indicates that the request is successfully executed. |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | message                      | No              | String          | System prompt. If the execution succeeds, this parameter may be left blank.                                           |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | queueName                    | No              | String          | Queue name.                                                                                                           |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | .. note::                                                                                                             |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 |    The queue name is case-insensitive. The uppercase letters will be automatically converted to lowercase letters.    |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | description                  | No              | String          | Queue description.                                                                                                    |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | owner                        | No              | String          | User who creates a queue.                                                                                             |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | create_time                  | No              | Long            | Time when the queue is created. The timestamp is in milliseconds.                                                     |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | queueType                    | No              | String          | Queue type. Options:                                                                                                  |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | -  **sql**: Queues used to run SQL jobs                                                                               |
+   |                              |                 |                 | -  **general**: Queues used to run Flink and Spark Jar jobs                                                           |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | If this parameter is not specified, the default value **sql** is used.                                                |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | cuCount                      | No              | Integer         | Number of compute units (CUs) bound to a queue, that is, the number of CUs in the current queue.                      |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | resource_id                  | No              | String          | Resource ID of a queue.                                                                                               |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | resource_mode                | No              | Integer         | Resource mode                                                                                                         |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | -  **0**: Shared queue                                                                                                |
+   |                              |                 |                 | -  **1**: Dedicated queue                                                                                             |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id        | No              | String          | Enterprise project ID.                                                                                                |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | **0** indicates the default enterprise project.                                                                       |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 | .. note::                                                                                                             |
+   |                              |                 |                 |                                                                                                                       |
+   |                              |                 |                 |    Users who have enabled Enterprise Management can set this parameter to bind a specified project.                   |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | cu_spec                      | No              | Integer         | Specifications of a queue.                                                                                            |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | cu_scale_out_limit           | No              | Integer         | Upper limit of the CU value for elastic scaling of the current queue.                                                 |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | cu_scale_in_limit            | No              | Integer         | Lower limit of the CU value for elastic scaling of the current queue.                                                 |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | elastic_resource_pool_name   | No              | String          | Name of the elastic resource pool.                                                                                    |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | support_spark_versions       | No              | Array[String]   | Spark version supported by the queue                                                                                  |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | default_spark_version        | No              | String          | Default Spark version of the queue                                                                                    |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | support_hetu_engine_versions | No              | Array[String]   | HetuEngine version supported by the queue                                                                             |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | default_hetu_engine_version  | No              | String          | Default HetuEngine version of the queue                                                                               |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | support_flink_sql_versions   | No              | Array[String]   | Flink SQL version supported by the queue                                                                              |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | default_flink_sql_version    | No              | String          | Default Flink SQL version of the queue                                                                                |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | support_flink_jar_versions   | No              | Array[String]   | Flink Jar version supported by the queue                                                                              |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   | default_flink_jar_version    | No              | String          | Default Flink Jar version of the queue                                                                                |
+   +------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+
+Example Request
+---------------
+
+None
+
+Example Response
+----------------
+
+.. code-block::
+
+   {
+       "is_success": true,
+       "message": "",
+       "owner": "testuser",
+       "description": "",
+       "queueName": "test",
+       "create_time": 1587613028851,
+       "queueType": "general",
+       "cuCount": 16,
+       "resource_id": "03d51b88-db63-4611-b779-9a72ba0cf58b",
+       "resource_mode": 0
+   ,
+       "resource_type": "vm",
+        "cu_spec": 16
+   }
+
+Status Codes
+------------
+
+:ref:`Table 3 <dli_02_0016__tb12870f1c5f24b27abd55ca24264af36>` describes status codes.
+
+.. _dli_02_0016__tb12870f1c5f24b27abd55ca24264af36:
+
+.. table:: **Table 3** Status codes
+
+   =========== ========================
+   Status Code Description
+   =========== ========================
+   200         The query is successful.
+   400         Request error.
+   500         Internal server error.
+   =========== ========================
+
+Error Codes
+-----------
+
+If an error occurs when this API is called, the system does not return the result similar to the preceding example, but returns an error code and error message. For details, see :ref:`Error Codes <dli_02_0056>`.

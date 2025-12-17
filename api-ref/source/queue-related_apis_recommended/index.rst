@@ -8,7 +8,7 @@ Queue-related APIs (Recommended)
 -  :ref:`Creating a Queue <dli_02_0194>`
 -  :ref:`Deleting a Queue <dli_02_0195>`
 -  :ref:`Querying All Queues <dli_02_0196>`
--  :ref:`Viewing Details of a Queue <dli_02_0016>`
+-  :ref:`Querying Queue Details <dli_02_0016>`
 -  :ref:`Restarting, Scaling Out, and Scaling In Queues <dli_02_0249>`
 -  :ref:`Creating an Address Connectivity Test Request <dli_02_0284>`
 -  :ref:`Querying Connectivity Test Details of a Specified Address <dli_02_0285>`
@@ -20,7 +20,7 @@ Queue-related APIs (Recommended)
    creating_a_queue
    deleting_a_queue
    querying_all_queues
-   viewing_details_of_a_queue
+   querying_queue_details
    restarting_scaling_out_and_scaling_in_queues
    creating_an_address_connectivity_test_request
    querying_connectivity_test_details_of_a_specified_address

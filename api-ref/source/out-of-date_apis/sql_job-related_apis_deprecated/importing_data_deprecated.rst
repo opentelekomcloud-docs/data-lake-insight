@@ -43,8 +43,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -118,8 +118,8 @@ Request
    z         Time zone             Pacific Standard Time; PST; GMT-08:00
    ========= ===================== =====================================
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 

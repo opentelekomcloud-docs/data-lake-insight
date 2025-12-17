@@ -47,13 +47,13 @@ URI
       | index     | No        | Integer | When a submitted job is retried, multiple driver logs are generated. This parameter specifies the **index** number of the specified driver log. The default value is **0**. This parameter must be used together with the **type** parameter. If only **index** is specified, the default value of **type** is **driver**. |
       +-----------+-----------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

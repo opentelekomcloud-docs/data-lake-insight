@@ -15,9 +15,9 @@ URI
 
 -  URI format
 
-   GET/v1.0/{project_id}/jobs/{job_id}/detail
+   GET /v1.0/{project_id}/jobs/{job_id}/detail
 
--  Parameter description
+-  Parameter descriptions
 
    .. table:: **Table 1** URI parameters
 
@@ -29,22 +29,22 @@ URI
       | job_id     | Yes       | String | Job ID. You can get the value by calling :ref:`Submitting a SQL Job (Recommended) <dli_02_0102>`.                                             |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
    +--------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter          | Mandatory       | Type             | Description                                                                                                                                                                                   |
    +====================+=================+==================+===============================================================================================================================================================================================+
-   | is_success         | Yes             | Boolean          | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed.                                                                             |
+   | is_success         | Yes             | Boolean          | Whether the request is successfully executed. **true** indicates that the request is successfully executed.                                                                                   |
    +--------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | message            | Yes             | String           | System prompt. If execution succeeds, the parameter setting may be left blank.                                                                                                                |
+   | message            | Yes             | String           | System prompt. If the execution succeeds, this parameter may be left blank.                                                                                                                   |
    +--------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | job_id             | Yes             | String           | Job ID.                                                                                                                                                                                       |
    +--------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -56,7 +56,7 @@ Response
    +--------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | export_mode        | No              | String           | Specified export mode during data export and query result saving.                                                                                                                             |
    |                    |                 |                  |                                                                                                                                                                                               |
-   |                    |                 |                  | Available values are **ErrorIfExists** and **Overwrite**.                                                                                                                                     |
+   |                    |                 |                  | Options: **ErrorIfExists** and **Overwrite**.                                                                                                                                                 |
    |                    |                 |                  |                                                                                                                                                                                               |
    |                    |                 |                  | -  **ErrorIfExists**: Ensure that the specified export directory does not exist. If the specified export directory exists, an error is reported and the export operation cannot be performed. |
    |                    |                 |                  | -  **Overwrite**: If you add new files to a specific directory, existing files will be deleted.                                                                                               |
@@ -88,7 +88,7 @@ Response
 
 .. _dli_02_0022__table9391124139:
 
-.. table:: **Table 3** tags parameter
+.. table:: **Table 3** tags parameters
 
    ========= ========= ====== ===========
    Parameter Mandatory Type   Description
@@ -150,7 +150,7 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 4 <dli_02_0022__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
+:ref:`Table 4 <dli_02_0022__tb12870f1c5f24b27abd55ca24264af36>` describes status codes.
 
 .. _dli_02_0022__tb12870f1c5f24b27abd55ca24264af36:
 
@@ -161,10 +161,10 @@ Status Codes
    =========== ========================
    200         The query is successful.
    400         Request error.
-   500         Internal service error.
+   500         Internal server error.
    =========== ========================
 
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
+If an error occurs when this API is called, the system does not return the result similar to the preceding example, but returns an error code and error message. For details, see :ref:`Error Codes <dli_02_0056>`.

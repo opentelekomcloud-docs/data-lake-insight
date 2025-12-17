@@ -29,7 +29,7 @@ VBS provides system-defined policies that can be directly used in IAM. You can a
 
 -  Actions: added to a custom policy to control permissions for specific operations.
 
--  Related actions: Actions on which a specific action depends to take effect. When assigning permissions for the action to a user, you also need to assign permissions for the related actions.
+-  Dependencies: actions which a specific action depends on. When allowing an action for a user, you also need to allow any existing action dependencies for that user.
 
 -  IAM or enterprise projects: Type of projects for which an action will take effect. Policies that contain actions supporting both IAM and enterprise projects can be assigned to user groups and take effect in both IAM and Enterprise Management. Policies that only contain actions supporting IAM projects can be assigned to user groups and only take effect for IAM. Such policies will not take effect if they are assigned to user groups in Enterprise Project.
 
@@ -67,6 +67,14 @@ DLI supports the following actions that can be defined in custom policies:
    | Granting elastic resource pool permissions                                     | PUT /v1.0/{project_id}/user-authorization                                       | dli:elasticresourcepool:grantPrivilege  | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
    | Revoking elastic resource pool permissions                                     | PUT /v1.0/{project_id}/user-authorization                                       | dli:elasticresourcepool:revokePrivilege | Y           | x                    |
+   +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
+   | Obtaining information about all catalogs in a project                          | GET /v3/{project_id}/catalogs                                                   | dli:catalog:list                        | Y           | x                    |
+   +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
+   | Querying details about a specified catalog                                     | GET /v3/{project_id}/catalogs/{catalog_name}                                    | dli:catalog:get                         | Y           | x                    |
+   +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
+   | Binding a catalog                                                              | POST /v3/{project_id}/catalogs/action                                           | dli:catalog:bind                        | Y           | x                    |
+   +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
+   | Unbinding a catalog                                                            | POST /v3/{project_id}/catalogs/action                                           | dli:catalog:unbind                      | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+
    | Creating a database                                                            | POST /v1.0/{project_id}/databases                                               | dli:database:createDatabase             | Y           | x                    |
    +--------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------------------------------------+-------------+----------------------+

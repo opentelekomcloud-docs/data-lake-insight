@@ -29,8 +29,8 @@ URI
       | queue_name | Yes       | String | Name of a queue.                                                                                                                              |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -40,8 +40,8 @@ Request
    | address   | Yes       | String | Test address. The format is *IP address or domain name*\ **:**\ *port*. |
    +-----------+-----------+--------+-------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

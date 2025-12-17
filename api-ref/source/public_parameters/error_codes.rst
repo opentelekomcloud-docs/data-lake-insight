@@ -5,7 +5,7 @@
 Error Codes
 ===========
 
-If an error occurs in API calling, no result is returned. Identify the cause of error based on the error codes of each API. If an error occurs in API calling, HTTP status code 4\ *xx* or 5\ *xx* is returned. The response body contains the specific error code and information. If you are unable to identify the cause of an error, contact technical personnel and provide the error code so that we can help you solve the problem as soon as possible.
+If an error occurs in API calling, no result is returned. Identify the cause of error based on the error codes of each API. If an error occurs in API calling, HTTP status code 4\ *xx* or 5\ *xx* is returned. The response body contains the specific error code and information. If you fail to locate the cause of the error, contact technical support and provide the error code for troubleshooting.
 
 Format of an Error Response Body
 --------------------------------

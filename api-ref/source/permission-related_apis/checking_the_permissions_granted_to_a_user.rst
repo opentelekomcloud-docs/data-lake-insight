@@ -21,27 +21,41 @@ URI
 
 .. table:: **Table 1** URI parameters
 
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                                                                   |
-   +============+===========+========+===============================================================================================================================================+
-   | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                        |
+   +=================+=================+=================+====================================================================================================================================+
+   | project_id      | Yes             | String          | **Definition**                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | Project ID, which is used for resource isolation. For how to obtain a project ID, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | **Constraints**                                                                                                                    |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | None                                                                                                                               |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | **Range**                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | The value can contain 1 to 64 characters. Only letters and digits are allowed.                                                     |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | **Default Value**                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                    |
+   |                 |                 |                 | None                                                                                                                               |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-.. table:: **Table 2** query parameter description
+.. table:: **Table 2** query parameter descriptions
 
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                          |
-   +=================+=================+=================+======================================================================================================================+
-   | object          | Yes             | String          | Data object to be assigned, which corresponds to the **object** in API permission assignment.                        |
-   |                 |                 |                 |                                                                                                                      |
-   |                 |                 |                 | -  **jobs.flink.\ Fink job ID**, data in the specified job will be queried.                                          |
-   |                 |                 |                 | -  **groups. Package group name**, data in the specified package group will be queried.                              |
-   |                 |                 |                 | -  **resources.\ Package name**, data in the specified package will be queried.                                      |
-   |                 |                 |                 |                                                                                                                      |
-   |                 |                 |                 |    .. note::                                                                                                         |
-   |                 |                 |                 |                                                                                                                      |
-   |                 |                 |                 |       When you view the packages in a group, the **object** format is **resources.package group name/package name**. |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                       |
+   +=================+=================+=================+===================================================================================================================+
+   | object          | Yes             | String          | Data object to be assigned, which corresponds to the **object** in API permission assignment.                     |
+   |                 |                 |                 |                                                                                                                   |
+   |                 |                 |                 | -  **jobs.flink.**\ *Flink job ID*, data in the specified job will be queried.                                    |
+   |                 |                 |                 | -  **groups.**\ *Package group name*, data in the specified package group will be queried.                        |
+   |                 |                 |                 | -  **resources.**\ *Package name*, data in the specified package will be queried.                                 |
+   |                 |                 |                 |                                                                                                                   |
+   |                 |                 |                 | .. note::                                                                                                         |
+   |                 |                 |                 |                                                                                                                   |
+   |                 |                 |                 |    When you view the packages in a group, the **object** format is **resources.package group name/package name**. |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+
 
 .. note::
 
@@ -49,31 +63,41 @@ URI
 
    GET /v1.0/{project_id}/authorization/privileges\ *?object={object}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type            | Description                                                                                                       |
-   +=============+===========+=================+===================================================================================================================+
-   | is_success  | Yes       | Boolean         | Whether the request is successfully executed. Value **true** indicates that the request is successfully executed. |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | message     | Yes       | String          | Indicates the system prompt. If execution succeeds, this parameter may be left blank.                             |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | object_name | No        | String          | Object name.                                                                                                      |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | object_type | No        | String          | Object type.                                                                                                      |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | privileges  | No        | Array of Object | Permission information. For details, see :ref:`Table 4 <dli_02_0252__table431614366394>`.                         |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
-   | count       | No        | Integer         | Total number of permissions.                                                                                      |
-   +-------------+-----------+-----------------+-------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                 |
+   +=================+=================+=================+=============================================================================================================+
+   | is_success      | Yes             | Boolean         | Whether the request is successfully executed. **true** indicates that the request is successfully executed. |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | message         | Yes             | String          | Indicates the system prompt. If the execution succeeds, this parameter may be left blank.                   |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | object_name     | No              | String          | Object name.                                                                                                |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | object_type     | No              | String          | Object type. Options:                                                                                       |
+   |                 |                 |                 |                                                                                                             |
+   |                 |                 |                 | -  **database**: database.                                                                                  |
+   |                 |                 |                 | -  **table**: data table.                                                                                   |
+   |                 |                 |                 | -  **column**: column.                                                                                      |
+   |                 |                 |                 | -  **queue**: queue.                                                                                        |
+   |                 |                 |                 | -  **datasourceauth**: enhanced datasource connection.                                                      |
+   |                 |                 |                 | -  **resource**: resource package.                                                                          |
+   |                 |                 |                 | -  **group**: resource package group.                                                                       |
+   |                 |                 |                 | -  **elasticresourcepool**: elastic resource pool.                                                          |
+   |                 |                 |                 | -  **variable**: global variable.                                                                           |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | privileges      | No              | Array of Object | Permission information. For details, see :ref:`Table 4 <dli_02_0252__table431614366394>`.                   |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   | count           | No              | Integer         | Total number of permissions.                                                                                |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
 .. _dli_02_0252__table431614366394:
 
@@ -128,7 +152,7 @@ Example Response
 Status Codes
 ------------
 
-:ref:`Table 5 <dli_02_0252__tb12870f1c5f24b27abd55ca24264af36>` describes the status code.
+:ref:`Table 5 <dli_02_0252__tb12870f1c5f24b27abd55ca24264af36>` describes status codes.
 
 .. _dli_02_0252__tb12870f1c5f24b27abd55ca24264af36:
 
@@ -139,18 +163,18 @@ Status Codes
    =========== =======================
    200         Authorization succeeds.
    400         Request error.
-   500         Internal service error.
+   500         Internal server error.
    =========== =======================
 
 Error Codes
 -----------
 
-If an error occurs when this API is invoked, the system does not return the result similar to the preceding example, but returns the error code and error information. For details, see :ref:`Error Codes <dli_02_0056>`.
+If an error occurs when this API is called, the system does not return the result similar to the preceding example, but returns an error code and error message. For details, see :ref:`Error Codes <dli_02_0056>`.
 
 .. table:: **Table 6** Error codes
 
    +------------+-----------------------------------------------------------------------------+
    | Error Code | Error Message                                                               |
    +============+=============================================================================+
-   | DLI.0001   | user input validation failed, object_type sql or saprk is not supported now |
+   | DLI.0001   | user input validation failed, object_type sql or spark is not supported now |
    +------------+-----------------------------------------------------------------------------+

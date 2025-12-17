@@ -35,13 +35,13 @@ URI
       | plan_id    | Yes       | Long   | ID of scheduled CU change to be deleted. For details about how to obtain the IDs, see :ref:`Viewing a Scheduled CU Change (Deprecated) <dli_02_0292>`.        |
       +------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 

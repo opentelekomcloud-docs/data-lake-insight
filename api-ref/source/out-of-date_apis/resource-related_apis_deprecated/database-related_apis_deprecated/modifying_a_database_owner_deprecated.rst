@@ -33,8 +33,8 @@ URI
       | database_name | Yes       | String | Name of a database.                                                                                                                           |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -44,8 +44,8 @@ Request
    | new_owner | Yes       | String | Name of the new owner. The new user must be a sub-user of the current tenant. |
    +-----------+-----------+--------+-------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

@@ -24,13 +24,13 @@ URI
       +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter  | Mandatory | Type   | Description                                                                                                                                                                          |
       +============+===========+========+======================================================================================================================================================================================+
-      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`.                                        |
+      | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain a project ID, see :ref:`Obtaining a Project ID <dli_02_0183>`.                                     |
       +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | var_name   | Yes       | String | A global variable name can contain a maximum of 128 characters, including only digits, letters, and underscores (_), but cannot start with an underscore (_) or contain only digits. |
       +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -40,8 +40,8 @@ Request
    var_value Yes       String Global variable value.
    ========= ========= ====== ======================
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

@@ -12,7 +12,7 @@ This API is used to delete resource packages in a group in a **Project**.
 
 .. note::
 
-   This API has been deprecated and is not recommended.
+   This API is deprecated for Flink 1.15 or later and Spark 3.3.1 or later, and its use is not recommended.
 
 URI
 ---
@@ -47,13 +47,13 @@ URI
 
       DELETE /v2.0/{project_id}/resources/{resource_name}\ *?group={group}*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 -  Code 200 is returned if you successfully delete a resource package.
 -  Code 404 is returned if you initiate a request to delete a resource package that does not exist.

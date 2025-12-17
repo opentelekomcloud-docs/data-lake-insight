@@ -13,6 +13,8 @@ APIs Related to Enhanced Datasource Connections
 -  :ref:`Unbinding a Queue <dli_02_0192>`
 -  :ref:`Modifying Host Information <dli_02_0200>`
 -  :ref:`Querying Authorization of an Enhanced Datasource Connection <dli_02_0256>`
+-  :ref:`Creating a Route <dli_02_0371>`
+-  :ref:`Deleting a Route <dli_02_0372>`
 
 .. toctree::
    :maxdepth: 1
@@ -26,3 +28,5 @@ APIs Related to Enhanced Datasource Connections
    unbinding_a_queue
    modifying_host_information
    querying_authorization_of_an_enhanced_datasource_connection
+   creating_a_route
+   deleting_a_route

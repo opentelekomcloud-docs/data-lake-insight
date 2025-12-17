@@ -59,7 +59,7 @@ URI
       |                   |                 |                 | -  CloudTable                                                                                                                                                |
       |                   |                 |                 | -  CSS                                                                                                                                                       |
       |                   |                 |                 | -  DLI                                                                                                                                                       |
-      |                   |                 |                 | -  GaussDB(DWS)                                                                                                                                              |
+      |                   |                 |                 | -  DWS                                                                                                                                                       |
       |                   |                 |                 | -  Geomesa                                                                                                                                                   |
       |                   |                 |                 | -  HBase                                                                                                                                                     |
       |                   |                 |                 | -  JDBC                                                                                                                                                      |
@@ -79,13 +79,13 @@ URI
 
       GET /v1.0/{project_id}/databases/{database_name}/tables\ *?keyword=tb&with-detail=true*
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

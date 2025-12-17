@@ -31,8 +31,8 @@ URI
       | project_id | Yes       | String | Project ID, which is used for resource isolation. For details about how to obtain its value, see :ref:`Obtaining a Project ID <dli_02_0183>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -86,8 +86,8 @@ Request
    |                 |                 |                  |    If **Action** is **Update** and the update list is empty, all permissions of the user in the database or table are revoked.             |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 

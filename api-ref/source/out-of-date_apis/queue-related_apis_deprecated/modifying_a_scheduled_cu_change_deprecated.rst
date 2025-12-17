@@ -35,8 +35,8 @@ URI
       | plan_id    | Yes       | String | ID of scheduled CU change to be modified. Use commas (,) to separate multiple IDs. For details about how to obtain the IDs, see :ref:`Viewing a Scheduled CU Change (Deprecated) <dli_02_0292>`. |
       +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -64,8 +64,8 @@ Request
    | activate         | No              | Boolean          | Indicates whether the scheduled CU change is activated. The default value is **true**, indicating that the change is activated.                                                                                                                                                                                |
    +------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
@@ -133,10 +133,8 @@ If an error occurs when this API is invoked, the system does not return the resu
 
 .. table:: **Table 5** Error codes
 
-   +-----------------------------------+-------------------------------------------------------------------------------------------------+
-   | Error Code                        | Error Message                                                                                   |
-   +===================================+=================================================================================================+
-   | DLI.0999                          | Queue plans create failed. The plan plan_A can not generate a scale plan, please check all time |
-   |                                   |                                                                                                 |
-   |                                   | settings for the plan.                                                                          |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------+
+   +------------+------------------------------------------------------------------------------------------------------------------------+
+   | Error Code | Error Message                                                                                                          |
+   +============+========================================================================================================================+
+   | DLI.0999   | Queue plans create failed. The plan plan_A can not generate a scale plan, please check all time settings for the plan. |
+   +------------+------------------------------------------------------------------------------------------------------------------------+

@@ -12,7 +12,8 @@ This API is used to restart, scale out, and scale in queues.
 
 .. note::
 
-   Only SQL queues in the **Available** status can be restarted. (The queue status is **Available** only after the SQL job is successfully executed.)
+   -  Only SQL queues in the **Available** state can be restarted. (The queue status is **Available** only after the SQL job is successfully executed.)
+   -  This API cannot be used to scale out or scale in queues within an elastic resource pool. For how to scale out or scale in queues within an elastic resource pool, refer to :ref:`Modifying the Scaling Policy of a Queue Associated with an Elastic Resource Pool <dli_02_0332>`.
 
 URI
 ---
@@ -33,8 +34,8 @@ URI
       | queue_name | Yes       | String | Name of a queue.                                                                                                                              |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -56,8 +57,8 @@ Request
    | cu_count        | No              | Integer         | Number of CUs to be scaled in or out. This parameter is optional when **action** is set to **scale_out** or **scale_in**. The value of **cu_count** must be a multiple of 16. |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

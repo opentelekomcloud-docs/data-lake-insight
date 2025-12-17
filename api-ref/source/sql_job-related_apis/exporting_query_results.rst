@@ -32,8 +32,8 @@ URI
       | job_id     | Yes       | String | Job ID.                                                                                                                                       |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -97,8 +97,8 @@ Request
    |                    |                 |                 | -  If there is already an escape character in the data content, add another escape character before the existing one to avoid the original character being used as an escape character.       |
    +--------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

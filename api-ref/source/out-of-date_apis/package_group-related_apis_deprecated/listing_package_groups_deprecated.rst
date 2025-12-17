@@ -12,7 +12,7 @@ This API is used to query all resources in a project, including groups.
 
 .. note::
 
-   This API has been deprecated and is not recommended.
+   This API is deprecated for Flink 1.15 or later and Spark 3.3.1 or later, and its use is not recommended.
 
 URI
 ---
@@ -46,13 +46,13 @@ URI
       | tags            | No              | String          | Specifies a label for filtering.                     |
       +-----------------+-----------------+-----------------+------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
@@ -104,7 +104,7 @@ Response
    | module_type     | No              | String           | Module type.                                                               |
    +-----------------+-----------------+------------------+----------------------------------------------------------------------------+
    | status          | No              | String           | -  Value **UPLOADING** indicates that the package group is being uploaded. |
-   |                 |                 |                  | -  Value **READY** indicates that the package group has been uploaded.     |
+   |                 |                 |                  | -  Value **READY** indicates that the module package has been uploaded.    |
    |                 |                 |                  | -  Value **FAILED** indicates that the package group fails to be uploaded. |
    +-----------------+-----------------+------------------+----------------------------------------------------------------------------+
    | resources       | No              | Array of Strings | List of names of resource packages contained in the group.                 |

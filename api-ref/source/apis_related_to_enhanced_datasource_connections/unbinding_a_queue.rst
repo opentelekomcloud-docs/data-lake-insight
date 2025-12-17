@@ -29,8 +29,8 @@ URI
       | connection_id | Yes       | String | Connection ID. Identifies the UUID of a datasource connection.                                                                                |
       +---------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -40,8 +40,8 @@ Request
    | queues    | No        | Array of String | List of queue names that are available for datasource connections. |
    +-----------+-----------+-----------------+--------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

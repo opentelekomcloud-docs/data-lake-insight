@@ -33,13 +33,13 @@ URI
       | batch_id   | Yes       | String | ID of a batch processing job. Set the value to the job ID obtained in :ref:`Creating a Batch Processing Job <dli_02_0124>`.                   |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 

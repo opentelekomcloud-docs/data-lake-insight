@@ -29,8 +29,8 @@ URI
       | connection_id | Yes       | String | Connection ID. Identifies the UUID of a datasource connection. Set the value to the connection ID returned by :ref:`Creating an Enhanced Datasource Connection <dli_02_0187>`. |
       +---------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -40,8 +40,8 @@ Request
    | queues    | No        | Array of Strings | List of queue names that are available for datasource connections. |
    +-----------+-----------+------------------+--------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 

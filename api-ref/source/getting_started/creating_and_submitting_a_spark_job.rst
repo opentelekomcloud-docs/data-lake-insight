@@ -23,7 +23,7 @@ Involved APIs
 -  :ref:`Uploading a Package Group (Deprecated) <dli_02_0130>`: Upload the resource package required by the Spark job.
 -  :ref:`Querying Resource Packages in a Group (Deprecated) <dli_02_0172>`: Check whether the uploaded resource package is correct.
 -  :ref:`Creating a Batch Processing Job <dli_02_0124>`: Create and submit a Spark batch processing job.
--  :ref:`Querying a Batch Job Status <dli_02_0127>`: View the status of a batch processing job.
+-  :ref:`Querying a Batch Processing Job Status <dli_02_0127>`: View the status of a batch processing job.
 -  :ref:`Querying Batch Job Logs (Deprecated) <dli_02_0128>`: View batch processing job logs.
 
 Procedure
@@ -277,7 +277,7 @@ Procedure
       URI format: GET /v2.0/{*project_id*}/batches/{*batch_id*}/state
 
       -  Obtain the value of {*project_id*} from :ref:`Obtaining a Project ID <dli_02_0183>`.
-      -  For details about the query parameters, see :ref:`Querying a Batch Job Status <dli_02_0127>`.
+      -  For details about the query parameters, see :ref:`Querying a Batch Processing Job Status <dli_02_0127>`.
 
    -  Example request
 

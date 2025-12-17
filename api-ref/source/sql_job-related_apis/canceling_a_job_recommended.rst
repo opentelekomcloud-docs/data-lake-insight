@@ -29,13 +29,13 @@ URI
       | job_id     | Yes       | String | Job ID. You can get the value by calling :ref:`Submitting a SQL Job (Recommended) <dli_02_0102>`.                                             |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 None
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameters
 
