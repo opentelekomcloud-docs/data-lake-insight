@@ -9,4 +9,4 @@ DLI allows you to subscribe to an SMN topic for failed jobs.
 
 #. Log in to the DLI console.
 #. In the navigation pane on the left, choose **Queue Management**.
-#. On the **Queue Management** page, click **Create SMN Topic** in the upper left corner. .
+#. On the **Queue Management** page, click **Create SMN Topic** in the upper left corner.

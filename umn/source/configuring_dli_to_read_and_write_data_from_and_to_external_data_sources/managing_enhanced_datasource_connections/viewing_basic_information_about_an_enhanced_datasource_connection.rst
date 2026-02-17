@@ -7,7 +7,7 @@ Viewing Basic Information About an Enhanced Datasource Connection
 
 After creating an enhanced datasource connection, you can view and manage it on the management console.
 
-This section describes how to view basic information about an enhanced datasource connection on the management console, including the enhanced datasource connection's host information and more.
+This section describes how to view basic information about an enhanced datasource connection on the management console, including the enhanced datasource connection's host information, IPv6 support, and more.
 
 Procedure
 ---------
@@ -25,6 +25,7 @@ Procedure
 
    You can view the following information:
 
+   -  **IPv6 Support**: If you selected a subnet with IPv6 enabled when creating the enhanced datasource connection, then your enhanced datasource connection will support IPv6.
    -  **Host Information**: When accessing an MRS HBase cluster, you need to configure the host name (domain name) and the corresponding IP address of the instance. For details, see :ref:`Modifying Host Information in an Elastic Resource Pool <dli_01_0013>`.
 
 .. |image1| image:: /_static/images/en-us_image_0000001891931040.png

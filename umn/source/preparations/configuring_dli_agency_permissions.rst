@@ -89,9 +89,9 @@ In addition to the permissions provided by **dli_management_agency**, you need t
 
 -  Data cleanup agency required for clearing data according to the lifecycle of a table and clearing lakehouse table data. You need to create a DLI agency named **dli_data_clean_agency** on IAM and grant permissions to it. You need to create an agency and customize permissions for it. However, the agency name is fixed to **dli_data_clean_agency**.
 -  **Tenant Administrator** permissions are required to access data from OBS to execute Flink jobs on DLI, for example, obtaining OBS data sources, log dump (including bucket authorization), checkpointing enabling, and job import and export.
--  The AK/SK required by DLI Flink jobs is stored in DEW. To allow DLI to access DEW data during job execution, you need to create an agency to delegate the permissions to operate on DEW data to DLI.
+-  The AK and SK required for DLI Flink jobs are securely stored in DEW. To enable DLI to access DEW data during job execution, you need to create an agency that grants DLI the necessary permissions to operate on DEW data. This agency allows DLI to access DEW on your behalf.
 -  To allow DLI to access DLI catalogs to retrieve metadata when executing jobs, you need to create an agency that grants DLI catalog data operation permissions to DLI. This will enable DLI to access DLI catalogs on your behalf.
--  Cloud data required by DLI Flink jobs is stored in LakeFormation. To allow DLI to access catalogs to retrieve metadata during job execution, you need to create an agency to delegate the permissions to operate on catalog data to DLI.
+-  Cloud data required for DLI Flink jobs is securely stored in LakeFormation. To enable DLI to access catalogs to retrieve metadata during job execution, you need to create an agency that grants DLI the necessary permissions to operate on catalog data. This agency allows DLI to access catalog metadata on your behalf.
 
 When creating an agency, you cannot use the default agency names **dli_admin_agency**, **dli_management_agency**, or **dli_data_clean_agency**. It must be unique.
 

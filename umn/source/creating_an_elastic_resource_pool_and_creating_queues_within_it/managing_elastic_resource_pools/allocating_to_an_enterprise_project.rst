@@ -5,15 +5,15 @@
 Allocating to an Enterprise Project
 ===================================
 
-You can create enterprise projects matching the organizational structure of your enterprises to centrally manage cloud resources across regions by project. Then you can create user groups and users with different permissions and add them to enterprise projects.
+An enterprise project is a cloud resource management approach that allows organizations to plan resources based on their organizational structure. It enables unified management of resources distributed across different regions under specific enterprise projects. Additionally, user groups and users with varying permissions can be assigned to each enterprise project.
 
-DLI allows you to select an enterprise project when creating an elastic resource pool. This section describes how to bind an elastic resource pool to and modify an enterprise project.
+DLI allows you to select an enterprise project when creating an elastic resource pool. This section explains how to bind or modify the enterprise project for a DLI elastic resource pool.
 
 .. note::
 
-   Modifying the enterprise project of an elastic resource pool will modify the enterprise projects of the queues in the elastic resource pool.
+   Changing the enterprise project of an elastic resource pool will also update the enterprise project of its associated queue resources.
 
-   Only queues under the same enterprise project can be bound to an elastic resource pool.
+   Here, the elastic resource pool only supports adding queues from the same enterprise project.
 
 Prerequisites
 -------------
@@ -27,7 +27,7 @@ When creating an elastic resource pool, you can select a created enterprise proj
 
 Alternatively, you can click **Create Enterprise Project** to go to the Enterprise Project Management Service console to create an enterprise project and check existing ones.
 
-For how to create a queue, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`.
+For details about how to create a queue, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`.
 
 Modifying an Enterprise Project
 -------------------------------

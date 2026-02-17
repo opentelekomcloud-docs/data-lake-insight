@@ -29,7 +29,7 @@ Managing a Job Tag
 
 DLI allows you to add, modify, or delete tags for jobs.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 #. Click the name of the job to be viewed. The **Job Details** page is displayed.
 #. Click **Tags** to display the tag information about the current job.
 #. On the page that appears, click **Add/Edit Tag** in the upper left corner.
@@ -78,7 +78,7 @@ Searching for a Job by Tag
 
 If tags have been added to a job, you can search for the job by setting tag filtering conditions to quickly find it.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 #. In the upper right corner of the page, click the search box and select **Tags**.
 #. Choose a tag key and value as prompted. If no tag key or value is available, create a tag for the job. For details, see :ref:`Managing a Job Tag <dli_01_0463__section236374613167>`.
 #. Choose other tags to generate a tag combination for job search.

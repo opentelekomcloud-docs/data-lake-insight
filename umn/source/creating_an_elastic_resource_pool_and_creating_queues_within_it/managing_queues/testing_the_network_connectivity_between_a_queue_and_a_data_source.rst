@@ -24,6 +24,8 @@ Testing the Address Connectivity Between a Queue and the Data Source
    -  IPv4 + Port number: 192.168.x.x:8080
    -  Domain name: domain-xxxxxx.com
    -  Domain name + Port number: domain-xxxxxx.com:8080
+   -  IPv6 address: 2001:0db8:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+   -  [IPv6] + Port number: [2001:0db8:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:8080
 
 #. Click **Test**.
 

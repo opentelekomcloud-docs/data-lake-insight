@@ -5,24 +5,29 @@
 Advantages
 ==========
 
-Full SQL Compatibility
-----------------------
+Pure SQL Operations: Zero Learning Curve
+----------------------------------------
 
-You do not need a background in big data to use DLI for data analysis. You only need to know SQL, and you are good to go. The SQL syntax is fully compatible with the standard ANSI SQL 2003.
+-  DLI offers standard SQL APIs, enabling you to perform massive data query and analysis using only SQL. Its syntax is fully compatible with ANSI SQL 2003 standards.
+-  This significantly lowers the barrier for data analysts and business professionals, enhancing overall efficiency in data analysis.
 
-Decoupled Storage and Compute
------------------------------
+Decoupled Storage and Compute: Efficient Resource Utilization
+-------------------------------------------------------------
 
-DLI compute and storage loads are decoupled. This architecture allows you to flexibly configure storage and compute resources on demand, improving resource utilization and reducing costs.
+-  DLI decouples storage and compute workloads through its decoupling architecture, allowing flexible configuration of resources based on demand. This improves resource utilization and reduces costs.
+-  The elastic resource pool supports multiple engines like Flink and Spark, further optimizing resource allocation efficiency.
 
-DLI's elastic resource pool feature effectively boosts compute resource utilization. The same compute resources can support multiple compute engines like Flink and Spark simultaneously.
+Serverless Architecture: Full-Scenario Adaptability
+---------------------------------------------------
 
-Serverless DLI
---------------
+DLI is fully compatible with `Apache Spark <https://spark.apache.org/>`__ and `Apache Flink <https://flink.apache.org/>`__ ecosystems and APIs, providing a unified serverless big data computing service for real-time, offline, and interactive analytics.
 
-DLI is fully compatible with `Apache Spark <https://spark.apache.org/>`__ and `Apache Flink <https://flink.apache.org/>`__ ecosystems and APIs. It is a serverless big data computing and analysis service that integrates real-time, offline, and interactive analysis. Offline applications can be seamlessly migrated to the cloud, reducing the migration workload. DLI provides a highly-scalable framework integrating batch and stream processing, allowing you to handle data analysis requests with ease. With a deeply optimized kernel and architecture, DLI delivers 100-fold performance improvement compared with the MapReduce model. Your analysis is backed by an industry-vetted 99.95% SLA.
+-  On-premises Spark/Flink applications can migrate to the cloud effortlessly, minimizing migration efforts and ensuring smooth transitions.
+-  A batch-stream fusion framework delivers scalable, high-performance processing for TB to EB-level data, meeting diverse big data needs.
+-  Deep optimizations in product core and architecture result in performance over 100x faster than traditional MapReduce models, with 99.95% SLA.
 
-Cross-Source Analysis
----------------------
+Cross-Source Analysis: No Data Migration Required
+-------------------------------------------------
 
-Analyze your data across databases. No migration required. A unified view of your data gives you a comprehensive understanding of your data and helps you innovate faster. There are no restrictions on data formats, cloud data sources, or whether the database is created online or off.
+-  Supports multiple data formats and sources, including cloud-based (e.g., OBS, RDS, DWS, CSS, MongoDB, Redis), ECS-hosted databases, and on-premises databases.
+-  Enables unified cross-source analysis without data relocation, accelerating enterprise-wide data insights and innovation.

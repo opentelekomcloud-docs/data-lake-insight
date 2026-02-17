@@ -84,13 +84,13 @@ The **SQL Jobs** page displays all SQL jobs, which may span multiple pages if th
 Viewing Job Details
 -------------------
 
-On the **SQL Jobs** page, you can click |image2| in front of a job record to view details about the job.
+On the **SQL Jobs** page, click |image2| next to a job to view its details.
 
-Job details vary with job types. The job details vary depending on the job types, status, and configuration options. The following describes how to load data, create a table, and select a job. For details about other job types, see the information on the management console.
+The details displayed vary depending on the job type, status, and configuration options. The console will show the precise information based on these factors. Below are examples for three common job types: load data, create table, and select jobs. For other job types, refer to the console for supported details.
 
--  **Load data** (job type: IMPORT) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter settings, label, number of results, scanned data, number of scanned data, number of error records, storage path, data format, database, table, table header, separator, reference character, escape character, date format, timestamp format, total CPU used, and output bytes.
--  **Create table** (job type: DDL) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter settings, tags, number of results, scanned data, and database.
--  **Select** (job type: QUERY) include the following information: queue, job ID, username, type, status, execution statement, running duration, creation time, end time, parameter setting, label, number of results (results of successful executions can be exported), and scanned data, username, result status (results of successful tasks can be viewed. Failure causes of failed tasks are displayed), database, total CPU used, and output bytes.
+-  For **load data** jobs (job type: **IMPORT**), the following details are included: queue, job ID, username, type, status, execution statement, runtime duration, creation time, end time, parameter settings, tags, result count, scanned data volume, scan record count, error record count, storage path, data format, database, table, table headers, delimiter, quote character, escape character, date format, timestamp format, cumulative CPU usage, and output bytes.
+-  For **create table** jobs (job type: **DDL**), the details include: queue, job ID, username, type, status, execution statement, runtime duration, creation time, end time, parameter settings, tags, result count, scanned data volume, and database.
+-  For **select** jobs (job type: **QUERY**), the details consist of: queue, job ID, username, type, status, execution statement, runtime duration, creation time, end time, parameter settings, tags, result count (exportable if successful), scanned data volume, executing user, result status (view results if successful; failure reason if failed), database, cumulative CPU usage, and output bytes.
 
    .. note::
 

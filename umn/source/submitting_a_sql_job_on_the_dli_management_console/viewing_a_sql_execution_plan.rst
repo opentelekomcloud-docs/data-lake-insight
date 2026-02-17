@@ -12,7 +12,7 @@ This section describes how to view a SQL execution plan on the DLI management co
 Notes and Constraints
 ---------------------
 
--  You can only view SQL execution plans for Spark 3.3.\ *x* or later queues and HetuEngine queues.
+-  You can only view SQL execution plans for Spark 3.3.\ *x* or later queues.
 -  You can only view a SQL execution plan after a SQL job is executed.
 -  You can only view the SQL execution plan for SQL jobs that have reached the **Finished** state.
 -  Make sure you have authorized DLI to use OBS buckets for saving the SQL execution plans of user jobs.

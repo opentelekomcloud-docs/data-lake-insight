@@ -21,7 +21,7 @@ Notes
 DLI Supported Data Sources
 --------------------------
 
-:ref:`Table 1 <dli_01_0410__table1771918377534>` lists the data sources supported by DLI. For how to use the data sources, see *Data Lake Insight SQL Syntax Reference*.
+:ref:`Table 1 <dli_01_0410__table1771918377534>` lists the data sources supported by DLI. For details about how to use the data sources, see *Data Lake Insight SQL Syntax Reference*.
 
 .. _dli_01_0410__table1771918377534:
 
@@ -35,7 +35,7 @@ DLI Supported Data Sources
    DCS Redis     Y       Y             Y             Y
    DDS           Y       Y             Y             Y
    DMS for Kafka x       x             Y             Y
-   GaussDB(DWS)  Y       Y             Y             Y
+   DWS           Y       Y             Y             Y
    MRS HBase     Y       Y             Y             Y
    MRS Kafka     x       x             Y             Y
    MRS OpenTSDB  Y       Y             x             Y
