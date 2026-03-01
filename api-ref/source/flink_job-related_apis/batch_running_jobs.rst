@@ -88,19 +88,19 @@ Example Response
    [
        {
            "is_success": "true",
-           "message": "The request for submitting DLI jobs is delivered successfully."
+           "message": "The request for submitting DLI jobs is successfully delivered."
        },
        {
            "is_success": "true",
-           "message": "The request for submitting DLI jobs is delivered successfully."
+           "message": "The request for submitting DLI jobs is successfully delivered."
        },
        {
            "is_success": "true",
-           "message": "The request for submitting DLI jobs is delivered successfully."
+           "message": "The request for submitting DLI jobs is successfully delivered."
        },
        {
            "is_success": "true",
-           "message": "The request for submitting DLI jobs is delivered successfully."
+           "message": "The request for submitting DLI jobs is successfully delivered."
        }
    ]
 

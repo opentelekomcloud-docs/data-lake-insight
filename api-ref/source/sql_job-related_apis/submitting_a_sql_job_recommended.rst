@@ -50,7 +50,7 @@ URI
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Range**                                                                                                                          |
       |                 |                 |                 |                                                                                                                                    |
-      |                 |                 |                 | The value can contain 1 to 64 characters. Only letters and digits are allowed.                                                     |
+      |                 |                 |                 | The value can contain up to 64 characters. Only letters and digits are allowed.                                                    |
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Default Value**                                                                                                                  |
       |                 |                 |                 |                                                                                                                                    |
@@ -155,7 +155,7 @@ Request Parameters
    |                 |                 |                  |                                                                                                                              |
    |                 |                 |                  | **Range**                                                                                                                    |
    |                 |                 |                  |                                                                                                                              |
-   |                 |                 |                  | -  **spark**: Spark engine                                                                                                   |
+   |                 |                 |                  | Only the Spark engine is currently supported. The default value is **spark**.                                                |
    |                 |                 |                  |                                                                                                                              |
    |                 |                 |                  | **Default Value**                                                                                                            |
    |                 |                 |                  |                                                                                                                              |
