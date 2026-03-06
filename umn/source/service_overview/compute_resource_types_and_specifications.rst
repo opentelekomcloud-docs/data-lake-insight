@@ -5,7 +5,7 @@
 Compute Resource Types and Specifications
 =========================================
 
-DLI compute resources are the foundation for job execution. Both DLI's elastic resource pools and queues fall under compute resources. This section introduces the types and specifications of DLI compute resources.
+When performing big data analysis with DLI, you need to select the appropriate compute resources based on specific business needs. DLI offers a variety of resource types and product specifications, including elastic resource pools and queues. This section provides a detailed overview of these options to help you make informed decisions tailored to your requirements.
 
 What Are Elastic Resource Pools and Queues?
 -------------------------------------------
@@ -26,7 +26,7 @@ Before we dive into the compute resource modes of DLI, let us first understand t
 
    -  An elastic resource pool can simultaneously support SQL, Spark, and Flink jobs. The specific job types supported depend on the queue types created within the elastic resource pool.
 
-      Refer to :ref:`DLI Compute Resource Modes and Supported Queue Types <dli_07_0027__section1666431292413>`.
+      See :ref:`DLI Compute Resource Modes and Supported Queue Types <dli_07_0027__section1666431292413>`.
 
 -  .. _dli_07_0027__li1752524818338:
 
@@ -48,7 +48,7 @@ Before we dive into the compute resource modes of DLI, let us first understand t
 
    -  **For SQL:**
 
-      For SQL queues are used to execute SQL jobs and supports specifying engine types including Spark and HetuEngine.
+      For SQL queues are designed to execute SQL jobs. They support the Spark engine.
 
       This type of queues is suitable for businesses that require fast data query and analysis, as well as regular cache clearing or environment resetting.
 
@@ -74,7 +74,7 @@ DLI offers three compute resource management modes, each with unique advantages 
    A pooled management mode for compute resources that provides dynamic scaling capabilities. Queues within the same elastic resource pool share compute resources. By appropriately setting up compute resource allocation policies for queues, you can enhance compute resource utilization and handle peak business demands efficiently.
 
    -  Use cases: suitable for scenarios with significant fluctuations in business volume, such as periodic data batch processing tasks or real-time data processing needs.
-   -  Supported queue types: for SQL (Spark), for SQL (HetuEngine), and for general purpose. For details about DLI queue types, see :ref:`Queue Types <dli_07_0027__li1752524818338>`.
+   -  Supported queue types: for SQL (Spark) and for general purpose. For details about DLI queue types, see :ref:`Queue Types <dli_07_0027__li1752524818338>`.
 
       .. note::
 
@@ -128,9 +128,7 @@ DLI Compute Resource Modes and Supported Queue Types
    +====================================+======================+======================================================================+==========================================================================================================================================================+
    | **Elastic resource pool mode**     | For SQL (Spark)      | Resources are shared among multiple queues for a single user.        | Suitable for scenarios with significant fluctuations in business demand, where resources need to be flexibly adjusted to meet peak and off-peak demands. |
    |                                    |                      |                                                                      |                                                                                                                                                          |
-   |                                    | For SQL (HetuEngine) | Resources are dynamically allocated and can be flexibly adjusted.    |                                                                                                                                                          |
-   |                                    |                      |                                                                      |                                                                                                                                                          |
-   |                                    | For general purpose  |                                                                      |                                                                                                                                                          |
+   |                                    | For general purpose  | Resources are dynamically allocated and can be flexibly adjusted.    |                                                                                                                                                          |
    +------------------------------------+----------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
    | **Global sharing mode**            | default queue        | Resources are shared among multiple queues for multiple users.       | Suitable for temporary or testing projects where data size is uncertain or data processing is only required occasionally.                                |
    |                                    |                      |                                                                      |                                                                                                                                                          |

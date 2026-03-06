@@ -25,7 +25,7 @@ DLI allows you to add, modify, or delete tags for datasource connections.
 Procedure
 ---------
 
-#. In the left navigation pane of the DLI management console, choose **Datasource Connections**.
+#. In the navigation pane of the DLI management console, choose **Datasource Connections**.
 #. In the **Operation** column of the link, choose **More** > **Tags**.
 #. The tag management page is displayed, showing the tag information about the current connection.
 #. Click **Add/Edit Tag**. The **Add/Edit Tag** dialog is displayed. Add or edit tag keys and values and click **OK**.

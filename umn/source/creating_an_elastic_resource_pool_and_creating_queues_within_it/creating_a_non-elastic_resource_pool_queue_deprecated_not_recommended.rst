@@ -7,7 +7,7 @@ Creating a Non-Elastic Resource Pool Queue (Deprecated, Not Recommended)
 
 Queues in the non-elastic resource pool mode are the previous-gen of resource management for DLI. It involved purchasing and releasing resources based on usage demands, requiring estimation of resource needs before making purchases.
 
-Queues in an elastic resource pool are recommended, as they offer the flexibility to use resources with high utilization as needed. For how to buy an elastic resource pool and create queues within it, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`.
+Queues in an elastic resource pool are recommended, as they offer the flexibility to use resources with high utilization as needed. For details about how to buy an elastic resource pool and create queues within it, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`.
 
 .. note::
 
@@ -46,7 +46,7 @@ Procedure
 
 #. You can create a queue on the **Overview**, **SQL Editor**, or **Queue Management** page.
 
-   -  In the upper right corner of the **Overview** page, click Create Queue.
+   -  In the upper right corner of the **Overview** page, click **Create Queue**.
    -  To create a queue on the **Queue Management** page:
 
       a. In the navigation pane on the left of the DLI management console, choose **Resources** > **Queue Management**.
@@ -57,7 +57,7 @@ Procedure
       a. In the navigation pane on the left of the DLI management console, choose **SQL Editor**.
       b. Click **Queues**. On the tab page displayed, click |image1| on the right to create a queue.
 
-#. On the **Create Queue** page displayed, set the parameters according to :ref:`Table 2 <dli_01_0363__table17301125219910>`.
+#. On the displayed **Create Queue** page, configure the parameters according to :ref:`Table 2 <dli_01_0363__table17301125219910>`.
 
    .. _dli_01_0363__table17301125219910:
 

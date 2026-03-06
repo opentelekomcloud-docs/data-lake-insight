@@ -14,16 +14,6 @@ IAM can authorize different enterprise users to access cloud service resources. 
 
 For newly created users, they must first log in to DLI once to record metadata before being able to use DLI.
 
-.. table:: **Table 1** IAM authorization types
-
-   +---------------------------------+-------------------------------------+--------------------------+-------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Type                            | Core Relationship                   | Permission               | Authorization Method                      | Use Case                                                                                                                                                                                                                                                                                         |
-   +=================================+=====================================+==========================+===========================================+==================================================================================================================================================================================================================================================================================================+
-   | Role/Policy-based authorization | User-permission-authorization scope | -  System-defined role   | Assigning roles or policies to principals | To authorize a user, you need to add it to a user group first and then specify the scope of authorization. It provides a limited number of condition keys and cannot meet the requirements of fine-grained permissions control. This method is suitable for small- and medium-sized enterprises. |
-   |                                 |                                     | -  System-defined policy |                                           |                                                                                                                                                                                                                                                                                                  |
-   |                                 |                                     | -  Custom policy         |                                           |                                                                                                                                                                                                                                                                                                  |
-   +---------------------------------+-------------------------------------+--------------------------+-------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
 IAM is free to use, and you only need to pay for the resources in your account.
 
 If your account does not need individual IAM users for permission management, skip over this section.
@@ -31,17 +21,18 @@ If your account does not need individual IAM users for permission management, sk
 DLI System Permissions
 ----------------------
 
-:ref:`Table 2 <dli_01_0417__table14662032053>` lists all system-defined permissions for DLI.
+:ref:`Table 1 <dli_01_0417__table14662032053>` lists all system-defined permissions for DLI.
 
 .. _dli_01_0417__table14662032053:
 
-.. table:: **Table 2** DLI system permissions
+.. table:: **Table 1** DLI system permissions
 
-   +----------------------------------------------------------------+
-   | Type                                                           |
-   +================================================================+
-   | System-defined permissions for role/policy-based authorization |
-   +----------------------------------------------------------------+
+   +----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+   | Type                                                           | Link                                                                                                               |
+   +================================================================+====================================================================================================================+
+   | System-defined permissions for role/policy-based authorization | -  :ref:`DLI System Permissions <dli_07_0006>`                                                                     |
+   |                                                                | -  :ref:`Common Operations Supported by DLI System Policy <dli_07_0006__en-us_topic_0206791772_table168060107500>` |
+   +----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 Permission types: Based on the granularity of authorization, they are divided into roles and policies.
 

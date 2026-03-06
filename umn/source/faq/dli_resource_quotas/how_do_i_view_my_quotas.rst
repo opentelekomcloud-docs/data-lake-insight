@@ -11,11 +11,11 @@ How Do I View My Quotas?
 
 #. Click the **My Quota** icon |image2| in the upper right corner of the page.
 
-   The **Service Quota** page is displayed.
+   This will take you to the **Service Quota** page.
 
-#. View the used and total quota of each type of resources on the displayed page.
+#. Here, you can view the total quota and usage details for each resource.
 
-   If a quota cannot meet service requirements, increase a quota.
+   If your current quota is insufficient, follow the steps below to request an increase.
 
 .. |image1| image:: /_static/images/en-us_image_0000001487683840.png
 .. |image2| image:: /_static/images/en-us_image_0000001488163536.png

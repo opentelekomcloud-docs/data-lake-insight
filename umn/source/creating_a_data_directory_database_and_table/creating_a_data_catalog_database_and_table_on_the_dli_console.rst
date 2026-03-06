@@ -88,7 +88,7 @@ Before creating a table, ensure that a database has been created.
 
    .. note::
 
-      Datasource connection tables, such as View tables, HBase (MRS) tables, OpenTSDB (MRS) tables, GaussDB(DWS) tables, RDS tables, and CSS tables, cannot be created. You can use SQL to create views and datasource connection tables. For details, see "Creating a View" and "Creating a Datasource Connection Table" in *Data Lake Insight SQL Syntax Reference*.
+      Datasource connection tables, such as View tables, HBase (MRS) tables, OpenTSDB (MRS) tables, DWS tables, RDS tables, and CSS tables, cannot be created. You can use SQL to create views and datasource connection tables. For details, see "Creating a View" and "Creating a Datasource Connection Table" in the *Data Lake Insight SQL Syntax Reference*.
 
    -  To create a table on the **Data Management** page:
 
@@ -144,7 +144,7 @@ Before creating a table, ensure that a database has been created.
          |                       | -  **date**: The value ranges from 0000-01-01 to 9999-12-31.                                                                                                                           |                       |
          |                       | -  **double**: Each number is stored on eight bytes.                                                                                                                                   |                       |
          |                       | -  **boolean**: Each value is stored on one byte.                                                                                                                                      |                       |
-         |                       | -  **decimal**: The valid bits are positive integers between 1 to 38, including 1 and 38. The decimal digits are integers less than 10.                                                |                       |
+         |                       | -  **decimal**: The valid bits are positive integers ranging from 1 to 38. The decimal digits are integers less than 10.                                                               |                       |
          |                       | -  **smallint/short**: The number is stored on two bytes.                                                                                                                              |                       |
          |                       | -  **bigint/long**: The number is stored on eight bytes.                                                                                                                               |                       |
          |                       | -  **timestamp**: The data indicates a date and time. The value can be accurate to six decimal points.                                                                                 |                       |

@@ -10,9 +10,9 @@ What Is Datasource Authentication?
 
 When analyzing across multiple sources, you are advised not to configure authentication information directly in a job as it can lead to password leakage. Instead, you are advised to use either DEW or datasource authentication provided by DLI to securely store data source authentication information.
 
--  DEW is a comprehensive cloud-based encryption service designed to address challenges related to data security, key security, and the complexities of key management. You are advised to use DEW to store authentication information for data sources.
+-  DEW is designed to address critical challenges such as data security, key security, and the complexities of key management. You are advised to use DEW to securely store authentication credentials for your data sources.
 
-   You are advised to use DEW to store authentication information of data sources when Spark 3.3.1 or later and Flink 1.15 or later jobs access data sources using datasource connections. This will help you address issues related to data security, key security, and complex key management. For details, see :ref:`Managing Data Source Access Credentials Using DEW <dli_01_0636>`.
+   For cross-source access scenarios involving Spark 3.3.1 or later versions, as well as Flink 1.15 or later versions, we strongly advise using DEW to manage your data source authentication information. This approach ensures robust solutions for data security, key protection, and streamlined key management. For details, see :ref:`Managing Data Source Access Credentials Using DEW <dli_01_0636>`.
 
 -  Datasource authentication is used to manage authentication information for accessing specified data sources. After datasource authentication is configured, you do not need to repeatedly configure data source authentication information in jobs, improving data source authentication security while enabling DLI to securely access data sources.
 
@@ -35,7 +35,7 @@ Notes and Constraints
    |                                   |    -  CSS: applies to 6.5.4 or later CSS clusters with the security mode enabled.                                    |
    |                                   |    -  Kerberos: applies to MRS security clusters with Kerberos authentication enabled.                               |
    |                                   |    -  Kafka_SSL: applies to Kafka with SSL enabled.                                                                  |
-   |                                   |    -  Password: applies to GaussDB(DWS), RDS, DDS, and DCS.                                                          |
+   |                                   |    -  Password: applies to DWS, RDS, DDS, and DCS.                                                                   |
    +-----------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 Datasource Authentication Types
@@ -46,7 +46,7 @@ DLI supports four types of datasource authentication. Select an authentication t
 -  CSS: applies to 6.5.4 or later CSS clusters with the security mode enabled. During the configuration, you need to specify the username, password, and authentication certificate of the cluster and store the information in DLI through datasource authentication so that DLI can securely access CSS data sources. For details, see :ref:`Creating a CSS Datasource Authentication <dli_01_0427>`.
 -  Kerberos: applies to MRS security clusters with Kerberos authentication enabled. During the configuration, you need to specify MRS cluster authentication credentials, including the **krb5.conf** and **user.keytab** files. For details, see :ref:`Creating a Kerberos Datasource Authentication <dli_01_0558>`.
 -  Kafka_SSL: applies to Kafka with SSL enabled. During the configuration, you need to specify the KafkaTruststore path and password. For details, see :ref:`Creating a Kafka_SSL Datasource Authentication <dli_01_0560>`.
--  Password: applies to GaussDB(DWS), RDS, DDS, and DCS data sources. During the configuration, you need to store the passwords of the data sources in DLI. For details, see :ref:`Creating a Password Datasource Authentication <dli_01_0559>`.
+-  Password: applies to DWS, RDS, DDS, and DCS data sources. During the configuration, you need to store the passwords of the data sources in DLI. For details, see :ref:`Creating a Password Datasource Authentication <dli_01_0559>`.
 
 Jobs That Can Connect to Data Sources Through Datasource Authentication
 -----------------------------------------------------------------------
@@ -60,42 +60,42 @@ Different types of jobs can connect to data sources through different types of d
 
 .. table:: **Table 2** Data sources that Spark SQL jobs can connect to through datasource authentication
 
-   +--------------------------------+-----------------------------------+-----------------------------------------------------+
-   | Datasource Authentication Type | Data Source                       | Notes and Constraints                               |
-   +================================+===================================+=====================================================+
-   | CSS                            | CSS                               | The cluster version is 6.5.4 or later.              |
-   |                                |                                   |                                                     |
-   |                                |                                   | The security mode has been enabled for the cluster. |
-   +--------------------------------+-----------------------------------+-----------------------------------------------------+
-   | Password                       | GaussDB(DWS), RDS, DDS, and Redis | ``-``                                               |
-   +--------------------------------+-----------------------------------+-----------------------------------------------------+
+   +--------------------------------+--------------------------+-----------------------------------------------------+
+   | Datasource Authentication Type | Data Source              | Notes and Constraints                               |
+   +================================+==========================+=====================================================+
+   | CSS                            | CSS                      | The cluster version is 6.5.4 or later.              |
+   |                                |                          |                                                     |
+   |                                |                          | The security mode has been enabled for the cluster. |
+   +--------------------------------+--------------------------+-----------------------------------------------------+
+   | Password                       | DWS, RDS, DDS, and Redis | ``-``                                               |
+   +--------------------------------+--------------------------+-----------------------------------------------------+
 
 .. _dli_01_0561__table208001745193719:
 
 .. table:: **Table 3** Data sources that Flink SQL jobs can connect to through datasource authentication
 
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   | Table Type      | Datasource Authentication Type | Data Source                | Notes and Constraints                                         |
-   +=================+================================+============================+===============================================================+
-   | Source table    | Kerberos                       | Kafka                      | Kerberos authentication has been enabled for MRS Kafka.       |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   |                 | Kafka_SSL                      | Kafka                      | SASL_SSL authentication has been enabled for DMS Kafka.       |
-   |                 |                                |                            |                                                               |
-   |                 |                                |                            | SASL authentication has been enabled for MRS Kafka.           |
-   |                 |                                |                            |                                                               |
-   |                 |                                |                            | SSL authentication has been enabled for MRS Kafka.            |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   | Result table    | Kerberos                       | HBase                      | Kerberos authentication has been enabled for the MRS cluster. |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   |                 |                                | Kafka                      | Kerberos authentication has been enabled for MRS Kafka.       |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   |                 | Kafka_SSL                      | Kafka                      | SASL_SSL authentication has been enabled for DMS Kafka.       |
-   |                 |                                |                            |                                                               |
-   |                 |                                |                            | SASL authentication has been enabled for MRS Kafka.           |
-   |                 |                                |                            |                                                               |
-   |                 |                                |                            | SSL authentication has been enabled for MRS Kafka.            |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   |                 | Password                       | GaussDB(DWS), RDS, and CSS | ``-``                                                         |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
-   | Dimension table | Password                       | RDS and Redis              | ``-``                                                         |
-   +-----------------+--------------------------------+----------------------------+---------------------------------------------------------------+
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   | Table Type      | Datasource Authentication Type | Data Source       | Notes and Constraints                                         |
+   +=================+================================+===================+===============================================================+
+   | Source table    | Kerberos                       | Kafka             | Kerberos authentication has been enabled for MRS Kafka.       |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   |                 | Kafka_SSL                      | Kafka             | SASL_SSL authentication has been enabled for DMS Kafka.       |
+   |                 |                                |                   |                                                               |
+   |                 |                                |                   | SASL authentication has been enabled for MRS Kafka.           |
+   |                 |                                |                   |                                                               |
+   |                 |                                |                   | SSL authentication has been enabled for MRS Kafka.            |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   | Result table    | Kerberos                       | HBase             | Kerberos authentication has been enabled for the MRS cluster. |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   |                 |                                | Kafka             | Kerberos authentication has been enabled for MRS Kafka.       |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   |                 | Kafka_SSL                      | Kafka             | SASL_SSL authentication has been enabled for DMS Kafka.       |
+   |                 |                                |                   |                                                               |
+   |                 |                                |                   | SASL authentication has been enabled for MRS Kafka.           |
+   |                 |                                |                   |                                                               |
+   |                 |                                |                   | SSL authentication has been enabled for MRS Kafka.            |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   |                 | Password                       | DWS, RDS, and CSS | ``-``                                                         |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+
+   | Dimension table | Password                       | RDS and Redis     | ``-``                                                         |
+   +-----------------+--------------------------------+-------------------+---------------------------------------------------------------+

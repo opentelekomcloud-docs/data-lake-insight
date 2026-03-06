@@ -156,7 +156,7 @@ In this example, the elastic resource pool **dli_resource_pool** and queue **dli
 Step 3: Use DEW to Manage Access Credentials
 --------------------------------------------
 
-To write the output data of a Spark Jar job to OBS, AK/SK is required for accessing OBS. To ensure the security of AK/SK data, you can use DEW and CSMS for unified management of AK/SK, effectively avoiding sensitive information leakage and business risks caused by hard-coded or plaintext configuration of programs.
+When writing output data from Spark Jar jobs to OBS, you need to configure an AK/SK for accessing OBS. To ensure the security of AK/SK data, you can use DEW and CSMS for centralized management of AK/SK. This approach effectively mitigates risks such as sensitive information leakage caused by hardcoding in programs or plaintext configurations, as well as potential business disruptions due to unauthorized access.
 
 This part introduces how to create a shared secret in DEW.
 

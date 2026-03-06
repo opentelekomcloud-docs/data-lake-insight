@@ -50,7 +50,7 @@ Before we dive into the compute resource modes of DLI, let us first understand t
 
    -  **For SQL:**
 
-      For SQL queues are used to execute SQL jobs and supports specifying engine types including Spark and HetuEngine.
+      For SQL queues are designed to execute SQL jobs. They support the Spark engine.
 
       This type of queues is suitable for businesses that require fast data query and analysis, as well as regular cache clearing or environment resetting.
 
@@ -83,7 +83,7 @@ DLI offers three compute resource management modes, each with unique advantages 
 
    -  Use cases: suitable for scenarios with significant fluctuations in business volume, such as periodic data batch processing tasks or real-time data processing needs.
 
-   -  Supported queue types: for SQL (Spark), for SQL (HetuEngine), and for general purpose. For details about DLI queue types, see :ref:`Queue Types <dli_01_0504__li1290916414444>`.
+   -  Supported queue types: for SQL (Spark) and for general purpose. For details about DLI queue types, see :ref:`Queue Types <dli_01_0504__li1290916414444>`.
 
       .. note::
 
@@ -139,9 +139,7 @@ DLI Compute Resource Modes and Supported Queue Types
    +====================================+======================+======================================================================+==========================================================================================================================================================+
    | **Elastic resource pool mode**     | For SQL (Spark)      | Resources are shared among multiple queues for a single user.        | Suitable for scenarios with significant fluctuations in business demand, where resources need to be flexibly adjusted to meet peak and off-peak demands. |
    |                                    |                      |                                                                      |                                                                                                                                                          |
-   |                                    | For SQL (HetuEngine) | Resources are dynamically allocated and can be flexibly adjusted.    |                                                                                                                                                          |
-   |                                    |                      |                                                                      |                                                                                                                                                          |
-   |                                    | For general purpose  |                                                                      |                                                                                                                                                          |
+   |                                    | For general purpose  | Resources are dynamically allocated and can be flexibly adjusted.    |                                                                                                                                                          |
    +------------------------------------+----------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
    | **Global sharing mode**            | default queue        | Resources are shared among multiple queues for multiple users.       | Suitable for temporary or testing projects where data size is uncertain or data processing is only required occasionally.                                |
    |                                    |                      |                                                                      |                                                                                                                                                          |
@@ -241,7 +239,7 @@ The quantities of compute resources required for jobs change in different time o
 
 -  During the data period from approximately 04:00 to 07:00 in the morning, there are no other jobs running after ETL jobs complete. Since the resources remain constantly occupied, it leads to significant resource wastage.
 
--  Between 09:00 a.m. to 12:00 p.m. and 14:00 p.m. to 16:00 p.m., the volume of ETL report and job query requests is high. Due to insufficient allocated resources, jobs end up queuing continuously.
+-  Between 09:00 a.m. to 12:00 p.m. and 14:00 to 16:00, the volume of ETL report and job query requests is high. Due to insufficient allocated resources, jobs end up queuing continuously.
 
    .. _dli_01_0504__fig6453203515012:
 

@@ -8,7 +8,7 @@ Creating a Password Datasource Authentication
 Scenario
 --------
 
-Create a password datasource authentication on the DLI console to store passwords of the GaussDB(DWS), RDS, DCS, and DDS data sources to DLI. This will allow you to access to the data sources without having to configure a username and password in SQL jobs.
+Create a password datasource authentication on the DLI console to store passwords of the DWS, RDS, DCS, and DDS data sources to DLI. This will allow you to access to the data sources without having to configure a username and password in SQL jobs.
 
 Procedure
 ---------

@@ -5,28 +5,28 @@
 Adjusting Scaling Policies for Queues in an Elastic Resource Pool
 =================================================================
 
-Multiple queues can be added to an elastic resource pool. For how to add a queue, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`. You can configure the number of CUs you want based on the compute resources used by DLI queues during peaks and troughs and set priorities for the scaling policies to ensure stable running of jobs.
+Elastic resource pools support multiple queues to manage job execution efficiently. For details about how to create queues in a pool, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`. Once configured, you can define scaling policies based on each queue's compute resource usage patterns, such as peak and off-peak periods, and priority levels. This ensures optimal allocation of CUs to maintain stable and efficient job performance.
 
 Precautions
 -----------
 
--  You are advised to implement fine-grained management of resource pools for stream and batch processing jobs by placing Flink real-time stream jobs and SQL batch processing jobs in separate elastic resource pools.
+-  You are advised to implement fine-grained management by separating Flink real-time streaming jobs from SQL batch processing jobs into distinct elastic resource pools. This approach offers two key benefits:
 
-   Flink real-time stream jobs can run stably without forced scale-in, thus avoiding job interruption and system instability.
+   Flink streaming jobs run continuously and require stability without forced scale-in, preventing interruptions and system instability.
 
-   SQL batch processing jobs are placed in independent resource pools, which can scale out and in more flexibly, significantly enhancing the success rate and operational efficiency of scaling operations.
+   SQL batch jobs benefit from flexible scaling within their dedicated pool, significantly improving scaling success rates and operational efficiency.
 
--  In any time segment of a day, the total minimum CUs of all queues in an elastic resource pool cannot be more than the minimum CUs of the pool.
+-  At any time of day, the sum of minimum CUs across all queues in the elastic resource pool must not exceed the pool's minimum CUs.
 
--  In any time segment of a day, the maximum CUs of any queue in an elastic resource pool cannot be more than the maximum CUs of the pool.
+-  Similarly, at any given time, no single queue's maximum CU allocation should exceed the pool's maximum CUs.
 
--  The periods of scaling policies cannot overlap.
+-  The time intervals for different scaling policies within the same queue must not overlap.
 
--  The period of a scaling policy can only be set by hour and specified by the start time and end time. For example, if you set the period to **00-09**, the time range when the policy takes effect is [00:00, 09:00). The period of the default scaling policy cannot be modified.
+-  Scaling policy periods are set in whole-hour increments, including the start time but excluding the end time. For example, a 00-09 interval covers [00:00, 09:00). Note that default scaling policies do not allow modifications to these time settings.
 
--  In any period, compute resources are preferentially allocated to meet the minimum number of CUs of all queues. The remaining CUs (total CUs of the elastic resource pool - total minimum CUs of all queues) are allocated in accordance with the scaling policy priorities.
+-  During any period, the system first ensures all queues meet their minimum CU requirements. Any remaining CUs (calculated as the pool's maximum CUs minus the sum of all queues' minimum CUs) are allocated based on configured priorities until fully distributed.
 
--  After the queue is scaled out, the system starts billing you for the added CUs. So, if you do not have sufficient requirements, scale in your queue to release unnecessary CUs to save cost.
+-  Once a queue successfully scales out, billing begins for the additional CUs and continues until scale-in occurs. To avoid unnecessary costs, promptly release resources when they are no longer needed, as unused CUs will still incur charges.
 
    .. table:: **Table 1** CU allocation (without jobs)
 

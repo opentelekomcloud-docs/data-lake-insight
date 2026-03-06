@@ -46,7 +46,7 @@ Develop a Flink Jar job program, compile it, and pack it into **flink-examples.j
 
 Before submitting a Flink job, upload data files to OBS.
 
-#. Log in to the DLI console.
+#. Log in to the management console.
 
 #. In the service list, click **Object Storage Service** under **Storage**.
 
@@ -74,7 +74,7 @@ Before submitting a Flink job, upload data files to OBS.
 Step 2: Buy an Elastic Resource Pool and Create Queues Within It
 ----------------------------------------------------------------
 
-To execute SQL jobs in datasource scenarios, you must use your own SQL queue as the existing **default** queue cannot be used. In this example, create an elastic resource pool named **dli_resource_pool** and a queue named **dli_queue_01**.
+When running a Flink job in datasource scenarios, you cannot use the existing **default** queue. You need to create a general-purpose queue. In this example, the elastic resource pool **dli_resource_pool** and queue **dli_queue_01** are created.
 
 #. Log in to the DLI management console.
 
@@ -160,7 +160,7 @@ Step 3: Use DEW to Manage Access Credentials
 
 In cross-source analysis scenarios, you need to set attributes such as the username and password in the connector. However, information such as usernames and passwords is highly sensitive and needs to be encrypted to ensure user data privacy.
 
-DEW is a secure, reliable, and easy-to-use solution for encrypting and decrypting private data while ensuring its security.
+DEW offers a secure, reliable, and easy-to-use solution for encrypting and decrypting sensitive data.
 
 This example introduces how to create a shared secret in DEW.
 
@@ -321,7 +321,7 @@ Step 5: Create a Flink Jar Job and Configure Job Information
       |                           |                       | .. note::                                                                                                                                                                                                                       |
       |                           |                       |                                                                                                                                                                                                                                 |
       |                           |                       |    -  The value cannot exceed four times the number of compute units (**CUs** - **Job Manager CUs**).                                                                                                                           |
-      |                           |                       |    -  You are advised to set this parameter to a value greater than that configured in the code. Otherwise, job submission may fail.                                                                                            |
+      |                           |                       |    -  Set this parameter to a value greater than that configured in the code. Otherwise, job submission may fail.                                                                                                               |
       +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Task Manager Config       | No                    | Whether TaskManager resource parameters are set                                                                                                                                                                                 |
       |                           |                       |                                                                                                                                                                                                                                 |
@@ -342,7 +342,7 @@ Step 5: Create a Flink Jar Job and Configure Job Information
       |                           |                       |                                                                                                                                                                                                                                 |
       |                           |                       | **SMN Topic**                                                                                                                                                                                                                   |
       |                           |                       |                                                                                                                                                                                                                                 |
-      |                           |                       | Select a custom SMN topic. For how to create a custom SMN topic, see "Creating a Topic" in the *Simple Message Notification User Guide*.                                                                                        |
+      |                           |                       | Select a custom SMN topic. For details about how to create a custom SMN topic, see "Creating a Topic" in the *Simple Message Notification User Guide*.                                                                          |
       +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Auto Restart on Exception | No                    | Whether automatic restart is enabled. If enabled, jobs will be automatically restarted and restored when exceptions occur.                                                                                                      |
       |                           |                       |                                                                                                                                                                                                                                 |
