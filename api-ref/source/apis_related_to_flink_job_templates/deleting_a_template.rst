@@ -73,7 +73,7 @@ Example Response
 
    {
        "is_success": "true",
-       "message": "The template is deleted successfully.",
+       "message": "The template is successfully deleted.",
        "template": {
            "template_id": 2
        }

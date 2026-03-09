@@ -399,7 +399,7 @@ Response Parameters
    +----------------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | graph_editor_enabled | No              | Boolean          | **Definition**                                                                                                                                                                                    |
    |                      |                 |                  |                                                                                                                                                                                                   |
-   |                      |                 |                  | Whether the flow diagram can be edited. Value **true** indicates that the flow diagram can be edited, and **false** indicates that the flow diagram cannot be edited.                             |
+   |                      |                 |                  | Whether the stream graph of a job can be edited. Value **true** indicates that the stream graph can be edited, and **false** indicates that the stream graph cannot be edited.                    |
    |                      |                 |                  |                                                                                                                                                                                                   |
    |                      |                 |                  | **Range**                                                                                                                                                                                         |
    |                      |                 |                  |                                                                                                                                                                                                   |
@@ -735,7 +735,7 @@ Response Parameters
    +-------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | graph_editor_enabled    | No              | Boolean          | **Definition**                                                                                                                                                                                                        |
    |                         |                 |                  |                                                                                                                                                                                                                       |
-   |                         |                 |                  | Whether to enable flow diagram editing. The default value is **false**.                                                                                                                                               |
+   |                         |                 |                  | Whether to enable stream graph editing. The default value is **false**.                                                                                                                                               |
    |                         |                 |                  |                                                                                                                                                                                                                       |
    |                         |                 |                  | **Range**                                                                                                                                                                                                             |
    |                         |                 |                  |                                                                                                                                                                                                                       |
@@ -853,7 +853,7 @@ Example Response
 
    {
        "is_success": "true",
-       "message": "Querying of the job list succeeds.",
+       "message": "Jobs are successfully listed.",
        "job_list": {
            "total_count": 26,
            "jobs": [

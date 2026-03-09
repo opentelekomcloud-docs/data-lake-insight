@@ -84,7 +84,7 @@ Example Response
 .. code-block::
 
    [{"is_success":"true",
-   "message": "The request for stopping DLI jobs is delivered successfully."}]
+   "message": "The request for stopping DLI jobs is successfully delivered."}]
 
 Status Codes
 ------------

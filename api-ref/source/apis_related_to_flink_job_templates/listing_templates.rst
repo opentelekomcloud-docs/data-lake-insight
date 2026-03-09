@@ -117,14 +117,14 @@ Example Response
 
    {
        "is_success": "true",
-       "message": "The template list is obtained successfully.",
+       "message": "The template list is successfully obtained.",
        "template_list": {
            "total_count": 2,
            "templates": [
                {
                    "template_id": 2,
                    "name": "updatetest",
-                    "desc": "Example of quick start",
+                   "desc": "Example of quick start",
                    "create_time": 1578748092000,
                    "update_time": 1578748092000,
                    "sql_body": "select * from source_table",

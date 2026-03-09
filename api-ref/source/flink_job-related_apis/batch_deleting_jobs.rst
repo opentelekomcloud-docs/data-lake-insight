@@ -79,7 +79,7 @@ Example Response
 
    [{
        "is_success": "true",
-       "message": "The job is deleted successfully.",
+       "message": "The job is successfully deleted.",
    }]
 
 Status Codes

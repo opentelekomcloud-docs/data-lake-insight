@@ -134,8 +134,7 @@ Example Response
 
    {
      "is_success": true,
-     "message": "Create peer connection for queues:{Queue list in the request parameter}",
-     "connection_id": "2a620c33-5609-40c9-affd-2b6453071b0f"
+     "message": "Create peer connection for queues:{Queue list in the request parameter}",   "connection_id": "2a620c33-5609-40c9-affd-2b6453071b0f"
    }
 
 Status Codes

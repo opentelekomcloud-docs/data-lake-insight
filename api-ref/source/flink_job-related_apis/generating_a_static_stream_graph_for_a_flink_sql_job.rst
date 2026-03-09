@@ -107,7 +107,7 @@ Generate a static stream graph for a Flink SQL job.
    {
      "job_type": "flink_opensource_sql_job",
      "graph_type": "job_graph",
-     "sql_body": "create table orders(\r\n  name string,\r\n  num int\r\n) with (\r\n  'connector' = 'datagen',\r\n  'rows-per-second' = '1', --Generates a data record per second.\r\n  'fields.name.kind' = 'random', --Specify a random generator for the user_id field.\r\n  'fields.name.length' = '5' --Limit the length of user_id to 3.\r\n);\r\n \r\nCREATE TABLE sink_table (\r\n  name string,\r\n  num int\r\n) WITH (\r\n   'connector' = 'print'\r\n);\r\nINSERT into sink_table SELECT * FROM orders;",
+     "sql_body": "create table orders(\r\n  name string,\r\n  num int\r\n) with (\r\n  'connector' = 'datagen',\r\n  'rows-per-second' = '1', --Generate a data record per second.\r\n  'fields.name.kind' = 'random', --Specify a random generator for the user_id field.\r\n  'fields.name.length' = '5' --Limit the length of user_id to 3.\r\n);\r\n \r\nCREATE TABLE sink_table (\r\n  name string,\r\n  num int\r\n) WITH (\r\n   'connector' = 'print'\r\n);\r\nINSERT into sink_table SELECT * FROM orders;",
      "cu_number": 2,
      "manager_cu_number": 1,
      "parallel_number": 2,
