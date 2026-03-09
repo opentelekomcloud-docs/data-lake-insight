@@ -12,7 +12,7 @@ The following error is reported when a Spark job accesses OBS data:
 
 .. code-block::
 
-   Caused by: com.obs.services.exception.ObsException: Error message:Request Error.OBS servcie Error Message. -- ResponseCode: 403, ResponseStatus: Forbidden
+   Caused by: com.obs.services.exception.ObsException: Error message:Request Error.OBS service Error Message. -- ResponseCode: 403, ResponseStatus: Forbidden
 
 Solution
 --------

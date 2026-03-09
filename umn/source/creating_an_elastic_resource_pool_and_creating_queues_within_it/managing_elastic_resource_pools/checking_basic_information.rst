@@ -23,29 +23,29 @@ Procedure
 
 #. Click |image2| to expand the basic information card of the elastic resource pool and view detailed information about the pool.
 
-   These details include the name of the pool, the user who created it, the date it was created, and the VPC CIDR block.
+   These details include the name of the pool, the user who created it, the date it was created, whether IPv6 is enabled, and the VPC CIDR block. If IPv6 is enabled, the subnet's IPv6 CIDR block will also be displayed.
 
-   For the definitions of actual CUs, used CUs, CU range, and specifications of the elastic resource pool, refer to :ref:`Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool <dli_01_0622__section3723248135610>`.
+   For details about the definitions of actual CUs, used CUs, CU range, and yearly/monthly CUs (specifications) of the elastic resource pool, see :ref:`Actual CUs, Used CUs, CU Range, and Yearly/Monthly CUs (Specifications) of an Elastic Resource Pool <dli_01_0622__section3723248135610>`.
 
 .. _dli_01_0622__section3723248135610:
 
-Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
-------------------------------------------------------------------------------
+Actual CUs, Used CUs, CU Range, and Yearly/Monthly CUs (Specifications) of an Elastic Resource Pool
+---------------------------------------------------------------------------------------------------
 
--  **Actual CUs**: actual size of resources currently allocated to the elastic resource pool (in CUs).
+-  **Actual CUs**: The current allocated resource size of the elastic resource pool, measured in CUs.
 
-   -  When there is no queue in the resource pool, the actual CUs are equal to the minimum CUs when the elastic resource pool is created.
+   -  When no queues exist in the resource pool: The actual CUs equal the minimum CUs set during its creation.
 
-   -  When there are queues in the resource pool, the formula for calculating actual CUs is:
+   -  When there are queues in the resource pool, the formula to calculate actual CUs is:
 
       -  Actual CUs = max{(min[sum(maximum CUs of queues), maximum CUs of the elastic resource pool]), minimum CUs of the elastic resource pool}.
-      -  The calculation result must be a multiple of 16 CUs. If it cannot be exactly divided by 16 CUs, round up to the nearest multiple.
+      -  The result must be a multiple of 16 CUs. If not divisible by 16, round up to the nearest multiple.
 
-   -  Scaling out or in an elastic resource pool means adjusting the actual CUs of the resource pool. Refer to :ref:`Scaling Out or In an Elastic Resource Pool <dli_01_0686>`.
+   -  Scaling out or in an elastic resource pool means adjusting its actual CUs. See :ref:`Scaling Out or In an Elastic Resource Pool <dli_01_0686>`.
 
    -  Example of actual CU allocation:
 
-      In :ref:`Table 1 <dli_01_0622__dli_07_0003_dli_07_0003_table4844638152415>`, the calculation process for the actual allocation of CUs in an elastic resource pool is as follows:
+      Consider :ref:`Table 1 <dli_01_0622__dli_07_0003_dli_07_0003_table4844638152415>` below, which illustrates the process of calculating actual CUs for an elastic resource pool:
 
       #. Calculate the sum of maximum CUs of the queues: sum(maximum CUs) = 32 + 56 = 88 CUs.
 
@@ -74,15 +74,15 @@ Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
             |                                                                                                   | Queue B               | 16-56CUS              |
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
 
--  **Used CUs**: CUs that have been used by jobs or tasks. These resources may be executing computing tasks.
+-  **Used CUs**: The portion of CUs currently occupied by jobs or tasks, which may be actively performing computations.
 -  **CU range**: CU settings are used to control the maximum and minimum CU ranges for elastic resource pools to avoid unlimited resource scaling.
 
-   -  The total minimum CUs of all queues in an elastic resource pool must be no more than the minimum CUs of the pool.
-   -  The maximum CUs of any queue in an elastic resource pool must be no more than the maximum CUs of the pool.
-   -  An elastic resource pool should at least ensure that all queues in it can run with the minimum CUs and should try to ensure that all queues in it can run with the maximum CUs.
-   -  When expanding the specifications of an elastic resource pool, the minimum value of the CU range is linked to the specifications of the elastic resource pool. After changing the specifications of the elastic resource pool, the minimum value of the CU range is modified to match the specifications.
+   -  The sum of all queues' minimum CUs in an elastic resource pool must not exceed the pool's minCU.
+   -  Any single queue's maxCU cannot exceed the pool's maxCU.
+   -  The resource pool ensures it meets the minCU requirements across all queues while striving to accommodate their maxCU demands.
+   -  When expanding the specifications of an elastic resource pool, the minimum value of the CU range is linked to the yearly/monthly CUs (specifications) of the elastic resource pool. After changing the specifications of the elastic resource pool, the minimum value of the CU range is modified to match the yearly/monthly CUs (specifications).
 
--  **Specifications**: The minimum CUs selected during elastic resource pool purchase are elastic resource pool specifications.
+-  **Yearly/monthly CUs (specifications)**: The minimum value of the CU range selected when purchasing an elastic resource pool is the elastic resource pool specifications.
 
 .. |image1| image:: /_static/images/en-us_image_0000001934973209.png
 .. |image2| image:: /_static/images/en-us_image_0000002129969110.png

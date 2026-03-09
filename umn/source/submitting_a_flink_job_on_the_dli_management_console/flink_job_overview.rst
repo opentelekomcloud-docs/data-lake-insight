@@ -10,7 +10,7 @@ DLI supports two types of Flink jobs:
 -  **Flink OpenSource SQL job:**
 
    -  It is fully compatible with Flink of the community edition, ensuring that jobs can run smoothly on these Flink versions.
-   -  DLI Flink has expanded the support for connectors based on Flink of the community edition, supporting Redis and GaussDB(DWS) as new data source types. With this expansion, you can now utilize a wider range of data source types, providing greater flexibility and convenience when working with datasets.
+   -  DLI Flink has expanded the support for connectors based on Flink of the community edition, supporting Redis and DWS as new data source types. With this expansion, you can now utilize a wider range of data source types, providing greater flexibility and convenience when working with datasets.
    -  Flink OpenSource SQL jobs are ideal for scenarios where stream processing logic can be defined and executed through SQL statements. This simplifies stream processing, allowing developers to focus more on implementing service logic.
 
    For how to create a Flink OpenSource SQL job, see :ref:`Creating a Flink OpenSource SQL Job <dli_01_0498>`.

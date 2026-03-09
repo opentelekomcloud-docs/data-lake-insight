@@ -17,22 +17,22 @@ Prerequisites
 -------------
 
 -  You have uploaded the dependencies to the corresponding OBS bucket on the **Data Management > Package Management** page.
--  Before creating a Spark job to access other external data sources, such as OpenTSDB, HBase, Kafka, GaussDB(DWS), RDS, CSS, CloudTable, DCS Redis, and DDS, you need to create a datasource connection to enable the network between the job running queue and external data sources.
+-  Before creating a Spark job to access other external data sources, such as OpenTSDB, HBase, Kafka, DWS, RDS, CSS, CloudTable, DCS Redis, and DDS, you need to create a datasource connection to enable the network between the job running queue and external data sources.
 
    -  For details about the external data sources that can be accessed by Spark jobs, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
-   -  For how to create a datasource connection, see :ref:`Configuring the Network Connection Between DLI and Data Sources (Enhanced Datasource Connection) <dli_01_0426>`.
+   -  For details about how to create a datasource connection, see :ref:`Configuring the Network Connection Between DLI and Data Sources (Enhanced Datasource Connection) <dli_01_0426>`.
 
       On the **Resources** > **Queue Management** page, locate the queue you have created, click **More** in the **Operation** column, and select **Test Address Connectivity** to check if the network connection between the queue and the data source is normal. For details, see :ref:`Testing the Network Connectivity Between a Queue and a Data Source <dli_01_0489>`.
 
 Procedure
 ---------
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Spark Jobs**. The **Spark Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Spark Jobs**.
 
    Click **Create Job** in the upper right corner. In the job editing window, you can set parameters in **Fill Form** mode or **Write API** mode.
 
-   The following uses the **Fill Form** as an example. In **Write API** mode, refer to the *Data Lake Insight API Reference* for parameter settings.
+   The following uses the **Fill Form** as an example. In **Write API** mode, see *Data Lake Insight API Reference* for parameter settings.
 
 2. Select a queue.
 
@@ -121,7 +121,7 @@ Procedure
       |                                   |                                                                                         |
       |                                   | spark.executor.extraClassPath=/usr/share/extension/dli/spark-jar/datasource/css/\*      |
       +-----------------------------------+-----------------------------------------------------------------------------------------+
-      | GaussDB(DWS)                      | spark.driver.extraClassPath=/usr/share/extension/dli/spark-jar/datasource/dws/\*        |
+      | DWS                               | spark.driver.extraClassPath=/usr/share/extension/dli/spark-jar/datasource/dws/\*        |
       |                                   |                                                                                         |
       |                                   | spark.executor.extraClassPath=/usr/share/extension/dli/spark-jar/datasource/dws/\*      |
       +-----------------------------------+-----------------------------------------------------------------------------------------+
@@ -195,7 +195,7 @@ Procedure
       +---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Other Dependencies (--files)          | Other files on which the Spark job depends. You can enter the name of the dependency file or the corresponding OBS path of the dependency file. The format is as follows: **obs://Bucket name/Folder name/File name**. |
       +---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Group Name                            | If you select a group when creating a package, you can select all the packages and files in the group. For how to create a package, see :ref:`Creating a DLI Package <dli_01_0367>`.                                   |
+      | Group Name                            | If you select a group when creating a package, you can select all the packages and files in the group. For details about how to create a package, see :ref:`Creating a DLI Package <dli_01_0367>`.                     |
       |                                       |                                                                                                                                                                                                                        |
       |                                       | Spark 3.3.\ *x* or later does not support group information configuration.                                                                                                                                             |
       +---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

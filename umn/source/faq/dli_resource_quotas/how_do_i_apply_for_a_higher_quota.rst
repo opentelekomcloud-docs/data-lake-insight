@@ -5,13 +5,12 @@
 How Do I Apply for a Higher Quota?
 ==================================
 
+How Do I Apply for a Quota Increase?
+------------------------------------
 
-How Do I Apply for a Higher Quota?
-----------------------------------
+The system currently does not support online quota adjustments. If you need to modify your quota, please contact our customer service team via phone or email. They will promptly process your request and keep you updated on its progress through either a call or email.
 
-The system does not support online quota adjustment. To increase a resource quota, dial the hotline or send an email to the customer service. We will process your application and inform you of the progress by phone call or email.
-
-Before dialing the hotline number or sending an email, ensure that the following information has been obtained:
+Before reaching out, ensure you have the following details ready:
 
 -  Domain name, project name, and project ID
 
@@ -21,6 +20,6 @@ Before dialing the hotline number or sending an email, ensure that the following
 
    -  Service name
    -  Quota type
-   -  Required quota
+   -  Desired quota value
 
 `Learn how to obtain the service hotline and email address. <https://open-telekom-cloud.com/en/contact>`__

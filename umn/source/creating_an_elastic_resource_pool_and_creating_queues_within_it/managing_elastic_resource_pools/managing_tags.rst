@@ -22,7 +22,7 @@ DLI supports the following two types of tags:
 
 DLI allows you to add, modify, or delete tags for queues.
 
-#. In the left navigation pane of the DLI console, choose **Resources** > **Resource Pool**.
+#. In the navigation pane of the DLI console, choose **Resources** > **Resource Pool**.
 #. In the **Operation** column of the queue, choose **More** > **Tags**.
 #. The tag management page is displayed, showing the tag information about the current queue.
 #. On the page that appears, click **Add/Edit Tag** in the upper left corner. Enter a tag and a value, and click **Add**.

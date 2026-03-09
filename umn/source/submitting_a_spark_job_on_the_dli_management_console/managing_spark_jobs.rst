@@ -10,7 +10,7 @@ Managing Spark Jobs
 Viewing Basic Information
 -------------------------
 
-On the **Overview** page, click **Spark Jobs** to go to the SQL job management page. Alternatively, you can click **Job Management** > **Spark Jobs**. The page displays all Spark jobs. If there are a large number of jobs, they will be displayed on multiple pages. DLI allows you to view jobs in all statuses.
+To access the Spark job management page, click **Spark Jobs** on the **Overview** page or choose **Job Management** > **Spark Jobs** in the navigation pane on the left. The page displays all Spark jobs. If there are a large number of jobs, they will be displayed on multiple pages. DLI allows you to view jobs in all statuses.
 
 .. table:: **Table 1** Job management parameters
 

@@ -8,11 +8,11 @@ Creating an Enhanced Datasource Connection
 Scenario
 --------
 
-Create an enhanced datasource connection for DLI to access, import, query, and analyze data of other data sources.
+Before using DLI to access data from other sources, you need to create an enhanced datasource connection to enable network communication between DLI and the destination data source. This allows DLI to seamlessly access, import, query, and analyze data stored in external systems.
 
-For example, to connect DLI to the MRS, RDS, CSS, Kafka, or GaussDB(DWS) data source, you need to enable the network between DLI and the VPC of the data source.
+For example, when connecting DLI to services such as MRS, RDS, CSS, Kafka, or DWS, you must first configure the network connectivity between DLI and the corresponding VPC of these data sources to facilitate smooth data exchange.
 
-Create an enhanced datasource connection on the console.
+This section provides a step-by-step guide on how to create an enhanced datasource connection via the management console.
 
 Notes and Constraints
 ---------------------
@@ -153,6 +153,8 @@ Step 1: Create an Enhanced Datasource Connection
       | VPC                               | VPC used by the data source.                                                                                                                                                                                                                                                                                        |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Subnet                            | Subnet used by the data source.                                                                                                                                                                                                                                                                                     |
+      |                                   |                                                                                                                                                                                                                                                                                                                     |
+      |                                   | If the subnet of the selected data source has IPv6 enabled, the enhanced datasource connection you create will also support IPv6. For more information on using IPv6 for cross-source access, see :ref:`How Do I Configure a Network Connection with IPv6 Address Enabled? <dli_01_0006__section463114164718>`.     |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Host Information                  | In this text field, you can configure the mapping between host IP addresses and domain names so that jobs can only use the configured domain names to access corresponding hosts. This parameter is optional.                                                                                                       |
       |                                   |                                                                                                                                                                                                                                                                                                                     |
@@ -221,17 +223,30 @@ After an enhanced datasource connection is created, the subnet is automatically 
 
    .. table:: **Table 4** Parameters for adding a custom route
 
-      +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter                         | Description                                                                                                                                                                                              |
-      +===================================+==========================================================================================================================================================================================================+
-      | Route Name                        | Name of a custom route, which is unique in the same enhanced datasource connection. The name can contain up to 64 characters. Only digits, letters, underscores (_), and hyphens (-) are allowed.        |
-      +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | IP Address                        | Custom route CIDR block. The CIDR blocks of different routes can overlap but cannot be identical.                                                                                                        |
-      |                                   |                                                                                                                                                                                                          |
-      |                                   | Do not add the **100.125.**\ *xx.xx* or **100.64.**\ *xx.xx* CIDR blocks to avoid conflicts with the internal CIDR blocks of services like SWR, which can cause enhanced datasource connections to fail. |
-      +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                                                                       |
+      +===================================+===================================================================================================================================================================================================================+
+      | Route Name                        | Name of a custom route, which is unique in the same enhanced datasource connection. The name can contain up to 64 characters. Only digits, letters, underscores (_), and hyphens (-) are allowed.                 |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | IP Address Type                   | The options are **IPv4** and **IPv6**.                                                                                                                                                                            |
+      |                                   |                                                                                                                                                                                                                   |
+      |                                   | If your data source has IPv6 enabled and the current enhanced datasource connection supports IPv6, you can select IPv6 routes when adding a route table.                                                          |
+      |                                   |                                                                                                                                                                                                                   |
+      |                                   | You can check whether the current enhanced datasource connection supports IPv6 in its basic information. For details, see :ref:`Viewing Basic Information About an Enhanced Datasource Connection <dli_01_0623>`. |
+      |                                   |                                                                                                                                                                                                                   |
+      |                                   | The route IP address example is as follows:                                                                                                                                                                       |
+      |                                   |                                                                                                                                                                                                                   |
+      |                                   | -  IPv4 address: **192.168.2.0/24**.                                                                                                                                                                              |
+      |                                   | -  IPv6 address: **2407:c080:802:be7::/64**.                                                                                                                                                                      |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | IP Address                        | Custom route CIDR block. The CIDR blocks of different routes can overlap but cannot be identical.                                                                                                                 |
+      |                                   |                                                                                                                                                                                                                   |
+      |                                   | Do not add the **100.125.**\ *xx.xx* or **100.64.**\ *xx.xx* CIDR blocks to avoid conflicts with the internal CIDR blocks of services like SWR, which can cause enhanced datasource connections to fail.          |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. After adding a route, you can view the route information on the route details page.
+
+.. _dli_01_0006__section17945175313448:
 
 Step 3: Test the Connectivity Between the Queue in the Elastic Resource Pool and the Data Source Address
 --------------------------------------------------------------------------------------------------------
@@ -248,10 +263,26 @@ Step 3: Test the Connectivity Between the Queue in the Elastic Resource Pool and
    -  IPv4 + Port number: 192.168.x.x:8080
    -  Domain name: domain-xxxxxx.com
    -  Domain name + Port number: domain-xxxxxx.com:8080
+   -  IPv6 address: 2001:0db8:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+   -  [IPv6] + Port number: [2001:0db8:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:8080
 
 #. Click **Test**.
 
    -  If the test address is reachable, you will receive a message.
    -  If the test address is unreachable, you will also receive a message. Check the network configurations and retry. Network configurations include the VPC peering and the datasource connection. Check whether they have been activated.
+
+.. _dli_01_0006__section463114164718:
+
+How Do I Configure a Network Connection with IPv6 Address Enabled?
+------------------------------------------------------------------
+
+DLI resource networks support IPv4/IPv6 dual stack. When creating an enhanced datasource connection, you can choose to use an IPv6 address for communication to enhance network compatibility and security.
+
+A prerequisite for using IPv6 in datasource scenarios is that both the DLI elastic resource pool and the data source must have IPv6 enabled.
+
+-  Elastic resource pool: Enable IPv6 when creating the resource pool. For details, see :ref:`Creating an Elastic Resource Pool and Creating Queues Within It <dli_01_0505>`.
+-  Data source: The subnet where the data source is must have IPv6 enabled. Otherwise, the IPv6 network connection cannot be established.
+
+To verify if IPv6 communication is successful, use an IPv6 address to test the network connectivity between the queue and the data source by referring to :ref:`Step 3: Test the Connectivity Between the Queue in the Elastic Resource Pool and the Data Source Address <dli_01_0006__section17945175313448>`.
 
 .. |image1| image:: /_static/images/en-us_image_0000002363080342.png

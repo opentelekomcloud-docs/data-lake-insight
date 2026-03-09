@@ -2,8 +2,8 @@
 
 .. _dli_03_0060:
 
-Why Is Error "unsupported media Type" Reported When I Subimt a SQL Job?
-=======================================================================
+Why Am I Getting an "unsupported media Type" Error When Submitting a SQL Job?
+=============================================================================
 
 In the REST API provided by DLI, the request header can be added to the request URI, for example, **Content-Type**.
 

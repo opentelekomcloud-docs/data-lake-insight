@@ -50,6 +50,7 @@ Application scenario: Data cleanup agency, which is used to clean up data accord
                    "dli:table:showPartitions",
                    "dli:table:select",
                    "dli:table:dropTable",
+                   "dli:table:alter",
                    "dli:table:alterTableDropPartition"
                ]
            }
@@ -61,7 +62,7 @@ Application scenario: Data cleanup agency, which is used to clean up data accord
 Permission Policies for Accessing and Using OBS
 -----------------------------------------------
 
-Application scenario: For DLI Flink jobs, the permissions include downloading OBS objects, obtaining OBS/GaussDB(DWS) data sources (foreign tables), transferring logs, using savepoints, and enabling checkpointing. For DLI Spark jobs, the permissions allow downloading OBS objects and reading/writing OBS foreign tables.
+Application scenario: For DLI Flink jobs, the permissions include downloading OBS objects, obtaining OBS/DWS data sources (foreign tables), transferring logs, using savepoints, and enabling checkpointing. For DLI Spark jobs, the permissions allow downloading OBS objects and reading/writing OBS foreign tables.
 
 .. code-block::
 
@@ -180,6 +181,7 @@ Application scenario: DLI Flink and Spark jobs are authorized to access DLI meta
                    "dli:table:alterTableRecoverPartition",
                    "dli:table:dropTable",
                    "dli:table:update",
+                   "dli:table:alter",
                    "dli:table:alterTableDropPartition"
                ]
            }

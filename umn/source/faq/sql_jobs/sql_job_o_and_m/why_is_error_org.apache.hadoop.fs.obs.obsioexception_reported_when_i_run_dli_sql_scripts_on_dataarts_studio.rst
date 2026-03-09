@@ -13,9 +13,9 @@ When you run a DLI SQL script on DataArts Studio, the log shows that the stateme
 .. code-block::
 
    DLI.0999: RuntimeException: org.apache.hadoop.fs.obs.OBSIOException: initializing on obs://xxx.csv: status [-1] - request id
-   [null] - error code [null] - error message [null] - trace :com.obs.services.exception.ObsException: OBS servcie Error Message. Request Error:
+   [null] - error code [null] - error message [null] - trace :com.obs.services.exception.ObsException: OBS service Error Message. Request Error:
    ...
-   Cause by: ObsException: com.obs.services.exception.ObsException: OBSs servcie Error Message. Request Error: java.net.UnknownHostException: xxx: Name or service not known
+   Cause by: ObsException: com.obs.services.exception.ObsException: OBSs service Error Message. Request Error: java.net.UnknownHostException: xxx: Name or service not known
 
 Possible Causes
 ---------------
