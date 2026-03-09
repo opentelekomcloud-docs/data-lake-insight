@@ -22,4 +22,4 @@ Procedure
 
 This example uses the **default** queue and database preset in the system as an example. You can also run the command in a self-created queue and database.
 
-For details, see "Creating a Queue" in the *Data Lake Insight User Guide*. For how to create a database, see "Data Management" > "Databases and Tables" > "Creating a Database" in the *Data Lake Insight User Guide*.
+For details, see "Creating a Queue" in the *Data Lake Insight User Guide*. For details about how to create a database, see "Data Management" > "Databases and Tables" > "Creating a Database" in the *Data Lake Insight User Guide*.

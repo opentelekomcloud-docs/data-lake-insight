@@ -21,6 +21,6 @@ How Do I Use Python Scripts to Access the MySQL Database If the pymysql Module I
 
 #. To interconnect PySpark jobs with MySQL, you need to create a datasource connection to enable the network between DLI and RDS.
 
-   For how to create a datasource connection on the management console, see "Enhanced Datasource Connections" in *Data Lake Insight User Guide*.
+   For details about how to create a datasource connection on the management console, see "Enhanced Datasource Connections" in *Data Lake Insight User Guide*.
 
-   For how to call an API to create a datasource connection, see "Creating an Enhanced Datasource Connection" in *Data Lake Insight API Reference*.
+   For details about how to call an API to create a datasource connection, see "Creating an Enhanced Datasource Connection" in *Data Lake Insight API Reference*.

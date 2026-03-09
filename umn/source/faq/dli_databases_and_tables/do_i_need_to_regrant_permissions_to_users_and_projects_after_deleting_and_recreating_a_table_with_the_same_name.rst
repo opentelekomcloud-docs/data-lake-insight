@@ -2,8 +2,8 @@
 
 .. _dli_03_0175:
 
-Do I Need to to Regrant Permissions to Users and Projects After Deleting and Recreating a Table With the Same Name?
-===================================================================================================================
+Do I Need to Regrant Permissions to Users and Projects After Deleting and Recreating a Table With the Same Name?
+================================================================================================================
 
 Scenario
 --------
@@ -13,7 +13,7 @@ User A created the **testTable** table in a database through a SQL job and grant
 Possible Causes
 ---------------
 
-After a table is deleted, the table permissions are not retained. You need to grant permissions to a user or project.
+After deleting a table and recreating one with the same name, table permissions do not automatically inherit in this scenario. You need to regrant permissions to the users or projects.
 
 Solution
 --------

@@ -12,7 +12,7 @@ Editing a Job
 
 You can edit a created job, for example, by modifying the SQL statement, job name, job description, or job configurations.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 #. In the row where the job you want to edit locates, click **Edit** in the **Operation** column to switch to the editing page.
 
@@ -25,7 +25,7 @@ Starting a Job
 
 You can start a saved or stopped job.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 #. Use either of the following methods to start jobs:
 
@@ -50,7 +50,7 @@ Stopping a Job
 
 You can stop a job in the **Running** or **Submitting** state.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 #. Stop a job using either of the following methods:
 
@@ -83,7 +83,7 @@ Deleting a Job
 
 If you do not need to use a job, perform the following operations to delete it. A deleted job cannot be restored. Therefore, exercise caution when deleting a job.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 2. Perform either of the following methods to delete jobs:
 
@@ -110,7 +110,7 @@ This mode is applicable to the scenario where a large number of jobs need to be 
 
    When switching to another project or user, you need to grant permissions to the new project or user. For details, see :ref:`Configuring Flink Job Permissions <dli_01_0479>`.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 2. Click **Export Job** in the upper right corner. The **Export Job** dialog box is displayed.
 
@@ -138,7 +138,7 @@ For details, see :ref:`Creating a Flink OpenSource SQL Job <dli_01_0498>` and :r
    -  When switching to another project or user, you need to grant permissions to the new project or user. For details, see :ref:`Configuring Flink Job Permissions <dli_01_0479>`.
    -  Only jobs whose data format is the same as that of Flink jobs exported from DLI can be imported.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 2. Click **Import Job** in the upper right corner. The **Import Job** dialog box is displayed.
 3. Select the complete OBS path of the job configuration file to be imported. Click **Next**.
@@ -154,7 +154,7 @@ Modifying the Name and Description of a Flink Job
 
 You can change the job name and description as required.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 #. In the **Operation** column of the job whose name and description need to be modified, choose **More > Modify Name and Description**. The **Modify Name and Description** dialog box is displayed. Change the name or modify the description of a job.
 #. Click **OK**.
 
@@ -206,7 +206,7 @@ You can configure job exception alarms and restart options by selecting **Runtim
       |                                     |                                                                                                                                                                                                                                                      |
       |                                     | **SMN Topic**                                                                                                                                                                                                                                        |
       |                                     |                                                                                                                                                                                                                                                      |
-      |                                     | Select a custom SMN topic. For how to create a custom SMN topic, see "Creating a Topic" in the *Simple Message Notification User Guide*.                                                                                                             |
+      |                                     | Select a custom SMN topic. For details about how to create a custom SMN topic, see "Creating a Topic" in the *Simple Message Notification User Guide*.                                                                                               |
       +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Auto Restart upon Exception         | Whether automatic restart is enabled. If enabled, jobs will be automatically restarted and restored when exceptions occur.                                                                                                                           |
       |                                     |                                                                                                                                                                                                                                                      |

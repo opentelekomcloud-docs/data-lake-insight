@@ -29,7 +29,7 @@ Procedure
 
       a. In the navigation pane on the left of the management console, choose **SQL Editor**.
       b. In the navigation tree on the left, click **Databases** to see all databases. Click the database name corresponding to the table to which data is to be exported. The tables are displayed.
-      c. Click |image1| on the right of the managed table (DLI table) whose data is to be exported, and choose **Export** from the shortcut menu.
+      c. Click |image1| next to the managed table (DLI table) whose data is to be exported, and choose **Export** from the shortcut menu.
 
 #. In the displayed **Export Data** dialog box, specify parameters by referring to :ref:`Table 1 <dli_01_0010__table1903113115020>`.
 

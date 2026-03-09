@@ -16,7 +16,7 @@ Procedure
 ---------
 
 #. In the navigation pane on the left of the DLI management console, choose **Resources** > **Queue Management**.
-#. Locate the row where the target queue locates and click **Delete** in the **Operation** column.
+#. Locate the row containing the queue to delete and click **Delete** in its **Operation** column.
 
    .. note::
 

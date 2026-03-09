@@ -69,17 +69,17 @@ Relational Database Service (RDS) works as the data source and data storage syst
 -  Data source: DLI allows you to import RDS data using DataFrame or SQL.
 -  Query result storage: DLI uses the SQL INSERT syntax to store query result data to RDS tables.
 
-For how to access RDS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access RDS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
-GaussDB(DWS)
-------------
+DWS
+---
 
-GaussDB(DWS) works as the data source and data storage system for DLI, and delivers the following capabilities:
+DWS works as the data source and data storage system for DLI, and delivers the following capabilities:
 
--  Data source: DLI allows you to import GaussDB(DWS) data using DataFrame or SQL.
--  Query result storage: DLI uses the SQL INSERT syntax to store query result data to GaussDB(DWS) tables.
+-  Data source: DLI allows you to import DWS data using DataFrame or SQL.
+-  Query result storage: DLI uses the SQL INSERT syntax to store query result data to DWS tables.
 
-For how to access GaussDB(DWS) data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access DWS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
 CSS
 ---
@@ -89,7 +89,7 @@ CSS works as the data source and data storage system for DLI, and delivers the f
 -  Data source: DLI allows you to import CSS data using DataFrame or SQL.
 -  Query result storage: DLI uses the SQL INSERT syntax to store query result data to CSS tables.
 
-For how to access CSS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access CSS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
 DCS
 ---
@@ -99,7 +99,7 @@ Distributed Cache Service (DCS) works as the data source and data storage system
 -  Data source: DLI allows you to import DCS data using DataFrame or SQL.
 -  Query result storage: DLI uses the SQL INSERT syntax to store query result data to DCS tables.
 
-For how to access DCS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access DCS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
 DDS
 ---
@@ -109,7 +109,7 @@ Document Database Service (DDS) works as the data source and data storage system
 -  Data source: DLI allows you to import DDS data using DataFrame or SQL.
 -  Query result storage: DLI uses the SQL INSERT syntax to store query result data to DDS tables.
 
-For how to access DDS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access DDS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
 MRS
 ---
@@ -119,7 +119,7 @@ MapReduce Service (MRS) works as the data source and data storage system for DLI
 -  Data source: DLI allows you to import MRS data using DataFrame or SQL.
 -  Query result storage: DLI uses the SQL INSERT syntax to store query result data to MRS tables.
 
-For how to access MRS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
+For details about how to access MRS data through a DLI datasource connection, see :ref:`Common Development Methods for DLI Cross-Source Analysis <dli_01_0410>`.
 
 DataArts Studio
 ---------------

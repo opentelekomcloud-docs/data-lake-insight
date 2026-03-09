@@ -5,33 +5,23 @@
 Basic Concepts
 ==============
 
-Elastic Resource Pool
----------------------
+Actual CUs, Used CUs, CU Range, and Yearly/Monthly CUs (Specifications) of an Elastic Resource Pool
+---------------------------------------------------------------------------------------------------
 
-An elastic resource pool consists of dedicated compute resources where the resources in different pools are completely isolated from each other. Within a single elastic resource pool, multiple queues can share the resources available in that pool. Additionally, you can configure policies based on the resource load of these queues to enable time-based elastic scaling to meet diverse business needs.
+-  **Actual CUs**: The current allocated resource size of the elastic resource pool, measured in CUs.
 
-DLI Storage Resource
---------------------
+   -  When no queues exist in the resource pool: The actual CUs equal the minimum CUs set during its creation.
 
-DLI storage resources are the internal storage capacities of the DLI service. They are utilized for storing databases and DLI tables, playing a crucial role in data import into DLI. These resources also indicate the volume of data that users have stored within DLI.
-
-Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
-------------------------------------------------------------------------------
-
--  **Actual CUs**: actual size of resources currently allocated to the elastic resource pool (in CUs).
-
-   -  When there is no queue in the resource pool, the actual CUs are equal to the minimum CUs when the elastic resource pool is created.
-
-   -  When there are queues in the resource pool, the formula for calculating actual CUs is:
+   -  When there are queues in the resource pool, the formula to calculate actual CUs is:
 
       -  Actual CUs = max{(min[sum(maximum CUs of queues), maximum CUs of the elastic resource pool]), minimum CUs of the elastic resource pool}.
-      -  The calculation result must be a multiple of 16 CUs. If it cannot be exactly divided by 16 CUs, round up to the nearest multiple.
+      -  The result must be a multiple of 16 CUs. If not divisible by 16, round up to the nearest multiple.
 
-   -  Scaling out or in an elastic resource pool means adjusting the actual CUs of the resource pool. Refer to :ref:`Scaling Out or In an Elastic Resource Pool <dli_01_0686>`.
+   -  Scaling out or in an elastic resource pool means adjusting its actual CUs. See :ref:`Scaling Out or In an Elastic Resource Pool <dli_01_0686>`.
 
    -  Example of actual CU allocation:
 
-      In :ref:`Table 1 <dli_07_0003__dli_07_0003_table4844638152415>`, the calculation process for the actual allocation of CUs in an elastic resource pool is as follows:
+      Consider :ref:`Table 1 <dli_07_0003__dli_07_0003_table4844638152415>` below, which illustrates the process of calculating actual CUs for an elastic resource pool:
 
       #. Calculate the sum of maximum CUs of the queues: sum(maximum CUs) = 32 + 56 = 88 CUs.
 
@@ -60,73 +50,77 @@ Actual CUs, Used CUs, CU Range, and Specifications of an Elastic Resource Pool
             |                                                                                                   | Queue B               | 16-56CUS              |
             +---------------------------------------------------------------------------------------------------+-----------------------+-----------------------+
 
--  **Used CUs**: CUs that have been used by jobs or tasks. These resources may be executing computing tasks.
+-  **Used CUs**: The portion of CUs currently occupied by jobs or tasks, which may be actively performing computations.
 -  **CU range**: CU settings are used to control the maximum and minimum CU ranges for elastic resource pools to avoid unlimited resource scaling.
 
-   -  The total minimum CUs of all queues in an elastic resource pool must be no more than the minimum CUs of the pool.
-   -  The maximum CUs of any queue in an elastic resource pool must be no more than the maximum CUs of the pool.
-   -  An elastic resource pool should at least ensure that all queues in it can run with the minimum CUs and should try to ensure that all queues in it can run with the maximum CUs.
-   -  When expanding the specifications of an elastic resource pool, the minimum value of the CU range is linked to the specifications of the elastic resource pool. After changing the specifications of the elastic resource pool, the minimum value of the CU range is modified to match the specifications.
+   -  The sum of all queues' minimum CUs in an elastic resource pool must not exceed the pool's minCU.
+   -  Any single queue's maxCU cannot exceed the pool's maxCU.
+   -  The resource pool ensures it meets the minCU requirements across all queues while striving to accommodate their maxCU demands.
+   -  When expanding the specifications of an elastic resource pool, the minimum value of the CU range is linked to the yearly/monthly CUs (specifications) of the elastic resource pool. After changing the specifications of the elastic resource pool, the minimum value of the CU range is modified to match the yearly/monthly CUs (specifications).
 
--  **Specifications**: The minimum CUs selected during elastic resource pool purchase are elastic resource pool specifications.
+-  **Yearly/monthly CUs (specifications)**: The minimum value of the CU range selected when purchasing an elastic resource pool is the elastic resource pool specifications.
 
 Database
 --------
 
-A database is a warehouse where data is organized, stored, and managed based on the data structure. DLI management permissions are granted on a per database basis.
+A database is a structured repository designed to organize, store, and manage data efficiently. In DLI, databases serve as the fundamental unit for managing permissions, with access rights assigned at the database level.
 
-In DLI, tables and databases are metadata containers that define underlying data. The metadata in the table shows the location of the data and specifies the data structure, such as the column name, data type, and table name. A database is a collection of tables.
+Within DLI, both tables and databases act as metadata containers that define underlying data structures. Table metadata informs DLI about the location of the data and specifies its structure, such as column names, data types, and table names. Databases provide logical groupings for these tables.
 
-OBS Table, DLI Table, and CloudTable Table
-------------------------------------------
+OBS Tables, DLI Tables, CloudTable Tables
+-----------------------------------------
 
-The table type indicates the storage location of data.
+Different table types indicate distinct storage locations:
 
--  OBS table indicates that data is stored in the OBS bucket.
--  DLI table indicates that data is stored in the internal table of DLI.
--  CloudTable table indicates that data is stored in CloudTable.
+-  OBS table: Data is stored in buckets within OBS.
 
-You can create a table on DLI and associate the table with other services to achieve querying data from multiple data sources.
+-  DLI table: Data is stored in tables internal to DLI.
+
+   DLI storage resources are internal resources used to house databases and DLI tables, essential for importing data into DLI and reflecting the volume of user data stored within the service.
+
+-  CloudTable table: Data is stored in tables managed by CloudTable.
+
+Tables can be created through DLI to establish connections with other services, enabling federated query and analysis across diverse data sources.
 
 Metadata
 --------
 
-Metadata is used to define data types. It describes information about the data, including the source, size, format, and other data features. In database fields, metadata interprets data content in the data warehouse.
+Metadata refers to data that defines other data types. It primarily describes information about the data itself, including its source, size, format, or other characteristics. In database fields, metadata is used to interpret the contents of a data warehouse.
 
-SQL Job
--------
+SQL Jobs
+--------
 
-SQL job refers to the SQL statement executed in the SQL job editor. It serves as the execution entity used for performing operations, such as importing and exporting data, in the SQL job editor.
+A SQL job refers to the execution entity within the system that handles operations such as running SQL statements, importing data, and exporting data through the SQL job editor.
 
-This type is suitable for scenarios where standard SQL statements are used for querying. It is typically used for querying and analyzing structured data.
+It is ideal for scenarios involving structured data queries and analysis using standard SQL.
 
-Flink Job
----------
+Flink Jobs
+----------
 
-This type is specifically designed for real-time data stream processing, making it ideal for scenarios that require low latency and quick response. It is well-suited for real-time monitoring and online analysis.
+Designed for real-time stream processing, Flink jobs are suited for low-latency applications requiring rapid responses, such as real-time monitoring and online analytics.
 
--  Flink OpenSource job: When submitting jobs, you can quickly integrate with other data systems using DLI's standard connectors and various APIs.
--  Flink Jar job: allows you to submit Flink jobs compiled into JAR files, providing greater flexibility and customization capabilities. It is suitable for complex data processing scenarios that require user-defined functions (UDFs) or specific library integration. The Flink ecosystem can be utilized to implement advanced stream processing logic and status management.
+-  Flink OpenSource jobs: These allow you to use DLI-provided connectors and APIs for seamless integration with other data systems during job submission.
+-  Flink Jar jobs: You can submit pre-compiled JAR files containing Flink jobs, offering greater flexibility and customization. This type is ideal for complex data processing tasks involving custom functions, UDFs, or specific library integrations, enabling advanced stream processing logic and state management using Flink's ecosystem.
 
-Spark Job
----------
+Spark Jobs
+----------
 
-Spark jobs are those submitted by users through visualized interfaces and RESTful APIs. Full-stack Spark jobs are allowed, such as Spark Core, DataSet, MLlib, and GraphX jobs.
+Spark jobs refer to those submitted via visual interfaces or RESTful APIs, supporting full-stack Spark functionalities including Spark Core, DataSet, MLlib, and GraphX.
 
 CU
 --
 
-CU is the unit of compute resources in DLI, where 1 CU equals 1 vCPU and 4 GB of memory. The higher the specifications of compute resources, the better its computing power.
+CU represents the unit of compute resources in DLI. One CU equals one vCPU paired with 4 GB of memory. Higher specifications correspond to increased computational power.
 
 Constants and Variables
 -----------------------
 
 The differences between constants and variables are as follows:
 
--  During the running of a program, the value of a constant cannot be changed.
--  Variables are readable and writable, whereas constants are read-only. A variable is a memory address that contains a segment of data that can be changed during program running. For example, in **int a = 123**, **a** is an integer variable.
+-  Constants retain their value throughout program execution and cannot be altered. They are strictly read-only.
+-  Variables are both readable and writable. A variable represents a specific memory address where the stored value can be updated at any time during runtime. For example, in **int a = 123**, **a** is an integer variable.
 
 Table Lifecycle
 ---------------
 
-The table lifecycle management feature in DLI refers to the automatic recycling of tables or partitions that have not been updated for a specified period of time since their last update. This specified period is known as the lifecycle. This feature simplifies the process of recycling data and frees up storage space. Additionally, it provides data backup and recovery functions to prevent data loss due to accidental operations.
+The table lifecycle management feature in DLI automatically reclaims table (or partition) data if it remains unchanged after a specified period from its last update. This duration is termed the lifecycle. The feature simplifies storage space reclamation and data recycling processes while providing backup and recovery options to prevent accidental data loss.

@@ -14,16 +14,16 @@ Creating an IAM User and Granting Permissions
 
 -  When using DLI for the first time, you need to update the DLI agency according to the console's guidance so that DLI can use other cloud services and perform resource O&M operations on your behalf. The agency includes permissions to obtain IAM user information, access and use VPCs, CIDR blocks, routes, and peering connections, and send notifications via SMN in case of job execution failure.
 
-   For more information on the specific permissions included in the agency, refer to :ref:`Configuring DLI Agency Permissions <dli_01_0618>`.
+   For more information on the specific permissions included in the agency, see :ref:`Configuring DLI Agency Permissions <dli_01_0618>`.
 
 Creating Compute Resources and Metadata Required for Running Jobs
 -----------------------------------------------------------------
 
--  Before submitting a job using DLI, you need to create an elastic resource pool and create queues within it. This will provide the necessary compute resources for running the job. For how to create an elastic resource pool and create queues within it, see :ref:`Overview of DLI Elastic Resource Pools and Queues <dli_01_0504>`.
+-  Before submitting a job using DLI, you need to create an elastic resource pool and create queues within it. This will provide the necessary compute resources for running the job. For details about how to create an elastic resource pool and create queues within it, see :ref:`Overview of DLI Elastic Resource Pools and Queues <dli_01_0504>`.
 
    Alternatively, you can enhance DLI's computing environment by creating custom images. Specifically, to enhance the functions and performance of Spark and Flink jobs, you can create custom images by downloading the base images provided by DLI and adding dependencies (files, JAR files, or software) and private capabilities required for job execution. This changes the container runtime environment for the jobs.
 
-   For example, you can add a Python package or C library related to machine learning to a custom image to help you extend functions. For how to create a custom image, see :ref:`Enhancing the Job Runtime Environment Using a Custom Image <dli_01_0494>`.
+   For example, you can add a Python package or C library related to machine learning to a custom image to help you extend functions. For details about how to create a custom image, see :ref:`Enhancing the Job Runtime Environment Using a Custom Image <dli_01_0494>`.
 
 -  DLI metadata is the basis for developing SQL and Spark jobs. Before executing a job, you need to define databases and tables based on your business scenario.
 
@@ -104,4 +104,4 @@ For example, you can monitor the resource usage and job status of a DLI queue. F
 Using CTS to Audit DLI
 ----------------------
 
-With CTS, you can log operations related to DLI, making it easier to search, audit, and trace in the future. For the supported operations, see :ref:`Using CTS to Audit DLI <dli_01_0318>`.
+With CTS, you can log operations related to DLI, making it easier to search, audit, and trace in the future. For details about the supported operations, see :ref:`Using CTS to Audit DLI <dli_01_0318>`.

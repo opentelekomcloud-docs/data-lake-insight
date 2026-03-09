@@ -1,9 +1,9 @@
-:original_name: dli_01_0550.html
+:original_name: dli_07_0009.html
 
-.. _dli_01_0550:
+.. _dli_07_0009:
 
-Managing DLI Resource Quotas
-============================
+Quota Management
+================
 
 What Is a Quota?
 ----------------

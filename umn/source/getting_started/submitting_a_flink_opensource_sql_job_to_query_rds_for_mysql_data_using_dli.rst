@@ -56,14 +56,14 @@ Enable DIS to import Kafka data to DLI. For details, see "Buying a Kafka Instanc
 
    Before creating a Kafka instance, ensure the availability of resources, including a virtual private cloud (VPC), subnet, security group, and security group rules.
 
-   -  For how to create a VPC and subnet, see "Creating a VPC and Subnet" in the *Virtual Private Cloud User Guide*. For how to create and use a subnet in an existing VPC, see "Create a Subnet for the VPC" in the *Virtual Private Cloud User Guide*.
+   -  For details about how to create a VPC and subnet, see "Creating a VPC with a Subnet" in the *Virtual Private Cloud User Guide*. For details about how to create and use a subnet in an existing VPC, see "Creating a Subnet for an Existing VPC" in the *Virtual Private Cloud User Guide*.
 
       .. note::
 
          -  The created VPC and the Kafka instance you will create must be in the same region.
          -  Retain the default settings unless otherwise specified.
 
-   -  For how to create a security group, see "Creating a Security Group" in the *Virtual Private Cloud User Guide*. For how to add rules to a security group, see "Creating a Subnet for the VPC" in the *Virtual Private Cloud User Guide*.
+   -  For details about how to create a security group, see "Creating a Security Group" in the *Virtual Private Cloud User Guide*. For details about how to add rules to a security group, see "Adding a Security Group Rule" in the *Virtual Private Cloud User Guide*.
 
 #. Create a Kafka premium instance as the job source stream.
 
@@ -148,7 +148,7 @@ Use RDS for MySQL as the data sink stream and create an RDS for MySQL DB instanc
 
 #. Click **Buy DB Instance** in the upper right corner of the page and set related parameters. Retain the default values for other parameters.
 
-   For the parameters, see "RDS for MySQL Getting Started" in the *Relational Database Service Getting Started*.
+   For details about the parameters, see "RDS for MySQL Getting Started" in the *Relational Database Service Getting Started*.
 
    .. table:: **Table 3** RDS for MySQL instance parameters
 
@@ -191,7 +191,7 @@ Use RDS for MySQL as the data sink stream and create an RDS for MySQL DB instanc
       +------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
       | VPC and Subnet         | Select an existing VPC and subnet.                                                                                                                                                                                                                                                                                                        | Select the VPC and subnet created in :ref:`1 <dli_01_0531__en-us_topic_0000001354966081_li485218325375>`. |
       |                        |                                                                                                                                                                                                                                                                                                                                           |                                                                                                           |
-      |                        | For how to recreate a VPC and subnet, refer to "Creating a VPC and Subnet" in the *Virtual Private Cloud User Guide*.                                                                                                                                                                                                                     |                                                                                                           |
+      |                        | For details about how to recreate a VPC and subnet, see "Creating a VPC with a Subnet" in the *Virtual Private Cloud User Guide*.                                                                                                                                                                                                         |                                                                                                           |
       |                        |                                                                                                                                                                                                                                                                                                                                           |                                                                                                           |
       |                        | .. note::                                                                                                                                                                                                                                                                                                                                 |                                                                                                           |
       |                        |                                                                                                                                                                                                                                                                                                                                           |                                                                                                           |
@@ -256,10 +256,10 @@ Step 3: Create an OBS Bucket to Store Output Data
 
 In this example, you need to enable OBS for job **JobSample** to provide DLI Flink jobs with the functions of checkpointing, saving job logs, and commissioning test data.
 
-For how to create a bucket, see "Creating a Bucket" in the *Object Storage Service Console Operation Guide*.
+For details about how to create a bucket, see "Creating a Bucket" in the *Object Storage Service User Guide*.
 
 #. In the navigation pane on the OBS management console, choose **Object Storage**.
-#. In the upper right corner of the page, click **Create Bucket** and set bucket parameters.
+#. In the upper right corner of the page, click **Create Bucket** and configure bucket parameters.
 
    .. table:: **Table 4** OBS bucket parameters
 
@@ -286,7 +286,7 @@ For how to create a bucket, see "Creating a Bucket" in the *Object Storage Servi
 Step 4: Create an Elastic Resource Pool and Create Queues Within It
 -------------------------------------------------------------------
 
-To create a Flink OpenSource SQL job, you must use your own queue as the existing **default** queue cannot be used. In this example, create an elastic resource pool named **dli_resource_pool** and a queue named **dli_queue_01**.
+When creating a Flink OpenSource SQL job, you cannot use the existing **default** queue. You need to create a general-purpose queue. In this example, the elastic resource pool **dli_resource_pool** and queue **dli_queue_01** are created.
 
 #. Log in to the DLI management console.
 
@@ -396,7 +396,7 @@ You need to create an enhanced datasource connection for the Flink OpenSource SQ
 
    a. Log in to the DLI management console. In the navigation pane on the left, choose **Datasource Connections**. On the displayed page, click **Create** in the **Enhanced** tab.
 
-   b. In the displayed dialog box, set the following parameters: For details, see the following section:
+   b. In the dialog box that appears, configure the parameters as follows:
 
       -  **Connection Name**: Name of the enhanced datasource connection For this example, enter **dli_kafka**.
       -  **Resource Pool**: Select the elastic resource pool created in :ref:`Step 4: Create an Elastic Resource Pool and Create Queues Within It <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`.
@@ -431,7 +431,7 @@ Step 6: Create an Enhanced Datasource Connection Between DLI and RDS
 
    a. Log in to the DLI management console. In the navigation pane on the left, choose **Datasource Connections**. On the displayed page, click **Create** in the **Enhanced** tab.
 
-   b. In the displayed dialog box, set the following parameters: For details, see the following section:
+   b. In the dialog box that appears, configure the parameters as follows:
 
       -  **Connection Name**: Name of the enhanced datasource connection For this example, enter **dli_rds**.
       -  **Resource Pool**: Select the name of the queue created in :ref:`Step 4: Create an Elastic Resource Pool and Create Queues Within It <dli_01_0531__en-us_topic_0000001354966081_dli_01_0481_section122981023152710>`.
@@ -454,7 +454,9 @@ In cross-source analysis scenarios, you need to set attributes such as the usern
 
 Flink 1.15 allows for the use of DEW to manage credentials. Before running a job, create a custom agency and configure agency information within the job.
 
-Data Encryption Workshop (DEW) and Cloud Secret Management Service (CSMS) joint form a secure, reliable, and easy-to-use privacy data encryption and decryption solution. This example describes how a Flink OpenSource SQL job uses DEW to manage RDS access credentials.
+Data Encryption Workshop (DEW) and Cloud Secret Management Service (CSMS) offer a secure, reliable, and easy-to-use solution for encrypting and decrypting sensitive data.
+
+This example describes how a Flink OpenSource SQL job uses DEW to manage RDS access credentials.
 
 #. Create an agency for DLI to access DEW and complete authorization.
 #. Create a shared secret in DEW.
@@ -477,7 +479,7 @@ Step 8: Create a Flink OpenSource SQL Job
 
 After the source and sink streams are prepared, you can create a Flink OpenSource SQL job.
 
-#. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+#. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
 
 #. In the upper right corner of the **Flink Jobs** page, click **Create Job**.
 

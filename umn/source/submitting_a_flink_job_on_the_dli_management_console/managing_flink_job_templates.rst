@@ -95,7 +95,7 @@ You can create a template using any of the following methods:
 
 -  Creating a template on the **Template Management** page
 
-   #. In the left navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**.
+   #. In the navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**.
 
    #. Click **Create Template** in the upper right corner of the page. The **Create Template** dialog box is displayed.
 
@@ -148,43 +148,43 @@ You can create a template using any of the following methods:
 
       .. table:: **Table 5** Template parameters
 
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Parameter                         | Description                                                                                                                                                      |
-         +===================================+==================================================================================================================================================================+
-         | Name                              | You can modify the template name.                                                                                                                                |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Description                       | You can modify the template description.                                                                                                                         |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Saving Mode                       | -  **Save Here**: Save the modification to the current template.                                                                                                 |
-         |                                   | -  **Save as New**: Save the modification as a new template.                                                                                                     |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | SQL statement editing area        | In the area, you can enter detailed SQL statements to implement business logic. For how to compile SQL statements, see *Data Lake Insight SQL Syntax Reference*. |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Save                              | Save the modifications.                                                                                                                                          |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Create Job                        | Use the current template to create a job.                                                                                                                        |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Format                            | Format SQL statements. After SQL statements are formatted, you need to compile SQL statements again.                                                             |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Theme Settings                    | Change the font size, word wrap, and page style (black or white background).                                                                                     |
-         +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Parameter                         | Description                                                                                                                                                                    |
+         +===================================+================================================================================================================================================================================+
+         | Name                              | You can modify the template name.                                                                                                                                              |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Description                       | You can modify the template description.                                                                                                                                       |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Saving Mode                       | -  **Save Here**: Save the modification to the current template.                                                                                                               |
+         |                                   | -  **Save as New**: Save the modification as a new template.                                                                                                                   |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | SQL statement editing area        | In the area, you can enter detailed SQL statements to implement business logic. For details about how to compile SQL statements, see *Data Lake Insight SQL Syntax Reference*. |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Save                              | Save the modifications.                                                                                                                                                        |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Create Job                        | Use the current template to create a job.                                                                                                                                      |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Format                            | Format SQL statements. After SQL statements are formatted, you need to compile SQL statements again.                                                                           |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Theme Settings                    | Change the font size, word wrap, and page style (black or white background).                                                                                                   |
+         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   #. In the SQL statement editing area, enter SQL statements to implement service logic. For how to compile SQL statements, see *Data Lake Insight SQL Syntax Reference*.
+   #. In the SQL statement editing area, enter SQL statements to implement service logic. For details about how to compile SQL statements, see *Data Lake Insight SQL Syntax Reference*.
 
    #. After the SQL statement is edited, click **Save** in the upper right corner to complete the template creation.
 
-   #. (Optional) If you do not need to modify the template, click **Create Job** in the upper right corner to create a job based on the current template. For how to create a job, see :ref:`Creating a Flink Jar Job <dli_01_0457>`.
+   #. (Optional) If you do not need to modify the template, click **Create Job** in the upper right corner to create a job based on the current template. For details about how to create a job, see :ref:`Creating a Flink Jar Job <dli_01_0457>`.
 
 -  Creating a template based on an existing job template
 
-   #. In the left navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
+   #. In the navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
    #. In the row where the desired template is located in the custom template list, click **Edit** under **Operation** to enter the **Edit** page.
    #. After the modification is complete, set **Saving Mode** to **Save as New**.
    #. Click **Save** in the upper right corner to save the template as a new one.
 
 -  Creating a template using a created job
 
-   #. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+   #. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
    #. Click **Create Job** in the upper right corner. The **Create Job** page is displayed.
    #. Specify parameters as required.
    #. Click **OK** to enter the editing page.
@@ -193,7 +193,7 @@ You can create a template using any of the following methods:
 
 -  Creating a template based on the existing job
 
-   #. In the left navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**. The **Flink Jobs** page is displayed.
+   #. In the navigation pane of the DLI management console, choose **Job Management** > **Flink Jobs**.
    #. In the job list, locate the row where the job that you want to set as a template resides, and click **Edit** in the **Operation** column.
    #. After the SQL statement is compiled, click **Set as Template**.
    #. In the **Set as Template** dialog box that is displayed, specify **Name** and **Description** and click **OK**.
@@ -205,8 +205,8 @@ Creating a Job Based on a Template
 
 You can create jobs based on sample templates or custom templates.
 
-#. In the left navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**.
-#. In the sample template list, click **Create Job** in the **Operation** column of the target template. For how to create a job, see :ref:`Creating a Flink OpenSource SQL Job <dli_01_0498>` and :ref:`Creating a Flink Jar Job <dli_01_0457>`.
+#. In the navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**.
+#. In the sample template list, click **Create Job** in the **Operation** column of the target template. For details about how to create a job, see :ref:`Creating a Flink OpenSource SQL Job <dli_01_0498>` and :ref:`Creating a Flink Jar Job <dli_01_0457>`.
 
 .. _dli_01_0464__section735234815411:
 
@@ -215,7 +215,7 @@ Modifying a Template
 
 After creating a custom template, you can modify it as required. The sample template cannot be modified, but you can view the template details.
 
-#. In the left navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
+#. In the navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
 #. In the row where the template you want to modify is located in the custom template list, click **Edit** in the **Operation** column to enter the **Edit** page.
 #. In the SQL statement editing area, modify the SQL statements as required.
 #. Set **Saving Mode** to **Save Here**.
@@ -228,7 +228,7 @@ Deleting a Template
 
 You can delete a custom template as required. The sample templates cannot be deleted. Deleted templates cannot be restored. Exercise caution when performing this operation.
 
-#. In the left navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
+#. In the navigation pane of the DLI management console, choose **Job Templates** > **Flink Templates**. Click the **Custom Templates** tab.
 
 #. In the custom template list, select the templates you want to delete and click **Delete** in the upper left of the custom template list.
 

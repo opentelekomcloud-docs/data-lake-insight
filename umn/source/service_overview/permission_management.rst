@@ -5,23 +5,23 @@
 Permission Management
 =====================
 
-If you need to assign different permissions to employees in your enterprise to access your DLI resources, IAM is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you securely access to your cloud resources.
+After purchasing DLI resources, you can use IAM to assign different access rights to employees, ensuring proper isolation between roles. IAM provides identity authentication, permission assignment, and access control, helping you securely manage access to cloud resources.
 
-With IAM, you can use your account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, some software developers in your enterprise need to use DLI resources but must not delete them or perform any high-risk operations. To achieve this result, you can create IAM users for the software developers and grant them only the permissions required for using DLI resources.
+With IAM, you can create users under your account and apply policies to define their access scope. For example, developers may need permission to use DLI but should not be allowed to delete it. In this case, you can create IAM users for developers and assign a policy that grants usage rights while restricting deletion.
 
-If your account does not require individual IAM users for permissions management, you may skip over this section.
+If your account already meets your needs, you can skip creating separate IAM users without affecting other DLI functions.
 
 DLI Permissions
 ---------------
 
-New IAM users do not have any permissions assigned by default. You need to first add them to one or more groups and attach policies or roles to these groups. The users then inherit permissions from the groups and can perform specified operations on cloud services based on the permissions they have been assigned.
+By default, newly created IAM users have no permissions. To enable access, you must add them to a user group and assign roles or policies. This process is called authorization. Once authorized, users can perform operations within the scope of their assigned permissions.
 
-DLI is a project-level service deployed and accessed in specific physical regions. To assign ServiceStage permissions to a user group, specify the scope as region-specific projects and select projects for the permissions to take effect. If **All projects** is selected, the permissions will take effect for the user group in all region-specific projects. When accessing DLI, the users need to switch to a region where they have been authorized to use cloud services.
+DLI is deployed by physical region and operates as a project-level service. When authorizing, select **Region-specific projects** for **Scope**, then assign permissions within the specific project. These permissions apply only to that project. If you assign permissions to **All projects**, they apply across all regions. To access DLI, users must first switch to the authorized region.
 
-Permission types: Based on the granularity of authorization, they are divided into roles and policies.
+Permission types: Permissions are categorized into roles and policies.
 
--  Roles: A coarse-grained authorization strategy that defines permissions by job responsibility. This strategy offers limited service-level roles for authorization. If one role has a dependency role required for accessing SA, assign both roles to the users. Roles are not suitable for fine-grained authorization and least privilege access.
--  Policies: A fine-grained authorization strategy that defines permissions required to perform operations on specific cloud resources under certain conditions. This type of authorization is more flexible and is ideal for least privilege access. For example, you can grant DLI users only the permissions for managing a certain type of ECSs. For the actions supported by DLI APIs, see "Permissions Policies and Supported Actions" in the *Data Lake Insight API Reference*.
+-  Roles: A coarse-grained authorization mechanism based on job responsibilities. This strategy offers limited service-level roles for authorization. Granting a role may require assigning additional dependency roles. Roles cannot fully meet fine-grained authorization or strict least-privilege access.
+-  Policies: A fine-grained authorization mechanism that defines permissions at the level of specific operations, resources, and conditions. Policies provide flexible control and support enterprise-level least-privilege security. For example, you can restrict IAM users to perform only certain management operations on specific DLI resources. For details about the actions supported by DLI APIs, see "Permissions Policies and Supported Actions" in the *Data Lake Insight API Reference*.
 
 .. table:: **Table 1** DLI system permissions
 
@@ -50,7 +50,7 @@ Permission types: Based on the granularity of authorization, they are divided in
    |                           | -  Scope: project-level service                                                                                                                                                                                                                                                                                                                 |                       |                                                                  |
    +---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+------------------------------------------------------------------+
 
-:ref:`Table 2 <dli_07_0006__en-us_topic_0206791772_table168060107500>` lists the common operations supported by each system policy. You can choose required system policies according to this table.
+:ref:`Table 2 <dli_07_0006__en-us_topic_0206791772_table168060107500>` lists the common operations supported by each system policy. You can use this table to select appropriate system policies.
 
 .. _dli_07_0006__en-us_topic_0206791772_table168060107500:
 

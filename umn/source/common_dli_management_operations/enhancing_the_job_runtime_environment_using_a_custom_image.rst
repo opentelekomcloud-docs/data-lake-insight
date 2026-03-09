@@ -34,7 +34,7 @@ Use Process
 
 #. Obtain DLI base images.
 #. Use Dockerfile to pack dependencies (files, JAR files, or software) required for job execution into the base image to create a custom image.
-#. Publish the custom image to SoftWare Repository for Container (SWR).
+#. Publish the custom image to SWR.
 #. On the DLI job editing page, select the created image and run the job.
 #. Check the job execution status.
 
@@ -47,7 +47,7 @@ Contact the administrator to obtain DLI base images.
 
 Select the base image of the same type as the architecture of the queue.
 
-For the CPU architecture type of a queue, see :ref:`Viewing Basic Information About a Queue <dli_01_0663>`.
+For details about the CPU architecture type of a queue, see :ref:`Viewing Basic Information About a Queue <dli_01_0663>`.
 
 Creating a Custom Image
 -----------------------
