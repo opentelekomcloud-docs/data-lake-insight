@@ -81,7 +81,7 @@ Example Response
 
    {
        "is_success": true,
-       "message": "The job is exported successfully.",
+       "message": "The job is successfully exported.",
        "zip_file": ["obs-test/aggregate_1582677879475.zip"]
    }
 

@@ -95,7 +95,7 @@ Example Response
 
    {
        "is_success": "true",
-     "message": "Querying the job execution graph succeeds.",
+       "message": "The job execution stream graph is successfully queried.",
        "execute_graph": {
            "jid": "4e966f43f2c90b0e1bf3188ecf55504b",
            "name": "",

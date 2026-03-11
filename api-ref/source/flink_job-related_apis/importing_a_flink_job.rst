@@ -92,7 +92,7 @@ Example Response
 
    {
        "is_success": true,
-       "message": "The job is imported successfully.",
+       "message": "The job is successfully imported.",
        "job_mapping": [
            {
                "old_job_id": "100",

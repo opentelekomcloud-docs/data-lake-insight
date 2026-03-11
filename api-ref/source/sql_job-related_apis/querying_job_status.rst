@@ -36,7 +36,7 @@ URI
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Range**                                                                                                                          |
       |                 |                 |                 |                                                                                                                                    |
-      |                 |                 |                 | The value can contain 1 to 64 characters. Only letters and digits are allowed.                                                     |
+      |                 |                 |                 | The value can contain up to 64 characters. Only letters and digits are allowed.                                                    |
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Default Value**                                                                                                                  |
       |                 |                 |                 |                                                                                                                                    |
@@ -54,7 +54,7 @@ URI
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Range**                                                                                                                          |
       |                 |                 |                 |                                                                                                                                    |
-      |                 |                 |                 | The value can contain 1 to 64 characters. Only letters and digits are allowed.                                                     |
+      |                 |                 |                 | The value can contain up to 64 characters. Only letters and digits are allowed.                                                    |
       |                 |                 |                 |                                                                                                                                    |
       |                 |                 |                 | **Default Value**                                                                                                                  |
       |                 |                 |                 |                                                                                                                                    |

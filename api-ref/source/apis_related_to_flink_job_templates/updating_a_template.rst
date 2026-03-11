@@ -77,7 +77,7 @@ Example Response
 
    {
        "is_success": "true",
-       "message": "The template is updated successfully.",
+       "message": "The template is successfully updated.",
    }
 
 Status Codes
